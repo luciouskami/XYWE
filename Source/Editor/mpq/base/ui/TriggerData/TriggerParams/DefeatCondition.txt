@@ -1,0 +1,1 @@
+bj_lastCreatedDefeatCondition=0,defeatcondition,bj_lastCreatedDefeatCondition,最后创建的失败条件 [R]

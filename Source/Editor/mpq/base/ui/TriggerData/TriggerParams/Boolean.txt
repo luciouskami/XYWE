@@ -1,0 +1,1 @@
+bj_lastLoadPreloadSLResult=0,boolean,bj_lastLoadPreloadSLResult,最后读取的存档为有效 [YDWE]

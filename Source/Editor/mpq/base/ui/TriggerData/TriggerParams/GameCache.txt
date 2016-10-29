@@ -1,0 +1,1 @@
+bj_lastCreatedGameCache=0,gamecache,bj_lastCreatedGameCache,最后创建的游戏缓存 [R]

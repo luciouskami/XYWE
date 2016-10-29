@@ -1,0 +1,2 @@
+InclusionIncludeNot=0,includeoptionnot,false,WESTRING_INCLUSION_INCLUDE
+InclusionExcludeNot=0,includeoptionnot,true,WESTRING_INCLUSION_EXCLUDE

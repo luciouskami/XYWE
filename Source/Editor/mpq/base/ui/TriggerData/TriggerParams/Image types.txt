@@ -1,0 +1,6 @@
+ImageTypeShadow=1,imagetype,0,WESTRING_IMAGETYPE_SHADOW
+ImageTypeSelection=1,imagetype,1,WESTRING_IMAGETYPE_SELECTION
+ImageTypeIndicator=1,imagetype,2,WESTRING_IMAGETYPE_INDICATOR
+ImageTypeOcclusionMark=1,imagetype,3,WESTRING_IMAGETYPE_OCCLUSIONMARK
+ImageTypeUbersplat=1,imagetype,4,WESTRING_IMAGETYPE_UBERSPLAT
+ImageTypeLast=1,imagetype,5,WESTRING_IMAGETYPE_LAST

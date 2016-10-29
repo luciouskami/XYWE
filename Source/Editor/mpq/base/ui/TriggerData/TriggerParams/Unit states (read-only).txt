@@ -1,0 +1,4 @@
+UnitStateLife=0,unitstate,UNIT_STATE_LIFE,生命值
+UnitStateMaxLife=0,unitstate,UNIT_STATE_MAX_LIFE,WESTRING_USTATE_MAXLIFE
+UnitStateMana=0,unitstate,UNIT_STATE_MANA,魔法值
+UnitStateMaxMana=0,unitstate,UNIT_STATE_MAX_MANA,WESTRING_USTATE_MAXMANA

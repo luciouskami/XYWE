@@ -1,0 +1,2 @@
+CheckingIgnoringChecking=0,checkingignoringoption,true,WESTRING_CHECKINGIGNORINGOPTION_CHECKING
+CheckingIgnoringIgnoring=0,checkingignoringoption,false,WESTRING_CHECKINGIGNORINGOPTION_IGNORING

@@ -1,0 +1,1 @@
+// Defines categories to be automatically added to new maps

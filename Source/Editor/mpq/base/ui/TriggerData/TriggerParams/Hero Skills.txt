@@ -1,0 +1,187 @@
+// Human Archmage
+	HeroSkillBlizzard=0,heroskillcode,'AHbz',WESTRING_HEROSKILL_BLIZZARD
+	HeroSkillWaterElemental=0,heroskillcode,'AHwe',WESTRING_HEROSKILL_WATERELEMENTAL
+	HeroSkillBrillianceAura=0,heroskillcode,'AHab',WESTRING_HEROSKILL_BRILLIANCEAURA
+	HeroSkillMassTeleport=0,heroskillcode,'AHmt',WESTRING_HEROSKILL_MASSTELEPORT
+// Human Blood Mage
+	HeroSkillFlameStrike=1,heroskillcode,'AHfs',WESTRING_HEROSKILL_FLAMESTRIKE
+	HeroSkillBanish=1,heroskillcode,'AHbn',WESTRING_HEROSKILL_BANISH
+	HeroSkillSiphonMana=1,heroskillcode,'AHdr',WESTRING_HEROSKILL_SIPHONMANA
+	HeroSkillPhoenix=1,heroskillcode,'AHpx',WESTRING_HEROSKILL_PHOENIX
+// Human Mountain King
+	HeroSkillStormBolt=0,heroskillcode,'AHtb',WESTRING_HEROSKILL_STORMBOLT
+	HeroSkillThunderClap=0,heroskillcode,'AHtc',WESTRING_HEROSKILL_THUNDERCLAP
+	HeroSkillBash=0,heroskillcode,'AHbh',WESTRING_HEROSKILL_BASH
+	HeroSkillAvatar=0,heroskillcode,'AHav',WESTRING_HEROSKILL_AVATAR
+// Human Paladin
+	HeroSkillDivineShield=0,heroskillcode,'AHds',WESTRING_HEROSKILL_DIVINESHIELD
+	HeroSkillHolyBolt=0,heroskillcode,'AHhb',WESTRING_HEROSKILL_HOLYBOLT
+	HeroSkillDevotionAura=0,heroskillcode,'AHad',WESTRING_HEROSKILL_DEVOTIONAURA
+	HeroSkillResurrection=0,heroskillcode,'AHre',WESTRING_HEROSKILL_RESURRECTION
+// Orc Blademaster
+	HeroSkillWindWalk=0,heroskillcode,'AOwk',WESTRING_HEROSKILL_WINDWALK
+	HeroSkillMirrorImage=0,heroskillcode,'AOmi',WESTRING_HEROSKILL_MIRRORIMAGE
+	HeroSkillCriticalStrike=0,heroskillcode,'AOcr',WESTRING_HEROSKILL_CRITICALSTRIKE
+	HeroSkillWhirlwind=0,heroskillcode,'AOww',WESTRING_HEROSKILL_WHIRLWIND
+// Orc Far Seer
+	HeroSkillChainLightning=0,heroskillcode,'AOcl',WESTRING_HEROSKILL_CHAINLIGHTNING
+	HeroSkillFarSight=0,heroskillcode,'AOfs',WESTRING_HEROSKILL_FARSIGHT
+	HeroSkillSpiritWolf=0,heroskillcode,'AOsf',WESTRING_HEROSKILL_SPIRITWOLF
+	HeroSkillEarthquake=0,heroskillcode,'AOeq',WESTRING_HEROSKILL_EARTHQUAKE
+// Orc Shadow Hunter
+	HeroSkillHealingWave=1,heroskillcode,'AOhw',WESTRING_HEROSKILL_HEALINGWAVE
+	HeroSkillHex=1,heroskillcode,'AOhx',WESTRING_HEROSKILL_HEX
+	HeroSkillSerpentWard=1,heroskillcode,'AOsw',WESTRING_HEROSKILL_SERPENTWARD
+	HeroSkillVoodoo=1,heroskillcode,'AOvd',WESTRING_HEROSKILL_VOODOO
+// Orc Tauren Chieftain
+	HeroSkillShockwave=0,heroskillcode,'AOsh',WESTRING_HEROSKILL_SHOCKWAVE
+	HeroSkillWarStomp=0,heroskillcode,'AOws',WESTRING_HEROSKILL_WARSTOMP
+	HeroSkillEnduranceAura=0,heroskillcode,'AOae',WESTRING_HEROSKILL_ENDURANCEAURA
+	HeroSkillReincarnation=0,heroskillcode,'AOre',WESTRING_HEROSKILL_REINCARNATION
+// Undead Crypt Lord
+	HeroSkillImpale=1,heroskillcode,'AUim',WESTRING_HEROSKILL_IMPALE
+	HeroSkillThornyShield=1,heroskillcode,'AUts',WESTRING_HEROSKILL_THORNYSHIELD
+	HeroSkillCarrionScarabs=1,heroskillcode,'AUcb',WESTRING_HEROSKILL_CARRIONSCARABS
+	HeroSkillLocustSwarm=1,heroskillcode,'AUls',WESTRING_HEROSKILL_LOCUSTSWARM
+// Undead Death Knight
+	HeroSkillDeathCoil=0,heroskillcode,'AUdc',WESTRING_HEROSKILL_DEATHCOIL
+	HeroSkillDeathPact=0,heroskillcode,'AUdp',WESTRING_HEROSKILL_DEATHPACT
+	HeroSkillUnholyAura=0,heroskillcode,'AUau',WESTRING_HEROSKILL_UNHOLYAURA
+	HeroSkillAnimateDead=0,heroskillcode,'AUan',WESTRING_HEROSKILL_ANIMATEDEAD
+// Undead Dread Lord
+	HeroSkillCarrionSwarm=0,heroskillcode,'AUcs',WESTRING_HEROSKILL_CARRIONSWARM
+	HeroSkillSleep=0,heroskillcode,'AUsl',WESTRING_HEROSKILL_SLEEP
+	HeroSkillVampiricAura=0,heroskillcode,'AUav',WESTRING_HEROSKILL_VAMPIRICAURA
+	HeroSkillDarkSummoning=0,heroskillcode,'AUin',WESTRING_HEROSKILL_DARKSUMMONING
+// Undead Lich
+	HeroSkillFrostNova=0,heroskillcode,'AUfn',WESTRING_HEROSKILL_FROSTNOVA
+	HeroSkillFrostArmor=0,heroskillcode,'AUfa',WESTRING_HEROSKILL_FROSTARMOR
+	HeroSkillDarkRitual=0,heroskillcode,'AUdr',WESTRING_HEROSKILL_DARKRITUAL
+	HeroSkillDeathAndDecay=0,heroskillcode,'AUdd',WESTRING_HEROSKILL_DEATHANDDECAY
+// Night Elf Demon Hunter
+	HeroSkillManaBurn=0,heroskillcode,'AEmb',WESTRING_HEROSKILL_MANABURN
+	HeroSkillImmolation=0,heroskillcode,'AEim',WESTRING_HEROSKILL_IMMOLATION
+	HeroSkillEvasion=0,heroskillcode,'AEev',WESTRING_HEROSKILL_EVASION
+	HeroSkillMetamorphosis=0,heroskillcode,'AEme',WESTRING_HEROSKILL_METAMORPHOSIS
+// Night Elf Keeper of the Grove
+	HeroSkillEntanglingRoots=0,heroskillcode,'AEer',WESTRING_HEROSKILL_ENTANGLINGROOTS
+	HeroSkillForceOfNature=0,heroskillcode,'AEfn',WESTRING_HEROSKILL_FORCEOFNATURE
+	HeroSkillThornsAura=0,heroskillcode,'AEah',WESTRING_HEROSKILL_THORNSAURA
+	HeroSkillTranquility=0,heroskillcode,'AEtq',WESTRING_HEROSKILL_TRANQUILITY
+// Night Elf Priestess of the Moon
+	HeroSkillScout=0,heroskillcode,'AEst',WESTRING_HEROSKILL_SCOUT
+	HeroSkillSearingArrows=0,heroskillcode,'AHfa',WESTRING_HEROSKILL_SEARINGARROWS
+	HeroSkillTrueshotAura=0,heroskillcode,'AEar',WESTRING_HEROSKILL_TRUESHOTAURA
+	HeroSkillStarfall=0,heroskillcode,'AEsf',WESTRING_HEROSKILL_STARFALL
+// Night Elf Warden
+	HeroSkillFanOfKnives=1,heroskillcode,'AEfk',WESTRING_HEROSKILL_FANOFKNIVES
+	HeroSkillBlink=1,heroskillcode,'AEbl',WESTRING_HEROSKILL_BLINK
+	HeroSkillShadowTouch=1,heroskillcode,'AEsh',WESTRING_HEROSKILL_SHADOWTOUCH
+	HeroSkillSpiritOfVengeance=1,heroskillcode,'AEsv',WESTRING_HEROSKILL_SPIRITOFVENGEANCE
+// Neutral Beast Master
+	HeroSkillGrizzly=1,heroskillcode,'ANsg',WESTRING_HEROSKILL_GRIZZLY
+	HeroSkillQuillbeast=1,heroskillcode,'ANsq',WESTRING_HEROSKILL_QUILLBEAST
+	HeroSkillWarEagle=1,heroskillcode,'ANsw',WESTRING_HEROSKILL_WAREAGLE
+	HeroSkillStampede=1,heroskillcode,'ANst',WESTRING_HEROSKILL_STAMPEDE
+// Neutral Dark Ranger
+	HeroSkillSilence=1,heroskillcode,'ANsi',WESTRING_HEROSKILL_SILENCE
+	HeroSkillBlackArrow=1,heroskillcode,'ANba',WESTRING_HEROSKILL_BLACKARROW
+	HeroSkillLifeDrain=1,heroskillcode,'ANdr',WESTRING_HEROSKILL_LIFEDRAIN
+	HeroSkillCharm=1,heroskillcode,'ANch',WESTRING_HEROSKILL_CHARM
+// Neutral Naga Sea Witch
+	HeroSkillForkedLightning=1,heroskillcode,'ANfl',WESTRING_HEROSKILL_FORKEDLIGHTNING
+	HeroSkillColdArrow=1,heroskillcode,'ANfa',WESTRING_HEROSKILL_COLDARROW
+	HeroSkillManaShield=1,heroskillcode,'ANms',WESTRING_HEROSKILL_MANASHIELD
+	HeroSkillTornado=1,heroskillcode,'ANto',WESTRING_HEROSKILL_TORNADO
+// Neutral Pandaren Brewmaster
+	HeroSkillBreathOfFire=1,heroskillcode,'ANbf',WESTRING_HEROSKILL_BREATHOFFIRE
+	HeroSkillStrongDrink=1,heroskillcode,'ANdh',WESTRING_HEROSKILL_STRONGDRINK
+	HeroSkillDrunkenBrawler=1,heroskillcode,'ANdb',WESTRING_HEROSKILL_DRUNKENBRAWLER
+	HeroSkillElementalFury=1,heroskillcode,'ANef',WESTRING_HEROSKILL_ELEMENTALFURY
+// Neutral Pit Lord
+	HeroSkillRainOfFire=1,heroskillcode,'ANrf',WESTRING_HEROSKILL_RAINOFFIRE
+	HeroSkillHowlOfTerror=1,heroskillcode,'ANht',WESTRING_HEROSKILL_HOWLOFTERROR
+	HeroSkillCleavingAttack=1,heroskillcode,'ANca',WESTRING_HEROSKILL_CLEAVINGATTACK
+	HeroSkillDoom=1,heroskillcode,'ANdo',WESTRING_HEROSKILL_DOOM
+// Neutral Alchemist
+	HeroSkillAcidBomb=1,heroskillcode,'ANab',WESTRING_HEROSKILL_ACIDBOMB
+	HeroSkillChemicalRage=1,heroskillcode,'ANcr',WESTRING_HEROSKILL_CHEMICALRAGE
+	HeroSkillHealingSpray=1,heroskillcode,'ANhs',WESTRING_HEROSKILL_HEALINGSPRAY
+	HeroSkillTransmute=1,heroskillcode,'ANtm',WESTRING_HEROSKILL_TRANSMUTE
+// Neutral Tinker
+	HeroSkillEngineeringUpgrade=1,heroskillcode,'ANeg',WESTRING_HEROSKILL_ENGINEERINGUPGRADE
+	HeroSkillClusterRockets=1,heroskillcode,'ANcs',WESTRING_HEROSKILL_CLUSTERROCKETS
+	HeroSkillSummonFactory=1,heroskillcode,'ANsy',WESTRING_HEROSKILL_SUMMONFACTORY
+	HeroSkillRoboGoblin=1,heroskillcode,'ANrg',WESTRING_HEROSKILL_ROBOGOBLIN
+// Neutral Fire Lord
+	HeroSkillIncinerate=1,heroskillcode,'ANic',WESTRING_HEROSKILL_INCINERATE
+	HeroSkillIncinerateArrow=1,heroskillcode,'ANia',WESTRING_HEROSKILL_INCINERATEARROW
+	HeroSkillSoulBurn=1,heroskillcode,'ANso',WESTRING_HEROSKILL_SOULBURN
+	HeroSkillLavaMonster=1,heroskillcode,'ANlm',WESTRING_HEROSKILL_LAVAMONSTER
+	HeroSkillVolcano=1,heroskillcode,'ANvc',WESTRING_HEROSKILL_VOLCANO
+// Special Akama
+	HeroSkillChainLightning2=1,heroskillcode,'AOcl',WESTRING_HEROSKILL_AKAMA_CHAINLIGHTNING
+	HeroSkillSpiritBeast=1,heroskillcode,'ACs7',WESTRING_HEROSKILL_AKAMA_FERALSPIRIT
+	HeroSkillShadowTouch2=1,heroskillcode,'AEsh',WESTRING_HEROSKILL_AKAMA_SHADOWTOUCH
+	HeroSkillReincarnation2=1,heroskillcode,'ANr2',WESTRING_HEROSKILL_AKAMA_REINCARNATION
+// Special Archimonde
+	HeroSkillDarkPortal=0,heroskillcode,'ANdp',WESTRING_HEROSKILL_DARKPORTAL
+	HeroSkillRainOfChaos=0,heroskillcode,'ANrc',WESTRING_HEROSKILL_RAINOFCHAOS
+	HeroSkillArchiBash=0,heroskillcode,'AHah',WESTRING_HEROSKILL_ARCHIBASH
+	HeroSkillFingerOfDeath=0,heroskillcode,'ANfd',WESTRING_HEROSKILL_FINGEROFDEATH
+// Special Balnazar
+	HeroSkillBalnaSleep=1,heroskillcode,'AUsl',WESTRING_HEROSKILL_BALNA_SLEEP
+	HeroSkillBalnaVampiricAura=1,heroskillcode,'AUav',WESTRING_HEROSKILL_BALNA_VAMPIRICAURA
+	HeroSkillBalnaRainOfChaos=1,heroskillcode,'ANr3',WESTRING_HEROSKILL_BALNA_RAINOFCHAOS
+	HeroSkillBalnaFingerOfPain=1,heroskillcode,'ACf3',WESTRING_HEROSKILL_BALNA_FINGEROFPAIN
+	HeroSkillBalnaEarthquake=1,heroskillcode,'AOeq',WESTRING_HEROSKILL_BALNA_EARTHQUAKE
+// Special Chen
+	HeroSkillChenBreathOfFire=1,heroskillcode,'ANcf',WESTRING_HEROSKILL_CHEN_BREATHOFFIRE
+	HeroSkillChenStrongDrink=1,heroskillcode,'Acdh',WESTRING_HEROSKILL_CHEN_STRONGDRINK
+	HeroSkillChenDrunkenBrawler=1,heroskillcode,'Acdb',WESTRING_HEROSKILL_CHEN_DRUNKENBRAWLER
+	HeroSkillChenElementalFury=1,heroskillcode,'Acef',WESTRING_HEROSKILL_CHEN_ELEMENTALFURY
+	HeroSkillChenAttributeBonus=1,heroskillcode,'Aamk',WESTRING_HEROSKILL_CHEN_ATTRIBUTEBONUS
+// Special Detheroc
+	HeroSkillDetheSleep=1,heroskillcode,'AUsl',WESTRING_HEROSKILL_DETHE_SLEEP
+	HeroSkillDetheShadowTouch=1,heroskillcode,'AEsh',WESTRING_HEROSKILL_DETHE_SHADOWTOUCH
+	HeroSkillDetheCarrionSwarm=1,heroskillcode,'AUcs',WESTRING_HEROSKILL_DETHE_CARRIONSWARM
+	HeroSkillDetheDeathAndDecay=1,heroskillcode,'AUdd',WESTRING_HEROSKILL_DETHE_DEATHANDDECAY
+// Special Garithos
+	HeroSkillGaritShockwave=1,heroskillcode,'ANsh',WESTRING_HEROSKILL_GARIT_SHOCKWAVE
+	HeroSkillGaritHolyLight=1,heroskillcode,'AHhb',WESTRING_HEROSKILL_GARIT_HOLYLIGHT
+	HeroSkillGaritDevotionAura=1,heroskillcode,'AHad',WESTRING_HEROSKILL_GARIT_DEVOTIONAURA
+	HeroSkillGaritAvatar=1,heroskillcode,'ANav',WESTRING_HEROSKILL_GARIT_AVATAR
+// Special Illidan
+	HeroSkillIllimorphosis=0,heroskillcode,'AEIl',WESTRING_HEROSKILL_ILLIMORPHOSIS
+	HeroSkillEvilIllimorphosis=0,heroskillcode,'AEvi',WESTRING_HEROSKILL_EVILILLIMORPHOSIS
+// Special Malganis
+	HeroSkillMalganisSleep=0,heroskillcode,'ANdc',WESTRING_HEROSKILL_DARKCONVERSION
+	HeroSkillSoulPreservation=0,heroskillcode,'ANsl',WESTRING_HEROSKILL_SOULPRESERVATION
+// Special Manaroth
+	HeroSkillManarothReincarnation=0,heroskillcode,'ANrn',WESTRING_HEROSKILL_MANAROTHREINCARNATION
+// Special Rexxar
+	HeroSkillRexxarGrizzly=1,heroskillcode,'Arsg',WESTRING_HEROSKILL_REXXAR_GRIZZLY
+	HeroSkillRexxarQuillbeast=1,heroskillcode,'Arsq',WESTRING_HEROSKILL_REXXAR_QUILLBEAST
+	HeroSkillRexxarStormBolt=1,heroskillcode,'ANsb',WESTRING_HEROSKILL_REXXAR_STORMBOLT
+	HeroSkillRexxarStampede=1,heroskillcode,'Arsp',WESTRING_HEROSKILL_REXXAR_STAMPEDE
+	HeroSkillRexxarAttributeBonus=1,heroskillcode,'Aamk',WESTRING_HEROSKILL_REXXAR_ATTRIBUTEBONUS
+// Special Rokhan
+	HeroSkillRokhanHealingWave=1,heroskillcode,'ANhw',WESTRING_HEROSKILL_ROKHAN_HEALINGWAVE
+	HeroSkillRokhanHex=1,heroskillcode,'ANhx',WESTRING_HEROSKILL_ROKHAN_HEX
+	HeroSkillRokhanSerpentWard=1,heroskillcode,'Arsw',WESTRING_HEROSKILL_ROKHAN_SERPENTWARD
+	HeroSkillRokhanVoodooSpirits=1,heroskillcode,'AOls',WESTRING_HEROSKILL_ROKHAN_VOODOOSPIRITS
+	HeroSkillRokhanAttributeBonus=1,heroskillcode,'Aamk',WESTRING_HEROSKILL_ROKHAN_ATTRIBUTEBONUS
+// Special Sylvanas Windrunner
+	HeroSkillColdArrows=0,heroskillcode,'AHca',WESTRING_HEROSKILL_COLDARROWS
+// Special Tichondrius
+	HeroSkillTichondriusInferno=0,heroskillcode,'SNin',WESTRING_HEROSKILL_TICHONDRIUSINFERNO
+// Special Varimathras
+	HeroSkillVarimSleep=1,heroskillcode,'AUsl',WESTRING_HEROSKILL_VARIM_SLEEP
+	HeroSkillVarimVampiricAura=1,heroskillcode,'AUav',WESTRING_HEROSKILL_VARIM_VAMPIRICAURA
+	HeroSkillVarimRainOfFire=1,heroskillcode,'ANrf',WESTRING_HEROSKILL_VARIM_RAINOFFIRE
+	HeroSkillVarimDoom=1,heroskillcode,'ANdo',WESTRING_HEROSKILL_VARIM_DOOM
+// Special Warlock
+	HeroSkillInfernal=0,heroskillcode,'ANin',WESTRING_HEROSKILL_INFERNAL
+// Special Miscellaneous
+	HeroSkillMalganisSleepFast=0,heroskillcode,'SNdc',WESTRING_HEROSKILL_DARKCONVERSIONFAST
+	HeroSkillDarkSummoningOld=0,heroskillcode,'AUds',WESTRING_HEROSKILL_DARKSUMMONINGOLD

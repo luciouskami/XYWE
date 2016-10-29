@@ -1,0 +1,3 @@
+RectNull=0,rect,null,WESTRING_TRIGRECT_NULL
+bj_mapInitialPlayableArea=0,rect,bj_mapInitialPlayableArea,可用地图区域 [R]
+bj_mapInitialCameraBounds=0,rect,bj_mapInitialCameraBounds,初始可用镜头区域 [R]

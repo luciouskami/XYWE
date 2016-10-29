@@ -1,0 +1,2 @@
+VertOnlyOn=0,vertonlyoption,true,垂直晃动
+VertOnlyOff=0,vertonlyoption,false,水平晃动

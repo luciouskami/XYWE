@@ -1,0 +1,15 @@
+SkyModelNone=0,skymodelstring,null,WESTRING_SKYMODEL_NONE
+SkyModelSky08=0,skymodelstring,`Environment\\Sky\\BlizzardSky\\BlizzardSky.mdl`,WESTRING_SKYMODEL_SKY08
+SkyModelSky02=0,skymodelstring,`Environment\\Sky\\DalaranSky\\DalaranSky.mdl`,WESTRING_SKYMODEL_SKY02
+SkyModelSky06=0,skymodelstring,`Environment\\Sky\\FelwoodSky\\FelwoodSky.mdl`,WESTRING_SKYMODEL_SKY06
+SkyModelSky07=0,skymodelstring,`Environment\\Sky\\FoggedSky\\FoggedSky.mdl`,WESTRING_SKYMODEL_SKY07
+SkyModelSky01=0,skymodelstring,`Environment\\Sky\\Sky\\SkyLight.mdl`,WESTRING_SKYMODEL_SKY01
+SkyModelSky03=0,skymodelstring,`Environment\\Sky\\LordaeronFallSky\\LordaeronFallSky.mdl`,WESTRING_SKYMODEL_SKY03
+SkyModelSky04=0,skymodelstring,`Environment\\Sky\\LordaeronSummerSky\\LordaeronSummerSky.mdl`,WESTRING_SKYMODEL_SKY04
+SkyModelSky05=0,skymodelstring,`Environment\\Sky\\LordaeronWinterSky\\LordaeronWinterSky.mdl`,WESTRING_SKYMODEL_SKY05
+SkyModelSky09=0,skymodelstring,`Environment\\Sky\\LordaeronWinterSkyBrightGreen\\LordaeronWinterSkyBrightGreen.mdl`,WESTRING_SKYMODEL_SKY09
+SkyModelSky10=0,skymodelstring,`Environment\\Sky\\LordaeronWinterSkyPink\\LordaeronWinterSkyPink.mdl`,WESTRING_SKYMODEL_SKY10
+SkyModelSky11=0,skymodelstring,`Environment\\Sky\\LordaeronWinterSkyPurple\\LordaeronWinterSkyPurple.mdl`,WESTRING_SKYMODEL_SKY11
+SkyModelSky12=0,skymodelstring,`Environment\\Sky\\LordaeronWinterSkyRed\\LordaeronWinterSkyRed.mdl`,WESTRING_SKYMODEL_SKY12
+SkyModelSky13=0,skymodelstring,`Environment\\Sky\\LordaeronWinterSkyYellow\\LordaeronWinterSkyYellow.mdl`,WESTRING_SKYMODEL_SKY13
+SkyModelSky14=1,skymodelstring,`Environment\\Sky\\Outland_Sky\\Outland_Sky.mdl`,WESTRING_SKYMODEL_SKY14

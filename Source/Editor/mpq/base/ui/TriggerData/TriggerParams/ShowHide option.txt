@@ -1,0 +1,2 @@
+ShowHideHide=0,showhideoption,false,WESTRING_SHOWHIDE_HIDE
+ShowHideShow=0,showhideoption,true,WESTRING_SHOWHIDE_SHOW

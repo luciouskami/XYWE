@@ -1,0 +1,96 @@
+//
+	XYSplitLine_TriggerActions_Normal_1=0,nothing
+		_XYSplitLine_TriggerActions_Normal_1_Category=TC_NOTHING
+BJDebugMsg=0,StringExt
+	_BJDebugMsg_Defaults=_
+	_BJDebugMsg_Category=TC_DEBUGMSG
+SetVariable=0,AnyGlobal,Null
+	// Specially handled by the editor
+	_SetVariable_Defaults=_,_
+	_SetVariable_Category=TC_SETVARIABLE
+SetJassLocalVariables=0,typename,scriptcode,Null
+	_SetJassLocalVariables_Defaults=_,_,_
+	_SetJassLocalVariables_Category=TC_SETLOCALVARIABLE
+CustomScriptCode=1,scriptcode
+	_CustomScriptCode_Defaults=_
+	_CustomScriptCode_Category=TC_CUSTOM
+ExecuteFunc=0,string
+	_ExecuteFunc_Defaults=_
+	_ExecuteFunc_Category=TC_NOTHING
+CommentString=0,scriptcode
+	_CommentString_Defaults=　,_
+	_CommentString_Category=TC_COMMENT
+PolledWait=1,real
+	_PolledWait_Defaults=2
+	_PolledWait_Limits=0,_
+	_PolledWait_Category=TC_WAIT
+TriggerSleepAction=0,real
+	_TriggerSleepAction_Defaults=2
+	_TriggerSleepAction_Limits=0,_
+	_TriggerSleepAction_Category=TC_WAIT
+WaitForCondition=1,boolexpr,real
+	_WaitForCondition_Defaults=_,1
+	_WaitForCondition_Limits=_,_,0.1,_
+	_WaitForCondition_Category=TC_WAIT
+WaitForSoundBJ=0,sound,real
+	_WaitForSoundBJ_Defaults=_,0
+	_WaitForSoundBJ_Category=TC_WAIT
+	_WaitForSoundBJ_ScriptName=TriggerWaitForSound
+IfThenElseMultiple=1,nothing
+	// Specially handled by the editor
+	_IfThenElseMultiple_Category=TC_LOGIC
+ForLoopAMultiple=1,integer,integer
+	// Specially handled by the editor
+	_ForLoopAMultiple_Defaults=1,10
+	_ForLoopAMultiple_Category=TC_FORLOOP
+ForLoopBMultiple=1,integer,integer
+	// Specially handled by the editor
+	_ForLoopBMultiple_Defaults=1,10
+	_ForLoopBMultiple_Category=TC_FORLOOP
+ForLoopVarMultiple=1,integervar,integer,integer
+	// Specially handled by the editor
+	_ForLoopVarMultiple_Defaults=_,1,10
+	_ForLoopVarMultiple_Category=TC_FORLOOP
+SetForLoopIndexA=1,integer
+	_SetForLoopIndexA_Defaults=10
+	_SetForLoopIndexA_Category=TC_FORLOOP
+SetForLoopIndexB=1,integer
+	_SetForLoopIndexB_Defaults=10
+	_SetForLoopIndexB_Category=TC_FORLOOP
+ReturnAction=0,nothing
+	// Specially handled by the editor
+	_ReturnAction_Defaults=
+	_ReturnAction_Category=TC_SKIPACTIONS
+YDWEExitLoop=0,nothing
+	_YDWEExitLoop_Defaults=
+	_YDWEExitLoop_Category=TC_SKIPACTIONS
+	_YDWEExitLoop_ScriptName=DoNothing() YDNL exitwhen true//
+SetRandomSeed=0,integer
+	_SetRandomSeed_Defaults=_
+	_SetRandomSeed_Limits=0,_
+	_SetRandomSeed_Category=TC_NOTHING
+//
+	XYSplitLine_TriggerActions_Normal_2=0,nothing
+		_XYSplitLine_TriggerActions_Normal_2_Category=TC_NOTHING
+DoNothing=0,nothing
+	_DoNothing_Defaults=
+	_DoNothing_Category=TC_NOTHING
+IfThenElse=0,boolexpr,code,code
+	// Specially handled by the editor
+	_IfThenElse_Defaults=_,DoNothing,DoNothing
+	_IfThenElse_Category=TC_LOGIC
+ForLoopA=0,integer,integer,code
+	// Specially handled by the editor
+	_ForLoopA_Defaults=1,10,DoNothing
+	_ForLoopA_Category=TC_FORLOOP
+ForLoopB=0,integer,integer,code
+	// Specially handled by the editor
+	_ForLoopB_Defaults=1,10,DoNothing
+	_ForLoopB_Category=TC_FORLOOP
+ForLoopVar=1,integervar,integer,integer,code
+	// Specially handled by the editor
+	_ForLoopVar_Defaults=_,1,10,DoNothing
+	_ForLoopVar_Category=TC_FORLOOP
+//
+	XYSplitLine_TriggerActions_Normal_3=0,nothing
+		_XYSplitLine_TriggerActions_Normal_3_Category=TC_NOTHING

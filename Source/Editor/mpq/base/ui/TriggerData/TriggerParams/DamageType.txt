@@ -1,0 +1,1 @@
+bj_lastSetDamageType=0,damagetype,bj_lastSetDamageType,最后设置的伤害类型 [YDWE]

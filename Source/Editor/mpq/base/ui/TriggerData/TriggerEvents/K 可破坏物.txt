@@ -1,0 +1,6 @@
+TriggerRegisterDeathEvent=0,destructable
+	_TriggerRegisterDeathEvent_Defaults=_
+	_TriggerRegisterDeathEvent_Category=TC_DESTRUCT
+TriggerRegisterDestDeathInRegionEvent=1,rect
+	_TriggerRegisterDestDeathInRegionEvent_Defaults=_
+	_TriggerRegisterDestDeathInRegionEvent_Category=TC_DESTRUCT

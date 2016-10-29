@@ -1,0 +1,1 @@
+bj_lastCreatedFogModifier=0,fogmodifier,bj_lastCreatedFogModifier,最后创建的可见度修正器 [R]

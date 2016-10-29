@@ -1,0 +1,3 @@
+GameResultWin=0,playergameresult,PLAYER_GAME_RESULT_VICTORY,WESTRING_VICTORY
+GameResultLose=0,playergameresult,PLAYER_GAME_RESULT_DEFEAT,WESTRING_DEFEAT
+GameResultDraw=0,playergameresult,PLAYER_GAME_RESULT_TIE,WESTRING_DRAW

@@ -1,0 +1,2 @@
+CraterTypeTemporary=1,cratertype,false,WESTRING_CRATERTYPE_TEMPORARY
+CraterTypePermanent=1,cratertype,true,WESTRING_CRATERTYPE_PERMANENT

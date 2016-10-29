@@ -1,0 +1,4 @@
+targettypeA=0,targettype,1,对敌人
+targettypeB=0,targettype,2,对点
+targettypeC=0,targettype,3,立即
+targettypeD=0,targettype,4,对自己

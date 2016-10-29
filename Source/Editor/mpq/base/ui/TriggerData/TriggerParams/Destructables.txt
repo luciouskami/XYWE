@@ -1,0 +1,2 @@
+DestructableNull=0,destructable,null,WESTRING_TRIGDESTRUCTABLE_NULL
+bj_lastCreatedDestructable=0,destructable,bj_lastCreatedDestructable,最后创建的可破坏物 [R]

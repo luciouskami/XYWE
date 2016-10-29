@@ -1,0 +1,2 @@
+attackorattackedeventA=0,attackorattackedevent,0,被攻击
+attackorattackedeventB=0,attackorattackedevent,1,攻击

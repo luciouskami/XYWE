@@ -1,0 +1,13 @@
+unitstatesec=0,0,0,WESTRING_TRIGTYPE_unitstate,unitstate
+nearestonlyoption=0,0,0,WESTRING_TRIGTYPE_nearestonlyoption,boolean
+vertonlyoption=0,0,0,WESTRING_TRIGTYPE_vertonlyoption,boolean
+includeoptionnot=0,0,0,WESTRING_TRIGTYPE_inclusionoption,boolean
+unittypeaddable=0,0,0,WESTRING_TRIGTYPE_unittype,unittype
+isnotoption=0,0,0,WESTRING_TRIGTYPE_isnotoption,boolean
+pingstyle=1,0,0,WESTRING_TRIGTYPE_minimappingstyle,boolean
+hotkeyint=0,0,0,WESTRING_TRIGTYPE_hotkeyint,integer
+sharevisionoption=0,0,0,WESTRING_TRIGTYPE_sharevisionoption,boolean
+converunitoption=0,0,0,WESTRING_TRIGTYPE_converunitoption,boolean
+lockunlockoption=0,0,0,WESTRING_TRIGTYPE_lockunlockoption,boolean
+onoffintoption=0,0,0,WESTRING_TRIGTYPE_onoffoption,integer
+onoffnotoption=0,0,0,WESTRING_TRIGTYPE_onoffoption,boolean

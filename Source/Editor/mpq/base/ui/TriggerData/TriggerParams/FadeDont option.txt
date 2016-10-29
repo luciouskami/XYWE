@@ -1,0 +1,2 @@
+FadeDontFade=0,fadedontoption,true,WESTRING_FADEDONTOPTION_FADE
+FadeDontDont=0,fadedontoption,false,WESTRING_FADEDONTOPTION_DONT

@@ -1,0 +1,7 @@
+TriggerRegisterDialogEventBJ=0,dialog
+	_TriggerRegisterDialogEventBJ_Defaults=_
+	_TriggerRegisterDialogEventBJ_Category=TC_DIALOG
+	_TriggerRegisterDialogEventBJ_ScriptName=TriggerRegisterDialogEvent
+TriggerRegisterDialogButtonEvent=0,button
+	_TriggerRegisterDialogButtonEvent_Defaults=_
+	_TriggerRegisterDialogButtonEvent_Category=TC_DIALOG

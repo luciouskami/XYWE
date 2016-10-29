@@ -1,0 +1,17 @@
+AmbientThemeDayA=0,ambientthemeday,`AshenvaleDay`,WESTRING_AMBIENTTHEMEDAY_A
+AmbientThemeDayB=0,ambientthemeday,`BarrensDay`,WESTRING_AMBIENTTHEMEDAY_B
+AmbientThemeDayK=1,ambientthemeday,`BlackCitadelDay`,WESTRING_AMBIENTTHEMEDAY_K
+AmbientThemeDayY=0,ambientthemeday,`CityScapeDay`,WESTRING_AMBIENTTHEMEDAY_Y
+AmbientThemeDayX=0,ambientthemeday,`DalaranDay`,WESTRING_AMBIENTTHEMEDAY_X
+AmbientThemeDayJ=1,ambientthemeday,`DalaranRuinsDay`,WESTRING_AMBIENTTHEMEDAY_J
+AmbientThemeDayD=0,ambientthemeday,`DungeonDay`,WESTRING_AMBIENTTHEMEDAY_D
+AmbientThemeDayC=0,ambientthemeday,`FelwoodDay`,WESTRING_AMBIENTTHEMEDAY_C
+AmbientThemeDayI=1,ambientthemeday,`IceCrownDay`,WESTRING_AMBIENTTHEMEDAY_I
+AmbientThemeDayF=0,ambientthemeday,`LordaeronFallDay`,WESTRING_AMBIENTTHEMEDAY_F
+AmbientThemeDayL=0,ambientthemeday,`LordaeronSummerDay`,WESTRING_AMBIENTTHEMEDAY_L
+AmbientThemeDayW=0,ambientthemeday,`LordaeronWinterDay`,WESTRING_AMBIENTTHEMEDAY_W
+AmbientThemeDayN=0,ambientthemeday,`NorthrendDay`,WESTRING_AMBIENTTHEMEDAY_N
+AmbientThemeDayO=1,ambientthemeday,`BlackCitadelDay`,WESTRING_AMBIENTTHEMEDAY_O
+AmbientThemeDayZ=1,ambientthemeday,`SunkenRuinsDay`,WESTRING_AMBIENTTHEMEDAY_Z
+AmbientThemeDayV=0,ambientthemeday,`VillageDay`,WESTRING_AMBIENTTHEMEDAY_V
+AmbientThemeDayQ=0,ambientthemeday,`VillageFallDay`,WESTRING_AMBIENTTHEMEDAY_Q

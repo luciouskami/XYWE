@@ -1,0 +1,2 @@
+ChatMatchTypeExact=0,chatmatchtype,true,WESTRING_CHATMATCH_EXACT
+ChatMatchTypeSubstring=0,chatmatchtype,false,WESTRING_CHATMATCH_SUBSTRING

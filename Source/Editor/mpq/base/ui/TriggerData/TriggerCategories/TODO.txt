@@ -1,0 +1,3 @@
+TC_UDDS=. 伤害系统,ReplaceableTextures\CommandButtons\BTNMetamorphosis.blp
+TC_HTSY=. 仇恨系统,ReplaceableTextures\CommandButtons\BTNMetamorphosis.blp
+TC_DZAPI=. DzAPI,ReplaceableTextures\CommandButtons\BTNTome.blp

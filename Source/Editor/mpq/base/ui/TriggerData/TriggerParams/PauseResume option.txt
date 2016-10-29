@@ -1,0 +1,2 @@
+PauseResumePause=0,pauseresumeoption,true,WESTRING_PAUSERESUMEOPTION_PAUSE
+PauseResumeResume=0,pauseresumeoption,false,WESTRING_PAUSERESUMEOPTION_RESUME

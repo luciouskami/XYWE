@@ -1,0 +1,2 @@
+CameraApply=0,cameraapplyoption,true,WESTRING_CAMERAAPPLYOPTION_APPLY
+CameraApplyNoPan=0,cameraapplyoption,false,WESTRING_CAMERAAPPLYOPTION_APPLYNOPAN

@@ -1,0 +1,2 @@
+CompletionOptionCompleted=0,completionoption,true,WESTRING_COMPLETIONOPTION_COMPLETED
+CompletionOptionIncomplete=0,completionoption,false,WESTRING_COMPLETIONOPTION_INCOMPLETE

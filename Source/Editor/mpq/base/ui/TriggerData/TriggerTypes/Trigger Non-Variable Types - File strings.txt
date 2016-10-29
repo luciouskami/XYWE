@@ -1,0 +1,5 @@
+aiscript=0,0,0,WESTRING_TRIGTYPE_aiscript,string,AIScript,1
+modelfile=0,0,0,WESTRING_TRIGTYPE_modelfile,string,Model,1
+anyfile=0,0,0,WESTRING_TRIGTYPE_anyfile,string,Any,1
+preloadfile=0,0,0,WESTRING_TRIGTYPE_preloadfile,string,Preload,1
+imagefile=0,0,0,WESTRING_TRIGTYPE_imagefile,string,Image,1

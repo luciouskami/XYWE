@@ -1,0 +1,2 @@
+Minimize=1,minimizeoption,true,WESTRING_MINIMIZEOPTION_MINIMIZE
+Maximize=1,minimizeoption,false,WESTRING_MINIMIZEOPTION_MAXIMIZE

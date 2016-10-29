@@ -1,0 +1,2 @@
+CameraBoundsAdjustAdd=0,cameraboundsadjusttype,bj_CAMERABOUNDS_ADJUST_ADD,WESTRING_CAMERABOUNDSADJUST_ADD
+CameraBoundsAdjustSub=0,cameraboundsadjusttype,bj_CAMERABOUNDS_ADJUST_SUB,WESTRING_CAMERABOUNDSADJUST_SUB

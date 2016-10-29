@@ -1,0 +1,2 @@
+UseSkipOptionUse=0,useskipoption,true,WESTRING_USESKIPOPTION_USE
+UseSkipOptionSkip=0,useskipoption,false,WESTRING_USESKIPOPTION_SKIP

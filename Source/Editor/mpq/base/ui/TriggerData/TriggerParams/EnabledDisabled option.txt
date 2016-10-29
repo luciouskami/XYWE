@@ -1,0 +1,2 @@
+EnabledDisabledEnabled=0,enableddisabledoption,true,WESTRING_ENABLEDDISABLED_ENABLED
+EnabledDisabledDisabled=0,enableddisabledoption,false,WESTRING_ENABLEDDISABLED_DISABLED

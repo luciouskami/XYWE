@@ -1,0 +1,2 @@
+ShareDontOptionShare=0,sharedontoption,true,WESTRING_SHAREDONTOPTION_SHARE
+ShareDontOptionDont=0,sharedontoption,false,WESTRING_SHAREDONTOPTION_DONT

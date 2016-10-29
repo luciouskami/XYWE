@@ -1,0 +1,2 @@
+StringCaseLower=1,stringcaseoption,false,WESTRING_STRINGCASE_LOWER
+StringCaseUpper=1,stringcaseoption,true,WESTRING_STRINGCASE_UPPER

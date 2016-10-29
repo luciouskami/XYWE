@@ -1,0 +1,11 @@
+RaceHuman=0,race,RACE_HUMAN,WESTRING_TRIGRACE_HUMAN
+RaceOrc=0,race,RACE_ORC,WESTRING_TRIGRACE_ORC
+RaceUndead=0,race,RACE_UNDEAD,WESTRING_TRIGRACE_UNDEAD
+RaceNightElf=0,race,RACE_NIGHTELF,WESTRING_TRIGRACE_NIGHTELF
+RaceDemon=0,race,RACE_DEMON,WESTRING_TRIGRACE_DEMON
+RaceUnknown=0,race,ConvertRace(0),没有
+RaceOther=0,race,ConvertRace(7),其他
+RaceCreeps=0,race,ConvertRace(8),野外生物
+RaceCommoner=0,race,ConvertRace(9),平民
+RaceCritters=0,race,ConvertRace(10),动物
+RaceNaga=0,race,ConvertRace(11),娜迦

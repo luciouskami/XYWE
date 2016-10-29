@@ -1,0 +1,1 @@
+bj_lastCreatedLightning=0,lightning,bj_lastCreatedLightning,最后创建的闪电效果 [R]

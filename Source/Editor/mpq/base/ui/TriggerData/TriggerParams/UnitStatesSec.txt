@@ -1,0 +1,2 @@
+UnitStateLifeSec=0,unitstatesec,UNIT_STATE_LIFE,生命值
+UnitStateManaSec=0,unitstatesec,UNIT_STATE_MANA,魔法值

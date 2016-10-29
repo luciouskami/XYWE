@@ -1,0 +1,10 @@
+abileventA=0,abilevent,1,环绕(特效)
+abileventB=0,abilevent,2,跳跃
+abileventC=0,abilevent,3,丝带
+abileventD=0,abilevent,4,钩子(命中)
+abileventE=0,abilevent,5,钩子(返回)
+abileventF=0,abilevent,6,冲锋
+abileventG=0,abilevent,7,跳劈
+abileventH=0,abilevent,8,月神箭(命中)
+abileventI=0,abilevent,9,月神箭(消失)
+abileventJ=0,abilevent,10,环绕(模板)

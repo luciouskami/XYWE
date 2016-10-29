@@ -1,0 +1,2 @@
+AddRemoveAdd=0,addremoveoption,true,WESTRING_ADDREMOVEOPTION_ADD
+AddRemoveRemove=0,addremoveoption,false,WESTRING_ADDREMOVEOPTION_REMOVE

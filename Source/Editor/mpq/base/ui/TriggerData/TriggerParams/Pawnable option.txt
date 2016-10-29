@@ -1,0 +1,2 @@
+PawnableOptionPawnable=1,pawnableoption,true,WESTRING_PAWNABLEOPTION_PAWNABLE
+PawnableOptionUnpawnable=1,pawnableoption,false,WESTRING_PAWNABLEOPTION_UNPAWNABLE

@@ -1,0 +1,2 @@
+PauseUnpauseOptionPause=0,pauseunpauseoption,true,WESTRING_PAUSEUNPAUSEOPTION_PAUSE
+PauseUnpauseOptionUnpause=0,pauseunpauseoption,false,WESTRING_PAUSEUNPAUSEOPTION_UNPAUSE

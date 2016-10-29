@@ -1,0 +1,11 @@
+CineFilterTextureWhite=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\White_mask.blp`,WESTRING_CINEFILTERTEX_WHITE
+CineFilterTextureBlack=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\Black_mask.blp`,WESTRING_CINEFILTERTEX_BLACK
+CineFilterTextureHaze=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\HazeFilter_mask.blp`,WESTRING_CINEFILTERTEX_HAZE
+CineFilterTextureGroundFog=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\GroundFog_mask.blp`,WESTRING_CINEFILTERTEX_GROUNDFOG
+CineFilterTextureHazeAndFog=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\HazeAndFogFilter_Mask.blp`,WESTRING_CINEFILTERTEX_HAZEANDFOG
+CineFilterTextureDiagonal=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\DiagonalSlash_mask.blp`,WESTRING_CINEFILTERTEX_DIAGONAL
+CineFilterTextureDream=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\DreamFilter_Mask.blp`,WESTRING_CINEFILTERTEX_DREAM
+CineFilterTextureScope=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\Scope_Mask.blp`,WESTRING_CINEFILTERTEX_SCOPE
+CineFilterTexturePow=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\SpecialPowMask.blp`,WESTRING_CINEFILTERTEX_POW
+CineFilterTextureSplat=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\SpecialSplatMask.blp`,WESTRING_CINEFILTERTEX_SPLAT
+CineFilterTexturePanda=0,cinefiltertexture,`ReplaceableTextures\\CameraMasks\\Panda-n-Cub.blp`,WESTRING_CINEFILTERTEX_PANDA

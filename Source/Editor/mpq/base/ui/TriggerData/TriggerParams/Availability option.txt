@@ -1,0 +1,2 @@
+AvailabilityOptionAvailable=0,availabilityoption,true,WESTRING_AVAILABILITY_AVAILABLE
+AvailabilityOptionUnavailable=0,availabilityoption,false,WESTRING_AVAILABILITY_UNAVAILABLE

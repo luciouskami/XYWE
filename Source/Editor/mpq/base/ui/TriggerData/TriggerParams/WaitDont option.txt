@@ -1,0 +1,2 @@
+WaitDontWait=0,waitdontoption,true,WESTRING_WAITDONTOPTION_WAIT
+WaitDontDont=0,waitdontoption,false,WESTRING_WAITDONTOPTION_DONT

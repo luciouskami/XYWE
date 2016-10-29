@@ -1,0 +1,2 @@
+ShareVisionShare=0,sharevisionoption,true,¹²Ïí
+ShareVisionNot=0,sharevisionoption,false,²»¹²Ïí

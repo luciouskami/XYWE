@@ -1,0 +1,1 @@
+bj_lastCreatedTextTag=0,texttag,bj_lastCreatedTextTag,最后创建的漂浮文字 [R]

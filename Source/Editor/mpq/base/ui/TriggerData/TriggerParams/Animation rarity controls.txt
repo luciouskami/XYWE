@@ -1,0 +1,2 @@
+RarityControlFrequent=0,raritycontrol,RARITY_FREQUENT,WESTRING_RARITY_FREQUENT
+RarityControlRare=0,raritycontrol,RARITY_RARE,WESTRING_RARITY_RARE

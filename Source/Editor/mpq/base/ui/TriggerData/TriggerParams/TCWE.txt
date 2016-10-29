@@ -1,0 +1,6 @@
+tcpreloadtype_1=0,tcpreloadtype,1,存储
+tcpreloadtype_2=0,tcpreloadtype,2,读取
+tcstringcodetype_1=0,tcstringcodetype,1,存储
+tcstringcodetype_2=0,tcstringcodetype,2,读取
+preload_lastCreatedPreload=0,tcpreload,TCPreloadSystem_preload.lastCreatedPreload,最后创建的存档
+stringcode_lastCreatedStringcode=0,tcstringcode,TCStringcodeSystem_stringcode.lastCreatedStringcode,最后创建的加密字符串

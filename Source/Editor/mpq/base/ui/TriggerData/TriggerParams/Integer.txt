@@ -1,0 +1,2 @@
+bj_forLoopAIndex=0,integer,bj_forLoopAIndex,循环整数A [R]
+bj_forLoopBIndex=0,integer,bj_forLoopBIndex,循环整数B [R]

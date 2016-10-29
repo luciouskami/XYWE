@@ -1,0 +1,1 @@
+bj_lastCreatedTimerDialog=0,timerdialog,bj_lastCreatedTimerDialog,最后创建的计时器窗口 [R]

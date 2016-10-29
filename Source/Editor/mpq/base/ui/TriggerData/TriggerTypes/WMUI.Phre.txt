@@ -1,0 +1,7 @@
+NewUIRefresh=0,0,0,WESTRING_TRIGTYPE_NewUIRefresh,boolean
+NewUIGetCost=0,0,0,WESTRING_TRIGTYPE_NewUIGetCost,boolean
+NewUIAttackType=0,0,0,WESTRING_TRIGTYPE_NewUIAttackType,integer
+NewUIDamageType=0,0,0,WESTRING_TRIGTYPE_NewUIDamageType,integer
+NewUIVariablesType=0,0,0,WESTRING_TRIGTYPE_NewUIVariablesType,scriptcode
+NewUIBlendModeType=0,0,0,WESTRING_TRIGTYPE_NewUIBlendModeType,integer
+NewUITEXMAP_FLAG=0,0,0,WESTRING_TRIGTYPE_NewUITEXMAP_FLAG,integer

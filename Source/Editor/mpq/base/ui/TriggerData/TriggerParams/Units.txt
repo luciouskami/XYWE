@@ -1,0 +1,8 @@
+UnitNull=0,unit,null,WESTRING_TRIGUNIT_NULL
+bj_lastCreatedUnit=0,unit,bj_lastCreatedUnit,最后创建的单位 [R]
+bj_lastLoadedUnit=0,unit,bj_lastLoadedUnit,最后读取的单位 [R]
+bj_lastReplacedUnit=0,unit,bj_lastReplacedUnit,最后替换的单位 [R]
+bj_lastHauntedGoldMine=0,unit,bj_lastHauntedGoldMine,最后创建的不死族金矿 [R]
+bj_lastPoolAbstractedUnit=0,unit,bj_lastPoolAbstractedUnit,最后从单位池中取出的单位 [Y]
+bj_lastAbilityCastingUnit=0,unit,bj_lastAbilityCastingUnit,最后施放特殊技能的单位 [Y]
+bj_lastAbilityTargetUnit=0,unit,bj_lastAbilityTargetUnit,最后被特殊技能命中的单位 [Y]

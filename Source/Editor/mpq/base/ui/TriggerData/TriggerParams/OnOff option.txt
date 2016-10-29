@@ -1,0 +1,2 @@
+OnOffOn=0,onoffoption,true,WESTRING_ONOFF_ON
+OnOffOff=0,onoffoption,false,WESTRING_ONOFF_OFF

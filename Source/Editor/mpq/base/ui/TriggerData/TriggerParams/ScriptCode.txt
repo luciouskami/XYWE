@@ -1,0 +1,3 @@
+ScriptCode00=0,scriptcode,exitwhen true,退出当前循环 [R]
+ScriptCode01=0,scriptcode,call DisableTrigger(bj_cineSceneBeingSkipped),禁用ESC跳过电影消息 [R]
+ScriptCode02=0,scriptcode,call EnableTrigger(bj_cineSceneBeingSkipped),启用ESC跳过电影消息 [R]

@@ -1,0 +1,2 @@
+PathingOn=0,pathingoption,true,WESTRING_PATHING_ON
+PathingOff=0,pathingoption,false,WESTRING_PATHING_OFF

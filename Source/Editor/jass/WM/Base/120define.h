@@ -1,0 +1,21 @@
+#define GetHandleId(h) WMH2I(h)
+#define WMSaveBoolean(p,c,b) StoreBoolean(WMGC,I2S(p),I2S(c),b)
+#define WMSaveInteger(p,c,i) StoreInteger(WMGC,I2S(p),I2S(c),i)
+#define WMSaveReal(p,c,r) StoreReal(WMGC,I2S(p),I2S(c),r)
+#define WMSaveUnitHandle(p,c,u) StoreInteger(WMGC,I2S(p),I2S(c),WMH2I(u))
+#define WMSaveStr(p,c,s) StoreString(WMGC,I2S(p),I2S(c),s)
+#define WMSaveTriggerHandle(p,c,tri) StoreInteger(WMGC,I2S(p),I2S(c),WMH2I(tri))
+#define WMLoadTriggerHandle(p,c) WMI2Trigger(GetStoredInteger(WMGC,I2S(p),I2S(c)))
+#define WMLoadStr(p,c) GetStoredString(WMGC,I2S(p),I2S(c))
+#define WMLoadUnitHandle(p,c) WMI2Unit(GetStoredInteger(WMGC,I2S(p),I2S(c)))
+#define WMLoadReal(p,c) GetStoredReal(WMGC,I2S(p),I2S(c))
+#define WMLoadInteger(p,c) GetStoredInteger(WMGC,I2S(p),I2S(c))
+#define WMLoadBoolean(p,c) GetStoredBoolean(WMGC,I2S(p),I2S(c))
+#define WMFlushChildHashtable(c) FlushStoredMission(WMGC,I2S(c))
+#define WMSaveDestructableHandle(p,c,d) StoreInteger(WMGC,I2S(p),I2S(c),WMH2I(d))
+#define WMLoadDestructableHandle(p,c) WMI2Destructable(GetStoredInteger(WMGC,I2S(p),I2S(c)))
+#define WMSaveGroupHandle(p,c,g) StoreInteger(WMGC,I2S(p),I2S(c),H2I(g))
+#define WMLoadGroupHandle(p,c) WMI2Group(GetStoredInteger(WMGC,I2S(p),I2S(c)))
+<?local ACc2i=false?>
+#define AntiCheatC2I(i) AntiCheatC2I(i)<?ACc2i=true?>
+#define InitGenericPlayerSlots() InitGenericPlayerSlots() YDNL <?if ACc2i then?> set WMc2i=WMC2I(function config)-WMC2I(function DoNothing) <?end?>

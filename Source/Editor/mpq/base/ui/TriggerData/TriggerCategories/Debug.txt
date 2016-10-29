@@ -1,0 +1,2 @@
+//%%% DEBUG - Remove for retail
+TC_OBSOLETE=WESTRING_TRIGCAT_OBSOLETE,ReplaceableTextures\WorldEditUI\Editor-TriggerFunction

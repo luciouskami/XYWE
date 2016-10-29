@@ -1,0 +1,2 @@
+PeriodicOptionOneTime=0,periodicoption,false,WESTRING_PERIODICOPTION_ONETIME
+PeriodicOptionPeriodic=0,periodicoption,true,WESTRING_PERIODICOPTION_PERIODIC

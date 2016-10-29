@@ -1,0 +1,2 @@
+DroppableOptionDrop=0,droppableoption,true,WESTRING_DROPPABLE_DROP
+DroppableOptionNoDrop=0,droppableoption,false,WESTRING_DROPPABLE_NODROP

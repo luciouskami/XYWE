@@ -1,0 +1,2 @@
+SleepWakeOptionSleep=0,sleepwakeoption,true,WESTRING_SLEEPWAKEOPTION_SLEEP
+SleepWakeOptionWake=0,sleepwakeoption,false,WESTRING_SLEEPWAKEOPTION_WAKE

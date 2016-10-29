@@ -1,0 +1,2 @@
+LockUnLockLock=0,lockunlockoption,true,Ëø¶¨
+LockUnLockUnLock=0,lockunlockoption,false,½â³ıËø¶¨

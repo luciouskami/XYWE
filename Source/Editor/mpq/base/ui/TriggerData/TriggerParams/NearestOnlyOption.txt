@@ -1,0 +1,2 @@
+NearestOnlyOn=0,nearestonlyoption,true,只选取最近的一个单位
+NearestOnlyOff=0,nearestonlyoption,false,选取范围内所有单位

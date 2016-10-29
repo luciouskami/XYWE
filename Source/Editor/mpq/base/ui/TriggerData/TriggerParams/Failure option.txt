@@ -1,0 +1,2 @@
+FailureOptionFailed=0,failureoption,true,WESTRING_FAILUREOPTION_FAILED
+FailureOptionNotFailed=0,failureoption,false,WESTRING_FAILUREOPTION_NOTFAILED

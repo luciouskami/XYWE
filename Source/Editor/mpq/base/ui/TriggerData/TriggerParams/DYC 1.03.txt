@@ -1,0 +1,4 @@
+dyc_LastSpawnTimer=0,timer,dyc_LastSpawnTimer,最后创建的刷兵计时器
+DYCUPause1=0,DYCUPauseOption,1,暂停单位
+DYCUPause2=0,DYCUPauseOption,2,暂停动画
+DYCUPause3=0,DYCUPauseOption,3,暂停单位和动画

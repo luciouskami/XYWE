@@ -1,0 +1,3 @@
+PlayerSlotStateEmpty=0,playerslotstate,PLAYER_SLOT_STATE_EMPTY,WESTRING_PSLOT_EMPTY
+PlayerSlotStatePlaying=0,playerslotstate,PLAYER_SLOT_STATE_PLAYING,WESTRING_PSLOT_PLAYING
+PlayerSlotStateLeft=0,playerslotstate,PLAYER_SLOT_STATE_LEFT,WESTRING_PSLOT_LEFT

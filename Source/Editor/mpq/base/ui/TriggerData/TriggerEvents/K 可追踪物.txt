@@ -1,0 +1,6 @@
+TriggerRegisterTrackableHitEvent=0,trackable
+	_TriggerRegisterTrackableHitEvent_Defaults=_
+	_TriggerRegisterTrackableHitEvent_Category=TC_TRACKABLE
+TriggerRegisterTrackableTrackEvent=0,trackable
+	_TriggerRegisterTrackableTrackEvent_Defaults=_
+	_TriggerRegisterTrackableTrackEvent_Category=TC_TRACKABLE

@@ -1,0 +1,6 @@
+[TriggerCategories]
+[[@INCLUDE:Single]]
+[[@INCLUDE:Normal]]
+[[@INCLUDE:TODO]]
+[[@INCLUDE:Debug]]
+[[@INCLUDE:AI Editor (Only)]]

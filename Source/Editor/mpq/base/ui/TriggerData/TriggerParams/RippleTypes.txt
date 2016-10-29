@@ -1,0 +1,2 @@
+RippleTypeNormal=1,rippletype,false,WESTRING_RIPPLETYPE_NORMAL
+RippleTypeDepression=1,rippletype,true,WESTRING_RIPPLETYPE_DEPRESSION

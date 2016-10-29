@@ -1,0 +1,2 @@
+RescuableOptionRescuable=0,rescuableoption,true,WESTRING_RESCUABLEOPTION_RESCUABLE
+RescuableOptionUnrescuable=0,rescuableoption,false,WESTRING_RESCUABLEOPTION_UNRESCUABLE

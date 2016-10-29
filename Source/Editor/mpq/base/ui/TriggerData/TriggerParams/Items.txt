@@ -1,0 +1,4 @@
+ItemNull=0,item,null,WESTRING_TRIGITEM_NULL
+bj_lastCreatedItem=0,item,bj_lastCreatedItem,最后创建的物品 [R]
+bj_lastRemovedItem=0,item,bj_lastRemovedItem,最后丢弃的物品 [R]
+bj_lastMovedItemInItemSlot=0,item,bj_lastMovedItemInItemSlot,最后在物品栏中移动的物品 [YDWE]

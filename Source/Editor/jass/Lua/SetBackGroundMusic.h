@@ -1,0 +1,1 @@
+<? local MusicPath = " "?><? Music = false ?>#define SetBackGroundMusic(s) DoNothing()<? MusicPath = #s ?><? Music = true ?>#define SetMapDescription(s) SetMapDescription(s) YDNL <?if Music==true then?> call PlayMusic(<?=  MusicPath ?>) <? end ?>

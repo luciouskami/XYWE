@@ -1,0 +1,2 @@
+AICommandPop=1,aicommandpop,true,WESTRING_AICOMMAND_REMOVE
+AICommandLeave=1,aicommandpop,false,WESTRING_AICOMMAND_LEAVE

@@ -1,0 +1,2 @@
+UnitFacingBoneHead=0,unitfacingbone,`bone_head`,WESTRING_UNITFACINGBONE_HEAD
+UnitFacingBoneChest=0,unitfacingbone,`bone_chest`,WESTRING_UNITFACINGBONE_CHEST

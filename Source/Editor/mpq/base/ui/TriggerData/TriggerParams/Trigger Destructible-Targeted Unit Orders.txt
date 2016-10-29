@@ -1,0 +1,12 @@
+// Common
+	UnitOrderAttackDestructible=0,unitorderdtarg,`attack`,WESTRING_UNITORDERDTARG_ATTACK
+	UnitOrderAttackDestructibleOnce=0,unitorderdtarg,`attackonce`,WESTRING_UNITORDERUTARG_ATTACKONCE
+	UnitOrderSmartDestructible=1,unitorderdtarg,`smart`,WESTRING_UNITORDERDTARG_SMART
+	UnitOrderSetRallyDestructible=0,unitorderdtarg,`setrally`,WESTRING_UNITORDERPTARG_SETRALLY
+	UnitOrderHarvestDestructible=0,unitorderdtarg,`harvest`,WESTRING_UNITORDERDTARG_HARVEST
+	UnitOrderMoveDestructible=0,unitorderdtarg,`move`,WESTRING_UNITORDERPTARG_MOVE
+	UnitOrderAIMoveDestructible=0,unitorderdtarg,`AImove`,AImove
+// Night Elf
+	UnitOrderConsumeTree=0,unitorderdtarg,`eattree`,WESTRING_UNITORDERDTARG_CONSUMETREE
+	UnitOrderSentinel=0,unitorderdtarg,`sentinel`,WESTRING_UNITORDERDTARG_SENTINEL
+	UnitOrderGrabTree=1,unitorderdtarg,`grabtree`,WESTRING_UNITORDERDTARG_GRABTREE

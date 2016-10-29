@@ -1,0 +1,2 @@
+ElevatorWallOpClose=1,elevatorwallop,false,WESTRING_ELEVATORWALLOP_CLOSE
+ElevatorWallOpOpen=1,elevatorwallop,true,WESTRING_ELEVATORWALLOP_OPEN

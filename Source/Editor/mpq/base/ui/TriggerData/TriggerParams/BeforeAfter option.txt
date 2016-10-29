@@ -1,0 +1,2 @@
+BeforeAfterBefore=0,beforeafteroption,false,WESTRING_BEFOREAFTER_BEFORE
+BeforeAfterAfter=0,beforeafteroption,true,WESTRING_BEFOREAFTER_AFTER

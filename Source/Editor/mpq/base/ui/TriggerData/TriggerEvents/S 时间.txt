@@ -1,0 +1,12 @@
+TriggerRegisterTimerEventSingle=0,real
+	_TriggerRegisterTimerEventSingle_Defaults=5
+	_TriggerRegisterTimerEventSingle_Limits=0,_
+	_TriggerRegisterTimerEventSingle_Category=TC_TIME
+TriggerRegisterTimerEventPeriodic=0,real
+	_TriggerRegisterTimerEventPeriodic_Defaults=2
+	_TriggerRegisterTimerEventPeriodic_Limits=0,_
+	_TriggerRegisterTimerEventPeriodic_Category=TC_TIME
+TriggerRegisterTimerExpireEventBJ=0,timer
+	_TriggerRegisterTimerExpireEventBJ_Defaults=_
+	_TriggerRegisterTimerExpireEventBJ_Category=TC_TIME
+	_TriggerRegisterTimerExpireEventBJ_ScriptName=TriggerRegisterTimerExpireEvent

@@ -1,0 +1,7 @@
+[DefaultTriggerCategories]
+NumCategories=5
+Category01="关于"
+Category02="Include"
+Category03="System"
+Category04="Event"
+Category05="MapInit"

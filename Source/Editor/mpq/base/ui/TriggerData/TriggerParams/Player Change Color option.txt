@@ -1,0 +1,2 @@
+PlayerChangeColorChange=0,playerchangecoloroption,true,WESTRING_SETPLAYERCOLOR_CHANGE
+PlayerChangeColorRetain=0,playerchangecoloroption,false,WESTRING_SETPLAYERCOLOR_RETAIN

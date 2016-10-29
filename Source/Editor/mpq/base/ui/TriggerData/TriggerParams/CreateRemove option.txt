@@ -1,0 +1,2 @@
+CreateRemoveCreate=0,createremoveoption,true,WESTRING_CREATEREMOVEOPTION_CREATE
+CreateRemoveRemove=0,createremoveoption,false,WESTRING_CREATEREMOVEOPTION_REMOVE

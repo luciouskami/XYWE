@@ -1,0 +1,2 @@
+AICaptainAttack=1,aicaptaintype,true,WESTRING_AICAPTAIN_ATTACK
+AICaptainDefense=1,aicaptaintype,false,WESTRING_AICAPTAIN_DEFENSE

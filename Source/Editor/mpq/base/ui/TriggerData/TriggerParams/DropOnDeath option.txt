@@ -1,0 +1,2 @@
+DropNoDropOptionDrop=0,dropnodropoption,true,WESTRING_DROPNODROPOPTION_DROP
+DropNoDropOptionNoDrop=0,dropnodropoption,false,WESTRING_DROPNODROPOPTION_NODROP

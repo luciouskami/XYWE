@@ -1,0 +1,2 @@
+DiscoveredOptionDiscovered=0,discoveredoption,true,WESTRING_DISCOVEREDOPTION_DISCOVERED
+DiscoveredOptionUndiscovered=0,discoveredoption,false,WESTRING_DISCOVEREDOPTION_UNDISCOVERED

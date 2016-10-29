@@ -1,0 +1,2 @@
+CameraOrientationNormal=0,cameraorientationoption,false,WESTRING_CAMERAORIENTATION_NORMAL
+CameraOrientationInherit=0,cameraorientationoption,true,WESTRING_CAMERAORIENTATION_INHERIT

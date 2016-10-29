@@ -1,0 +1,2 @@
+AscendingOptionAscending=0,ascendingoption,true,WESTRING_ASCENDINGOPTION_ASCENDING
+AscendingOptionDescending=0,ascendingoption,false,WESTRING_ASCENDINGOPTION_DESCENDING

@@ -1,0 +1,1 @@
+bj_lastSetAttackType=0,attacktype,bj_lastSetAttackType,最后设置的攻击类型 [YDWE]

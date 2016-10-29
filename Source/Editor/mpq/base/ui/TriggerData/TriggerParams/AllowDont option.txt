@@ -1,0 +1,2 @@
+AllowDontAllow=0,allowdontoption,true,WESTRING_ALLOWDONTOPTION_ALLOW
+AllowDontDont=0,allowdontoption,false,WESTRING_ALLOWDONTOPTION_DONT

@@ -1,0 +1,6 @@
+objtype=0,0,0,WESTRING_TRIGTYPE_objtype,string
+critmathtype=0,0,0,WESTRING_TRIGTYPE_critmathtype,string
+mathtype=0,0,0,WESTRING_TRIGTYPE_mathtype,string
+damagechoose=0,0,0,WESTRING_TRIGTYPE_damagechoose,boolean
+situation=0,0,0,WESTRING_TRIGTYPE_situation,string
+damagekey=0,0,0,WESTRING_TRIGTYPE_damagekey,boolean

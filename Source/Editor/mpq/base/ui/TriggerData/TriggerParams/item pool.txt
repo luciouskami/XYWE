@@ -1,0 +1,1 @@
+bj_lastCreatedItemPool=0,itempool,bj_lastCreatedItemPool,最后创建的物品池 [YDWE]

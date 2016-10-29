@@ -1,0 +1,2 @@
+EnableDisableEnable=0,enabledisableoption,true,WESTRING_ENABLEDISABLE_ENABLE
+EnableDisableDisable=0,enabledisableoption,false,WESTRING_ENABLEDISABLE_DISABLE

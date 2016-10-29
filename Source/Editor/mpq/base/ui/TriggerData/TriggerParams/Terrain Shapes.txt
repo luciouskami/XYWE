@@ -1,0 +1,2 @@
+TerrainShapeCircle=1,terrainshape,0,WESTRING_TERRAINSHAPE_CIRCLE
+TerrainShapeSquare=1,terrainshape,1,WESTRING_TERRAINSHAPE_SQUARE

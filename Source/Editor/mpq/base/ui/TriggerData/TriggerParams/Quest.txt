@@ -1,0 +1,1 @@
+bj_lastCreatedQuest=0,quest,bj_lastCreatedQuest,最后创建的任务 [R]

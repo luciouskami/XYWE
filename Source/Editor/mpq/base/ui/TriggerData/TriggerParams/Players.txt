@@ -1,0 +1,17 @@
+Player00=0,player,Player(0),WESTRING_PLAYER_00
+PlayerALL=0,player,Player(n),任意玩家
+Player01=0,player,Player(1),WESTRING_PLAYER_01
+Player02=0,player,Player(2),WESTRING_PLAYER_02
+Player03=0,player,Player(3),WESTRING_PLAYER_03
+Player04=0,player,Player(4),WESTRING_PLAYER_04
+Player05=0,player,Player(5),WESTRING_PLAYER_05
+Player06=0,player,Player(6),WESTRING_PLAYER_06
+Player07=0,player,Player(7),WESTRING_PLAYER_07
+Player08=0,player,Player(8),WESTRING_PLAYER_08
+Player09=0,player,Player(9),WESTRING_PLAYER_09
+Player10=0,player,Player(10),WESTRING_PLAYER_10
+Player11=0,player,Player(11),WESTRING_PLAYER_11
+PlayerNA=0,player,Player(PLAYER_NEUTRAL_AGGRESSIVE),WESTRING_PLAYER_NA
+PlayerNV=0,player,Player(bj_PLAYER_NEUTRAL_VICTIM),WESTRING_PLAYER_NV
+PlayerNE=0,player,Player(bj_PLAYER_NEUTRAL_EXTRA),WESTRING_PLAYER_NE
+PlayerNP=0,player,Player(PLAYER_NEUTRAL_PASSIVE),WESTRING_PLAYER_NP

@@ -1,0 +1,1 @@
+bj_lastCreatedWeatherEffect=0,weathereffect,bj_lastCreatedWeatherEffect,最后创建的天气效果 [R]

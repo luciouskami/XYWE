@@ -1,0 +1,12 @@
+OperatorAdd=0,ArithmeticOperator,"+",WESTRING_ARITHMETICOPERATOR_ADD
+OperatorSubtract=0,ArithmeticOperator,"-",WESTRING_ARITHMETICOPERATOR_SUBTRACT
+OperatorMultiply=0,ArithmeticOperator,"*",WESTRING_ARITHMETICOPERATOR_MULTIPLY
+OperatorDivide=0,ArithmeticOperator,"/",WESTRING_ARITHMETICOPERATOR_DIVIDE
+OperatorEqual=0,ComparisonOperator,"==",WESTRING_COMPARISONOPERATOR_EQUAL
+OperatorNotEqual=0,ComparisonOperator,"!=",WESTRING_COMPARISONOPERATOR_NOTEQUAL
+OperatorGreater=0,ComparisonOperator,">",WESTRING_COMPARISONOPERATOR_GREATER
+OperatorGreaterEq=0,ComparisonOperator,">=",WESTRING_COMPARISONOPERATOR_GREATEREQ
+OperatorLess=0,ComparisonOperator,"<",WESTRING_COMPARISONOPERATOR_LESS
+OperatorLessEq=0,ComparisonOperator,"<=",WESTRING_COMPARISONOPERATOR_LESSEQ
+OperatorEqualENE=0,EqualNotEqualOperator,"==",WESTRING_EQUALNOTEQUALOPERATOR_EQUAL
+OperatorNotEqualENE=0,EqualNotEqualOperator,"!=",WESTRING_EQUALNOTEQUALOPERATOR_NOTEQUAL

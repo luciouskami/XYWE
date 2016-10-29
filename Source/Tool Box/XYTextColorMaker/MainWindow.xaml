@@ -1,0 +1,107 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:XYTextColorMaker"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    x:Class="XYTextColorMaker.MainWindow"
+    mc:Ignorable="d"
+    Title="XYTextColorMaker 1.0.1"
+    Width="775.972"
+    Height="398.916"
+    Background="White"
+    WindowStartupLocation="CenterScreen"
+    Focusable="False"
+    ResizeMode="CanMinimize"
+    SizeToContent="WidthAndHeight"
+    Loaded="MainWindow_Loaded"
+    Icon="屌.ico">
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="753" Height="357">
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="248" Height="356">
+            <TabControl x:Name="tabControl" Height="356" VerticalAlignment="Top" HorizontalAlignment="Left" Width="248">
+                <TabItem Header="方案1">
+                    <Grid>
+                        <Grid HorizontalAlignment="Left" Width="238" Height="82" VerticalAlignment="Top">
+                            <Label Content="魔兽世界物品品质" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowItem1" Margin="0,26,0,0" Content="粗糙" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#9d9d9d" Background="Black"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowItem2" Margin="35,26,0,0" Content="普通" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#ffffff" Background="Black"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowItem3" Margin="70,26,0,0" Content="优秀" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#1eff00" Background="Black"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowItem4" Margin="105,26,0,0" Content="精良" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#0081ff" Background="Black"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowItem5" Margin="140,26,0,0" Content="史诗" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#c600ff" Background="Black"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowItem6" Margin="175,26,0,0" Content="传说" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#ff8000" Background="Black"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowItem7" Margin="0,52,0,0" Content="神器/传家宝" Width="76" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#e5cc80" Background="Black"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Width="238" Height="82" VerticalAlignment="Top" Margin="0,82,0,0">
+                            <Label Content="魔兽世界消息频道" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowChat1" Margin="0,26,0,0" Content="普通" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="White"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowChat2" Margin="35,26,0,0" Content="大喊" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FFFF4040"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowChat3" Margin="70,26,0,0" Content="私聊" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FFFF80FF"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowChat4" Margin="105,26,0,0" Content="公会" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FF40FF40"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowChat5" Margin="140,26,0,0" Content="官员" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FF40C040"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowChat6" Margin="175,26,0,0" Content="世界" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FFFFC0C0"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowChat7" Margin="0,52,0,0" Content="队伍" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FFAAAAFF"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowChat8" Margin="35,52,0,0" Content="表情" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FFFF8040"/>
+                        </Grid>
+                        <Grid HorizontalAlignment="Left" Width="238" Height="82" VerticalAlignment="Top" Margin="0,164,0,0">
+                            <Label Content="魔兽世界职业" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob1" Margin="0,26,0,0" Content="战士" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#C69B6D"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob2" Margin="35,26,0,0" Content="猎人" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#AAD372"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob3" Margin="70,26,0,0" Content="萨满" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#2359FF"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob4" Margin="105,26,0,0" Content="圣骑" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#F48CBA"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob5" Margin="140,26,0,0" Content="牧师" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#F0EBE0"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob6" Margin="175,26,0,0" Content="术士" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#9382C9"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob7" Margin="0,52,0,0" Content="盗贼" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FFF468"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob8" Margin="35,52,0,0" Content="法师" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#68CCEF"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob9" Margin="70,52,0,0" Content="死骑" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#C41E3B"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob10" Margin="105,52,0,0" Content="武僧" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#00FFBA"/>
+                            <Button Click="Button_Click_PatchSingleColor" x:Name="btnWowJob11" Margin="140,52,0,0" Content="德鲁伊" Width="44" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black" Foreground="#FF7C0A"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="方案2">
+                    <Grid>
+                        <Grid HorizontalAlignment="Left" Width="238" Height="82" VerticalAlignment="Top">
+                            <Label Content="配色模板" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <Button Click="Button_Template_Item_1" x:Name="templateItem1" Margin="0,26,0,0" Content="粗糙" Width="35" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#9d9d9d" Background="Black"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+        <Grid Margin="248,22,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="505" Height="257">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="257" Width="265">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="227" Width="265">
+                    <RichTextBox x:Name="tbInput" VerticalScrollBarVisibility="Auto" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" Block.LineHeight="1" Background="Black" PreviewKeyDown="TbInput_PreviewKeyDown">
+                        <RichTextBox.Document>
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Run Text="将需要染色的文本输入到这里。" Foreground="White"/><LineBreak/><Run Text="输入完成后，" Foreground="White"/><Run Text="框选" Foreground="Red"/><Run Text="想要染色的文本，然后选择颜色。" Foreground="White"/><LineBreak/><Run Text="完成染色后，点击下方按钮生成对应的染色代码。" Foreground="White"/>
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox.Document>
+                    </RichTextBox>
+                </Grid>
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="30" Width="265">
+                    <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="30" Width="130">
+                        <Button Content="生成触发染色代码" Click="Button_Click_MakeTriggerText"/>
+                    </Grid>
+                    <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="30" Width="135">
+                        <Button Content="生成物编染色代码" Click="Button_Click_MakeObjectEditorText"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Background="#FF5F1A1A" HorizontalAlignment="Right" VerticalAlignment="Top" Height="257" Width="240">
+                <xctk:ColorCanvas x:Name="ccColor" SelectedColor="Black" IsManipulationEnabled="True" Focusable="False" SelectedColorChanged="CcColor_SelectedColorChanged"/>
+            </Grid>
+        </Grid>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="77" Width="505" Margin="0,0,0,1">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="77" Width="265">
+                <TextBox x:Name="tbOutput" VerticalScrollBarVisibility="Auto" BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" Block.LineHeight="1" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" TextWrapping="Wrap"/>
+            </Grid>
+            <Grid HorizontalAlignment="Right" VerticalAlignment="Top" Height="77" Width="240">
+                <TextBox Text="这个染色器还在测试中。如果你发现了任何BUG，欢迎反馈给我们，谢谢！官网地址：wow9.org/xywe" TextWrapping="Wrap"></TextBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,1 @@
+bj_lastCreatedImage=0,image,bj_lastCreatedImage,最后创建的图像 [R]

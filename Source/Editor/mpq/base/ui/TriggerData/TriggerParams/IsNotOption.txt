@@ -1,0 +1,2 @@
+IsNotIs=0,isnotoption,true,ÊÇ
+IsNotNot=0,isnotoption,false,²»ÊÇ

@@ -1,0 +1,7 @@
+MapInitializationEvent=0,nothing
+	// Special events not defined in scripts, handled internally by the editor
+	_MapInitializationEvent_Defaults=
+	_MapInitializationEvent_Category=TC_NOTHING
+YDWEDisableRegister=0,nothing
+	_YDWEDisableRegister_Defaults=
+	_YDWEDisableRegister_Category=TC_NOTHING

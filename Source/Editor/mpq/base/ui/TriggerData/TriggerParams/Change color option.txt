@@ -1,0 +1,2 @@
+ChangeColorTrue=0,colorchangeoption,true,WESTRING_CHANGECOLOR_CHANGE
+ChangeColorFalse=0,colorchangeoption,false,WESTRING_CHANGECOLOR_RETAIN

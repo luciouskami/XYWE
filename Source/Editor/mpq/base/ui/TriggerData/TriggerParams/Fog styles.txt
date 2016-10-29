@@ -1,0 +1,3 @@
+FogStyleLinear=0,fogstyle,0,WESTRING_FOGSTYLE_LINEAR
+FogStyleExp1=0,fogstyle,1,WESTRING_FOGSTYLE_EXP1
+FogStyleExp2=0,fogstyle,2,WESTRING_FOGSTYLE_EXP2

@@ -1,0 +1,2 @@
+ExplodeDontExplode=0,explodedontoption,true,WESTRING_EXPLODEDONTOPTION_EXPLODE
+ExplodeDontDont=0,explodedontoption,false,WESTRING_EXPLODEDONTOPTION_DONT

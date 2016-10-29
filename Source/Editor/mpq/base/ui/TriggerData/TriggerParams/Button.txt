@@ -1,0 +1,1 @@
+bj_lastCreatedButton=0,button,bj_lastCreatedButton,最后创建的对话框按钮 [R]

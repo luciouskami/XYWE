@@ -1,0 +1,4 @@
+TriggerRegisterItemDeathEvent=0,item
+	_TriggerRegisterItemDeathEvent_Defaults=_
+	_TriggerRegisterItemDeathEvent_Category=TC_ITEM
+	_TriggerRegisterItemDeathEvent_ScriptName=TriggerRegisterDeathEvent

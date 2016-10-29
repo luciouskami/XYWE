@@ -1,0 +1,9 @@
+[TriggerTypeDefaults]
+boolean=false,WESTRING_FALSE
+integer=0
+real=0
+group=CreateGroup(),WESTRING_TRIGDEFAULT_GROUP
+force=CreateForce(),WESTRING_TRIGDEFAULT_FORCE
+timer=CreateTimer(),WESTRING_TRIGDEFAULT_TIMER
+dialog=DialogCreate(),WESTRING_TRIGDEFAULT_DIALOG
+region=CreateRegion(),WESTRING_TRIGDEFAULT_REGION

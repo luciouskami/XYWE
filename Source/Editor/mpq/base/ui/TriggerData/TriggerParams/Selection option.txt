@@ -1,0 +1,2 @@
+SelDeselOptionSel=0,seldeseloption,true,WESTRING_SELDESELOPTION_SEL
+SelDeselOptionDesel=0,seldeseloption,false,WESTRING_SELDESELOPTION_DESEL
