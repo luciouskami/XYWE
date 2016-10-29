@@ -1,2 +1,3 @@
 # XYWE
-XianYu WorldEditor
+
+咸鱼地图编辑器，重整结构中。
