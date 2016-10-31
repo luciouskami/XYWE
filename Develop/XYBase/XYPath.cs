@@ -16,7 +16,7 @@ namespace XYBase
             public static string Root = Path.GetFullPath(@"..");
             public static string Core = Root + @"\core";
 
-            public static string Editor = Core + @"\ydwe";
+            public static string Editor = Core + @"\editor";
 
             public static string Jass = Editor + @"\jass";
             public static string Share = Editor + @"\share";

@@ -13,7 +13,7 @@ namespace XYBase
         {
             public static void StartXYWE()
             {
-                Process.Start(@"..\ydwe\YDWE.exe");
+                Process.Start(@"editor\YDWE.exe");
             }
 
             public static void StartXYCodeLibraryManager()
