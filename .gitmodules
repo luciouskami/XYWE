@@ -1,6 +1,4 @@
 [submodule "Import/YDWE"]
 	path = Import/YDWE
 	url = https://github.com/actboy168/YDWE
-[submodule "Import/ScriptSharp"]
-	path = Import/ScriptSharp
-	url = https://github.com/chribben/ScriptSharp.git
+	ignore = dirty
