@@ -14,8 +14,13 @@ git clone --recursive https://github.com/LazyKnightX/XYWE DirName
 
 ### 仓库目录内
 
-克隆/更新 所有子模块  
+克隆所有子模块  
 git submodule update --init --recursive
+
+更新所有子模块到其Github上的最新版本([#](http://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin))  
+git submodule foreach --recursive git pull origin master  
+git submodule foreach git pull origin master  
+git submodule foreach git pull
 
 移除子模块  
 git rm --cached path/to/submodule
