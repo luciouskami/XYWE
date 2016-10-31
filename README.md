@@ -17,6 +17,9 @@ git clone --recursive https://github.com/LazyKnightX/XYWE DirName
 克隆/更新 所有子模块  
 git submodule update --init --recursive
 
+移除子模块  
+git rm --cached path/to/submodule
+
 ## 资源结构
 
 ### ./XYWE.exe Develop.lnk
