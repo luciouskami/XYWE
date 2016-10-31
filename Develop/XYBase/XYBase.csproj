@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58D896BF-6664-40F6-83FE-7ED6DEB75577}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XYBase</RootNamespace>
+    <AssemblyName>XYBase</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\core\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\core\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateState.cs" />
+    <Compile Include="ExtendSystemChar.cs" />
+    <Compile Include="Include\Ini.cs" />
+    <Compile Include="UIConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XYCodeLibrary.cs" />
+    <Compile Include="XYEncoding.cs" />
+    <Compile Include="XYFile.cs" />
+    <Compile Include="XYInfo.cs" />
+    <Compile Include="XYIni.cs" />
+    <Compile Include="XYMpq.cs" />
+    <Compile Include="XYPath.cs" />
+    <Compile Include="XYProcess.cs" />
+    <Compile Include="XYRandom.cs" />
+    <Compile Include="XYTip.cs" />
+    <Compile Include="XYVersion.cs" />
+    <Compile Include="XYWeb.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\tips.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="source\jass\Lua\SetBackGroundMusic.h" />
+    <Content Include="source\jass\WM\Base\120define.h" />
+    <Content Include="source\jass\WM\Base\124define.h" />
+    <Content Include="source\jass\WM\Base\GeneralDefine.h" />
+    <Content Include="source\mpq\base\ui\TriggerData.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerActions\TODO.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerActions\分组 N 逆天.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerActions\分组.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerActions\普通.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerActions\过时.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCalls\JAPI.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCalls\分组.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCalls\哈希表.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCalls\过时.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCategories\AI Editor %28Only%29.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCategories\Debug.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCategories\Normal.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCategories\Single.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerCategories\TODO.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\D 单位.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\D 对话框.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\K 可破坏物.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\K 可追踪物.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\S 事件.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\S 时间.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\W 物品.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\W 玩家.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\Y 游戏.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\普通.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerEvents\过时.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\AddRemove option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\AddSetTo option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\AI Captain types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\AI Command Pop options.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Alliance settings.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Alliance types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\AllowDont option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Animation rarity controls.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Ascending option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Attack Or Attacked.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Attack types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\AttackType.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Availability option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Available Option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\BeforeAfter option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Blending Methods.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Boolean.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Buff Polarity options.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Buff Resistance types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Buff Types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Button.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Cache value types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Camera Bounds Adjustment Type.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Camera fields.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Camera Orientation option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Camera Pan option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Change color option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Chat match types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\CheckingIgnoring option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Cinematic filter textures.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Completion option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\converunitoption.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Corpse creation styles.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\CraterTypes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\CreateRemove option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Damage types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\DamageType.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Daytime Ambient Themes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\DefeatCondition.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Destructables.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Discovered option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\DropOnDeath option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Droppable option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\DYC 1.03.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Effect types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Effect.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Elevator wall choices.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Elevator wall operations.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\EnabledDisabled option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\EnableDisable option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Explode Option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\FadeDont option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Failure option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Fog states.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Fog styles.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\FogModifier.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\For use with TriggerRegisterGameEvent.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\For use with TriggerRegisterPlayerEvent.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\For use with TriggerRegisterPlayerUnitEvent.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\For use with TriggerRegisterUnitEvent.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Forces.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Frozen Throne Expansion Events.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Game difficulties.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Game results.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Game speeds.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\GameCache.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Gate states.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Group.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Hashtable value types %28localization stolen from gamecache%29.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Hero Skills.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Hero Stats.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\HotKeyInt.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Image types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Image.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Include option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\IncludeOptionNot.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\InOut option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Integer.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Invulnerability option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\IsNotOption.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Item Classes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\item pool.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Item status codes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Itemcode status codes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Items.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\JAPI.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Keyboard Event Keys.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Keyboard Event Types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Leaderboard.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\LeaderboardSort option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Lightning Types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Lightning.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Limit operators.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\LockUnLockOption.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Map Control.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Map densities.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Map flags.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Melee AI difficulties.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Minimap ping styles.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Minimize option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Mission Index.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Modify methods.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\multiboard.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Music themes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Music.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\NearestOnlyOption.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Nighttime Ambient Themes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Normal.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\OnOff option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\OnOffIntoption.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\OnOffNotoption.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Operators.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\OrderCode.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Other.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Pathing option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Pathing types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\PauseResume option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\PauseUnpause option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Pawnable option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Periodic option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\pingstyle.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Player Change Color option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Player colors.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Player flags.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Player scores.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Player slot states.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Player states - resources only.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Player states.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Player unit events.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Players.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Quest.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Questitem.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\QuestMessageType option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\QuestType option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Races.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Reals.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Rects.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Rescuable option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\RippleTypes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\ScriptCode.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Selection option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\ShareDont option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\ShareVisionOption.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\ShowHide option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\SJWE.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Sky Model.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\SleepWake option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Sound types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Sounds.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\String case option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\SuspendResume Option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Target Type.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\TCWE.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Terrain Shapes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\TerrainDeformation.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\TextTag.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Tile IDs.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Timed-life buff codes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Timer.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\TimerDialog.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Tournament Game Event Types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Trigger Destructible-Targeted Unit Orders.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Trigger Immediate or Untageted Unit Orders.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Trigger Item-Targeted Unit Orders.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Trigger Point-Targeted Unit Orders.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Trigger Unit-Targeted Unit Orders.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Ubersplat codes.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Ubersplat.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Unit events.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Unit pool.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Unit State Method.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Unit states %28read-only%29.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Unit types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Unit-Types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\UnitFacing bones.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Units.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\UnitStatesSec.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\UnitTypeAddAble.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\unWE.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Usage options.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\VertOnlyOption.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Volume Groups.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\WaitDont option.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Weapon types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\WeaponType.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\Weather Effects.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\WeatherEffect.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\WMUI.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\YDWE 修改单位.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\YDWE 修改属性.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\技能事件.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerParams\逆天.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\Added Custom Types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\Trigger Non-Variable Types - Atomic %28built-in to the language%29.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\Trigger Non-Variable Types - Basic %28from common.j%29.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\Trigger Non-Variable Types - Custom %28handled internally by the editor%29.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\Trigger Non-Variable Types - File strings.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\Trigger Non-Variable Types - Utility, only used to simplify triggers.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\Trigger Variable Types.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\WMUI.Lua.txt" />
+    <Content Include="source\mpq\base\ui\TriggerData\TriggerTypes\WMUI.Phre.txt" />
+    <Content Include="source\mpq\base\ui\TriggerStrings.txt" />
+    <Content Include="source\mpq\base\ui\WorldEditStrings.txt" />
+    <Content Include="source\mpq\units\ui\miscdata.txt" />
+    <Content Include="source\mpq\units\ui\uniteditordata.txt" />
+    <Content Include="source\mpq\units\ui\worldeditdata.txt" />
+    <Content Include="source\mpq\units\units\campaignabilityfunc.txt" />
+    <Content Include="source\mpq\units\units\campaignabilitystrings.txt" />
+    <Content Include="source\mpq\units\units\campaignunitfunc.txt" />
+    <Content Include="source\mpq\units\units\campaignunitstrings.txt" />
+    <Content Include="source\mpq\units\units\campaignupgradestrings.txt" />
+    <Content Include="source\mpq\units\units\commandstrings.txt" />
+    <Content Include="source\mpq\units\units\commonabilityfunc.txt" />
+    <Content Include="source\mpq\units\units\commonabilitystrings.txt" />
+    <Content Include="source\mpq\units\units\humanabilityfunc.txt" />
+    <Content Include="source\mpq\units\units\humanabilitystrings.txt" />
+    <Content Include="source\mpq\units\units\humanunitfunc.txt" />
+    <Content Include="source\mpq\units\units\humanunitstrings.txt" />
+    <Content Include="source\mpq\units\units\humanupgradefunc.txt" />
+    <Content Include="source\mpq\units\units\humanupgradestrings.txt" />
+    <Content Include="source\mpq\units\units\itemabilityfunc.txt" />
+    <Content Include="source\mpq\units\units\itemabilitystrings.txt" />
+    <Content Include="source\mpq\units\units\itemfunc.txt" />
+    <Content Include="source\mpq\units\units\itemstrings.txt" />
+    <Content Include="source\mpq\units\units\miscdata.txt" />
+    <Content Include="source\mpq\units\units\miscgame.txt" />
+    <Content Include="source\mpq\units\units\neutralabilityfunc.txt" />
+    <Content Include="source\mpq\units\units\neutralabilitystrings.txt" />
+    <Content Include="source\mpq\units\units\neutralunitfunc.txt" />
+    <Content Include="source\mpq\units\units\neutralunitstrings.txt" />
+    <Content Include="source\mpq\units\units\neutralupgradestrings.txt" />
+    <Content Include="source\mpq\units\units\nightelfabilityfunc.txt" />
+    <Content Include="source\mpq\units\units\nightelfabilitystrings.txt" />
+    <Content Include="source\mpq\units\units\nightelfunitfunc.txt" />
+    <Content Include="source\mpq\units\units\nightelfunitstrings.txt" />
+    <Content Include="source\mpq\units\units\nightelfupgradestrings.txt" />
+    <Content Include="source\mpq\units\units\orcabilityfunc.txt" />
+    <Content Include="source\mpq\units\units\orcabilitystrings.txt" />
+    <Content Include="source\mpq\units\units\orcunitfunc.txt" />
+    <Content Include="source\mpq\units\units\orcunitstrings.txt" />
+    <Content Include="source\mpq\units\units\orcupgradefunc.txt" />
+    <Content Include="source\mpq\units\units\orcupgradestrings.txt" />
+    <Content Include="source\mpq\units\units\undeadabilityfunc.txt" />
+    <Content Include="source\mpq\units\units\undeadabilitystrings.txt" />
+    <Content Include="source\mpq\units\units\undeadunitfunc.txt" />
+    <Content Include="source\mpq\units\units\undeadunitstrings.txt" />
+    <Content Include="source\mpq\units\units\undeadupgradefunc.txt" />
+    <Content Include="source\mpq\units\units\undeadupgradestrings.txt" />
+    <Content Include="source\mpq\units\units\unitglobalstrings.txt" />
+    <Content Include="source\mpq\xywe\ui\WorldEditStrings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\data.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="source\jass\DYCUI\DYCAbilities.cfg" />
+    <None Include="source\jass\DYCUI\DYCAbilities.j" />
+    <None Include="source\jass\DYCUI\DYCbarsim.cfg" />
+    <None Include="source\jass\DYCUI\DYCbarsim.j" />
+    <None Include="source\jass\DYCUI\DYCbarsimoff.cfg" />
+    <None Include="source\jass\DYCUI\DYCbarsimoff.j" />
+    <None Include="source\jass\DYCUI\DYCbase.cfg" />
+    <None Include="source\jass\DYCUI\DYCbase.j" />
+    <None Include="source\jass\DYCUI\DYCcharge3d.cfg" />
+    <None Include="source\jass\DYCUI\DYCcharge3d.j" />
+    <None Include="source\jass\DYCUI\DYCdmgdisplay.cfg" />
+    <None Include="source\jass\DYCUI\DYCdmgdisplay.j" />
+    <None Include="source\jass\DYCUI\DYCdmgdodge.cfg" />
+    <None Include="source\jass\DYCUI\DYCdmgdodge.j" />
+    <None Include="source\jass\DYCUI\DYCghosting.cfg" />
+    <None Include="source\jass\DYCUI\DYCghosting.j" />
+    <None Include="source\jass\DYCUI\DYCghostingoff.cfg" />
+    <None Include="source\jass\DYCUI\DYCghostingoff.j" />
+    <None Include="source\jass\DYCUI\DYCpushback.cfg" />
+    <None Include="source\jass\DYCUI\DYCpushback.j" />
+    <None Include="source\jass\DYCUI\DYCspawnsystem.cfg" />
+    <None Include="source\jass\DYCUI\DYCspawnsystem.j" />
+    <None Include="source\jass\DYCUI\DYCTriggerEvent.cfg" />
+    <None Include="source\jass\DYCUI\DYCTriggerEvent.j" />
+    <None Include="source\jass\DYCUI\DYCultrams.cfg" />
+    <None Include="source\jass\DYCUI\DYCultrams.j" />
+    <None Include="source\jass\DYCUI\DYCultramsoff.cfg" />
+    <None Include="source\jass\DYCUI\DYCultramsoff.j" />
+    <None Include="source\jass\DzAPI.cfg" />
+    <None Include="source\jass\DzAPI.j" />
+    <None Include="source\jass\Editor\TODO_JapiToLuaToJassToUI.j" />
+    <None Include="source\jass\eJass\ejtimer.cfg" />
+    <None Include="source\jass\eJass\ejtimer.j" />
+    <None Include="source\jass\Lua\Lua.cfg" />
+    <None Include="source\jass\Lua\Lua.j" />
+    <None Include="source\jass\SJ\HatredSystem.cfg" />
+    <None Include="source\jass\SJ\HatredSystem.j" />
+    <None Include="source\jass\SJ\SJWEBase.cfg" />
+    <None Include="source\jass\SJ\SJWEBase.j" />
+    <None Include="source\jass\SJ\SJWEtype.cfg" />
+    <None Include="source\jass\SJ\SJWEtype.j" />
+    <None Include="source\jass\SJ\SWEsystem.cfg" />
+    <None Include="source\jass\SJ\SWEsystem.j" />
+    <None Include="source\jass\TCWE\TCMain.j" />
+    <None Include="source\jass\TCWE\TCPreloadSystem.cfg" />
+    <None Include="source\jass\TCWE\TCPreloadSystem.j" />
+    <None Include="source\jass\TCWE\TCStringcodeSystem.cfg" />
+    <None Include="source\jass\TCWE\TCStringcodeSystem.j" />
+    <None Include="source\jass\TCWE\TCTimerSystem.j" />
+    <None Include="source\jass\TCWE\TCTimerUtils.j" />
+    <None Include="source\jass\unWE\unWEDummyCaster.cfg" />
+    <None Include="source\jass\unWE\unWEDummyCaster.j" />
+    <None Include="source\jass\unWE\unWENewItemsFormula .cfg" />
+    <None Include="source\jass\unWE\unWENewItemsFormula .j" />
+    <None Include="source\jass\unWE\unWEOperatorRI.cfg" />
+    <None Include="source\jass\unWE\unWEOperatorRI.j" />
+    <None Include="source\jass\unWE\unWERectLoc.cfg" />
+    <None Include="source\jass\unWE\unWERectLoc.j" />
+    <None Include="source\jass\unWE\unWESetUnitLocByVector.cfg" />
+    <None Include="source\jass\unWE\unWESetUnitLocByVector.j" />
+    <None Include="source\jass\unWE\unWESetUnitState.cfg" />
+    <None Include="source\jass\unWE\unWESetUnitState.j" />
+    <None Include="source\jass\unWE\unWETextTag.cfg" />
+    <None Include="source\jass\unWE\unWETextTag.j" />
+    <None Include="source\jass\unWE\unWETriggerList.cfg" />
+    <None Include="source\jass\unWE\unWETriggerList.j" />
+    <None Include="source\jass\unWE\unWEUnitAddAbility.cfg" />
+    <None Include="source\jass\unWE\unWEUnitAddAbility.j" />
+    <None Include="source\jass\unWE\unWEUnitDamageTarget.cfg" />
+    <None Include="source\jass\unWE\unWEUnitDamageTarget.j" />
+    <None Include="source\jass\unWE\unWEUnitInventoryCountByType.cfg" />
+    <None Include="source\jass\unWE\unWEUnitInventoryCountByType.j" />
+    <None Include="source\jass\WMSLKAbilitys\WMSLKAbilitys.cfg" />
+    <None Include="source\jass\WMSLKAbilitys\WMSLKAbilitys.j" />
+    <None Include="source\jass\WM\AddSpecialEffectForPlayer.cfg" />
+    <None Include="source\jass\WM\AddSpecialEffectForPlayer.j" />
+    <None Include="source\jass\WM\AntiCheatC2I.cfg" />
+    <None Include="source\jass\WM\AntiCheatC2I.j" />
+    <None Include="source\jass\WM\AntiCheatHke.cfg" />
+    <None Include="source\jass\WM\AntiCheatHke.j" />
+    <None Include="source\jass\WM\AntiCheatPShan.cfg" />
+    <None Include="source\jass\WM\AntiCheatPShan.j" />
+    <None Include="source\jass\WM\Atan2ForCoordinate.cfg" />
+    <None Include="source\jass\WM\Atan2ForCoordinate.j" />
+    <None Include="source\jass\WM\AutoRemovePowerupItem.cfg" />
+    <None Include="source\jass\WM\AutoRemovePowerupItem.j" />
+    <None Include="source\jass\WM\Base\WMGeneral.j" />
+    <None Include="source\jass\WM\Base\WMHT124.j" />
+    <None Include="source\jass\WM\Base\WMRB120.j" />
+    <None Include="source\jass\WM\CinematicFadeForPlayer.cfg" />
+    <None Include="source\jass\WM\CinematicFadeForPlayer.j" />
+    <None Include="source\jass\WM\CKRefresh.cfg" />
+    <None Include="source\jass\WM\CKRefresh.j" />
+    <None Include="source\jass\WM\Common\GetCliffGradient.cfg" />
+    <None Include="source\jass\WM\Common\GetCliffGradient.j" />
+    <None Include="source\jass\WM\Common\TerrainPathability.cfg" />
+    <None Include="source\jass\WM\Common\TerrainPathability.j" />
+    <None Include="source\jass\WM\CreateAssUnit.cfg" />
+    <None Include="source\jass\WM\CreateAssUnit.j" />
+    <None Include="source\jass\WM\CreateTextTagForPlayer.cfg" />
+    <None Include="source\jass\WM\CreateTextTagForPlayer.j" />
+    <None Include="source\jass\WM\CustomDefeatEx.cfg" />
+    <None Include="source\jass\WM\CustomDefeatEx.j" />
+    <None Include="source\jass\WM\DistanceBetweenCoordinates.cfg" />
+    <None Include="source\jass\WM\DistanceBetweenCoordinates.j" />
+    <None Include="source\jass\WM\DoubleClick.cfg" />
+    <None Include="source\jass\WM\DoubleClick.j" />
+    <None Include="source\jass\WM\F2DanMu.cfg" />
+    <None Include="source\jass\WM\F2DanMu.j" />
+    <None Include="source\jass\WM\GetHost.cfg" />
+    <None Include="source\jass\WM\GetHost.j" />
+    <None Include="source\jass\WM\GetItemCostInit.cfg" />
+    <None Include="source\jass\WM\GetItemCostInit.j" />
+    <None Include="source\jass\WM\GetPlayerUnitTypeCount.cfg" />
+    <None Include="source\jass\WM\GetPlayerUnitTypeCount.j" />
+    <None Include="source\jass\WM\IsUnitInvulnerable.cfg" />
+    <None Include="source\jass\WM\IsUnitInvulnerable.j" />
+    <None Include="source\jass\WM\IsUnitSpelling.cfg" />
+    <None Include="source\jass\WM\IsUnitSpelling.j" />
+    <None Include="source\jass\WM\LeakMonitor.cfg" />
+    <None Include="source\jass\WM\LeakMonitor.j" />
+    <None Include="source\jass\WM\LocToLocEx.cfg" />
+    <None Include="source\jass\WM\LocToLocEx.j" />
+    <None Include="source\jass\WM\PlayMidi.cfg" />
+    <None Include="source\jass\WM\PlayMidi.j" />
+    <None Include="source\jass\WM\ReviveDestructables.cfg" />
+    <None Include="source\jass\WM\ReviveDestructables.j" />
+    <None Include="source\jass\WM\SetCameraTargetControllerEx.cfg" />
+    <None Include="source\jass\WM\SetCameraTargetControllerEx.j" />
+    <None Include="source\jass\WM\SetUnitMovable.cfg" />
+    <None Include="source\jass\WM\SetUnitMovable.j" />
+    <None Include="source\jass\WM\SetUnitPathingAll.cfg" />
+    <None Include="source\jass\WM\SetUnitPathingAll.j" />
+    <None Include="source\jass\WM\UnitAlive.cfg" />
+    <None Include="source\jass\WM\UnitAlive.j" />
+    <None Include="source\jass\WM\WMAOE.cfg" />
+    <None Include="source\jass\WM\WMAOE.j" />
+    <None Include="source\jass\WM\WMAroundSystem.cfg" />
+    <None Include="source\jass\WM\WMAroundSystem.j" />
+    <None Include="source\jass\WM\WMBase.cfg" />
+    <None Include="source\jass\WM\WMBase.j" />
+    <None Include="source\jass\WM\WMCreateEffects.cfg" />
+    <None Include="source\jass\WM\WMCreateEffects.j" />
+    <None Include="source\jass\WM\WMGetGroup.cfg" />
+    <None Include="source\jass\WM\WMGetGroup.j" />
+    <None Include="source\jass\WM\WMKillSystem.cfg" />
+    <None Include="source\jass\WM\WMKillSystem.j" />
+    <None Include="source\jass\WM\WMLeakMonitorSystem.cfg" />
+    <None Include="source\jass\WM\WMLeakMonitorSystem.j" />
+    <None Include="source\jass\WM\WMRush.cfg" />
+    <None Include="source\jass\WM\WMRush.j" />
+    <None Include="source\jass\XYWE\XYTime.cfg" />
+    <None Include="source\jass\XYWE\XYTime.j" />
+    <None Include="source\mpq\base\ui\TriggerData\DefaultTriggerCategories\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\DefaultTriggerCategories\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\DefaultTriggers\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\DefaultTriggers\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerActions\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerActions\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerCalls\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerCalls\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerCategories\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerCategories\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerConditions\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerConditions\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerEvents\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerEvents\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerParams\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerParams\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerTypeDefaults\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerTypeDefaults\__main__" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerTypes\README.md" />
+    <None Include="source\mpq\base\ui\TriggerData\TriggerTypes\__main__" />
+    <None Include="source\mpq\config" />
+    <None Include="source\mpq\units\doodads\doodadmetadata.slk" />
+    <None Include="source\mpq\units\doodads\doodads.slk" />
+    <None Include="source\mpq\units\ui\loading-yuexie.blp" />
+    <None Include="source\mpq\units\units\abilitybuffdata.slk" />
+    <None Include="source\mpq\units\units\abilitybuffmetadata.slk" />
+    <None Include="source\mpq\units\units\abilitydata.slk" />
+    <None Include="source\mpq\units\units\abilitymetadata.slk" />
+    <None Include="source\mpq\units\units\destructabledata.slk" />
+    <None Include="source\mpq\units\units\destructablemetadata.slk" />
+    <None Include="source\mpq\units\units\itemdata.slk" />
+    <None Include="source\mpq\units\units\miscmetadata.slk" />
+    <None Include="source\mpq\units\units\unitabilities.slk" />
+    <None Include="source\mpq\units\units\unitbalance.slk" />
+    <None Include="source\mpq\units\units\unitdata.slk" />
+    <None Include="source\mpq\units\units\unitmetadata.slk" />
+    <None Include="source\mpq\units\units\unitui.slk" />
+    <None Include="source\mpq\units\units\unitweapons.slk" />
+    <None Include="source\mpq\units\units\upgradedata.slk" />
+    <None Include="source\mpq\units\units\upgradeeffectmetadata.slk" />
+    <None Include="source\mpq\units\units\upgrademetadata.slk" />
+    <None Include="source\plugin\tesh\styles\default\Styles.ini" />
+    <None Include="source\plugin\tesh\styles\default\TESH.ini" />
+    <None Include="source\plugin\tesh\styles\monokai\Styles.ini" />
+    <None Include="source\plugin\tesh\styles\monokai\TESH.ini" />
+    <None Include="source\plugin\warcraft3\dzclient_api.ini" />
+    <None Include="source\script\compile\ejass.lua" />
+    <None Include="source\script\compile\inject_code.lua" />
+    <None Include="source\script\compile\template.lua" />
+    <None Include="source\script\compile\wave.lua" />
+    <None Include="source\script\uiloader.lua" />
+    <None Include="source\script\ydwe_on_menu.lua" />
+    <None Include="source\script\ydwe_on_startup.lua" />
+    <None Include="source\script\ydwe_on_test.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cache\" />
+    <Folder Include="editor\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

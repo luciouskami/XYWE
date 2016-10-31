@@ -1,2 +1,0 @@
-REM 1.复制YDWE(XYEdition)
-REM 2.复制XYWE

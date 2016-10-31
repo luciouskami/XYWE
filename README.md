@@ -16,3 +16,13 @@ git clone --recursive https://github.com/LazyKnightX/XYWE DirName
 
 克隆/更新 所有子模块  
 git submodule update --init --recursive
+
+## 资源结构
+
+### ./XYWE.exe Develop.lnk
+
+以开发模式启动咸鱼工具箱，包含 编译YDWE (XY Edition)，发布XYWE 等操作
+
+### ./core/editor
+
+固定的编辑器目录，编译后的YDWE会被放到这里，咸鱼工具箱会在每次启动WE前根据用户配置来更新editor目录的数据，从而实现动态管理
