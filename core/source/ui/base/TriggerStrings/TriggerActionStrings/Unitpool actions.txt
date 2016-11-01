@@ -1,0 +1,12 @@
+UnitPoolRemoveUnitType="删除单位类型 [C]"
+	UnitPoolRemoveUnitType="从 ",~单位池," 中删除 ",~单位
+	UnitPoolRemoveUnitTypeHint=
+PlaceRandomUnit="提取单位 [C]"
+	PlaceRandomUnit="根据 ",~单位池," 的权重为 ",~玩家," 提取其中任意一个单位到点 (",~X,", ",~Y,")"," 面向角度 ",~度
+	PlaceRandomUnitHint=
+YDWEPlaceRandomUnit="提取单位 [Y]"
+	YDWEPlaceRandomUnit="根据 ",~单位池," 的权重为 ",~玩家," 提取其中任意一个单位到点 (",~X,", ",~Y,")"," 面向角度 ",~度
+	YDWEPlaceRandomUnitHint="使用 '最后从单位池中取出的单位' 获取"
+DestroyUnitPool="删除单位池 [C]"
+	DestroyUnitPool="删除 ",~单位池
+	DestroyUnitPoolHint=

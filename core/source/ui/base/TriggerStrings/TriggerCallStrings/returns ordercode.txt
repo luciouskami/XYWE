@@ -1,0 +1,12 @@
+String2OrderIdBJ="转换命令字符串为命令ID"
+	String2OrderIdBJ="转换 ",~字符串," 为命令ID"
+	String2OrderIdBJHint="如''harvest'', ''move'', ''smart'', ''attack''都是命令字符串."
+UnitId2OrderIdBJ="转换单位类型为命令ID"
+	UnitId2OrderIdBJ="转换 ",~单位类型," 为命令ID"
+	UnitId2OrderIdBJHint=
+GetIssuedOrderIdBJ="发布的命令ID"
+	GetIssuedOrderIdBJ="发布的命令ID"
+	GetIssuedOrderIdBJHint="响应'发布命令'单位事件."
+GetUnitCurrentOrder="当前命令ID"
+	GetUnitCurrentOrder=~单位," 的当前命令ID."
+	GetUnitCurrentOrderHint=

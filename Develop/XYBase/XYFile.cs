@@ -9,6 +9,7 @@ namespace XYBase
 {
     public delegate void ForFileAction(string fullName);
     public delegate void OnSyncSuccessAction(string fullName);
+    public delegate void OnCompileSuccessAction(string fullName);
 
     public static class XYFile
     {
@@ -72,20 +73,40 @@ namespace XYBase
                 }
             }
         }
+        /// <summary>
+        /// sourcePath: Directory, targetPath: File
+        /// </summary>
+        /// <param name="sourcePath"></param>
+        /// <param name="targetPath"></param>
+        public static void Compile(string sourcePath, string targetPath)
+        {
+            var compiler = new XYCompiler(sourcePath, null);
+            var output = compiler.Output();
+            if (!Directory.Exists(targetPath)) Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
+            File.WriteAllText(targetPath, output, Encoding.UTF8);
+        }
+        public static void SyncFile(string sourcePath, string targetPath, OnSyncSuccessAction action = null)
+        {
+            if (!File.Exists(sourcePath)) throw new FileNotFoundException(sourcePath);
+
+            if (!File.Exists(targetPath) ||
+                (File.Exists(targetPath) &&
+                    File.GetLastWriteTimeUtc(sourcePath) != File.GetLastWriteTimeUtc(targetPath)))
+            {
+                var dirPath = Path.GetDirectoryName(targetPath);
+                if (!Directory.Exists(dirPath))
+                    Directory.CreateDirectory(dirPath);
+                File.Copy(sourcePath, targetPath, true);
+                action?.Invoke(sourcePath);
+            }
+        }
         public static void SyncDirectory(string sourcePath, string targetPath, OnSyncSuccessAction action = null)
         {
-            ForEachFile(sourcePath, (fullName) =>
+            ForEachFile(sourcePath, fullName =>
             {
                 string _sourcePath = fullName;
                 string _targetPath = fullName.Replace(sourcePath, targetPath);
-
-                if (!File.Exists(_targetPath) ||
-                    (File.Exists(_targetPath) &&
-                        File.GetLastWriteTimeUtc(_sourcePath) != File.GetLastWriteTimeUtc(_targetPath)))
-                {
-                    File.Copy(_sourcePath, _targetPath, true);
-                    action?.Invoke(fullName);
-                }
+                SyncFile(_sourcePath, _targetPath, action);
             });
         }
     }

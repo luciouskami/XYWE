@@ -1,0 +1,6 @@
+InitGameCache="新建游戏缓存 [C]"
+	InitGameCache="新建游戏缓存: ",~缓存名
+	InitGameCacheHint="创建一个新的游戏缓存,一个地图最多只有有256个游戏缓存."
+GetLastCreatedGameCacheBJ="最后创建的游戏缓存"
+	GetLastCreatedGameCacheBJ="最后创建的游戏缓存"
+	GetLastCreatedGameCacheBJHint="最后一个由'游戏缓存 - 创建缓存'动作创建的缓存."

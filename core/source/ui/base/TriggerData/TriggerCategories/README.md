@@ -1,5 +1,5 @@
-// Defines categories for organizing trigger functions
-// Key: Arbitrary category identifier
-// Value 0: Display text
-// Value 1: Icon image file
-// Value 2: Optional flag (defaults to 0) indicating to disable display of category name
+// 定义分类, 用于将触发器函数进行分类
+// 键: 分类的ID
+// 值0: 名字
+// 值1: 图标文件路径
+// 值2: 是否隐藏分类(0:不隐藏, 1:隐藏, 默认:0)。隐藏的分类仅仅不能在分类列表中看到分类，但仍然可以在“全部”里找到

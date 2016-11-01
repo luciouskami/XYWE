@@ -1,0 +1,6 @@
+CreateUnitPool="新建单位池 [C]"
+	CreateUnitPool="新建的空单位池"
+	CreateUnitPoolHint="会创建单位池。"
+YDWEGetLastUnitPool="最后创建的单位池 [Y]"
+	YDWEGetLastUnitPool="最后创建的单位池"
+	YDWEGetLastUnitPoolHint="该单位池必须是由YDWE提供的<创建单位池>动作生成，不然无法获取。"

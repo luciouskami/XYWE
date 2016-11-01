@@ -1,0 +1,6 @@
+YDWEGetTriggerActionByInteger="获取 触发器动作 (整数路径)"
+	YDWEGetTriggerActionByInteger="从存储目录-> ",~整数,"，标签-> ",~整数," 上获取触发器动作"
+	YDWEGetTriggerActionByIntegerHint="通过输入的路径，系统会根据当前魔兽版本从缓存或HashTable上获取触发器动作数据。"
+YDWEGetTriggerActionByString="获取 触发器动作 (字符串路径)"
+	YDWEGetTriggerActionByString="从存储目录-> ",~字符串,"，标签-> ",~字符串," 上获取触发器动作"
+	YDWEGetTriggerActionByStringHint="通过输入的路径，系统会根据当前魔兽版本从缓存或HashTable上获取触发器动作数据。"

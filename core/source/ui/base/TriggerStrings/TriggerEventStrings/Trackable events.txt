@@ -1,0 +1,6 @@
+TriggerRegisterTrackableHitEvent="鼠标点击可追踪物"
+	TriggerRegisterTrackableHitEvent="鼠标点击 ",~可追踪物
+	TriggerRegisterTrackableHitEventHint=
+TriggerRegisterTrackableTrackEvent="鼠标移动到可追踪物"
+	TriggerRegisterTrackableTrackEvent="鼠标移动到 ",~可追踪物
+	TriggerRegisterTrackableTrackEventHint=

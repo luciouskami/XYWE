@@ -1,0 +1,3 @@
+GetLearnedSkillBJ="学习技能"
+	GetLearnedSkillBJ="学习技能"
+	GetLearnedSkillBJHint="响应'学习技能'单位事件, 指代被学习的技能. 新函数在'技能'类别中."

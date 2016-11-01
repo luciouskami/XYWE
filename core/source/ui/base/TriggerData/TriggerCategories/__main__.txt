@@ -1,0 +1,6 @@
+[TriggerCategories]
+[[@IMPORT:Single]]
+[[@IMPORT:Normal]]
+[[@IMPORT:TODO]]
+[[@IMPORT:Debug]]
+[[@IMPORT:AI Editor (Only)]]

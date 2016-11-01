@@ -16,7 +16,7 @@ namespace XYBase
             get
             {
                 if (_tips == null)
-                    _tips = new List<string>(File.ReadAllText(@"data\tips.txt").Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries));
+                    _tips = new List<string>(File.ReadAllText(XYPath.File.XyweTip).Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries));
                 return _tips;
             }
         }
@@ -47,8 +47,7 @@ namespace XYBase
             var area2 = "";
             var area3 = "";
 
-            File.WriteAllText(XYPath.File.XyweUiWes,
-                $"[WorldEditStrings]\r\n" +
+            File.WriteAllText(XYPath.File.XyweTip,
                 $"WESTRING_WELCOME_SMALLTEXT1=\"{area1}\"\r\n" +
                 $"WESTRING_WELCOME_SMALLTEXT2=\"{area2}\"\r\n" +
                 $"WESTRING_WELCOME_LEGALTEXT=\"{area3}\"", Encoding.UTF8);
@@ -71,7 +70,7 @@ namespace XYBase
                 var serverTime = DateTime.Parse(timeText);
                 if (serverTime.Subtract(DateTime.Parse(XYIni.Tips["LastUpdateTime"])).TotalSeconds > 0)
                 {
-                    File.WriteAllLines(@"data\tips.txt", data);
+                    File.WriteAllLines(XYPath.File.XyweTip, data);
                     XYIni.Tips["LastUpdateTime"] = timeText;
                 }
             });

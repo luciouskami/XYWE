@@ -1,0 +1,3 @@
+GetLastPlayedMusic="最后播放的音乐"
+	GetLastPlayedMusic="最后播放的音乐"
+	GetLastPlayedMusicHint="最后一个由'声音 - 播放音乐'动作播放的音乐."

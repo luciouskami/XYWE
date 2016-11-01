@@ -1,0 +1,30 @@
+unWETriggerListExecute="响应自定义事件 [U]"
+	unWETriggerListExecute="响应自定义事件: ",~自定义事件名字," [U]"
+	unWETriggerListExecuteHint="运行注册了该事件的多个触发器"
+unWESaveTriggerDataUnit="为上次响应的自定义事件传递单位参数 [U]"
+	unWESaveTriggerDataUnit="为响应的自定义事件传递参数，名为 ",~参数名字," 值为 ",~单位
+	unWESaveTriggerDataUnitHint="例如：为响应的自定义事件传递参数，名为 杀人凶手 值为 伤害来源"
+unWECreatDummyCaster="创建施法傀儡 [U]"
+	unWECreatDummyCaster="为 ",~玩家," 创建一个 施法傀儡 在 ",~位置
+	unWECreatDummyCasterHint=创建一个用于触发器动作的不可见单位，通常被用于代替英雄释放技能
+unWEUnitAddAbility="添加技能并设置永久性 [U]"
+	unWEUnitAddAbility="为 ",~单位," 添加 ",~技能," ",~数值," 级 ",~是否永久
+	unWEUnitAddAbilityHint="与 '添加技能并设置永久性 [D]' 作用相同"
+unWECreateNUnitsAtRect="创建单位(指定区域|面向角度) [U]"
+	unWECreateNUnitsAtRect="创建 ",~Number," 个 ",~单位," 给 ",~Player," 在 ",~指定区域," ,面向角度 ",~Direction
+	unWECreateNUnitsAtRectHint="面向角度采用角度制,0度为正东方向,90度为正北方向. 使用'最后创建的单位组'来获取创建的所有单位. 使用'最后创建的单位'来获取创建的单个单位."
+unWESetUnitState="设置单位属性 [U]"
+	unWESetUnitState="设置 ",~单位," 的 ",~属性," ",~运算符," ",~数值
+	unWESetUnitStateHint=
+unWEIssueRectOrder="发布命令(指定区域) [U]"
+	unWEIssueRectOrder="对 ",~单位," 发布 ",~Order," 命令到: ",~指定区域
+	unWEIssueRectOrderHint=
+unWEIssueRectOrderById="发布命令(指定区域|按ID) [U]"
+	unWEIssueRectOrderById="对 ",~单位," 发布 ",~Order," 命令到: ",~指定区域
+	unWEIssueRectOrderByIdHint=
+unWENewItemsFormula_2="合成物品(2个材料) [U]"
+	unWENewItemsFormula_2="合成物品 ",~类型," + ",~类型," = ",~物品
+	unWENewItemsFormula_2Hint="填写物品合成所需的材料及其数量"
+unWENewItemsFormula_3="合成物品(3个材料) [U]"
+	unWENewItemsFormula_3="合成物品 ",~类型," + ",~类型," + ",~类型," = ",~物品
+	unWENewItemsFormula_3Hint="填写物品合成所需的材料及其数量"

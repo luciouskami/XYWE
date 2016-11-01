@@ -1,0 +1,7 @@
+[[@COMPILE-TRIM-TAB]]
+[[@COMPILE-CLEAR:#]]
+[[@IMPORT:TriggerEventStrings]]
+[[@IMPORT:TriggerConditionStrings]]
+[[@IMPORT:TriggerActionStrings]]
+[[@IMPORT:TriggerCallStrings]]
+[[@IMPORT:AIFunctionStrings]]

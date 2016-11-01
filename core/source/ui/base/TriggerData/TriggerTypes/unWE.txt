@@ -1,0 +1,6 @@
+unWEdamagetype=1,0,1,伤害类型
+unWEOperator=0,0,0,运算符,string
+unWEMod=0,0,0,修正运算符,string
+unWEModPosition=0,0,0,位置类型,string
+unWEForeverTF=0,0,0,是否永久,boolean
+unWEDamMod=0,0,0,伤害方式,string

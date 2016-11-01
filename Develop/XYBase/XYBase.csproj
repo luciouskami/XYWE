@@ -50,12 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command.cs" />
     <Compile Include="CreateState.cs" />
-    <Compile Include="ExtendSystemChar.cs" />
+    <Compile Include="Extend\ExtendSystemChar.cs" />
     <Compile Include="Include\Ini.cs" />
     <Compile Include="UIConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XYCodeLibrary.cs" />
+    <Compile Include="XYCompiler.cs" />
     <Compile Include="XYEncoding.cs" />
     <Compile Include="XYFile.cs" />
     <Compile Include="XYInfo.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="XYPath.cs" />
     <Compile Include="XYProcess.cs" />
     <Compile Include="XYRandom.cs" />
+    <Compile Include="XYSource.cs" />
     <Compile Include="XYTip.cs" />
     <Compile Include="XYVersion.cs" />
     <Compile Include="XYWeb.cs" />

@@ -1,0 +1,3 @@
+GetItemType="指定物品的分类"
+	GetItemType=~物品," 的分类"
+	GetItemTypeHint=

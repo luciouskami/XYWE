@@ -1,0 +1,5 @@
+	MapInitializationEvent="地图初始化"
+		// Special events (not defined in common.j)
+		// handled internally by the editor
+		MapInitializationEvent="地图初始化"
+		MapInitializationEventHint="本事件发生在地图数据加载完成之后，游戏开始之前"

@@ -1,0 +1,2 @@
+typename=1,0,0,WESTRING_TRIGTYPE_typename,string
+objecttype=1,0,0,WESTRING_TRIGTYPE_objecttype,string

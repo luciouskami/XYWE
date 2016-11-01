@@ -1,0 +1,32 @@
+SetDayNightModels="文明 - 设置光照模型 [W]"
+	SetDayNightModels="文明 - 设置环境光照模型为",~路径,"，单位光照模型为",~路径
+	SetDayNightModelsHint="模型为空时则黑"
+F2DanMu="文明 - 弹幕系统 [W]"
+	F2DanMu="文明 - 弹幕马甲",~unit," 伤害来源",~u,"初末速度(",~v1,",",~v2,") 判定范围",~r,"伤害：",~d,"持续时间",~t," 物理伤害:",~b," 撞墙后消失:",~b," 撞人后消失:",~b," 无视地形:",~b," 伤害可破坏物并消失:",~b," 不分敌我",~b," 碰撞后运行触发:",~触发
+	F2DanMuHint="系统 by 飞俩"
+DoubleClick="文明 - 双击选择英雄 [W]"
+	DoubleClick="文明 - 英雄区域为 ",~rct,"双击后移动到(",~x,",",~y,")坐标。"
+	DoubleClickHint="将中立被动的英雄放入指定区域即可。"
+InitSlkAbilitysData="文明 - 导入自定义物编技能 [W]"
+	InitSlkAbilitysData="文明 - 将slk文件注入地图"
+	InitSlkAbilitysDataHint="必须在物编中设置 '冲锋(技能ID: WMRu)' 的 '显示-效果-特殊' 的值，否则会在保存地图时报错。"
+WMRush="文明 - 冲锋函数 [W]"
+	WMRush="文明 - 令",~单位,"向"~角度,"方向冲锋，距离为",~实数,"速度为",~实数,"伤害范围",~实数,"伤害为"~实数,"(",~d,"攻击伤害,",~d,"远程攻击).攻击类型 ",~t,"伤害类型 ",~t,"，造成伤害的单位为",~单位,"路径特效",~模型
+	WMRushHint=
+CKRefresh="文明 - 万能刷野系统 [W]"
+	CKRefresh="文明 - 开启",~方式,"刷野.刷怪开始时间:",~r,",刷怪周期:",~r,"野区半径",~r,",不主动攻击技能",~技能
+	CKRefreshHint="原系统是CK写的。开始把中立敌对单位放在地图上，事件为初始化即可。不主动攻击技能让野怪不主动攻击，一般是-1秒的永久隐身.魔兽版本1.24"
+PlayMidi="文明 - 初始化midi音乐环境 [W]"
+	PlayMidi="文明 - 加载",~库,"音色库
+	PlayMidiHint="加载音色库后才能正常播放，不需要重复加载。如果你C图播放过MIDI则需要关闭白天夜晚音效."
+GetItemCostInit="文明 - 获取物品价格初始化设置 [W]"
+	GetItemCostInit="文明 - 马甲商店类型",~s
+	GetItemCostInitHint="马甲设置请参考演示地图.原作者:麦德三世(Renee)"
+AutoRemovePowerupItem="文明 - 开启自动排除书类泄露 [W]"
+	AutoRemovePowerupItem="文明 - 排除书、神符等物品泄露"
+WMAroundSystem="文明 - 环绕单位系统 [W]"
+	WMAroundSystem="文明 - 中心单位",~u,"环绕单位类型(马甲)",~m,"长轴",~a,"短轴",~b,"Z轴偏移高度",~z,"长轴与X轴夹角",~d1,"长轴与水平面夹角",~d2,"短轴与水平面夹角",~d3,".环绕周期",~T,"环绕持续时间",~t
+	WMAroundSystemHint="原系统:永恒的灌水帝.若长轴=短轴,即为半径为长轴的圆.Z轴偏移,如此值为200,则环绕中心为中心单位头顶200处.长轴与X轴夹角,若此值填-1，则始终为中心单位面向角度.环绕持续时间0,则永久环绕."
+SetJassLocalVariables="设置真局部变量 [W]"
+	SetJassLocalVariables="设置 {",~类型,"}",~变量名," = ",~值
+	SetJassLocalVariablesHint="(不推荐新手使用)与YD逆天的模拟局部变量不同，这是封装的原版Jass局部变量，因此不与逆天局部变量互通。使用完成后会自动set null，但具体的排泄和传参需要自己完成。用法与JASS中的局部变量完全相同。"

@@ -1,0 +1,6 @@
+MoveLocation="移动点 [C]"
+	MoveLocation="移动 ",~点," 到(",~X,",",~Y,")"
+	MoveLocationHint="该点必须是一个变量. 因为移动一个不可重用的点是无意义的."
+RemoveLocation="清除点 [C]"
+	RemoveLocation="清除 ",~点
+	RemoveLocationHint="点是堆积最多的垃圾资源,不需要再使用的点都要记得清除掉."

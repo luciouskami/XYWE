@@ -1,0 +1,3 @@
+GetPlayerController="玩家控制者"
+	GetPlayerController=~Player," 的控制者"
+	GetPlayerControllerHint=

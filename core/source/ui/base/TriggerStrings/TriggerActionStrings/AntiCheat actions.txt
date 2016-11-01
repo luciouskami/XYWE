@@ -1,0 +1,9 @@
+AntiCheatPShan="反作弊 - 检测P闪 [W]"
+	AntiCheatPShan="反作弊 - 开始检测",~u
+	AntiCheatPShanHint="检测出则立即重置单位位置，因检测机理，所以在单位非正常移动0.05秒内按出巡逻则会检测错误。(概率很小)。建议动态添加一部分英雄避免游戏卡。"
+AntiCheatC2I="反作弊 - 检测j文件是否被修改 [W]"
+	AntiCheatC2I="反作弊 - 差值为",~整数
+	AntiCheatC2IHint="(新手勿用) 1.20版本可用。差值在地图调试模式(YDWE配置)会看见，其他模式在填入错误差值或单单修改j文件会导致魔兽崩溃。每次修改地图都要更改此值。"
+AntiCheatHke="反作弊 - 反hke注入 [W]"
+	AntiCheatHke="反作弊 - 注入一些无用脚本，防止hke再次注入"
+	AntiCheatHkeHint="优化器优化脚本可能会导致无效。"

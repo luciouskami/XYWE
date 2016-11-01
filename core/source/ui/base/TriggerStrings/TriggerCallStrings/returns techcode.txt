@@ -1,0 +1,3 @@
+GetResearched="被研究科技"
+	GetResearched="被研究科技"
+	GetResearchedHint="响应'开始/取消/完成科技研究'单位事件."

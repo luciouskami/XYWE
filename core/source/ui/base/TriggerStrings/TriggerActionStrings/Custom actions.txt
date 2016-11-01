@@ -1,0 +1,6 @@
+YDWECreateUnitPool="创建单位池 [Y]"
+	YDWECreateUnitPool="新建一个单位池"
+	YDWECreateUnitPoolHint="新建一个单位池，该单位池可以被<最后创建的单位池>获得。"
+UnitPoolAddUnitType="添加单位类型 [C]"
+	UnitPoolAddUnitType="在 ",~单位池," 中添加一个 ",~单位," 比重为 ",~数值
+	UnitPoolAddUnitTypeHint="比重越高被选择的机率越大"

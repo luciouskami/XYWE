@@ -1,0 +1,6 @@
+GetPlayerRace="玩家的种族"
+	GetPlayerRace=~Player," 的种族"
+	GetPlayerRaceHint=
+GetUnitRace="单位种族"
+	GetUnitRace=~单位," 所属种族"
+	GetUnitRaceHint="物体编辑器中设置的单位所属种族."

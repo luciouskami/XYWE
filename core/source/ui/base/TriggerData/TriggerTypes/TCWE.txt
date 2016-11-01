@@ -1,0 +1,4 @@
+tcpreload=0,1,1,存档,integer
+tcstringcode=0,1,1,加密字符串,integer
+tcpreloadtype=0,0,0,存档类型,integer
+tcstringcodetype=0,0,0,加密字符串类型,integer

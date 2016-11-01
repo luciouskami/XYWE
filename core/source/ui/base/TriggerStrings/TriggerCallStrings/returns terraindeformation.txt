@@ -1,0 +1,18 @@
+ConvertTerrainde="转换整数地址为地形变化"
+	ConvertTerrainde="转换地形变化( ",~整数地址,")"
+	ConvertTerraindeHint="用于取得该整数地址所表示的天气效果.如果没有地形变化,则无效."
+TerrainDeformCrater="新建地形变化:弹坑 [C]"
+	TerrainDeformCrater="新建的弹坑变形. 中心坐标:(",~X,",",~Y,") 半径: ",~Radius," 深度: ",~Depth," 持续时间: ",~Duration," 毫秒, 变化类型: ",~Type
+	TerrainDeformCraterHint="深度可取负数. 永久地形变化在保存游戏时不会被记录.
+TerrainDeformRipple="新建地形变化:波纹 [C]"
+	TerrainDeformRipple="新建的波纹变形. 中心坐标:(",~X,",",~Y,") 最终半径: ",~Radius," 深度: ",~Depth," 持续时间: ",~Duration," 毫秒, 变化次数: ",~Count," 面波数: ",~SpaceWave," 总波数: ",~TimeWave," 初始半径率: ",~数值," 变化类型: ",~Type
+	TerrainDeformRipple="初始半径率=初始半径/最终半径."
+TerrainDeformWave="新建地形变化:冲击波 [C]"
+	TerrainDeformWave="新建的冲击波变形. 起始坐标:(",~X,",",~Y,") 波方向:(",~X,",",~Y,") 波距离: ",~distance," 波速度: ",~speed," 波半径: ",~radius," 深度: ",~Depth," 变形效果持续时间: ",~Delay," 毫秒, 变化次数: ",~Count
+	TerrainDeformWaveHint="深度可取负数. 方向以(X,Y)坐标形式表示,如(1,1)表示45度."
+TerrainDeformRandom="新建地形变化:随机 [C]"
+	TerrainDeformRandom="新建的随机变形. 中心坐标:(",~X,",",~Y,") 半径: ",~Radius," 最小高度变化: ",~Depth," 最大高度变化: ",~Depth," 持续时间: ",~Duration," 毫秒, 变化周期: ",~Duration," 毫秒"
+	TerrainDeformRandomHint=
+GetLastCreatedTerrainDeformation="最后创建的地形变化"
+	GetLastCreatedTerrainDeformation="最后创建的地形变化"
+	GetLastCreatedTerrainDeformationHint="最后一个由'环境 - 创建地形变化'动作创建的地形变化."

@@ -1,0 +1,3 @@
+GetLastCreatedDefeatConditionBJ="最后创建的失败条件"
+	GetLastCreatedDefeatConditionBJ="最后创建的失败条件"
+	GetLastCreatedDefeatConditionBJHint="最后一个由'任务 - 创建失败条件'动作创建的失败条件."

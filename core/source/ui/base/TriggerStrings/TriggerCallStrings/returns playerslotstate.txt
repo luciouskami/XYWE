@@ -1,0 +1,3 @@
+GetPlayerSlotState="玩家游戏状态"
+	GetPlayerSlotState=~Player," 的游戏状态"
+	GetPlayerSlotStateHint=

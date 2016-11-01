@@ -1,0 +1,6 @@
+AddWeatherEffect="新建天气效果 [C]"
+	AddWeatherEffect="新建的在 ",~矩形区域," 的天气效果: ",~WeatherId
+	AddWeatherEffectHint="会创建天气效果."
+GetLastCreatedWeatherEffect="最后创建的天气效果"
+	GetLastCreatedWeatherEffect="最后创建的天气效果"
+	GetLastCreatedWeatherEffectHint="最后一个使用'环境 - 创建天气效果'动作创建的天气效果."

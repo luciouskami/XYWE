@@ -1,0 +1,3 @@
+GetGameSpeed="当前游戏速度"
+	GetGameSpeed="当前游戏速度"
+	GetGameSpeedHint=

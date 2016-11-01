@@ -1,0 +1,173 @@
+// Normal
+	XYSplitLine_TriggerActions_Normal_1="------------------------------------"
+		XYSplitLine_TriggerActions_Normal_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Normal_2="------------------------------------"
+		XYSplitLine_TriggerActions_Normal_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Normal_3="------------------------------------"
+		XYSplitLine_TriggerActions_Normal_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// A AI
+	XYSplitLine_TriggerActions_A_AI_1="------------------------------------"
+		XYSplitLine_TriggerActions_A_AI_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_A_AI_2="------------------------------------"
+		XYSplitLine_TriggerActions_A_AI_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// C 触发器
+	XYSplitLine_TriggerActions_C_Trigger_1="------------------------------------"
+		XYSplitLine_TriggerActions_C_Trigger_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// C 存档
+	XYSplitLine_TriggerActions_C_SaveLoad_1="------------------------------------"
+		XYSplitLine_TriggerActions_C_SaveLoad_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_C_SaveLoad_2="------------------------------------"
+		XYSplitLine_TriggerActions_C_SaveLoad_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_C_SaveLoad_3="------------------------------------"
+		XYSplitLine_TriggerActions_C_SaveLoad_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// D 单位
+	XYSplitLine_TriggerActions_D_Unit_1="------------------------------------"
+		XYSplitLine_TriggerActions_D_Unit_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Unit_2="------------------------------------"
+		XYSplitLine_TriggerActions_D_Unit_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Unit_3="------------------------------------"
+		XYSplitLine_TriggerActions_D_Unit_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Unit_4="------------------------------------"
+		XYSplitLine_TriggerActions_D_Unit_4="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Unit_5="------------------------------------"
+		XYSplitLine_TriggerActions_D_Unit_5="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Unit_6="------------------------------------"
+		XYSplitLine_TriggerActions_D_Unit_6="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Unit_7="------------------------------------"
+		XYSplitLine_TriggerActions_D_Unit_7="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// D 单位池
+	XYSplitLine_TriggerActions_D_UnitPool_1="------------------------------------"
+		XYSplitLine_TriggerActions_D_UnitPool_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// D 单位组
+	XYSplitLine_TriggerActions_D_UnitGroup_1="------------------------------------"
+		XYSplitLine_TriggerActions_D_UnitGroup_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_UnitGroup_2="------------------------------------"
+		XYSplitLine_TriggerActions_D_UnitGroup_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_UnitGroup_3="------------------------------------"
+		XYSplitLine_TriggerActions_D_UnitGroup_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// D 地面纹理
+	XYSplitLine_TriggerActions_D_Ubersplat_1="------------------------------------"
+		XYSplitLine_TriggerActions_D_Ubersplat_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// D 电影
+	XYSplitLine_TriggerActions_D_Cinematic_1="------------------------------------"
+		XYSplitLine_TriggerActions_D_Cinematic_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Cinematic_2="------------------------------------"
+		XYSplitLine_TriggerActions_D_Cinematic_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Cinematic_3="------------------------------------"
+		XYSplitLine_TriggerActions_D_Cinematic_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// D 动画
+	XYSplitLine_TriggerActions_D_Animation_1="------------------------------------"
+		XYSplitLine_TriggerActions_D_Animation_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+		XYSplitLine_TriggerActions_D_Animation_1Hint=
+// D 对话框
+	XYSplitLine_TriggerActions_D_Dialog_1="------------------------------------"
+		XYSplitLine_TriggerActions_D_Dialog_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// D 多面板
+	XYSplitLine_TriggerActions_D_Multiboard_1="------------------------------------"
+		XYSplitLine_TriggerActions_D_Multiboard_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_D_Multiboard_2="------------------------------------"
+		XYSplitLine_TriggerActions_D_Multiboard_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// H 函数
+	XYSplitLine_TriggerActions_H_Function_1="------------------------------------"
+		XYSplitLine_TriggerActions_H_Function_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// H 哈希表
+	XYSplitLine_TriggerActions_H_Hashtable_1="------------------------------------"
+		XYSplitLine_TriggerActions_H_Hashtable_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// H 环境
+	XYSplitLine_TriggerActions_H_Environment_1="------------------------------------"
+		XYSplitLine_TriggerActions_H_Environment_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_H_Environment_2="------------------------------------"
+		XYSplitLine_TriggerActions_H_Environment_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_H_Environment_3="------------------------------------"
+		XYSplitLine_TriggerActions_H_Environment_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_H_Environment_4="------------------------------------"
+		XYSplitLine_TriggerActions_H_Environment_4="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// J 技能
+	XYSplitLine_TriggerActions_J_Ability_1="------------------------------------"
+		XYSplitLine_TriggerActions_J_Ability_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// J 计时器
+	XYSplitLine_TriggerActions_J_Timer_1="------------------------------------"
+		XYSplitLine_TriggerActions_J_Timer_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_J_Timer_2="------------------------------------"
+		XYSplitLine_TriggerActions_J_Timer_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// K 可见度
+	XYSplitLine_TriggerActions_K_Visibility_1="------------------------------------"
+		XYSplitLine_TriggerActions_K_Visibility_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// K 可破坏物
+	XYSplitLine_TriggerActions_K_Destruct_1="------------------------------------"
+		XYSplitLine_TriggerActions_K_Destruct_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// P 排行榜
+	XYSplitLine_TriggerActions_P_Leaderboard_1="------------------------------------"
+		XYSplitLine_TriggerActions_P_Leaderboard_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// Q 任务
+	XYSplitLine_TriggerActions_R_Quest_1="------------------------------------"
+		XYSplitLine_TriggerActions_R_Quest_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// S 闪电效果
+	XYSplitLine_TriggerActions_S_Lightning_1="------------------------------------"
+		XYSplitLine_TriggerActions_S_Lightning_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// T 特效
+	XYSplitLine_TriggerActions_T_SpecialEffect_1="------------------------------------"
+		XYSplitLine_TriggerActions_T_SpecialEffect_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_T_SpecialEffect_2="------------------------------------"
+		XYSplitLine_TriggerActions_T_SpecialEffect_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// T 图像
+	XYSplitLine_TriggerActions_T_Image_1="------------------------------------"
+		XYSplitLine_TriggerActions_T_Image_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// W 玩家
+	XYSplitLine_TriggerActions_W_Player_1="------------------------------------"
+		XYSplitLine_TriggerActions_W_Player_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_W_Player_2="------------------------------------"
+		XYSplitLine_TriggerActions_W_Player_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// W 玩家组
+	XYSplitLine_TriggerActions_W_PlayerGroup_1="------------------------------------"
+		XYSplitLine_TriggerActions_W_PlayerGroup_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// W 物品
+	XYSplitLine_TriggerActions_W_Item_1="------------------------------------"
+		XYSplitLine_TriggerActions_W_Item_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_W_Item_2="------------------------------------"
+		XYSplitLine_TriggerActions_W_Item_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// W 物品池
+	XYSplitLine_TriggerActions_W_ItemPool_1="------------------------------------"
+		XYSplitLine_TriggerActions_W_ItemPool_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// X 系统
+	XYSplitLine_TriggerActions_X_System_1="------------------------------------"
+		XYSplitLine_TriggerActions_X_System_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_X_System_2="------------------------------------"
+		XYSplitLine_TriggerActions_X_System_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_X_System_3="------------------------------------"
+		XYSplitLine_TriggerActions_X_System_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_X_System_4="------------------------------------"
+		XYSplitLine_TriggerActions_X_System_4="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_X_System_5="------------------------------------"
+		XYSplitLine_TriggerActions_X_System_5="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_X_System_6="------------------------------------"
+		XYSplitLine_TriggerActions_X_System_6="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_X_System_7="------------------------------------ 废弃 / 重复 / 不推荐"
+		XYSplitLine_TriggerActions_X_System_7="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_X_System_8="------------------------------------"
+		XYSplitLine_TriggerActions_X_System_8="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_X_System_9="------------------------------------"
+		XYSplitLine_TriggerActions_X_System_9="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// X 选择
+	XYSplitLine_TriggerActions_X_UnitSel_1="------------------------------------"
+		XYSplitLine_TriggerActions_X_UnitSel_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// Y 英雄
+	XYSplitLine_TriggerActions_Y_Hero_1="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Hero_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Y_Hero_2="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Hero_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Y_Hero_3="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Hero_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Y_Hero_4="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Hero_4="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// Y 游戏
+	XYSplitLine_TriggerActions_Y_Game_1="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Game_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Y_Game_2="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Game_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Y_Game_3="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Game_3="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Y_Game_4="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Game_4="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerActions_Y_Game_5="------------------------------------"
+		XYSplitLine_TriggerActions_Y_Game_5="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"

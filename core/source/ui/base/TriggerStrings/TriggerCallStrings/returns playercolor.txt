@@ -1,0 +1,3 @@
+GetPlayerColor="玩家颜色"
+	GetPlayerColor=~Player," 的颜色"
+	GetPlayerColorHint=

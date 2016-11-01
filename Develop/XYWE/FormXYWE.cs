@@ -38,7 +38,15 @@ namespace XYWE
         void BtnStartXYWE_Click(object sender, EventArgs e)
         {
             XYTip.Refresh();
-            XYProcess.Application.StartXYWE();
+            XYFile.SyncDirectory(XYPath.Dir.SourceJass, XYPath.Dir.EditorJass);
+            XYFile.SyncDirectory(XYPath.Dir.SourceMpq, XYPath.Dir.EditorShareMpq);
+            XYFile.SyncDirectory(XYPath.Dir.SourcePlugin, XYPath.Dir.EditorPlugin);
+            XYFile.SyncDirectory(XYPath.Dir.SourceScript, XYPath.Dir.EditorShareScript);
+            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\TriggerData", XYPath.Dir.EditorShareMpq + @"\base\TriggerData.txt");
+            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\TriggerStrings", XYPath.Dir.EditorShareMpq + @"\base\TriggerStrings.txt");
+            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\WorldEditStrings", XYPath.Dir.EditorShareMpq + @"\base\WorldEditStrings.txt");
+            // XYProcess.Application.StartXYWE();
+            MessageBox.Show("Start");
         }
 
         void BtnXYCodeLibraryManager_Click(object sender, EventArgs e)

@@ -1,0 +1,12 @@
+YDWECreateQuestItem="创建任务目标项 [Y]"
+	YDWECreateQuestItem="为 ",~Quest," 创建一个任务目标项: ",~文字
+	YDWECreateQuestItemHint="新建一个任务目标项；YDWE新增功能。"
+GetLastCreatedQuestItemBJ="最后创建的任务项目"
+	GetLastCreatedQuestItemBJ="最后创建的任务项目"
+	GetLastCreatedQuestItemBJHint="最后一个由'任务 - 创建任务项目'动作创建的任务项目."
+YDWEGetQuestItemByInteger="获取 任务目标项 (整数路径)"
+	YDWEGetQuestItemByInteger="从存储目录-> ",~整数,"，标签-> ",~整数," 上获取任务目标项"
+	YDWEGetQuestItemByIntegerHint="通过输入的路径，系统会根据当前魔兽版本从缓存或HashTable上获取任务目标项数据。"
+YDWEGetQuestItemByString="获取 任务目标项 (字符串路径)"
+	YDWEGetQuestItemByString="从存储目录-> ",~字符串,"，标签-> ",~字符串," 上获取任务目标项"
+	YDWEGetQuestItemByStringHint="通过输入的路径，系统会根据当前魔兽版本从缓存或HashTable上获取任务目标项数据。"

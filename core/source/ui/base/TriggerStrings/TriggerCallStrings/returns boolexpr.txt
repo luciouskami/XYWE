@@ -1,0 +1,6 @@
+YDWEGetBoolexprByInteger="获取 布尔表达式 (整数路径)"
+	YDWEGetBoolexprByInteger="从存储目录-> ",~整数,"，标签-> ",~整数," 上获取布尔表达式"
+	YDWEGetBoolexprByIntegerHint="通过输入的路径，系统会根据当前魔兽版本从缓存或HashTable上获取布尔表达式数据。"
+YDWEGetBoolexprByString="获取 布尔表达式 (字符串路径)"
+	YDWEGetBoolexprByString="从存储目录-> ",~字符串,"，标签-> ",~字符串," 上获取布尔表达式"
+	YDWEGetBoolexprByStringHint="通过输入的路径，系统会根据当前魔兽版本从缓存或HashTable上获取布尔表达式数据。"

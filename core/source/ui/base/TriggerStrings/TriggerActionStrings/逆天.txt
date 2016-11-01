@@ -1,0 +1,36 @@
+YDWEActivateTrigger="触发器   - 激活 [Y]"
+	YDWEActivateTrigger="激活 ",~Trigger," ( ",~On/Off," 兼容模式 )"
+	YDWEActivateTriggerHint="不要多次激活一个触发器。不要激活未开启休眠的触发器。打开兼容模式会略微影响效率，若关闭兼容模式，请保证该动作在需要激活的触发器之后，否则会有语法错误。"
+YDWEEnumUnitsInRangeMultiple="选取单位 - 圆形范围 [Y]"
+	YDWEEnumUnitsInRangeMultiple="选取以(",~坐标X,", ",~坐标Y,")为圆心,",~半径,"为半径的圆范围内的单位做动作"
+	YDWEEnumUnitsInRangeMultipleHint="选取范围内的单位做动作"
+YDWESetAnyTypeLocalVariable="局部变量 - 设置 [Y]"
+	YDWESetAnyTypeLocalVariable="设置 [",~类型,"] loc_",~变量名," = ",~null
+	YDWESetAnyTypeLocalVariableHint="设置局部变量，可以指定变量类型.在1.24下不可直接将变量置为null"
+YDWEForLoopLocVarMultiple="局部变量 - 循环 [Y]"
+	YDWEForLoopLocVarMultiple="循环动作[loop_",~局部变量名,"]从 ",~开始," 到 ",~结束,", 运行 (Loop - 动作)"
+	YDWEForLoopLocVarMultipleHint=
+YDWETimerStartMultiple="计时器   - 运行 [Y]"
+	YDWETimerStartMultiple="立即运行 ",~计时器," 时间设置: ",~time," 秒，是否循环: ",~false/true
+	YDWETimerStartMultipleHint="让计时器运行多个动作。计时器内不能使用等待。"
+YDWETimerStartFlush="计时器   - 清除 [Y]"
+	YDWETimerStartFlush="清除当前逆天计时器"
+	YDWETimerStartFlushHint="删除当前逆天计时器，并清空缓存或哈希表."
+YDWERegisterTriggerMultiple="触发器   - 注册 [Y]"
+	YDWERegisterTriggerMultiple="注册 ",~触发器
+	YDWERegisterTriggerMultipleHint="触发器内不能使用等待。"
+YDWERegisterTriggerFlush="触发器   - 清除 [Y]"
+	YDWERegisterTriggerFlush="清除当前逆天触发器"
+	YDWERegisterTriggerFlushHint="删除当前逆天触发器，并清空缓存或哈希表."
+YDWESaveAnyTypeDataByUserData="自定义值 - 设置 [Y]"
+	YDWESaveAnyTypeDataByUserData="设置 {",~类型,"}",~null,"[",~属性,"] = {",~类型,"}",~null
+	YDWESaveAnyTypeDataByUserDataHint="设置某个数据的自定义属性，如设置 {单位}骑士[长相] = {字符串}超帅"
+YDWEFlushAllByUserData="自定义值 - 清除(全部) [Y]"
+	YDWEFlushAllByUserData="清空 {",~类型,"}",~null," 的所有自定义属性"
+	YDWEFlushAllByUserDataHint="清空某个数据所有的自定义属性"
+YDWEFlushAnyTypeDataByUserData="自定义值 - 清除 [Y]"
+	YDWEFlushAnyTypeDataByUserData="清空 {",~类型,"}",~null," 的 {",~类型,"}",~属性
+	YDWEFlushAnyTypeDataByUserDataHint="清空某个数据的某项自定义属性"
+YDWEWaitForLocalVariable="等待(局部变量专用) [Y]"
+	YDWEWaitForLocalVariable="等待 ",~Time," 秒(局部变量专用)"
+	YDWEWaitForLocalVariableHint="使用逆天系列的UI，无需使用它"

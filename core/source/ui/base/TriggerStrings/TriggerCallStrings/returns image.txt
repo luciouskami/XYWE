@@ -1,0 +1,6 @@
+GetLastCreatedImage="最后创建的图像"
+	GetLastCreatedImage="最后创建的图像"
+	GetLastCreatedImageHint="最后一个使用'图像 - 创建'动作创建的图像."
+CreateImage="新建图像 [C]"
+	CreateImage="新建图像: ",~Image," 大小:(",~X,",",~Y,",",~Z,") 创建点:(",~X,",",~Y,",",~Z,") 原点坐标:(",~X,",",~Y,",",~Z,") 图像类型: ",~Type
+	CreateImageHint="使用'图像 - 设置永久渲染状态'动作才能显示图像. 大小、创建点和原点格式为(X,Y,Z). 创建点作为图像的左下角位置. 会创建图像."

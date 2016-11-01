@@ -1,0 +1,3 @@
+GetCurrentCameraSetup="玩家当前镜头"
+	GetCurrentCameraSetup="玩家当前镜头"
+	GetCurrentCameraSetupHint="注意:该函数对各玩家返回值不同,请确定你知道自己在做什么,否则很容易引起掉线. 会创建镜头对象,但每个玩家只会有一个当前镜头."

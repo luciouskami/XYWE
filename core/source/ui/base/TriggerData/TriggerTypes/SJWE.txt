@@ -1,0 +1,10 @@
+agentTypeId=0,0,1,对象类型,integer
+agentTypeID_0=0,0,1,对象类型,integer
+SJAttackType=0,0,1,WESTRING_TRIGTYPE_attacktype,integer
+SJDamageType=0,0,1,WESTRING_TRIGTYPE_damagetype,integer
+AD_Type=0,0,1,攻击/伤害类型,integer
+WUPTypeID=0,0,1,指定单位属性类型,integer
+SJStringType=0,0,0,字符串类型,integer
+SJPFWZType=0,0,0,漂浮文字类型,integer
+SJTypeID=0,0,1,类型ID,integer
+AttackEventType=0,0,0,攻击事件类型,integer

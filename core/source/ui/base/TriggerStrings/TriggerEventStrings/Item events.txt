@@ -1,0 +1,3 @@
+TriggerRegisterItemDeathEvent="物品被破坏"
+	TriggerRegisterItemDeathEvent=~物品," 被破坏"
+	TriggerRegisterItemDeathEventHint=

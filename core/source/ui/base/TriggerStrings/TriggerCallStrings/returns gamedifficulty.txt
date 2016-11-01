@@ -1,0 +1,3 @@
+GetGameDifficulty="当前游戏难度"
+	GetGameDifficulty="当前游戏难度"
+	GetGameDifficultyHint=

@@ -1,0 +1,6 @@
+TriggerRegisterDeathEvent="可破坏物死亡"
+	TriggerRegisterDeathEvent=~可破坏物," 死亡"
+	TriggerRegisterDeathEventHint="使用 '事件响应 - 死亡的可破坏物' 来获取死亡的可破坏物"
+TriggerRegisterDestDeathInRegionEvent="可破坏物死亡(在矩形区域内)"
+	TriggerRegisterDestDeathInRegionEvent="可破坏物在 ",~矩形区域," 内死亡"
+	TriggerRegisterDestDeathInRegionEventHint="不建议新手使用本事件。该事件默认只监视最多64个可破坏物，可以使用'set bj_destInRegionDiesCount = XXX'来修改该值"

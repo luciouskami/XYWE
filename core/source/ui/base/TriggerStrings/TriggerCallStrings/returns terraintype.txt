@@ -1,0 +1,6 @@
+GetTerrainType="指定坐标地形 [C]"
+	GetTerrainType="坐标(",~X,",",~Y,")处的地形"
+	GetTerrainTypeHint=
+GetTerrainTypeBJ="指定点地形"
+	GetTerrainTypeBJ=~指定点," 处的地形"
+	GetTerrainTypeBJHint=

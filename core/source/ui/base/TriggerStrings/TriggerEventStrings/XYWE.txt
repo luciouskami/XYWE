@@ -1,0 +1,15 @@
+// D 单位
+	XYSplitLine_TriggerEvents_Unit_1="------------------------------------"
+		XYSplitLine_TriggerEvents_Unit_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerEvents_Unit_2="------------------------------------"
+		XYSplitLine_TriggerEvents_Unit_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// S 事件
+	XYSplitLine_TriggerEvents_Event_1="------------------------------------"
+		XYSplitLine_TriggerEvents_Event_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerEvents_Event_2="------------------------------------"
+		XYSplitLine_TriggerEvents_Event_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+// W 玩家
+	XYSplitLine_TriggerEvents_Player_1="------------------------------------"
+		XYSplitLine_TriggerEvents_Player_1="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
+	XYSplitLine_TriggerEvents_Player_2="------------------------------------"
+		XYSplitLine_TriggerEvents_Player_2="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"

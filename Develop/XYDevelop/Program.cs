@@ -21,11 +21,11 @@ Select Command:
             Console.WriteLine("Execute Command: " + key);
             switch (key)
             {
-                case '1': Compile(); break;
+                case '1': CompileEditor(); break;
             }
             Initialize();
         }
-        void Compile()
+        void CompileEditor()
         {
             string pathImport = $@"{XYPath.Dir.Root}\Import";
             string pathSource = $@"{pathImport}\YDWE-Overwrite";

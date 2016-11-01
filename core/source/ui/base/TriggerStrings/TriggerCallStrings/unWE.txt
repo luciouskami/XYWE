@@ -1,0 +1,11 @@
+unWEUnitInventoryCountByType="持有物品数量 (指定类型) [U]"
+	unWEUnitInventoryCountByType=~单位," 所持有的 "~物品类型," 数量"
+	unWEUnitInventoryCountByTypeHint=
+unWEOperatorRI="算术运算 [U]"
+	unWEOperatorRI=~Value," ",~运算符," ",~Value
+unWEGetLastCreatedDummy="最后创建的施法傀儡 [U]"
+	unWEGetLastCreatedDummy="施法傀儡"
+	unWEGetLastCreatedDummyHint="最后一个使用'单位 - 创建施法傀儡'动作创建的单位"
+unWELoadTriggerDataUnit="获取自定义事件单位参数 [U]"
+	unWELoadTriggerDataUnit=~字符串
+	unWELoadTriggerDataUnitHint=

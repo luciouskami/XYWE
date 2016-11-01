@@ -1,0 +1,6 @@
+TriggerRegisterDialogEventBJ="对话框被点击"
+	TriggerRegisterDialogEventBJ=~对话框," 被点击"
+	TriggerRegisterDialogEventBJHint="通过 '事件响应 - 被点击的对话框' 来操作触发本事件的对话框"
+TriggerRegisterDialogButtonEvent="对话框按钮被点击 [C]"
+	TriggerRegisterDialogButtonEvent=~对话框按钮," 被点击"
+	TriggerRegisterDialogButtonEventHint="该事件通常会在别的触发器中用动作'触发器 - 添加事件'来动态添加给特定触发器"

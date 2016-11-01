@@ -111,7 +111,8 @@ namespace XYBase {
 
         public static void Create(string name) {
             var pathMpqUi = XYPath.Dir.MpqUi(name);
-            XYFile.CopyDirectory(XYPath.Dir.MpqUiTemplateXywe, pathMpqUi);
+            // TODO Create New UI Example From Template
+            // XYFile.CopyDirectory(XYPath.Dir.MpqUiTemplateXywe, pathMpqUi);
             SaveEnable();
         }
 

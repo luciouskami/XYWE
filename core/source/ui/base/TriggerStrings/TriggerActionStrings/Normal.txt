@@ -1,0 +1,76 @@
+DoNothing="不做任何动作"
+	DoNothing=不做任何动作
+	DoNothingHint=原名为“不做任何动作”。由于不做任何动作，在这里被我们当作分割线用。——真是太怠惰了
+CommentString="注释"
+	CommentString=~注释文本
+	CommentStringHint=注释的作用不仅仅是告诉别人某个功能如何使用，也用于在未来提醒自己当初曾经做出这个功能的思路是怎样的
+CustomScriptCode="Jass"
+	CustomScriptCode=~Jass代码
+	CustomScriptCodeHint="输入一行Jass代码，如：call MyFunction(udg_globalVariable)。"
+ExecuteFunc="运行函数"
+	ExecuteFunc="运行: ",~函数名
+	ExecuteFuncHint="使用该功能运行的函数与触发独立, 只能运行无参数的自定义函数."
+TriggerSleepAction="等待(玩家时间)"
+	TriggerSleepAction="等待 ",~时间," 秒(玩家时间)"
+	TriggerSleepActionHint="该延迟功能受真实时间的影响(也就是玩家机器上的时间). 因此每个玩家所延迟的时间可能不一致."
+PolledWait="等待(游戏时间)"
+	PolledWait="等待 ",~时间," 秒(游戏时间)"
+	PolledWaitHint="该延迟功能受游戏时间的影响. 通过调整游戏速度来调节该功能的具体延迟时间的长短."
+WaitForCondition="等待(条件成立)"
+	WaitForCondition="检查 ",~条件," 每隔 ",~Interval," 秒(直到条件成立)"
+	WaitForConditionHint="采用的是'while-do'类型的方式等待,比较耗CPU资源.注意不要造成过多的不成立的条件."
+WaitForSoundBJ="等待(声音结束)"
+	WaitForSoundBJ="等待直到 ",~Sound," 在 ",~Time," 秒后结束播放."
+	WaitForSoundBJHint="该功能只对于当前播放的3D-音效有效. 如果该音效未播放或已经结束, 则该功能无效."
+SetVariable="设置变量"
+	// Specially handled by the editor
+	SetVariable="设置 ",~变量," = ",~Value
+	SetVariableHint="给变量赋值."
+ReturnAction="跳过剩余动作"
+	// Specially handled by the editor
+	ReturnAction="跳过剩余动作"
+	ReturnActionHint="跳过剩余动作, 直接中止触发运行. (在组动作中无效)"
+YDWEExitLoop="退出循环"
+	YDWEExitLoop="退出循环"
+	YDWEExitLoopHint="退出循环, 也能退出逆天选取单位动作."
+IfThenElseMultiple="If / Then / Else (多项功能)"
+	// Specially handled by the editor
+	IfThenElseMultiple="如果(所有的条件成立) 则运行 (Then - 动作) 否则运行 (Else - 动作)"
+	IfThenElseMultipleHint=""
+IfThenElse="If / Then / Else (单项功能)"
+	// Specially handled by the editor
+	IfThenElse="如果 ",~条件," 成立, 运行 ",~Then 动作,", 否则运行 ",~Else 动作
+	IfThenElseHint=
+ForLoopAMultiple="使用循环整数A (做多项动作)"
+	// Specially handled by the editor
+	ForLoopAMultiple="循环动作[循环整数A]从 ",~开始," 到 ",~结束,", 运行 (Loop - 动作)"
+	ForLoopAMultipleHint="后一个整数一定要比前一个整数要大."
+ForLoopBMultiple="使用循环整数B (做多项动作)"
+	// Specially handled by the editor
+	ForLoopBMultiple="循环动作[循环整数B]从 ",~开始," 到 ",~结束,", 运行 (Loop - 动作)"
+	ForLoopBMultipleHint="后一个整数一定要比前一个整数要大."
+ForLoopVarMultiple="使用整数变量 (做多项动作)"
+	// Specially handled by the editor
+	ForLoopVarMultiple="循环动作[",~整数变量,"]从 ",~开始," 到 ",~结束,", 运行 (Loop - 动作)"
+	ForLoopVarMultipleHint="后一个整数一定要比前一个整数要大."
+ForLoopA="使用循环整数A (做动作)"
+	// Specially handled by the editor
+	ForLoopA="循环动作[循环整数A]从 ",~开始," 到 ",~结束,", 运行 ",~运作
+	ForLoopAHint="后一个整数一定要比前一个整数要大."
+ForLoopB="使用循环整数B (做动作)"
+	// Specially handled by the editor
+	ForLoopB="循环动作[循环整数B]从 ",~开始," 到 ",~结束,", 运行 ",~运作
+	ForLoopBHint="后一个整数一定要比前一个整数要大."
+ForLoopVar="使用整数变量 (做动作)"
+	// Specially handled by the editor
+	ForLoopVar="循环动作[",~整数变量,"]从 ",~开始," 到 ",~结束,", do ",~Action
+	ForLoopVarHint="后一个整数一定要比前一个整数要大."
+SetForLoopIndexA="设置循环整数A"
+	SetForLoopIndexA="设置循环整数A的值为 ",~数值
+	SetForLoopIndexAHint=
+SetForLoopIndexB="设置循环整数B"
+	SetForLoopIndexB="设置循环整数B的值为 ",~数值
+	SetForLoopIndexBHint=
+SetRandomSeed="设置随机种子"
+	SetRandomSeed="设置随机种子数为：",~整数
+	SetRandomSeedHint="设置游戏的随机种子，随机种子会影响随机整数，攻击骰子之类的随机数。"

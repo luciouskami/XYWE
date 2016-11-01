@@ -1,0 +1,12 @@
+TriggerRegisterGameStateEventTimeOfDay="游戏时间改变"
+	TriggerRegisterGameStateEventTimeOfDay="当游戏时间 ",~Operation," ",~时间
+	TriggerRegisterGameStateEventTimeOfDayHint="游戏时间采用24小时制。早上从6:00开始，下午从18:00开始，可以在平衡性常数中调整游戏一天对应现实的秒数。"
+TriggerRegisterTimerEventSingle="游戏计时(单次)"
+	TriggerRegisterTimerEventSingle="当游戏逝去 ",~Time," 秒"
+	TriggerRegisterTimerEventSingleHint="从事件开始的那一刻开始计时"
+TriggerRegisterTimerEventPeriodic="游戏计时(循环)"
+	TriggerRegisterTimerEventPeriodic="每当游戏逝去 ",~Time," 秒"
+	TriggerRegisterTimerEventPeriodicHint="从事件开始的那一刻开始计时，计时完毕后会重新计时"
+TriggerRegisterTimerExpireEventBJ="计时器到期"
+	TriggerRegisterTimerExpireEventBJ=~计时器," 到期"
+	TriggerRegisterTimerExpireEventBJHint="每当计时器到0时触发本事件。使用'事件响应 - 到期的计时器'来获取计时器。可以使用循环计时器来多次触发本事件。"

@@ -1,0 +1,15 @@
+SetRect="设置矩形区域(指定坐标) [C]"
+	SetRect="重新设置 ",~矩形区域," ,左下角坐标为(",~X,",",~Y,"), 右上角坐标为(",~X,",",~Y,")"
+	SetRectHint="该区域必须是一个变量. 重新设置矩形区域的大小和位置."
+SetRectFromLoc="设置矩形区域(指定点) [C]"
+	SetRectFromLoc="重新设置 ",~矩形区域," ,左下角点为 ",~点," 右上角点为 ",~点
+	SetRectFromLocHint="该区域必须是一个变量. 重新设置矩形区域的大小和位置."
+MoveRectTo="移动矩形区域(指定坐标) [C]"
+	MoveRectTo="移动 ",~矩形区域," 到(",~X,",",~Y,")"
+	MoveRectToHint="该区域必须是一个变量. 目标点将作为该区域的新中心点."
+MoveRectToLoc="移动矩形区域(指定点)"
+	MoveRectToLoc="移动 ",~矩形区域," 到 ",~目标点
+	MoveRectToLocHint="该区域必须是一个变量. 目标点将作为该区域的新中心点."
+RemoveRect="删除矩形区域 [C]"
+	RemoveRect="删除 ",~矩形区域
+	RemoveRectHint=

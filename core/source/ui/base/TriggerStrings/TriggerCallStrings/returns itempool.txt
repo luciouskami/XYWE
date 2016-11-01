@@ -1,0 +1,6 @@
+CreateItemPool="新建物品池 [C]"
+	CreateItemPool="新建的空物品池"
+	CreateItemPoolHint="会创建物品池"
+YDWEGetLastItemPool="最后创建的物品池 [Y]"
+	YDWEGetLastItemPool="最后创建的物品池"
+	YDWEGetLastItemPoolHint="该物品池必须是由YDWE提供的<创建物品池>动作生成，不然无法获取。"

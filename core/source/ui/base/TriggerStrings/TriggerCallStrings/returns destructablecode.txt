@@ -1,0 +1,3 @@
+GetDestructableTypeId="指定可破坏物的类型"
+	GetDestructableTypeId=~可破坏物," 的类型"
+	GetDestructableTypeIdHint=

@@ -1,0 +1,3 @@
+GetAIDifficulty="玩家的AI难度"
+	GetAIDifficulty=~Player," 的对战AI难度"
+	GetAIDifficultyHint="对非AI玩家返回普通难度."

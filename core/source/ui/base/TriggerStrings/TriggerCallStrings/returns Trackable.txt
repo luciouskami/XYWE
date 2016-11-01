@@ -1,0 +1,12 @@
+CreateTrackable="新建可追踪物 [C]"
+	CreateTrackable="新建的可追踪物, 使用模型: ",~模型名字," 所在位置: ( ",~X轴," , ",~Y轴," ) 面向角度: ",~数值," 度"
+	CreateTrackableHint="可用来响应鼠标的移动和点击. 会创建可追踪物."
+GetTriggeringTrackable="触发可追踪物 [C]"
+	GetTriggeringTrackable="触发可追踪物"
+	GetTriggeringTrackableHint=
+YDWEGetTrackableByInteger="获取 可追踪物 (整数路径)"
+	YDWEGetTrackableByInteger="从存储目录-> ",~整数,"，标签-> ",~整数," 上获取可追踪物"
+	YDWEGetTrackableByIntegerHint="通过输入的路径，系统会根据当前魔兽版本从缓存或HashTable上获取可追踪物数据。"
+YDWEGetTrackableByString="获取 可追踪物 (字符串路径)"
+	YDWEGetTrackableByString="从存储目录-> ",~字符串,"，标签-> ",~字符串," 上获取可追踪物"
+	YDWEGetTrackableByStringHint="通过输入的路径，系统会根据当前魔兽版本从缓存或HashTable上获取可追踪物数据。"
