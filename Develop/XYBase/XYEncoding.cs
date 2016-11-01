@@ -12,5 +12,9 @@ namespace XYBase
         {
             return Encoding.UTF8.GetString(Encoding.Default.GetBytes(source));
         }
+        public static string UTF8_to_ANSI(string source)
+        {
+            return Encoding.Default.GetString(Encoding.UTF8.GetBytes(source));
+        }
     }
 }

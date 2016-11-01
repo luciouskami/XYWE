@@ -24,10 +24,15 @@ namespace XYBase
             else
             {
                 // sourcePath是文件
-                this.mainPath = sourcePath + "." + Extension;
+                this.mainPath = sourcePath + "." + Extension; // 先假设IMPORT的文件没有填写后缀名
+                if (!File.Exists(this.mainPath))
+                {
+                    // 如果填写了后缀名，就会找不到文件，因此将sourcePath不作处理直接重新赋值给mainPath
+                    this.mainPath = sourcePath;
+                }
                 this.sourcePath = Path.GetDirectoryName(this.mainPath);
             }
-            this.variables = variables != null ? variables : new Dictionary<string, string>();
+            this.variables = variables != null ? variables : XYInfo.CompilerDefaultVariables;
             this.parent = parent;
         }
         string sourcePath;
@@ -109,12 +114,27 @@ namespace XYBase
 
         string AnalyVariable(string name)
         {
+            string encode = "", value;
+            if (name.Contains('@'))
+            {
+                var info = name.Split('@');
+                name = info[0];
+                encode = info[1];
+            }
+            
             if (variables != null && variables.ContainsKey(name))
-                return variables[name];
+                value = variables[name];
             else if (parent != null)
-                return parent.AnalyVariable(name);
+                value = parent.AnalyVariable(name);
             else
                 throw new KeyNotFoundException("Unknown Variable Name: " + name);
+
+            if (encode == "ANSI")
+                return XYEncoding.UTF8_to_ANSI(value);
+            else if (encode == "") // Default: UTF8
+                return value;
+            else
+                throw new EncoderFallbackException("Unknown Encoding Type: " + encode);
         }
 
         void CombineOutput()

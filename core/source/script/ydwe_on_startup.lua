@@ -161,7 +161,7 @@ function event.EVENT_WE_START(event_data)
 	ydwe_version = sys.version { file = fs.ydwe_path() / "ydwe.exe" }
 	war3_version = sys.war3_version { file = fs.war3_path() / "game.dll" }
 
-	log.debug("xywe version " .. "[[VersionName@ANSI]] [[Version]]")
+	log.debug("xywe version " .. "[[@VAR:VersionName]] [[@VAR:Version]]")
 	log.debug("ydwe version " .. tostring(ydwe_version))
 	log.debug("war3 version " .. tostring(war3_version))
 

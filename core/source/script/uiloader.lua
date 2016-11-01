@@ -107,7 +107,7 @@ function loader:save_worldeditstrings(tbl)
 	local rt = {}
 	tbl = self:merge(tbl, {
 		WorldEditStrings = {
-			{ 'WESTRING_APPNAME', '[[EditorNameMin]] [ [[VersionNameMin]] [[Version]] ]' }
+			{ 'WESTRING_APPNAME', '[[@VAR:EditorNameMin]] [ [[@VAR:VersionNameMin]] [[@VAR:Version]] ]' }
 		}
 	})
 	loader:save_section(tbl, rt, 'WorldEditStrings')

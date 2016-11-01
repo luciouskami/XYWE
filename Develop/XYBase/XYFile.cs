@@ -100,10 +100,12 @@ namespace XYBase
                 action?.Invoke(sourcePath);
             }
         }
-        public static void SyncDirectory(string sourcePath, string targetPath, OnSyncSuccessAction action = null)
+        public static void SyncDirectory(string sourcePath, string targetPath, OnSyncSuccessAction action = null, string[] ignoreFileName = null)
         {
             ForEachFile(sourcePath, fullName =>
             {
+                var fileName = Path.GetFileName(fullName);
+                if (ignoreFileName != null && ignoreFileName.Contains(fileName)) return;
                 string _sourcePath = fullName;
                 string _targetPath = fullName.Replace(sourcePath, targetPath);
                 SyncFile(_sourcePath, _targetPath, action);
