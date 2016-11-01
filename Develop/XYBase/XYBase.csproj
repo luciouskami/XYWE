@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XYCodeLibrary.cs" />
     <Compile Include="XYCompiler.cs" />
+    <Compile Include="XYConfig.cs" />
     <Compile Include="XYEncoding.cs" />
     <Compile Include="XYFile.cs" />
     <Compile Include="XYInfo.cs" />

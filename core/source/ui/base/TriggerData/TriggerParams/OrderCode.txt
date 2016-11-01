@@ -102,9 +102,9 @@
 		OrderCodeDarkConversion=0,ordercodeutarg,852228,WESTRING_UNITORDERUTARG_DARKCONVERSION
 		OrderCodeSoulPreservation=0,ordercodeutarg,852242,WESTRING_UNITORDERUTARG_SOULPRESERVATION
 		OrderCodeDarkConversionFast=0,ordercodeutarg,852228,WESTRING_UNITORDERUTARG_DARKCONVERSIONFAST
-		OrderCodeNeutralInterAct=0,ordercodeutarg,852566,ÖĞÁ¢ÉÌµê - Ñ¡Ôñµ¥Î»
-		OrderCodeItemIllusion=1,ordercodeutarg,852274,ÎïÆ·¼¼ÄÜ - »ÃÏóÈ¨ÕÈ
-		OrderCodeItemChainDispel=1,ordercodeutarg,852615,ÎïÆ·¼¼ÄÜ - Á¬ËøÇıÖğ
+		OrderCodeNeutralInterAct=0,ordercodeutarg,852566,ä¸­ç«‹å•†åº— - é€‰æ‹©å•ä½
+		OrderCodeItemIllusion=1,ordercodeutarg,852274,ç‰©å“æŠ€èƒ½ - å¹»è±¡æƒæ–
+		OrderCodeItemChainDispel=1,ordercodeutarg,852615,ç‰©å“æŠ€èƒ½ - è¿é”é©±é€
 // Trigger Point-Targeted Unit Orders
 	// Common
 		OrderCodeAttack=0,ordercodeptarg,851983,WESTRING_UNITORDERPTARG_ATTACK
@@ -118,7 +118,7 @@
 	// Human
 		OrderCodeFlare=0,ordercodeptarg,852060,WESTRING_UNITORDERPTARG_FLARE
 		OrderCodeCloudOfFog=1,ordercodeptarg,852473,WESTRING_UNITORDERPTARG_CLOUDOFFOG
-		OrderCodeReveal=1,ordercodeptarg,852270,ÈË×åÉñÃØÖ®Ëş - ÏÔÊ¾
+		OrderCodeReveal=1,ordercodeptarg,852270,äººæ—ç¥ç§˜ä¹‹å¡” - æ˜¾ç¤º
 		OrderCodeBlizzard=0,ordercodeptarg,852089,WESTRING_UNITORDERPTARG_BLIZZARD
 		OrderCodeFlameStrike=1,ordercodeptarg,852488,WESTRING_UNITORDERPTARG_FLAMESTRIKE
 	// Orc
@@ -161,7 +161,7 @@
 		OrderCodeRainOfChaos=0,ordercodeptarg,852237,WESTRING_UNITORDERPTARG_RAINOFCHAOS
 		OrderCodeRainOfFire=0,ordercodeptarg,852238,WESTRING_UNITORDERPTARG_RAINOFFIRE
 		OrderCodeDarkSummoningOld=0,ordercodeptarg,852220,WESTRING_UNITORDERPTARG_DARKSUMMONINGOLD
-		OrderCodeNeutralDetectAOE=0,ordercodeptarg,852023,µØ¾«ÊµÑéÊÒ - Õì²é
+		OrderCodeNeutralDetectAOE=0,ordercodeptarg,852023,åœ°ç²¾å®éªŒå®¤ - ä¾¦æŸ¥
 // Trigger Destructible-Targeted Unit Orders
 	// Common
 		OrderCodeAttackDestructible=0,ordercodedtarg,851983,WESTRING_UNITORDERDTARG_ATTACK
@@ -186,13 +186,13 @@
 		OrderCodeAttackItemOnce=1,ordercodeitarg,851985,WESTRING_UNITORDERITARG_ATTACKONCE
 		OrderCodeSmartItem=1,ordercodeitarg,851988,WESTRING_UNITORDERITARG_SMART
 		OrderCodeSetRallyItem=0,ordercodeitarg,851980,WESTRING_UNITORDERPTARG_SETRALLY
-		OrderCodeMoveItem0=1,ordercodeitarg,852002,ÒÆ¶¯ÎïÆ·µ½µÚ1¸ñ
-		OrderCodeMoveItem1=1,ordercodeitarg,852003,ÒÆ¶¯ÎïÆ·µ½µÚ2¸ñ
-		OrderCodeMoveItem2=1,ordercodeitarg,852004,ÒÆ¶¯ÎïÆ·µ½µÚ3¸ñ
-		OrderCodeMoveItem3=1,ordercodeitarg,852005,ÒÆ¶¯ÎïÆ·µ½µÚ4¸ñ
-		OrderCodeMoveItem4=1,ordercodeitarg,852006,ÒÆ¶¯ÎïÆ·µ½µÚ5¸ñ
-		OrderCodeMoveItem5=1,ordercodeitarg,852007,ÒÆ¶¯ÎïÆ·µ½µÚ6¸ñ
-		OrderCodeRandomItem=1,ordercodeitarg,852622,ÎïÆ·¼¼ÄÜ - Ëæ»úÎïÆ·
+		OrderCodeMoveItem0=1,ordercodeitarg,852002,ç§»åŠ¨ç‰©å“åˆ°ç¬¬1æ ¼
+		OrderCodeMoveItem1=1,ordercodeitarg,852003,ç§»åŠ¨ç‰©å“åˆ°ç¬¬2æ ¼
+		OrderCodeMoveItem2=1,ordercodeitarg,852004,ç§»åŠ¨ç‰©å“åˆ°ç¬¬3æ ¼
+		OrderCodeMoveItem3=1,ordercodeitarg,852005,ç§»åŠ¨ç‰©å“åˆ°ç¬¬4æ ¼
+		OrderCodeMoveItem4=1,ordercodeitarg,852006,ç§»åŠ¨ç‰©å“åˆ°ç¬¬5æ ¼
+		OrderCodeMoveItem5=1,ordercodeitarg,852007,ç§»åŠ¨ç‰©å“åˆ°ç¬¬6æ ¼
+		OrderCodeRandomItem=1,ordercodeitarg,852622,ç‰©å“æŠ€èƒ½ - éšæœºç‰©å“
 // Trigger Immediate / Untargeted Unit Orders
 	// Common
 		OrderCodeStop=0,ordercodenotarg,851972,WESTRING_UNITORDERNOTARG_STOP
@@ -201,14 +201,14 @@
 		OrderCodeAutoHarvestLumber=0,ordercodenotarg,852022,WESTRING_UNITORDERNOTARG_AUTOHARVESTLUMBER
 		OrderCodeReturnResources=0,ordercodenotarg,852020,WESTRING_UNITORDERNOTARG_RETURNRESOURCES
 		OrderCodeBuild=1,ordercodenotarg,851994,WESTRING_UNITORDERNOTARG_BUILD
-		OrderCodeHeroSkill=1,ordercodenotarg,852000,´ò¿ª¼¼ÄÜ²Ëµ¥
-		OrderCodeCancel=0,ordercodenotarg,851976,È¡Ïû(ÑµÁ·¡¢Éı¼¶¡¢ÑĞ¾¿)
-		OrderCodeUseItem0=1,ordercodenotarg,852008,Ê¹ÓÃµÚ1¸ñÎïÆ·(ÎŞĞ§)
-		OrderCodeUseItem1=1,ordercodenotarg,852009,Ê¹ÓÃµÚ2¸ñÎïÆ·(ÎŞĞ§)
-		OrderCodeUseItem2=1,ordercodenotarg,852010,Ê¹ÓÃµÚ3¸ñÎïÆ·(ÎŞĞ§)
-		OrderCodeUseItem3=1,ordercodenotarg,852011,Ê¹ÓÃµÚ4¸ñÎïÆ·(ÎŞĞ§)
-		OrderCodeUseItem4=1,ordercodenotarg,852012,Ê¹ÓÃµÚ5¸ñÎïÆ·(ÎŞĞ§)
-		OrderCodeUseItem5=1,ordercodenotarg,852013,Ê¹ÓÃµÚ6¸ñÎïÆ·(ÎŞĞ§)
+		OrderCodeHeroSkill=1,ordercodenotarg,852000,æ‰“å¼€æŠ€èƒ½èœå•
+		OrderCodeCancel=0,ordercodenotarg,851976,å–æ¶ˆ(è®­ç»ƒã€å‡çº§ã€ç ”ç©¶)
+		OrderCodeUseItem0=1,ordercodenotarg,852008,ä½¿ç”¨ç¬¬1æ ¼ç‰©å“(æ— æ•ˆ)
+		OrderCodeUseItem1=1,ordercodenotarg,852009,ä½¿ç”¨ç¬¬2æ ¼ç‰©å“(æ— æ•ˆ)
+		OrderCodeUseItem2=1,ordercodenotarg,852010,ä½¿ç”¨ç¬¬3æ ¼ç‰©å“(æ— æ•ˆ)
+		OrderCodeUseItem3=1,ordercodenotarg,852011,ä½¿ç”¨ç¬¬4æ ¼ç‰©å“(æ— æ•ˆ)
+		OrderCodeUseItem4=1,ordercodenotarg,852012,ä½¿ç”¨ç¬¬5æ ¼ç‰©å“(æ— æ•ˆ)
+		OrderCodeUseItem5=1,ordercodenotarg,852013,ä½¿ç”¨ç¬¬6æ ¼ç‰©å“(æ— æ•ˆ)
 	// Human
 		OrderCodeHumanBuild=1,ordercodenotarg,851995,WESTRING_UNITORDERNOTARG_HUMANBUILD
 		OrderCodeTownBellOn=0,ordercodenotarg,852082,WESTRING_UNITORDERNOTARG_TOWNBELLON
@@ -227,8 +227,8 @@
 		OrderCodeSlowOff=0,ordercodenotarg,852077,WESTRING_UNITORDERNOTARG_SLOWOFF
 		OrderCodeSpellStealOn=1,ordercodenotarg,852484,WESTRING_UNITORDERNOTARG_SPELLSTEALON
 		OrderCodeSpellStealOff=1,ordercodenotarg,852485,WESTRING_UNITORDERNOTARG_SPELLSTEALOFF
-		OrderCodeMagicDefense=1,ordercodenotarg,852478,ÈË×åÆÆ·¨Õß - ¼¤»îÄ§·¨·ÀÓù
-		OrderCodeMagicUnDefense=1,ordercodenotarg,852479,ÈË×åÆÆ·¨Õß - È¡ÏûÄ§·¨·ÀÓù
+		OrderCodeMagicDefense=1,ordercodenotarg,852478,äººæ—ç ´æ³•è€… - æ¿€æ´»é­”æ³•é˜²å¾¡
+		OrderCodeMagicUnDefense=1,ordercodenotarg,852479,äººæ—ç ´æ³•è€… - å–æ¶ˆé­”æ³•é˜²å¾¡
 		OrderCodeWaterElemental=0,ordercodenotarg,852097,WESTRING_UNITORDERNOTARG_WATERELEMENTAL
 		OrderCodePhoenix=1,ordercodenotarg,852489,WESTRING_UNITORDERNOTARG_PHOENIX
 		OrderCodeThunderClap=0,ordercodenotarg,852096,WESTRING_UNITORDERNOTARG_THUNDERCLAP
@@ -322,7 +322,7 @@
 		OrderCodeReplenishMana=1,ordercodenotarg,852548,WESTRING_UNITORDERNOTARG_REPLENISHMANA
 		OrderCodeReplenishManaOn=1,ordercodenotarg,852549,WESTRING_UNITORDERNOTARG_REPLENISHMANAON
 		OrderCodeReplenishManaOff=1,ordercodenotarg,852550,WESTRING_UNITORDERNOTARG_REPLENISHMANAOFF
-		OrderCodeCarrionScarabsInstant=1,ordercodenotarg,852554,"²»ËÀ×åµØÑ¨ÁìÖ÷ - ÕÙ»½¸¯Ê¬¼×³æ"
+		OrderCodeCarrionScarabsInstant=1,ordercodenotarg,852554,"ä¸æ­»æ—åœ°ç©´é¢†ä¸» - å¬å”¤è…å°¸ç”²è™«"
 		OrderCodeCarrionScarabsOn=1,ordercodenotarg,852552,WESTRING_UNITORDERNOTARG_CARRIONSCARABSON
 		OrderCodeCarrionScarabsOff=1,ordercodenotarg,852553,WESTRING_UNITORDERNOTARG_CARRIONSCARABSOFF
 		OrderCodeCarrionScarabsInstant=1,ordercodenotarg,852554,WESTRING_UNITORDERNOTARG_CARRIONSCARABS
@@ -332,10 +332,10 @@
 		OrderCodeFrostArmorOff=0,ordercodenotarg,852459,WESTRING_UNITORDERNOTARG_FROSTARMOROFF
 	// Neutral
 		OrderCodeNagaBuild=1,ordercodenotarg,852467,WESTRING_UNITORDERNOTARG_NAGABUILD
-		OrderCodeSubmerge=1,ordercodenotarg,852604,ÄÈåÈ - Ç±Ë®
-		OrderCodeUnSubmerge=1,ordercodenotarg,852605,ÄÈåÈ - È¡ÏûÇ±Ë®
-		OrderCodeParasiteOn=1,ordercodenotarg,852602,ÄÈåÈº£Ñı - ¼¤»î¼ÄÉú³æ
-		OrderCodeParasiteOff=1,ordercodenotarg,852603,ÄÈåÈº£Ñı - È¡Ïû¼ÄÉú³æ
+		OrderCodeSubmerge=1,ordercodenotarg,852604,å¨œè¿¦ - æ½œæ°´
+		OrderCodeUnSubmerge=1,ordercodenotarg,852605,å¨œè¿¦ - å–æ¶ˆæ½œæ°´
+		OrderCodeParasiteOn=1,ordercodenotarg,852602,å¨œè¿¦æµ·å¦– - æ¿€æ´»å¯„ç”Ÿè™«
+		OrderCodeParasiteOff=1,ordercodenotarg,852603,å¨œè¿¦æµ·å¦– - å–æ¶ˆå¯„ç”Ÿè™«
 		OrderCodeCreepAnimateDead=0,ordercodenotarg,852246,WESTRING_UNITORDERNOTARG_CREEPANIMATEDEAD
 		OrderCodeCreepHealOn=0,ordercodenotarg,852249,WESTRING_UNITORDERNOTARG_CREEPHEALON
 		OrderCodeCreepHealOff=0,ordercodenotarg,852250,WESTRING_UNITORDERNOTARG_CREEPHEALOFF
@@ -370,5 +370,5 @@
 		OrderCodeRexxarBattleRoar=1,ordercodenotarg,852599,WESTRING_UNITORDERNOTARG_REXXARBATTLEROAR
 		OrderCodeColdArrows=0,ordercodenotarg,852244,WESTRING_UNITORDERNOTARG_COLDARROWS
 		OrderCodeUnColdArrows=0,ordercodenotarg,852245,WESTRING_UNITORDERNOTARG_UNCOLDARROWS
-		OrderCodeDustOfAppearance=1,ordercodenotarg,852621,ÎïÆ·¼¼ÄÜ - ÔÂÁÁÊ¯
-		OrderCodeDustOfAppearance=1,ordercodenotarg,852625,ÎïÆ·¼¼ÄÜ - ÏÔÓ°Ö®³¾
+		OrderCodeDustOfAppearance=1,ordercodenotarg,852621,ç‰©å“æŠ€èƒ½ - æœˆäº®çŸ³
+		OrderCodeDustOfAppearance=1,ordercodenotarg,852625,ç‰©å“æŠ€èƒ½ - æ˜¾å½±ä¹‹å°˜

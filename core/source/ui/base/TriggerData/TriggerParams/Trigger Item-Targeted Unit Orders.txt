@@ -1,6 +1,6 @@
 // Common
 	UnitOrderAttackItem=1,unitorderitarg,`attack`,WESTRING_UNITORDERITARG_ATTACK
 	UnitOrderAttackItemOnce=1,unitorderitarg,`attackonce`,WESTRING_UNITORDERITARG_ATTACKONCE
-	UnitOrderMoveItem=1,unitorderitarg,`move`,ÒÆ¶¯(ÎÞÐ§)
+	UnitOrderMoveItem=1,unitorderitarg,`move`,ç§»åŠ¨(æ— æ•ˆ)
 	UnitOrderSmartItem=1,unitorderitarg,`smart`,WESTRING_UNITORDERITARG_SMART
 	UnitOrderSetRallyItem=0,unitorderitarg,`setrally`,WESTRING_UNITORDERPTARG_SETRALLY

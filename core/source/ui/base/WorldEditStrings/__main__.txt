@@ -1634,8 +1634,8 @@
 	WESTRING_ABOUT_COPYRIGHT=Wow9.Org
 	WESTRING_ABOUT_LINK=Blizzard Entertainment & 月协 & Wow9.Org
 
-	WESTRING_WELCOMETITLE=欢迎使用 [[EditorName]] [[VersionName]] [[Version]] ([[VersionClass]])
-	WESTRING_WELCOME_LARGETEXT=~ [[EditorName]] 制图小技巧 ~
+	WESTRING_WELCOMETITLE=欢迎使用 [[@VAR:EditorName]] [[@VAR:VersionName]] [[@VAR:Version]] ([[@VAR:VersionClass]])
+	WESTRING_WELCOME_LARGETEXT=~ [[@VAR:EditorName]] 制图小技巧 ~
 	WESTRING_WELCOME_SMALLTEXT1=""
 	WESTRING_WELCOME_SMALLTEXT2=""
 	WESTRING_WELCOME_LEGALTEXT=""

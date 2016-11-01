@@ -1,1 +1,1 @@
-bj_lastSetWeaponType=0,weapontype,bj_lastSetWeaponType,最后设置的武器类型 [YDWE]
+bj_lastSetWeaponType=0,weapontype,bj_lastSetWeaponType,鏈�鍚庤缃殑姝﹀櫒绫诲瀷 [YDWE]

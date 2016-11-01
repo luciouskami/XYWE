@@ -1,2 +1,2 @@
-ShareVisionShare=0,sharevisionoption,true,¹²Ïí
-ShareVisionNot=0,sharevisionoption,false,²»¹²Ïí
+ShareVisionShare=0,sharevisionoption,true,å…±äº«
+ShareVisionNot=0,sharevisionoption,false,ä¸å…±äº«

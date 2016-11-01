@@ -10,7 +10,7 @@ namespace XYBase
             get
             {
                 if (_Tips == null)
-                    _Tips = new IniFile(@"data\data.ini", nameof(Tips));
+                    _Tips = new IniFile(XYPath.File.XyweDataIni, nameof(Tips));
                 return _Tips;
             }
         }
@@ -21,7 +21,7 @@ namespace XYBase
             get
             {
                 if (_Config == null)
-                    _Config = new IniFile(@"data\data.ini", nameof(Config));
+                    _Config = new IniFile(XYPath.File.XyweDataIni, nameof(Config));
                 return _Config;
             }
         }

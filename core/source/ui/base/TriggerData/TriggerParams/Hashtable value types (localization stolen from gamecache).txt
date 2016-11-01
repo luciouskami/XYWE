@@ -3,4 +3,4 @@ HashtableValueTypeInteger=1,hashtablevaluetype,bj_HASHTABLE_INTEGER,WESTRING_CAC
 HashtableValueTypeReal=1,hashtablevaluetype,bj_HASHTABLE_REAL,WESTRING_CACHEVALUETYPE_REAL
 HashtableValueTypeString=1,hashtablevaluetype,bj_HASHTABLE_STRING,WESTRING_CACHEVALUETYPE_STRING
 HashtableValueTypeHandle=1,hashtablevaluetype,bj_HASHTABLE_HANDLE,WESTRING_CACHEVALUETYPE_HANDLE
-bj_lastCreatedHashtable=0,hashtable,bj_lastCreatedHashtable,×îºó´´½¨µÄ¹şÏ£±í [C]
+bj_lastCreatedHashtable=0,hashtable,bj_lastCreatedHashtable,æœ€ååˆ›å»ºçš„å“ˆå¸Œè¡¨ [C]

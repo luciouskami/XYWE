@@ -31,12 +31,15 @@
             this.BtnXYTextColorMaker = new System.Windows.Forms.Button();
             this.BtnXYTriggerSyntaxHighlighter = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.cbUI = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnPatchUI = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LlVersion
             // 
             this.LlVersion.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.LlVersion.Location = new System.Drawing.Point(214, 223);
+            this.LlVersion.Location = new System.Drawing.Point(317, 389);
             this.LlVersion.Name = "LlVersion";
             this.LlVersion.Size = new System.Drawing.Size(171, 12);
             this.LlVersion.TabIndex = 0;
@@ -49,7 +52,7 @@
             // 
             this.BtnXYCodeLibraryManager.Enabled = false;
             this.BtnXYCodeLibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(118, 120);
+            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(118, 56);
             this.BtnXYCodeLibraryManager.Name = "BtnXYCodeLibraryManager";
             this.BtnXYCodeLibraryManager.Size = new System.Drawing.Size(100, 38);
             this.BtnXYCodeLibraryManager.TabIndex = 1;
@@ -61,7 +64,7 @@
             // 
             this.BtnXYUILibraryManager.Enabled = false;
             this.BtnXYUILibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(12, 120);
+            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(12, 56);
             this.BtnXYUILibraryManager.Name = "BtnXYUILibraryManager";
             this.BtnXYUILibraryManager.Size = new System.Drawing.Size(100, 38);
             this.BtnXYUILibraryManager.TabIndex = 3;
@@ -71,9 +74,9 @@
             // 
             // BtnStartXYWE
             // 
-            this.BtnStartXYWE.Location = new System.Drawing.Point(12, 164);
+            this.BtnStartXYWE.Location = new System.Drawing.Point(14, 100);
             this.BtnStartXYWE.Name = "BtnStartXYWE";
-            this.BtnStartXYWE.Size = new System.Drawing.Size(373, 51);
+            this.BtnStartXYWE.Size = new System.Drawing.Size(204, 51);
             this.BtnStartXYWE.TabIndex = 4;
             this.BtnStartXYWE.Text = "启动咸鱼地图编辑器";
             this.BtnStartXYWE.UseVisualStyleBackColor = true;
@@ -104,7 +107,7 @@
             // linkLabel1
             // 
             this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 223);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 389);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(171, 12);
             this.linkLabel1.TabIndex = 7;
@@ -113,11 +116,44 @@
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // cbUI
+            // 
+            this.cbUI.FormattingEnabled = true;
+            this.cbUI.Items.AddRange(new object[] {
+            "XYWE",
+            "YDWE"});
+            this.cbUI.Location = new System.Drawing.Point(286, 22);
+            this.cbUI.Name = "cbUI";
+            this.cbUI.Size = new System.Drawing.Size(117, 20);
+            this.cbUI.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(237, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "UI方案";
+            // 
+            // btnPatchUI
+            // 
+            this.btnPatchUI.Location = new System.Drawing.Point(413, 20);
+            this.btnPatchUI.Name = "btnPatchUI";
+            this.btnPatchUI.Size = new System.Drawing.Size(75, 23);
+            this.btnPatchUI.TabIndex = 10;
+            this.btnPatchUI.Text = "应用";
+            this.btnPatchUI.UseVisualStyleBackColor = true;
+            this.btnPatchUI.Click += new System.EventHandler(this.btnPatchUI_Click);
+            // 
             // FormXYWE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 244);
+            this.ClientSize = new System.Drawing.Size(500, 410);
+            this.Controls.Add(this.btnPatchUI);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbUI);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.BtnXYTriggerSyntaxHighlighter);
             this.Controls.Add(this.BtnXYTextColorMaker);
@@ -133,6 +169,7 @@
             this.Text = "咸鱼地图编辑器";
             this.Load += new System.EventHandler(this.FormXYWE_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,6 +182,9 @@
         private System.Windows.Forms.Button BtnXYTextColorMaker;
         private System.Windows.Forms.Button BtnXYTriggerSyntaxHighlighter;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ComboBox cbUI;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPatchUI;
     }
 }
 

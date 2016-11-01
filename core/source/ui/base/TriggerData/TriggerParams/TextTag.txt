@@ -1,1 +1,1 @@
-bj_lastCreatedTextTag=0,texttag,bj_lastCreatedTextTag,最后创建的漂浮文字 [R]
+bj_lastCreatedTextTag=0,texttag,bj_lastCreatedTextTag,鏈�鍚庡垱寤虹殑婕傛诞鏂囧瓧 [R]

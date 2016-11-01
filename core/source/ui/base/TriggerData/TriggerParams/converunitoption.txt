@@ -1,2 +1,2 @@
-ConverUnitConver=0,converunitoption,true,¸²¸Ç
-ConverUnitNot=0,converunitoption,false,²»¸²¸Ç
+ConverUnitConver=0,converunitoption,true,ë¦¼ë§¨
+ConverUnitNot=0,converunitoption,false,ê¼‡ë¦¼ë§¨

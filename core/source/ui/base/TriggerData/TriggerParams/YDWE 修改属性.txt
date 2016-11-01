@@ -1,6 +1,6 @@
-bonusTypeC=0,bonusType,3,攻击
-bonusTypeD=0,bonusType,2,防御
-bonusTypeA=0,bonusType,0,生命上限
-bonusTypeB=0,bonusType,1,魔法上限
-bonusTypeE=0,bonusType,4,攻击速度
+bonusTypeC=0,bonusType,3,鏀诲嚮
+bonusTypeD=0,bonusType,2,闃插尽
+bonusTypeA=0,bonusType,0,鐢熷懡涓婇檺
+bonusTypeB=0,bonusType,1,榄旀硶涓婇檺
+bonusTypeE=0,bonusType,4,鏀诲嚮閫熷害
 	// Add By WMUI

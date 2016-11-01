@@ -1,2 +1,2 @@
-VertOnlyOn=0,vertonlyoption,true,垂直晃动
-VertOnlyOff=0,vertonlyoption,false,水平晃动
+VertOnlyOn=0,vertonlyoption,true,鍨傜洿鏅冨姩
+VertOnlyOff=0,vertonlyoption,false,姘村钩鏅冨姩

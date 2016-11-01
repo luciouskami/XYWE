@@ -1,2 +1,2 @@
-PingStyleNormal=0,pingstyle,true,¾ªÌ¾ºÅ
-PingStyleExtra=0,pingstyle,false,ÆÕÍ¨
+PingStyleNormal=0,pingstyle,true,æƒŠå¹å·
+PingStyleExtra=0,pingstyle,false,æ™®é€š

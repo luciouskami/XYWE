@@ -1,1 +1,1 @@
-bj_lastCreatedLightning=0,lightning,bj_lastCreatedLightning,最后创建的闪电效果 [R]
+bj_lastCreatedLightning=0,lightning,bj_lastCreatedLightning,鏈�鍚庡垱寤虹殑闂數鏁堟灉 [R]

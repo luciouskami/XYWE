@@ -1,5 +1,5 @@
 // Common
-	UnitOrderAttackUnitnull=0,unitorderutarg,null,Œﬁ
+	UnitOrderAttackUnitnull=0,unitorderutarg,null,Êó†
 	UnitOrderAttackUnit=0,unitorderutarg,`attack`,WESTRING_UNITORDERUTARG_ATTACK
 	UnitOrderAttackUnitOnce=0,unitorderutarg,`attackonce`,WESTRING_UNITORDERUTARG_ATTACKONCE
 	UnitOrderMoveUnit=0,unitorderutarg,`move`,WESTRING_UNITORDERUTARG_MOVE
@@ -37,7 +37,7 @@
 	UnitOrderLightningShield=0,unitorderutarg,`lightningshield`,WESTRING_UNITORDERUTARG_LIGHTNINGSHIELD
 	UnitOrderBloodlust=0,unitorderutarg,`bloodlust`,WESTRING_UNITORDERUTARG_BLOODLUST
 	UnitOrderSpiritLink=1,unitorderutarg,`spiritlink`,WESTRING_UNITORDERUTARG_SPIRITLINK
-	UnitOrderAncestralSpiritTarg=1,unitorderutarg,`ancestralspirittarg`, ﬁ◊Â¡ÈªÍ––’ﬂ - œ»◊Ê”ƒ¡È(Œﬁ–ß)
+	UnitOrderAncestralSpiritTarg=1,unitorderutarg,`ancestralspirittarg`,ÂÖΩÊóèÁÅµÈ≠ÇË°åËÄÖ - ÂÖàÁ•ñÂπΩÁÅµ(Êó†Êïà)
 	UnitOrderDevour=0,unitorderutarg,`devour`,WESTRING_UNITORDERUTARG_DEVOUR
 	UnitOrderChainLightning=0,unitorderutarg,`chainlightning`,WESTRING_UNITORDERUTARG_CHAINLIGHTNING
 	UnitOrderHealingWave=1,unitorderutarg,`healingwave`,WESTRING_UNITORDERUTARG_HEALINGWAVE
@@ -80,7 +80,7 @@
 	UnitOrderFrostArmor=0,unitorderutarg,`frostarmor`,WESTRING_UNITORDERUTARG_FROSTARMOR
 	UnitOrderDarkRitual=0,unitorderutarg,`darkritual`,WESTRING_UNITORDERUTARG_DARKRITUAL
 // Neutral
-	UnitTargetOrderBreathOfFrost=1,unitorderutarg,`breathoffrost`,÷–¡¢ - À™∂≥Õ¬œ¢ [R]
+	UnitTargetOrderBreathOfFrost=1,unitorderutarg,`breathoffrost`,‰∏≠Á´ã - ÈúúÂÜªÂêêÊÅØ [R]
 	UnitOrderCreepDevour=1,unitorderutarg,`creepdevour`,WESTRING_UNITORDERUTARG_CREEPDEVOUR
 	UnitOrderFirebolt=0,unitorderutarg,`firebolt`,WESTRING_UNITORDERUTARG_FIREBOLT
 	UnitOrderCreepHeal=0,unitorderutarg,`creepheal`,WESTRING_UNITORDERUTARG_CREEPHEAL
@@ -104,4 +104,4 @@
 	UnitOrderDarkConversion=0,unitorderutarg,`darkconversion`,WESTRING_UNITORDERUTARG_DARKCONVERSION
 	UnitOrderSoulPreservation=0,unitorderutarg,`soulpreservation`,WESTRING_UNITORDERUTARG_SOULPRESERVATION
 	UnitOrderDarkConversionFast=0,unitorderutarg,`darkconversion`,WESTRING_UNITORDERUTARG_DARKCONVERSIONFAST
-	UnitOrderNeutralInterAct=0,unitorderutarg,`neutralinteract`,÷–¡¢…ÃµÍ - —°‘Òµ•Œª [R]
+	UnitOrderNeutralInterAct=0,unitorderutarg,`neutralinteract`,‰∏≠Á´ãÂïÜÂ∫ó - ÈÄâÊã©Âçï‰Ωç [R]

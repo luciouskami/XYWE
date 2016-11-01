@@ -54,4 +54,4 @@ RacePrefHuman=0,racepreference,RACE_PREF_HUMAN,WESTRING_RACE_HUMAN
 RacePrefOrc=0,racepreference,RACE_PREF_ORC,WESTRING_RACE_ORC
 RacePrefNightElf=0,racepreference,RACE_PREF_NIGHTELF,WESTRING_RACE_NIGHTELF
 RacePrefUndead=0,racepreference,RACE_PREF_UNDEAD,WESTRING_RACE_UNDEAD
-RacePrefRandom=0,racepreference,RACE_PREF_RANDOM,ÀÊª˙
+RacePrefRandom=0,racepreference,RACE_PREF_RANDOM,ÈöèÊú∫

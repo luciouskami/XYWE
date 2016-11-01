@@ -1,4 +1,4 @@
-UnitStateLife=0,unitstate,UNIT_STATE_LIFE,ÉúÃüÖµ
+UnitStateLife=0,unitstate,UNIT_STATE_LIFE,ç”Ÿå‘½å€¼
 UnitStateMaxLife=0,unitstate,UNIT_STATE_MAX_LIFE,WESTRING_USTATE_MAXLIFE
-UnitStateMana=0,unitstate,UNIT_STATE_MANA,Ä§·¨Öµ
+UnitStateMana=0,unitstate,UNIT_STATE_MANA,é­”æ³•å€¼
 UnitStateMaxMana=0,unitstate,UNIT_STATE_MAX_MANA,WESTRING_USTATE_MAXMANA

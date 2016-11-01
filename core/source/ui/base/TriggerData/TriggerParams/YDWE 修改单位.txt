@@ -1,3 +1,3 @@
-unitstatechangetypeA=0,unitstatechangetype,0,增加
-unitstatechangetypeB=0,unitstatechangetype,1,减少
-unitstatechangetypeC=0,unitstatechangetype,2,等于
+unitstatechangetypeA=0,unitstatechangetype,0,澧炲姞
+unitstatechangetypeB=0,unitstatechangetype,1,鍑忓皯
+unitstatechangetypeC=0,unitstatechangetype,2,绛変簬

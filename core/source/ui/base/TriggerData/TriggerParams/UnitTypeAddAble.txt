@@ -5,5 +5,5 @@ UnitTypeAncientAdd=0,unittypeaddable,UNIT_TYPE_ANCIENT,WESTRING_UNITTYPE_ANCIENT
 UnitTypePeonAdd=0,unittypeaddable,UNIT_TYPE_PEON,WESTRING_UNITTYPE_PEON
 UnitTypeTownHallAdd=0,unittypeaddable,UNIT_TYPE_TOWNHALL,WESTRING_UNITTYPE_TOWNHALL
 UnitTypeSapperAdd=0,unittypeaddable,UNIT_TYPE_SAPPER,WESTRING_UNITTYPE_SAPPER
-UnitTypeGiantAdd=0,unittypeaddable,UNIT_TYPE_GIANT,̩̹��
-UnitTypeTaurenAdd=0,unittypeaddable,UNIT_TYPE_TAUREN,ţͷ��
+UnitTypeGiantAdd=0,unittypeaddable,UNIT_TYPE_GIANT,泰坦族
+UnitTypeTaurenAdd=0,unittypeaddable,UNIT_TYPE_TAUREN,牛头人

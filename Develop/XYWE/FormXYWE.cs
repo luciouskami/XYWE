@@ -23,6 +23,7 @@ namespace XYWE
             LlVersion.Text = XYInfo.Version;
             XYTip.UpdateTipAsync();
             XYVersion.VerifyObsoleteAsync(ObsoleteAction);
+            cbUI.SelectedItem = XYConfig.GetCurrent();
         }
         void ObsoleteAction()
         {
@@ -51,9 +52,10 @@ namespace XYWE
             XYFile.SyncDirectory(XYPath.Dir.SourceScript, XYPath.Dir.EditorShareScript, ignoreFileName: new[] { "uiloader.lua", "ydwe_on_startup.lua" });
 
             // Compile UI
-            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\TriggerData", XYPath.Dir.EditorShareMpq + @"\base\TriggerData.txt");
-            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\TriggerStrings", XYPath.Dir.EditorShareMpq + @"\base\TriggerStrings.txt");
-            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\WorldEditStrings", XYPath.Dir.EditorShareMpq + @"\base\WorldEditStrings.txt");
+            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\TriggerData", XYPath.Dir.EditorShareMpq + @"\base\ui\TriggerData.txt");
+            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\TriggerStrings", XYPath.Dir.EditorShareMpq + @"\base\ui\TriggerStrings.txt");
+            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\WorldEditStrings", XYPath.Dir.EditorShareMpq + @"\base\ui\WorldEditStrings.txt");
+            XYFile.Compile(XYPath.Dir.SourceUi + @"\xywe\WorldEditStrings", XYPath.Dir.EditorShareMpq + @"\xywe\ui\WorldEditStrings.txt");
 
             // Compile Script
             XYFile.Compile(XYPath.Dir.SourceScript + @"\uiloader.lua", XYPath.Dir.EditorShareScript + @"\uiloader.lua");
@@ -89,6 +91,18 @@ namespace XYWE
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             XYProcess.Website.StartCommunity();
+        }
+
+        private void btnPatchUI_Click(object sender, EventArgs e)
+        {
+            var ui = (string)cbUI.SelectedItem;
+            switch (ui)
+            {
+                case "XYWE": XYConfig.TurnXYWE(); break;
+                case "YDWE": XYConfig.TurnYDWE(); break;
+                default: throw new KeyNotFoundException("没有找到UI配置：" + ui);
+            }
+            MessageBox.Show("成功切换UI：" + ui);
         }
     }
 }

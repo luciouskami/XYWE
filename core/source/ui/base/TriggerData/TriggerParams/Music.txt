@@ -1,2 +1,2 @@
 MusicFileMusic=0,musicfile,`music`,WESTRING_TRIGMUSICFILE_MUSIC
-bj_lastPlayedMusic=0,musicfile,bj_lastPlayedMusic,最后播放的音乐 [R]
+bj_lastPlayedMusic=0,musicfile,bj_lastPlayedMusic,鏈�鍚庢挱鏀剧殑闊充箰 [R]

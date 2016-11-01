@@ -1,1 +1,1 @@
-bj_lastSetAttackType=0,attacktype,bj_lastSetAttackType,最后设置的攻击类型 [YDWE]
+bj_lastSetAttackType=0,attacktype,bj_lastSetAttackType,鏈�鍚庤缃殑鏀诲嚮绫诲瀷 [YDWE]

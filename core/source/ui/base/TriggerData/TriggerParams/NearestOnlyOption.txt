@@ -1,2 +1,2 @@
-NearestOnlyOn=0,nearestonlyoption,true,Ö»Ñ¡È¡×î½üµÄÒ»¸öµ¥Î»
-NearestOnlyOff=0,nearestonlyoption,false,Ñ¡È¡·¶Î§ÄÚËùÓĞµ¥Î»
+NearestOnlyOn=0,nearestonlyoption,true,åªé€‰å–æœ€è¿‘çš„ä¸€ä¸ªå•ä½
+NearestOnlyOff=0,nearestonlyoption,false,é€‰å–èŒƒå›´å†…æ‰€æœ‰å•ä½

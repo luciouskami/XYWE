@@ -1,2 +1,2 @@
 SoundNull=0,sound,null,WESTRING_TRIGSOUND_NULL
-bj_lastPlayedSound=0,sound,bj_lastPlayedSound,最后播放的音效 [R]
+bj_lastPlayedSound=0,sound,bj_lastPlayedSound,鏈�鍚庢挱鏀剧殑闊虫晥 [R]

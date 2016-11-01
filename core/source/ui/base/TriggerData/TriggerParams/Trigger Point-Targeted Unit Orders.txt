@@ -1,5 +1,5 @@
 // Common
-	UnitOrderAttacknull=0,unitorderptarg,null,ÎÞ
+	UnitOrderAttacknull=0,unitorderptarg,null,æ— 
 	UnitOrderAttack=0,unitorderptarg,`attack`,WESTRING_UNITORDERPTARG_ATTACK
 	UnitOrderAttackGround=0,unitorderptarg,`attackground`,WESTRING_UNITORDERPTARG_ATTACKGROUND
 	UnitOrderMove=0,unitorderptarg,`move`,WESTRING_UNITORDERPTARG_MOVE
@@ -53,4 +53,4 @@
 	UnitOrderRainOfChaos=0,unitorderptarg,`rainofchaos`,WESTRING_UNITORDERPTARG_RAINOFCHAOS
 	UnitOrderRainOfFire=0,unitorderptarg,`rainoffire`,WESTRING_UNITORDERPTARG_RAINOFFIRE
 	UnitOrderDarkSummoningOld=0,unitorderptarg,`darksummoning`,WESTRING_UNITORDERPTARG_DARKSUMMONINGOLD
-	UnitOrderNeutralDetectAOE=0,unitorderptarg,`neutraldetectaoe`,µØ¾«ÊµÑéÊÒ - Õì²é [R]
+	UnitOrderNeutralDetectAOE=0,unitorderptarg,`neutraldetectaoe`,åœ°ç²¾å®žéªŒå®¤ - ä¾¦æŸ¥ [R]

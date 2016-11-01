@@ -1,2 +1,2 @@
-LockUnLockLock=0,lockunlockoption,true,Ëø¶¨
-LockUnLockUnLock=0,lockunlockoption,false,½â³ıËø¶¨
+LockUnLockLock=0,lockunlockoption,true,é”å®š
+LockUnLockUnLock=0,lockunlockoption,false,è§£é™¤é”å®š

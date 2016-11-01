@@ -1,4 +1,4 @@
-dyc_LastSpawnTimer=0,timer,dyc_LastSpawnTimer,×îºó´´½¨µÄË¢±ø¼ÆÊ±Æ÷
-DYCUPause1=0,DYCUPauseOption,1,ÔİÍ£µ¥Î»
-DYCUPause2=0,DYCUPauseOption,2,ÔİÍ£¶¯»­
-DYCUPause3=0,DYCUPauseOption,3,ÔİÍ£µ¥Î»ºÍ¶¯»­
+dyc_LastSpawnTimer=0,timer,dyc_LastSpawnTimer,æœ€ååˆ›å»ºçš„åˆ·å…µè®¡æ—¶å™¨
+DYCUPause1=0,DYCUPauseOption,1,æš‚åœå•ä½
+DYCUPause2=0,DYCUPauseOption,2,æš‚åœåŠ¨ç”»
+DYCUPause3=0,DYCUPauseOption,3,æš‚åœå•ä½å’ŒåŠ¨ç”»

@@ -1,1 +1,1 @@
-bj_lastSetDamageType=0,damagetype,bj_lastSetDamageType,最后设置的伤害类型 [YDWE]
+bj_lastSetDamageType=0,damagetype,bj_lastSetDamageType,鏈�鍚庤缃殑浼ゅ绫诲瀷 [YDWE]

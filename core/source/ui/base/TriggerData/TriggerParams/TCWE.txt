@@ -1,6 +1,6 @@
-tcpreloadtype_1=0,tcpreloadtype,1,´æ´¢
-tcpreloadtype_2=0,tcpreloadtype,2,¶ÁÈ¡
-tcstringcodetype_1=0,tcstringcodetype,1,´æ´¢
-tcstringcodetype_2=0,tcstringcodetype,2,¶ÁÈ¡
-preload_lastCreatedPreload=0,tcpreload,TCPreloadSystem_preload.lastCreatedPreload,×îºó´´½¨µÄ´æµµ
-stringcode_lastCreatedStringcode=0,tcstringcode,TCStringcodeSystem_stringcode.lastCreatedStringcode,×îºó´´½¨µÄ¼ÓÃÜ×Ö·û´®
+tcpreloadtype_1=0,tcpreloadtype,1,å­˜å‚¨
+tcpreloadtype_2=0,tcpreloadtype,2,è¯»å–
+tcstringcodetype_1=0,tcstringcodetype,1,å­˜å‚¨
+tcstringcodetype_2=0,tcstringcodetype,2,è¯»å–
+preload_lastCreatedPreload=0,tcpreload,TCPreloadSystem_preload.lastCreatedPreload,æœ€ååˆ›å»ºçš„å­˜æ¡£
+stringcode_lastCreatedStringcode=0,tcstringcode,TCStringcodeSystem_stringcode.lastCreatedStringcode,æœ€ååˆ›å»ºçš„åŠ å¯†å­—ç¬¦ä¸²

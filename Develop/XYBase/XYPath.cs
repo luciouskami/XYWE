@@ -53,7 +53,9 @@ namespace XYBase
             public static string MpqConfig = Dir.Mpq + @"\config";
             public static string MpqSort = Dir.Mpq + @"\sort";
 
-            public static string XyweTip = Dir.Data + @"\tips.txt";
+            public static string XyweDataIni = Dir.Data + @"\data.ini";
+            public static string XyweDataTip = Dir.Data + @"\tips.txt";
+            public static string XyweUiTip = Dir.SourceUi + @"\xywe\WorldEditStrings\Tip.txt";
         }
     }
 }

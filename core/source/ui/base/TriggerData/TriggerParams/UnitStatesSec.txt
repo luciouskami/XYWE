@@ -1,2 +1,2 @@
-UnitStateLifeSec=0,unitstatesec,UNIT_STATE_LIFE,ÉúÃüÖµ
-UnitStateManaSec=0,unitstatesec,UNIT_STATE_MANA,Ä§·¨Öµ
+UnitStateLifeSec=0,unitstatesec,UNIT_STATE_LIFE,ç”Ÿå‘½å€¼
+UnitStateManaSec=0,unitstatesec,UNIT_STATE_MANA,é­”æ³•å€¼
