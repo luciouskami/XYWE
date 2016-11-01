@@ -37,7 +37,14 @@ namespace XYWE
 
         void BtnStartXYWE_Click(object sender, EventArgs e)
         {
+            // Change Text
+            var text = BtnStartXYWE.Text;
+            BtnStartXYWE.Text = "正在启动XYWE中……";
+
+            // Refresh Tip
             XYTip.Refresh();
+
+            // Sync Source
             XYFile.SyncDirectory(XYPath.Dir.SourceJass, XYPath.Dir.EditorJass);
             XYFile.SyncDirectory(XYPath.Dir.SourceMpq, XYPath.Dir.EditorShareMpq);
             XYFile.SyncDirectory(XYPath.Dir.SourcePlugin, XYPath.Dir.EditorPlugin);
@@ -52,8 +59,11 @@ namespace XYWE
             XYFile.Compile(XYPath.Dir.SourceScript + @"\uiloader.lua", XYPath.Dir.EditorShareScript + @"\uiloader.lua");
             XYFile.Compile(XYPath.Dir.SourceScript + @"\ydwe_on_startup.lua", XYPath.Dir.EditorShareScript + @"\ydwe_on_startup.lua");
 
-            // XYProcess.Application.StartXYWE();
-            MessageBox.Show("Start");
+            // Recover Text
+            BtnStartXYWE.Text = text;
+
+            // Start XYWE
+            XYProcess.Application.StartXYWE();
         }
 
         void BtnXYCodeLibraryManager_Click(object sender, EventArgs e)
