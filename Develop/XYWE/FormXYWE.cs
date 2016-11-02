@@ -51,15 +51,8 @@ namespace XYWE
             XYFile.SyncDirectory(XYPath.Dir.SourcePlugin, XYPath.Dir.EditorPlugin);
             XYFile.SyncDirectory(XYPath.Dir.SourceScript, XYPath.Dir.EditorShareScript, ignoreFileName: new[] { "uiloader.lua", "ydwe_on_startup.lua" });
 
-            // Compile UI
-            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\TriggerData", XYPath.Dir.EditorShareMpq + @"\base\ui\TriggerData.txt");
-            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\TriggerStrings", XYPath.Dir.EditorShareMpq + @"\base\ui\TriggerStrings.txt");
-            XYFile.Compile(XYPath.Dir.SourceUi + @"\base\WorldEditStrings", XYPath.Dir.EditorShareMpq + @"\base\ui\WorldEditStrings.txt");
-            XYFile.Compile(XYPath.Dir.SourceUi + @"\xywe\WorldEditStrings", XYPath.Dir.EditorShareMpq + @"\xywe\ui\WorldEditStrings.txt");
-
-            // Compile Script
-            XYFile.Compile(XYPath.Dir.SourceScript + @"\uiloader.lua", XYPath.Dir.EditorShareScript + @"\uiloader.lua");
-            XYFile.Compile(XYPath.Dir.SourceScript + @"\ydwe_on_startup.lua", XYPath.Dir.EditorShareScript + @"\ydwe_on_startup.lua");
+            // Compile
+            XYFile.Compile(XYPath.Dir.Source);
 
             // Recover Text
             BtnStartXYWE.Text = text;

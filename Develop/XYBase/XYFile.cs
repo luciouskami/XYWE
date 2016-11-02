@@ -8,6 +8,9 @@ using System.IO;
 namespace XYBase
 {
     public delegate void ForFileAction(string fullName);
+    /// <param name="fullName">Directory Full Name</param>
+    /// <returns>Do Break</returns>
+    public delegate bool ForDirectoryAction(string fullName); // return doBreak
     public delegate void OnSyncSuccessAction(string fullName);
     public delegate void OnCompileSuccessAction(string fullName);
 
@@ -38,6 +41,11 @@ namespace XYBase
                 list.Add(colList);
             }
             return list;
+        }
+        public static void CreateDirectoryForFile(string path)
+        {
+            var dirPath = Path.GetDirectoryName(path);
+            if (!Directory.Exists(dirPath)) Directory.CreateDirectory(dirPath);
         }
         public static void CopyDirectory(string sourcePath, string destinationPath, bool overwrite = false)
         {
@@ -73,17 +81,34 @@ namespace XYBase
                 }
             }
         }
+        public static void ForEachDirectory(string directoryPath, ForDirectoryAction forDirectoryAction)
+        {
+            var doBreak = forDirectoryAction(directoryPath);
+            if (doBreak) return;
+
+            var dirInfo = new DirectoryInfo(directoryPath);
+            foreach (var di in dirInfo.GetDirectories())
+            {
+                var fullName = di.FullName;
+                ForEachDirectory(fullName, forDirectoryAction);
+            }
+        }
         /// <summary>
         /// sourcePath: Directory, targetPath: File
         /// </summary>
         /// <param name="sourcePath"></param>
         /// <param name="targetPath"></param>
-        public static void Compile(string sourcePath, string targetPath)
+        public static void CompileTo(string sourcePath, string targetPath)
         {
-            var compiler = new XYCompiler(sourcePath, null);
+            var compiler = new XYCompiler(sourcePath);
             var output = compiler.Output();
             if (!Directory.Exists(targetPath)) Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
             File.WriteAllText(targetPath, output, Encoding.UTF8);
+        }
+        public static string Compile(string sourcePath)
+        {
+            var compiler = new XYCompiler(sourcePath);
+            return compiler.Output(true);
         }
         public static void SyncFile(string sourcePath, string targetPath, OnSyncSuccessAction action = null)
         {

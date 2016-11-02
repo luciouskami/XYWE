@@ -1,0 +1,12 @@
+[[@SET-TARGET-ROOT:..\editor\share\mpq]]
+[[@COMPILE:ui\base\TriggerData,base\ui\TriggerData.txt]]
+[[@COMPILE:ui\base\TriggerStrings,base\ui\TriggerStrings.txt]]
+[[@COMPILE:ui\base\WorldEditStrings,base\ui\WorldEditStrings.txt]]
+[[@COMPILE:ui\xywe\WorldEditStrings,xywe\ui\WorldEditStrings.txt]]
+
+[[@SET-TARGET-ROOT:..\editor\share\script]]
+[[@COMPILE:script\uiloader.lua,uiloader.lua]]
+[[@COMPILE:script\ydwe_on_startup.lua,ydwe_on_startup.lua]]
+
+[[@#SET-TARGET-ROOT:.]]
+[[@#COMPILE:__test__.txt,test-output.txt]]

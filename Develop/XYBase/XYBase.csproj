@@ -50,8 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command.cs" />
-    <Compile Include="CreateState.cs" />
+    <Compile Include="Class\Command.cs" />
+    <Compile Include="Enum\CreateState.cs" />
     <Compile Include="Extend\ExtendSystemChar.cs" />
     <Compile Include="Include\Ini.cs" />
     <Compile Include="UIConverter.cs" />
