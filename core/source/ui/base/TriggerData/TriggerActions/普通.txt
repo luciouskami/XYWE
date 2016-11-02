@@ -1,6 +1,9 @@
 //
 	XYSplitLine_TriggerActions_Normal_1=0,nothing
 		_XYSplitLine_TriggerActions_Normal_1_Category=TC_NOTHING
+YDWERegionMultiple=0,scriptcode
+	_YDWERegionMultiple_Defaults=_
+	_YDWERegionMultiple_Category=TC_COMMENT
 BJDebugMsg=0,StringExt
 	_BJDebugMsg_Defaults=_
 	_BJDebugMsg_Category=TC_DEBUGMSG

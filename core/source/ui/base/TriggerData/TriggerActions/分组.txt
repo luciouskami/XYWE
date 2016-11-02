@@ -705,9 +705,6 @@
 		DecUnitAbilityLevelSwapped=1,abilcode,unit
 			_DecUnitAbilityLevelSwapped_Defaults=_,GetTriggerUnit
 			_DecUnitAbilityLevelSwapped_Category=TC_UNIT
-		IncUnitAbilityLevel=1,unit,abilcode
-			_IncUnitAbilityLevel_Defaults=GetTriggerUnit,_
-			_IncUnitAbilityLevel_Category=TC_UNIT
 		IncUnitAbilityLevelSwapped=1,abilcode,unit
 			_IncUnitAbilityLevelSwapped_Defaults=_,GetTriggerUnit
 			_IncUnitAbilityLevelSwapped_Category=TC_UNIT
@@ -975,6 +972,9 @@
 		UnitRemoveAbilityBJ=0,abilcode,unit
 			_UnitRemoveAbilityBJ_Defaults=_,GetTriggerUnit
 			_UnitRemoveAbilityBJ_Category=TC_UNIT
+		IncUnitAbilityLevel=1,unit,abilcode
+			_IncUnitAbilityLevel_Defaults=GetTriggerUnit,_
+			_IncUnitAbilityLevel_Category=TC_UNIT
 		UnitAddTypeBJ=1,unittype,unit
 			_UnitAddTypeBJ_Defaults=UnitTypeMechanical,GetTriggerUnit
 			_UnitAddTypeBJ_Category=TC_UNIT

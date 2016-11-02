@@ -24,7 +24,7 @@ namespace XYBase
             else
             {
                 // sourcePath是文件
-                this.mainPath = sourcePath + "." + Extension; // 先假设IMPORT的文件没有填写后缀名
+                this.mainPath = sourcePath + "." + Extension; // 先假设COMPILE/IMPORT的文件没有填写后缀名
                 if (!File.Exists(this.mainPath))
                 {
                     // 如果填写了后缀名，就会找不到文件，因此将sourcePath不作处理直接重新赋值给mainPath

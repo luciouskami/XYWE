@@ -33,7 +33,7 @@
 		XYSplitLine_TriggerActions_D_Unit_5="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
 	XYSplitLine_TriggerActions_D_Unit_6="------------------------------------"
 		XYSplitLine_TriggerActions_D_Unit_6="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
-	XYSplitLine_TriggerActions_D_Unit_7="------------------------------------"
+	XYSplitLine_TriggerActions_D_Unit_7="------------------------------------ 过时 / 废弃 / 不推荐使用"
 		XYSplitLine_TriggerActions_D_Unit_7="XYWE：这是一个分割线，禁止使用，否则会在保存时报错"
 // D 单位池
 	XYSplitLine_TriggerActions_D_UnitPool_1="------------------------------------"

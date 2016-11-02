@@ -35,7 +35,7 @@ YDWEExitLoop="退出循环"
 	YDWEExitLoopHint="退出循环, 也能退出逆天选取单位动作."
 IfThenElseMultiple="If / Then / Else (多项功能)"
 	// Specially handled by the editor
-	IfThenElseMultiple="如果(所有的条件成立) 则运行 (Then - 动作) 否则运行 (Else - 动作)"
+	IfThenElseMultiple="如果 (所有条件成立) 则运行 (Then - 动作) 否则运行 (Else - 动作)"
 	IfThenElseMultipleHint=""
 IfThenElse="If / Then / Else (单项功能)"
 	// Specially handled by the editor
