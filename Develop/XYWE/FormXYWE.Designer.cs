@@ -34,12 +34,13 @@
             this.cbUI = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPatchUI = new System.Windows.Forms.Button();
+            this.btnLibrary = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LlVersion
             // 
             this.LlVersion.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.LlVersion.Location = new System.Drawing.Point(317, 389);
+            this.LlVersion.Location = new System.Drawing.Point(317, 161);
             this.LlVersion.Name = "LlVersion";
             this.LlVersion.Size = new System.Drawing.Size(171, 12);
             this.LlVersion.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             this.BtnXYCodeLibraryManager.Enabled = false;
             this.BtnXYCodeLibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(118, 56);
+            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(388, 56);
             this.BtnXYCodeLibraryManager.Name = "BtnXYCodeLibraryManager";
             this.BtnXYCodeLibraryManager.Size = new System.Drawing.Size(100, 38);
             this.BtnXYCodeLibraryManager.TabIndex = 1;
@@ -64,7 +65,7 @@
             // 
             this.BtnXYUILibraryManager.Enabled = false;
             this.BtnXYUILibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(12, 56);
+            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(282, 56);
             this.BtnXYUILibraryManager.Name = "BtnXYUILibraryManager";
             this.BtnXYUILibraryManager.Size = new System.Drawing.Size(100, 38);
             this.BtnXYUILibraryManager.TabIndex = 3;
@@ -74,7 +75,7 @@
             // 
             // BtnStartXYWE
             // 
-            this.BtnStartXYWE.Location = new System.Drawing.Point(14, 100);
+            this.BtnStartXYWE.Location = new System.Drawing.Point(284, 100);
             this.BtnStartXYWE.Name = "BtnStartXYWE";
             this.BtnStartXYWE.Size = new System.Drawing.Size(204, 51);
             this.BtnStartXYWE.TabIndex = 4;
@@ -86,7 +87,7 @@
             // 
             this.BtnXYTextColorMaker.Enabled = false;
             this.BtnXYTextColorMaker.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYTextColorMaker.Location = new System.Drawing.Point(12, 12);
+            this.BtnXYTextColorMaker.Location = new System.Drawing.Point(282, 12);
             this.BtnXYTextColorMaker.Name = "BtnXYTextColorMaker";
             this.BtnXYTextColorMaker.Size = new System.Drawing.Size(100, 38);
             this.BtnXYTextColorMaker.TabIndex = 5;
@@ -96,7 +97,7 @@
             // 
             // BtnXYTriggerSyntaxHighlighter
             // 
-            this.BtnXYTriggerSyntaxHighlighter.Location = new System.Drawing.Point(118, 12);
+            this.BtnXYTriggerSyntaxHighlighter.Location = new System.Drawing.Point(388, 12);
             this.BtnXYTriggerSyntaxHighlighter.Name = "BtnXYTriggerSyntaxHighlighter";
             this.BtnXYTriggerSyntaxHighlighter.Size = new System.Drawing.Size(100, 38);
             this.BtnXYTriggerSyntaxHighlighter.TabIndex = 6;
@@ -107,7 +108,7 @@
             // linkLabel1
             // 
             this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 389);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 161);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(171, 12);
             this.linkLabel1.TabIndex = 7;
@@ -118,39 +119,53 @@
             // 
             // cbUI
             // 
+            this.cbUI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUI.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbUI.FormattingEnabled = true;
             this.cbUI.Items.AddRange(new object[] {
             "XYWE",
             "YDWE"});
-            this.cbUI.Location = new System.Drawing.Point(286, 22);
+            this.cbUI.Location = new System.Drawing.Point(88, 13);
             this.cbUI.Name = "cbUI";
-            this.cbUI.Size = new System.Drawing.Size(117, 20);
+            this.cbUI.Size = new System.Drawing.Size(95, 20);
             this.cbUI.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(237, 25);
+            this.label1.Location = new System.Drawing.Point(17, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 9;
-            this.label1.Text = "UI方案";
+            this.label1.Text = "标准UI方案";
             // 
             // btnPatchUI
             // 
-            this.btnPatchUI.Location = new System.Drawing.Point(413, 20);
+            this.btnPatchUI.Location = new System.Drawing.Point(193, 12);
             this.btnPatchUI.Name = "btnPatchUI";
-            this.btnPatchUI.Size = new System.Drawing.Size(75, 23);
+            this.btnPatchUI.Size = new System.Drawing.Size(75, 22);
             this.btnPatchUI.TabIndex = 10;
             this.btnPatchUI.Text = "应用";
             this.btnPatchUI.UseVisualStyleBackColor = true;
             this.btnPatchUI.Click += new System.EventHandler(this.btnPatchUI_Click);
             // 
+            // btnLibrary
+            // 
+            this.btnLibrary.Font = new System.Drawing.Font("宋体", 9F);
+            this.btnLibrary.Location = new System.Drawing.Point(168, 56);
+            this.btnLibrary.Name = "btnLibrary";
+            this.btnLibrary.Size = new System.Drawing.Size(100, 38);
+            this.btnLibrary.TabIndex = 11;
+            this.btnLibrary.Text = "函数库管理器";
+            this.btnLibrary.UseVisualStyleBackColor = true;
+            this.btnLibrary.Click += new System.EventHandler(this.btnLibrary_Click);
+            // 
             // FormXYWE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 410);
+            this.ClientSize = new System.Drawing.Size(500, 182);
+            this.Controls.Add(this.btnLibrary);
             this.Controls.Add(this.btnPatchUI);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbUI);
@@ -185,6 +200,7 @@
         private System.Windows.Forms.ComboBox cbUI;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPatchUI;
+        private System.Windows.Forms.Button btnLibrary;
     }
 }
 

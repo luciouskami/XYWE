@@ -1,0 +1,25 @@
+[[@SET-VAR:MODE,测试2]]
+[[@EQUAL:MODE,测试1]]
+[[@SET-VAR:var1,var1 , Value]]
+[[@SET-VAR:var2]]
+This is a block variable
+This is a block variable
+This is a block variable
+This is a block variable
+This is a block variable
+[[@END-VAR]]
+[[@END-EQUAL]]
+[[@EQUAL:MODE,测试2]]
+[[@SET-VAR:var1,var1111111111 , Value]]
+[[@SET-VAR:var2]]
+This is a block variable 22222222
+This is a block variable 22222222
+This is a block variable 22222222
+This is a block variable 22222222
+This is a block variable 22222222
+[[@END-VAR]]
+[[@END-EQUAL]]
+----- OUTPUT -----
+[[@VAR:var2]]
+----- -----
+[[@VAR:var1]]

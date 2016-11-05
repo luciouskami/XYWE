@@ -2,6 +2,10 @@
 
 namespace XYBase
 {
+    /// <summary>
+    /// 仅用于在XYBase内使用，每一个成员对应的是一个Section。
+    /// 使用时仅需填写key，不用填写section。
+    /// </summary>
     class XYIni
     {
         static IniFile _Tips;
@@ -23,6 +27,17 @@ namespace XYBase
                 if (_Config == null)
                     _Config = new IniFile(XYPath.File.XyweDataIni, nameof(Config));
                 return _Config;
+            }
+        }
+
+        static IniFile _Package;
+        public static IniFile Package
+        {
+            get
+            {
+                if (_Package == null)
+                    _Package = new IniFile(XYPath.File.XyweDataIni, nameof(Package));
+                return _Package;
             }
         }
     }

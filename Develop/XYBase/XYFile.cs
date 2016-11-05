@@ -136,5 +136,10 @@ namespace XYBase
                 SyncFile(_sourcePath, _targetPath, action);
             });
         }
+        public static void RemoveDirectory(string path)
+        {
+            if (Directory.Exists(path))
+                Directory.Delete(path, true);
+        }
     }
 }

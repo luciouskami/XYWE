@@ -40,19 +40,20 @@ namespace XYWE
         {
             // Change Text
             var text = BtnStartXYWE.Text;
-            BtnStartXYWE.Text = "正在启动XYWE中……";
+            BtnStartXYWE.Text = "正在启动XYWE……";
+            BtnStartXYWE.Refresh(); // http://stackoverflow.com/questions/570537/update-label-while-processing-in-windows-forms
 
             // Refresh Tip
             XYTip.Refresh();
 
-            // Sync Source
-            XYFile.SyncDirectory(XYPath.Dir.SourceJass, XYPath.Dir.EditorJass);
-            XYFile.SyncDirectory(XYPath.Dir.SourceMpq, XYPath.Dir.EditorShareMpq);
-            XYFile.SyncDirectory(XYPath.Dir.SourcePlugin, XYPath.Dir.EditorPlugin);
-            XYFile.SyncDirectory(XYPath.Dir.SourceScript, XYPath.Dir.EditorShareScript, ignoreFileName: new[] { "uiloader.lua", "ydwe_on_startup.lua" });
+            // Refresh Editor Source
+            XYSource.RefreshEditor();
 
             // Compile
             XYFile.Compile(XYPath.Dir.Source);
+
+            // Refresh Enabled Package UI Config
+            XYConfig.RefreshConfig();
 
             // Recover Text
             BtnStartXYWE.Text = text;
@@ -79,6 +80,11 @@ namespace XYWE
         private void BtnXYTriggerSyntaxHighlighter_Click(object sender, EventArgs e)
         {
             XYProcess.Application.StartXYTriggerSyntaxHighlighter();
+        }
+
+        private void btnLibrary_Click(object sender, EventArgs e)
+        {
+            XYProcess.Application.StartXYTriggerLibraryManager();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

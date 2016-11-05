@@ -1,0 +1,3 @@
+[TriggerActions]
+Example1Script=0,nothing
+_Example1Script_Category=TC_UNIT

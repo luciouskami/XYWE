@@ -1,0 +1,4 @@
+[TriggerActionStrings]
+Example1Script="函数库1示例代码"
+Example1Script="函数库1示例代码具体展现内容"
+Example1ScriptHint="这只是一个示例代码"

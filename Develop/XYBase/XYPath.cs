@@ -30,6 +30,7 @@ namespace XYBase
             public static string SourcePlugin = Source + @"\plugin";
             public static string SourceScript = Source + @"\script";
             public static string SourceUi = Source + @"\ui";
+            public static string SourcePackage = Source + @"\package";
 
             public static string Data = Core + @"\data";
 
@@ -44,6 +45,7 @@ namespace XYBase
 
             public static string Mpq = Share + @"\mpq";
 
+
             public static string MpqLib(string libName) { return Mpq + @"\" + libName; }
             public static string MpqUi(string libName) { return MpqLib(libName) + @"\ui"; }
         }
@@ -55,6 +57,7 @@ namespace XYBase
 
             public static string XyweDataIni = Dir.Data + @"\data.ini";
             public static string XyweDataTip = Dir.Data + @"\tips.txt";
+            public static string XyweDataPackages = Dir.Data + @"\packages.ini";
             public static string XyweUiTip = Dir.SourceUi + @"\xywe\WorldEditStrings\Tip.txt";
         }
     }

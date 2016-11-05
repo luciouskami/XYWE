@@ -35,6 +35,11 @@ namespace XYBase
             {
                 Process.Start(@"XYTriggerSyntaxHighlighter.exe");
             }
+
+            public static void StartXYTriggerLibraryManager()
+            {
+                Process.Start(@"XYTriggerLibraryManager.exe");
+            }
         }
         public static class Website
         {
