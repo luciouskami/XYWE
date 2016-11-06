@@ -1,0 +1,8 @@
+TODO
+  修复INDEX错位的BUG
+
+说明
+  本程序会将TriggerData.txt中所有形如WESTRING_XXXX_XXX的字符用与之相同目录的WorldEditStrings.txt中的WESTRING_XX_XXX的值来替代
+  替换后的文件会被生成到本程序的根目录下（"core/TriggerData.txt"）
+使用
+  将含有"TriggerData.txt"和"WorldEditStrings.txt"两个文件的editor/share/mpq/{xxxx}/ui目录拖放到本程序

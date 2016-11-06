@@ -36,6 +36,9 @@
             this.btnDown = new System.Windows.Forms.Button();
             this.btnEnable = new System.Windows.Forms.Button();
             this.btnDisable = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cbConfig = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -116,11 +119,44 @@
             this.btnDisable.UseVisualStyleBackColor = true;
             this.btnDisable.Click += new System.EventHandler(this.btnDisable_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(233, 211);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 33);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "保存到当前配置";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(233, 250);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "另存为新配置";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // cbConfig
+            // 
+            this.cbConfig.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbConfig.FormattingEnabled = true;
+            this.cbConfig.Items.AddRange(new object[] {
+            "默认方案"});
+            this.cbConfig.Location = new System.Drawing.Point(233, 170);
+            this.cbConfig.Name = "cbConfig";
+            this.cbConfig.Size = new System.Drawing.Size(103, 20);
+            this.cbConfig.TabIndex = 11;
+            this.cbConfig.SelectedIndexChanged += new System.EventHandler(this.cbConfig_SelectedIndexChanged);
+            // 
             // FormXYTriggerLibraryManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 332);
+            this.Controls.Add(this.cbConfig);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDisable);
             this.Controls.Add(this.btnEnable);
             this.Controls.Add(this.btnDown);
@@ -147,6 +183,9 @@
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnEnable;
         private System.Windows.Forms.Button btnDisable;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbConfig;
     }
 }
 

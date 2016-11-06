@@ -23,7 +23,7 @@ namespace XYWE
             LlVersion.Text = XYInfo.Version;
             XYTip.UpdateTipAsync();
             XYVersion.VerifyObsoleteAsync(ObsoleteAction);
-            cbUI.SelectedItem = XYConfig.GetCurrent();
+            cbUI.SelectedItem = XYConfig.GetCurrentStandardUI();
         }
         void ObsoleteAction()
         {

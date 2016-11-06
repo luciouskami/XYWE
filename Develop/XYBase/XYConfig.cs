@@ -26,14 +26,14 @@ namespace XYBase
         {
             SetConfig("XYWE");
         }
-        public static string GetCurrent()
+        public static string GetCurrentStandardUI()
         {
             return XYIni.Config["UI"];
         }
         public static void RefreshConfig()
         {
             var config = new List<string>();
-            var current = GetCurrent();
+            var current = GetCurrentStandardUI();
             switch (current)
             {
                 case "YDWE":
@@ -47,9 +47,10 @@ namespace XYBase
                     break;
             }
 
-            var enabled = XYPackage.GetEnabled();
+            /* TODO 未来通过更新器推送触发器库
+            var enabled = XYPackage.GetCurrentEnabled();
             enabled.Reverse(); // config处理逻辑的顺序是颠倒的，因此在这里进行Reverse来消除颠倒，从而能正常使用排序功能
-            config.AddRange(enabled);
+            config.AddRange(enabled); */
 
             WriteConfig(config);
         }

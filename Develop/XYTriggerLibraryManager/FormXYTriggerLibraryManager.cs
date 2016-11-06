@@ -13,17 +13,31 @@ namespace XYTriggerLibraryManager
 {
     public partial class FormXYTriggerLibraryManager : Form
     {
+        #region Initialize Program
         public FormXYTriggerLibraryManager()
         {
             InitializeComponent();
         }
         List<string> listExist, listEnabled, listDisabled;
+        #endregion
 
+        #region Initialize Manager
         private void FormXYTriggerLibraryManager_Load(object sender, EventArgs e)
         {
+            LoadScheme();
             LoadPackage();
             RefreshUI();
         }
+        #endregion
+
+        #region Change Using Library Configuration Scheme
+        private void cbConfig_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        #endregion
+
+        #region Change Library State
         private void btnEnable_Click(object sender, EventArgs e)
         {
             var items = lbDisabled.SelectedItems;
@@ -46,6 +60,9 @@ namespace XYTriggerLibraryManager
 
             DisablePackage((string)items[0]);
         }
+        #endregion
+
+        #region Change Library Sequence
         private void btnUp_Click(object sender, EventArgs e)
         {
             var items = lbEnabled.SelectedItems;
@@ -68,6 +85,7 @@ namespace XYTriggerLibraryManager
 
             DownSelectPackage();
         }
+        #endregion
 
         #region Prevent Double Side Select
         bool lbDisabled_PreventNextChange = false;
@@ -104,17 +122,19 @@ namespace XYTriggerLibraryManager
         }
         #endregion
 
+        void LoadScheme()
+        {
+            var currentScheme = XYPackage.GetCurrentScheme();
+            if (currentScheme.Length == 0)
+            {
+                currentScheme = "默认配置";
+            }
+
+        }
         void LoadPackage()
         {
-            listExist = XYPackage.GetExist();
-            listEnabled = XYPackage.GetEnabled();
-
-            listDisabled = new List<string>();
-            listExist.ForEach(name =>
-            {
-                if (listEnabled.Contains(name)) return;
-                listDisabled.Add(name);
-            });
+            listEnabled = XYPackage.GetCurrentEnabled();
+            listDisabled = XYPackage.GetCurrentDisabled();
         }
         void RefreshUI()
         {
@@ -139,13 +159,13 @@ namespace XYTriggerLibraryManager
         {
             listEnabled.Add(name);
             listDisabled.Remove(name);
-            XYPackage.PatchEnable(listEnabled);
+            XYPackage.PatchCurrentEnabled(listEnabled);
         }
         void UpdateDisabledPackageData(string name)
         {
             listEnabled.Remove(name);
             listDisabled.Add(name);
-            XYPackage.PatchEnable(listEnabled);
+            XYPackage.PatchCurrentEnabled(listEnabled);
         }
 
         void UpdateEnabledPackageUI()
@@ -173,7 +193,7 @@ namespace XYTriggerLibraryManager
             {
                 listEnabled.RemoveAt(index);
                 listEnabled.Insert(index - 1, name);
-                XYPackage.PatchEnable(listEnabled);
+                XYPackage.PatchCurrentEnabled(listEnabled);
                 UpdateEnabledPackageUI();
                 lbEnabled.SelectedIndex = index - 1;
             }
@@ -187,7 +207,7 @@ namespace XYTriggerLibraryManager
             {
                 listEnabled.RemoveAt(index);
                 listEnabled.Insert(index + 1, name);
-                XYPackage.PatchEnable(listEnabled);
+                XYPackage.PatchCurrentEnabled(listEnabled);
                 UpdateEnabledPackageUI();
                 lbEnabled.SelectedIndex = index + 1;
             }

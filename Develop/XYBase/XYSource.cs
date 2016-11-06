@@ -11,7 +11,8 @@ namespace XYBase
         public static void RefreshEditor()
         {
             SyncSource();
-            SyncPackage();
+            // TODO 未来通过更新器推送触发器库功能，由于太庞大，因此延迟推送
+            // SyncPackage();
         }
         static void SyncSource()
         {
@@ -23,7 +24,7 @@ namespace XYBase
         }
         static void SyncPackage()
         {
-            var enabled = XYPackage.GetEnabled();
+            var enabled = XYPackage.GetCurrentEnabled();
             for (int i = 0; i < enabled.Count; i++)
             {
                 var name = enabled[i];
@@ -36,7 +37,7 @@ namespace XYBase
                 XYFile.SyncDirectory(uiSource, uiTarget);
             }
 
-            var disabled = XYPackage.GetDisabled();
+            var disabled = XYPackage.GetCurrentDisabled();
             foreach (var name in disabled)
             {
                 var scriptTarget = XYPath.Dir.EditorJass + "\\package\\" + name;

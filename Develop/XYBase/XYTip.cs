@@ -56,8 +56,10 @@ namespace XYBase
 
         public static void UpdateTipAsync()
         {
-            // Only updated once a day
+#if DEBUG == false
+            // Only updated once a day (for release user)
             if (DateTime.Now.Subtract(DateTime.Parse(XYIni.Tips["LastCheckTime"])).Days == 0) return;
+#endif
             XYIni.Tips["LastCheckTime"] = DateTime.Now.ToString();
 
             XYWeb.DownloadXYWikiTextAsync("Tip库", data =>
