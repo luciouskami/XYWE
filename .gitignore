@@ -244,6 +244,7 @@ ModelManifest.xml
 ####################
 # XYWE Project
 
+core/*.exe.config
 core/editor
 core/data/data.ini
 *.exe.manifest
