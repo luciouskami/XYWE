@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using System.Windows.Forms;
+using System.IO.Compression;
 
 namespace XYBase
 {
@@ -19,13 +21,32 @@ namespace XYBase
                 {
                     try
                     {
-                        if (t.Exception != null) return;
-
+                        if (t.Exception != null) throw t.Exception;
                         successAction(t.Result);
                     }
-                    catch
+                    catch(Exception e)
                     {
-                        // MessageBox.Show(e.Message);
+                        throw e;
+                    }
+                });
+            }
+        }
+        public static void DownloadFileAsync(string address, string localFileName, Action successAction)
+        {
+            using (var wc = new WebClient())
+            {
+                wc.Headers.Set(HttpRequestHeader.UserAgent, "XYWE"); // Server deny if no UserAgent
+                var task = wc.DownloadFileTaskAsync(new Uri(address), localFileName);
+                task.ContinueWith(t =>
+                {
+                    try
+                    {
+                        if (t.Exception != null) throw t.Exception;
+                        successAction();
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
                     }
                 });
             }
@@ -52,6 +73,20 @@ namespace XYBase
 
                 successAction(texts);
             });
+        }
+
+        public static void DownloadXyweServerTextAsync(string path, Action<List<string>> successAction, Encoding encode = null)
+        {
+            if (encode == null) encode = Encoding.UTF8;
+
+            DownloadDataAsync($"https://wow9.org/xywe_server/{path}", data =>
+            {
+                successAction(encode.GetString(data).Split('\n').ToList());
+            });
+        }
+        public static void DownloadXyweServerFileAsync(string path, string localFileName, Action successAction)
+        {
+            DownloadFileAsync(path, localFileName, successAction);
         }
     }
 }

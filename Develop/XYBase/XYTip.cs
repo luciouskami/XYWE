@@ -10,6 +10,8 @@ namespace XYBase
 {
     public static class XYTip
     {
+        const string defaultTime = "2015/09/14 22:33:33";
+
         static List<string> _tips;
         static List<string> tips
         {
@@ -51,14 +53,14 @@ namespace XYBase
                 $"WESTRING_WELCOME_SMALLTEXT1=\"{area1}\"\r\n" +
                 $"WESTRING_WELCOME_SMALLTEXT2=\"{area2}\"\r\n" +
                 $"WESTRING_WELCOME_LEGALTEXT=\"{area3}\"", Encoding.UTF8);
-            XYIni.Tips["UsedIndex"] = $"{XYIni.Tips["UsedIndex"]},{tipIndex}";
+            XYIni.Tips["UsedIndex"] = XYIni.Tips["UsedIndex"] + "," + tipIndex;
         }
 
         public static void UpdateTipAsync()
         {
 #if DEBUG == false
             // Only updated once a day (for release user)
-            if (DateTime.Now.Subtract(DateTime.Parse(XYIni.Tips["LastCheckTime"])).Days == 0) return;
+            if (DateTime.Now.Subtract(DateTime.Parse(GetLastCheckTime())).Days == 0) return;
 #endif
             XYIni.Tips["LastCheckTime"] = DateTime.Now.ToString();
 
@@ -70,12 +72,31 @@ namespace XYBase
                 for (int i = 0; i < data.Count; i++) data[i] = data[i].Remove(0, 2);
 
                 var serverTime = DateTime.Parse(timeText);
-                if (serverTime.Subtract(DateTime.Parse(XYIni.Tips["LastUpdateTime"])).TotalSeconds > 0)
+                if (serverTime.Subtract(DateTime.Parse(GetLastUpdateTime())).TotalSeconds > 0)
                 {
-                    File.WriteAllLines(XYPath.File.XyweUiTip, data);
+                    File.WriteAllLines(XYPath.File.XyweDataTip, data);
                     XYIni.Tips["LastUpdateTime"] = timeText;
                 }
             });
+        }
+
+        static string GetLastCheckTime()
+        {
+            return SafeReadIni("LastCheckTime", defaultTime);
+        }
+        static string GetLastUpdateTime()
+        {
+            return SafeReadIni("LastUpdateTime", defaultTime);
+        }
+        static string SafeReadIni(string key, string defaultValue)
+        {
+            var value = XYIni.Tips[key];
+            if (value.Length == 0)
+            {
+                value = defaultValue;
+                XYIni.Tips[key] = value;
+            }
+            return value;
         }
     }
 }

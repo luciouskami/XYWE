@@ -28,7 +28,13 @@ namespace XYBase
         }
         public static string GetCurrentStandardUI()
         {
-            return XYIni.Config["UI"];
+            var standardUI = XYIni.Config["StandardUI"];
+            if (standardUI.Length == 0)
+            {
+                standardUI = "XYWE";
+                XYIni.Config["StandardUI"] = standardUI;
+            }
+            return standardUI;
         }
         public static void RefreshConfig()
         {
