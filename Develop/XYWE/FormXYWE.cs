@@ -38,9 +38,15 @@ namespace XYWE
 
         void BtnStartXYWE_Click(object sender, EventArgs e)
         {
+            SafeStart();
+        }
+
+        async void SafeStart()
+        {
             // Change Text
             var text = BtnStartXYWE.Text;
             BtnStartXYWE.Text = "正在启动XYWE……";
+            BtnStartXYWE.Enabled = false;
             BtnStartXYWE.Refresh(); // http://stackoverflow.com/questions/570537/update-label-while-processing-in-windows-forms
 
             // Refresh Tip
@@ -50,12 +56,13 @@ namespace XYWE
             XYSource.RefreshEditor();
 
             // Compile
-            XYFile.Compile(XYPath.Dir.Source);
+            await Task.Run(() => { XYFile.Compile(XYPath.Dir.Source); });
 
             // Refresh Enabled Package UI Config
             XYConfig.RefreshConfig();
 
             // Recover Text
+            BtnStartXYWE.Enabled = true;
             BtnStartXYWE.Text = text;
 
             // Start XYWE

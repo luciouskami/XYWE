@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -69,11 +70,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "历史版本";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 407);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 59);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "切换到选定版本";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormXYUpdater
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 478);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
@@ -91,6 +102,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

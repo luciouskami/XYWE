@@ -29,8 +29,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYTriggerLibraryManager", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYUpdater", "XYUpdater\XYUpdater.csproj", "{506FA10E-837F-4543-926A-9F8B28524F83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temporary", "Temporary\Temporary.csproj", "{10FFD481-1489-48BA-BF9E-20FD0F3179CB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,10 +79,6 @@ Global
 		{506FA10E-837F-4543-926A-9F8B28524F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{506FA10E-837F-4543-926A-9F8B28524F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{506FA10E-837F-4543-926A-9F8B28524F83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10FFD481-1489-48BA-BF9E-20FD0F3179CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10FFD481-1489-48BA-BF9E-20FD0F3179CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10FFD481-1489-48BA-BF9E-20FD0F3179CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10FFD481-1489-48BA-BF9E-20FD0F3179CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
