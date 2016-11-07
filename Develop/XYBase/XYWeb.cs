@@ -11,44 +11,26 @@ namespace XYBase
 {
     public static class XYWeb
     {
-        public static void DownloadDataAsync(string address, Action<byte[]> successAction)
+        public static async void DownloadDataAsync(string address, Action<byte[]> successAction)
         {
             using (var wc = new WebClient())
             {
                 wc.Headers.Set(HttpRequestHeader.UserAgent, "XYWE"); // Server deny if no UserAgent
                 var task = wc.DownloadDataTaskAsync(new Uri(address));
-                task.ContinueWith(t =>
-                {
-                    try
-                    {
-                        if (t.Exception != null) throw t.Exception;
-                        successAction(t.Result);
-                    }
-                    catch(Exception e)
-                    {
-                        throw e;
-                    }
-                });
+                await task;
+                if (task.Exception != null) throw task.Exception;
+                successAction(task.Result);
             }
         }
-        public static void DownloadFileAsync(string address, string localFileName, Action successAction)
+        public static async void DownloadFileAsync(string address, string localFileName, Action successAction)
         {
             using (var wc = new WebClient())
             {
                 wc.Headers.Set(HttpRequestHeader.UserAgent, "XYWE"); // Server deny if no UserAgent
                 var task = wc.DownloadFileTaskAsync(new Uri(address), localFileName);
-                task.ContinueWith(t =>
-                {
-                    try
-                    {
-                        if (t.Exception != null) throw t.Exception;
-                        successAction();
-                    }
-                    catch (Exception e)
-                    {
-                        throw e;
-                    }
-                });
+                await task;
+                if (task.Exception != null) throw task.Exception;
+                successAction();
             }
         }
 
