@@ -18,6 +18,17 @@ namespace XYWE
                 var formLog = new FormUpdateLog();
                 formLog.ShowDialog();
             }
+            XYWeb.ReadXyweServerTextAsync("announcement/last.txt", lastAnnouncementId =>
+            {
+                if (lastAnnouncementId == XYAnnouncement.GetLocalAnnouncementId()) return;
+
+                XYAnnouncement.SetLocalAnnouncementId(lastAnnouncementId);
+                XYWeb.ReadXyweServerTextAsync($"announcement/{lastAnnouncementId}.txt", announcement =>
+                {
+                    var formAnnouncement = new FormAnnouncement(announcement);
+                    formAnnouncement.ShowDialog();
+                }, null, null);
+            }, null, null, 0);
             InitializeComponent();
             XYFile.RemoveDirectory(XYPath.Dir.DataUpdate);
             if (!File.Exists(XYPath.File.UpdateLock)) XYProcess.Application.StartXYChecker();

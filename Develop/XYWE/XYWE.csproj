@@ -92,6 +92,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnnouncement.Designer.cs">
+      <DependentUpon>FormAnnouncement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAnnouncement.resx">
+      <DependentUpon>FormAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateLog.resx">
       <DependentUpon>FormUpdateLog.cs</DependentUpon>
     </EmbeddedResource>
