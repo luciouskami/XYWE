@@ -16,7 +16,7 @@ namespace XYBase
 #if DEBUG
         static string xyweServerAddress = "http://192.168.1.101/xywe_server";
 #else
-        static string xyServerAddress = "https://wow9.org/xywe_server";
+        static string xyweServerAddress = "https://wow9.org/xywe_server";
 #endif
 
         public static async void DownloadDataAsync(string address, Action<byte[]> successAction)

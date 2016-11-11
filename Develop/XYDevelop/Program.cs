@@ -23,7 +23,7 @@ Select Command:
             switch (key)
             {
                 case '1': CompileEditor(); break;
-                default: return;
+                default: Process.GetCurrentProcess().Kill(); return;
             }
             Initialize();
         }
