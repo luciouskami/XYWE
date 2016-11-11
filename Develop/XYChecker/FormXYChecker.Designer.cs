@@ -86,6 +86,7 @@
             this.Name = "FormXYChecker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Version!";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FormXYChecker_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

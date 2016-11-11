@@ -18,6 +18,9 @@ namespace XYChecker
 
         public FormXYChecker()
         {
+            InitializeComponent();
+            label2.Text = "... Updating ...";
+
             if (XYWeb.GetInternetConnection())
             {
                 XYWeb.ReadXyweServerTextAsync($"version/ask_update.php?a={XYInfo.Version}", content =>
@@ -51,8 +54,8 @@ namespace XYChecker
 
                     XYWeb.DownloadXyweServerFileAsync($"version/repository/{serverVersion}/log.txt", XYPath.File.DataUpdateLog, () =>
                     {
-                        InitializeComponent();
                         label2.Text = serverVersion;
+                        WindowState = FormWindowState.Normal;
                     }, Quit, Quit, successWhenNotFound: false);
                 }, Quit, Quit, successWhenNotFound: true);
             }, Quit, Quit, successWhenNotFound: true);
