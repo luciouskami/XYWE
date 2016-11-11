@@ -35,8 +35,10 @@ namespace XYUpdateExecutor
             var pathFile = @"core\data\update\files.zip";
             if (File.Exists(pathFile))
             {
-                ZipFile.ExtractToDirectory(pathFile, @"..");
+                ZipFile.ExtractToDirectory(pathFile, @"core\data\update\files");
+                CopyDirectory(@"core\data\update\files", @".", true);
                 File.Delete(pathFile);
+                Directory.Delete(@"core\data\update\files", true);
             }
 
             var pathRemove = @"core\data\update\remove.txt";
@@ -55,6 +57,26 @@ namespace XYUpdateExecutor
             var proc = Process.Start(@"XYWE.exe");
 
             Process.GetCurrentProcess().Kill();
+        }
+
+
+        public void CopyDirectory(string sourcePath, string destinationPath, bool overwrite = false)
+        {
+            var info = new DirectoryInfo(sourcePath);
+            Directory.CreateDirectory(destinationPath);
+            foreach (var fsi in info.GetFileSystemInfos())
+            {
+                var pathDst = destinationPath + @"\" + fsi.Name;
+                if (fsi is FileInfo)
+                {
+                    File.Copy(fsi.FullName, pathDst, overwrite);
+                }
+                else
+                {
+                    Directory.CreateDirectory(pathDst);
+                    CopyDirectory(fsi.FullName, pathDst, overwrite);
+                }
+            }
         }
     }
 }

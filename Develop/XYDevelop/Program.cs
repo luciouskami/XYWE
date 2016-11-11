@@ -16,12 +16,14 @@ namespace XYDevelop
             Console.WriteLine(@"
 Select Command:
     1 - Compile Editor (YDWE, XY Edition)
+    Other - Exit
 ");
             var key = Console.ReadKey(true).KeyChar;
             Console.WriteLine("Execute Command: " + key);
             switch (key)
             {
                 case '1': CompileEditor(); break;
+                default: return;
             }
             Initialize();
         }
