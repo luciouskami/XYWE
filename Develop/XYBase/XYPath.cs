@@ -33,6 +33,7 @@ namespace XYBase
             public static string SourcePackage = Source + @"\package";
 
             public static string Data = Core + @"\data";
+            public static string DataUpdate = Data + @"\update";
 
             public static string Jass = Editor + @"\jass";
             public static string Share = Editor + @"\share";
@@ -44,8 +45,6 @@ namespace XYBase
             public static string TeshStyle = Tesh + @"\styles";
 
             public static string Mpq = Share + @"\mpq";
-
-
             public static string MpqLib(string libName) { return Mpq + @"\" + libName; }
             public static string MpqUi(string libName) { return MpqLib(libName) + @"\ui"; }
         }
@@ -55,11 +54,14 @@ namespace XYBase
             public static string MpqConfig = Dir.Mpq + @"\config";
             public static string MpqSort = Dir.Mpq + @"\sort";
 
-            public static string XyweDataIni = Dir.Data + @"\data.ini";
-            public static string XyweDataTip = Dir.Data + @"\tips.txt";
-            public static string XyweDataPackages = Dir.Data + @"\packages.ini";
-            public static string XyweDataUpdateArchive = Dir.Data + @"\updateArchive.zip";
-            public static string XyweDataUpdateRequire = Dir.Data + @"\updateRequire.txt";
+            public static string DataIni = Dir.Data + @"\data.ini";
+            public static string DataTip = Dir.Data + @"\tips.txt";
+            public static string DataPackages = Dir.Data + @"\packages.ini";
+
+            public static string DataUpdateFiles = Dir.DataUpdate + @"\files.zip";
+            public static string DataUpdateLog = Dir.DataUpdate + @"\log.txt";
+            public static string DataUpdateRemove = Dir.DataUpdate + @"\remove.txt";
+
             public static string XyweUiTip = Dir.SourceUi + @"\xywe\WorldEditStrings\Tip.txt";
         }
     }

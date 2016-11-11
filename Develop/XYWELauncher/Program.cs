@@ -15,7 +15,7 @@ namespace XYWELauncher
             string name = args.Length > 0 && args[0] == "Develop" ? "XYDevelop.exe" : "XYWE.exe";
             string dir = "core";
 
-            if (name == "XYWE.exe" && File.Exists(dir + "/data/updateRequire.txt"))
+            if (name == "XYWE.exe" && Directory.Exists(dir + "/data/update"))
             {
                 name = "XYUpdater.exe";
             }

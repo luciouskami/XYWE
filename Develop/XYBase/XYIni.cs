@@ -14,7 +14,7 @@ namespace XYBase
             get
             {
                 if (_Tips == null)
-                    _Tips = new IniFile(XYPath.File.XyweDataIni, nameof(Tips));
+                    _Tips = new IniFile(XYPath.File.DataIni, nameof(Tips));
                 return _Tips;
             }
         }
@@ -25,7 +25,7 @@ namespace XYBase
             get
             {
                 if (_Config == null)
-                    _Config = new IniFile(XYPath.File.XyweDataIni, nameof(Config));
+                    _Config = new IniFile(XYPath.File.DataIni, nameof(Config));
                 return _Config;
             }
         }
@@ -36,7 +36,7 @@ namespace XYBase
             get
             {
                 if (_Package == null)
-                    _Package = new IniFile(XYPath.File.XyweDataIni, nameof(Package));
+                    _Package = new IniFile(XYPath.File.DataIni, nameof(Package));
                 return _Package;
             }
         }
@@ -50,7 +50,7 @@ namespace XYBase
             get
             {
                 if (_Cache == null)
-                    _Cache = new IniFile(XYPath.File.XyweDataIni, nameof(Cache));
+                    _Cache = new IniFile(XYPath.File.DataIni, nameof(Cache));
                 return _Cache;
             }
         }

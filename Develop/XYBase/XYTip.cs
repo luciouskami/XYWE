@@ -18,7 +18,7 @@ namespace XYBase
             get
             {
                 if (_tips == null)
-                    _tips = new List<string>(File.ReadAllText(XYPath.File.XyweDataTip).Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries));
+                    _tips = new List<string>(File.ReadAllText(XYPath.File.DataTip).Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries));
                 return _tips;
             }
         }
@@ -74,7 +74,7 @@ namespace XYBase
                 var serverTime = DateTime.Parse(timeText);
                 if (serverTime.Subtract(DateTime.Parse(GetLastUpdateTime())).TotalSeconds > 0)
                 {
-                    File.WriteAllLines(XYPath.File.XyweDataTip, data);
+                    File.WriteAllLines(XYPath.File.DataTip, data);
                     XYIni.Tips["LastUpdateTime"] = timeText;
                 }
             });

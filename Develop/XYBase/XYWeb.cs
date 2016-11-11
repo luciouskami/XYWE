@@ -14,7 +14,7 @@ namespace XYBase
     public static class XYWeb
     {
 #if DEBUG
-        static string xyweServerAddress = "http://127.0.0.1:82/xywe_server";
+        static string xyweServerAddress = "http://192.168.1.101/xywe_server";
 #else
         static string xyServerAddress = "https://wow9.org/xywe_server";
 #endif
@@ -132,6 +132,9 @@ namespace XYBase
                 successAction(encode.GetString(data).Split(new[] { "\r\n", "\n" }, StringSplitOptions.None).ToList());
             });
         }
+        /// <summary>
+        /// Default Cache Time is 30 days.
+        /// </summary>
         public static void DownloadXyweServerFileAsync(string path, string localFileName, Action successAction, Action<int> retryAction = null, Action failedAction = null, int cacheTime = 2592000)
         {
             DownloadFileAsync($"{xyweServerAddress}/{path}", localFileName, successAction, retryAction, failedAction, cacheTime);
@@ -143,6 +146,28 @@ namespace XYBase
         public static void ReadXyweServerTextAsync(string path, Action<string> successAction, Action<int> retryAction = null, Action failedAction = null, int cacheTime = 2592000)
         {
             ReadTextAsync($"{xyweServerAddress}/{path}", successAction, retryAction, failedAction, cacheTime);
+        }
+        
+        public static bool GetInternetConnection()
+        {
+            // http://stackoverflow.com/questions/2031824/what-is-the-best-way-to-check-for-internet-connectivity-using-net
+
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    client.Headers.Add(HttpRequestHeader.UserAgent, "XYWE");
+                    client.Headers.Add(HttpRequestHeader.CacheControl, "max-age=0");
+                    using (var stream = client.OpenRead("http://www.baidu.com"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
