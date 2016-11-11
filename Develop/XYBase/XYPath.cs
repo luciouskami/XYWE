@@ -58,6 +58,8 @@ namespace XYBase
             public static string XyweDataIni = Dir.Data + @"\data.ini";
             public static string XyweDataTip = Dir.Data + @"\tips.txt";
             public static string XyweDataPackages = Dir.Data + @"\packages.ini";
+            public static string XyweDataUpdateArchive = Dir.Data + @"\updateArchive.zip";
+            public static string XyweDataUpdateRequire = Dir.Data + @"\updateRequire.txt";
             public static string XyweUiTip = Dir.SourceUi + @"\xywe\WorldEditStrings\Tip.txt";
         }
     }

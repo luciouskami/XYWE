@@ -85,9 +85,9 @@ namespace XYBase {
             api.editorTip = line[3];
             api.functionName = line[4];
             api.returnType = line[5];
-            api.paramCount = line[6].Split('\n').Length;
-            api.paramType = line[6].Replace('\n', ',');
-            api.paramDefaultValue = line[7].Replace('\n', ',');
+            api.paramCount = line[6].Split(new[] { "\r\n", "\n" }, StringSplitOptions.None).Length;
+            api.paramType = line[6].Replace("\r\n", ",").Replace("\n", ",");
+            api.paramDefaultValue = line[7].Replace("\r\n", ",").Replace("\n", ","); // TODO 解决这里可能因为\N造成的BUG
             if (api.returnType == "nothing") {
                 apiActionList.Add(api);
             }

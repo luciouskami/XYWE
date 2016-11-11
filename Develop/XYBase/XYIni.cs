@@ -40,5 +40,19 @@ namespace XYBase
                 return _Package;
             }
         }
+
+        /// <summary>
+        /// 不可更改，已被Updater使用
+        /// </summary>
+        static IniFile _Cache;
+        public static IniFile Cache
+        {
+            get
+            {
+                if (_Cache == null)
+                    _Cache = new IniFile(XYPath.File.XyweDataIni, nameof(Cache));
+                return _Cache;
+            }
+        }
     }
 }
