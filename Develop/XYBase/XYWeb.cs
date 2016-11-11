@@ -30,7 +30,7 @@ namespace XYBase
                 successAction(task.Result);
             }
         }
-        public static async void DownloadFileAsync(string address, string localFileName, Action successAction, Action<int> retryAction = null, Action failedAction = null, int cacheTime = 2592000)
+        public static async void DownloadFileAsync(string address, string localFileName, Action successAction, Action<int> retryAction = null, Action failedAction = null, int cacheTime = 2592000, bool successWhenNotFound = false)
         {
             using (var wc = new WebClient())
             {
@@ -38,15 +38,23 @@ namespace XYBase
                 
                 int retry = 0, retryCount = 5;
 
-                Retry:
+            Retry:
                 var task = wc.DownloadFileTaskAsync(new Uri(address), localFileName);
                 try
                 {
                     await task;
-                    successAction();
+                    successAction?.Invoke();
                 }
                 catch (Exception e)
                 {
+                    if (successWhenNotFound && ((HttpWebResponse)((WebException)e).Response).StatusCode == HttpStatusCode.NotFound)
+                    {
+                        successAction?.Invoke();
+                        return;
+                    }
+#if DEBUG
+                    throw e;
+#endif
                     if (++retry <= retryCount)
                     {
                         retryAction?.Invoke(retry);
@@ -54,9 +62,6 @@ namespace XYBase
                         goto Retry;
                     }
                     failedAction?.Invoke();
-#if DEBUG
-                    MessageBox.Show("下载文件数据失败: " + e.Message);
-#endif
                 }
             }
         }
@@ -135,9 +140,9 @@ namespace XYBase
         /// <summary>
         /// Default Cache Time is 30 days.
         /// </summary>
-        public static void DownloadXyweServerFileAsync(string path, string localFileName, Action successAction, Action<int> retryAction = null, Action failedAction = null, int cacheTime = 2592000)
+        public static void DownloadXyweServerFileAsync(string path, string localFileName, Action successAction, Action<int> retryAction = null, Action failedAction = null, int cacheTime = 2592000, bool successWhenNotFound = false)
         {
-            DownloadFileAsync($"{xyweServerAddress}/{path}", localFileName, successAction, retryAction, failedAction, cacheTime);
+            DownloadFileAsync($"{xyweServerAddress}/{path}", localFileName, successAction, retryAction, failedAction, cacheTime, successWhenNotFound);
         }
 
         /// <summary>
@@ -158,7 +163,8 @@ namespace XYBase
                 {
                     client.Headers.Add(HttpRequestHeader.UserAgent, "XYWE");
                     client.Headers.Add(HttpRequestHeader.CacheControl, "max-age=0");
-                    using (var stream = client.OpenRead("http://www.baidu.com"))
+                    //using (var stream = client.OpenRead("http://www.baidu.com"))
+                    using (var stream = client.OpenRead("http://192.168.1.101"))
                     {
                         return true;
                     }

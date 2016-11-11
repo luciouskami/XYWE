@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,25 +11,23 @@ namespace XYWE
 {
     public partial class FormXYWE : Form
     {
-        static FormXYWE Last = null;
-
         public FormXYWE()
         {
+            if (File.Exists(XYPath.File.DataUpdateLog))
+            {
+                var formLog = new FormUpdateLog();
+                formLog.ShowDialog();
+            }
             InitializeComponent();
-            Last = this;
+            XYFile.RemoveDirectory(XYPath.Dir.DataUpdate);
+            XYProcess.Application.StartXYChecker();
         }
 
         void FormXYWE_Load(object sender, EventArgs e)
         {
             LlVersion.Text = XYInfo.Version;
             XYTip.UpdateTipAsync();
-            XYVersion.VerifyObsoleteAsync(ObsoleteAction);
             cbUI.SelectedItem = XYConfig.GetCurrentStandardUI();
-        }
-        void ObsoleteAction()
-        {
-            LlVersion.Text = LlVersion.Text + "(旧)";
-            LlVersion.LinkColor = System.Drawing.Color.Red;
         }
 
         void LlVersion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

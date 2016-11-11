@@ -26,6 +26,11 @@ namespace XYBase
                 Process.Start(@"XYMpqLibraryManager.exe");
             }
 
+            public static void StartXYChecker()
+            {
+                Process.Start(@"XYChecker.exe");
+            }
+
             public static void StartXYTextColorMaker()
             {
                 Process.Start(@"XYTextColorMaker.exe");
@@ -50,6 +55,10 @@ namespace XYBase
             public static void StartCommunity()
             {
                 Process.Start("https://wow9.org/forum.php?mod=forumdisplay&fid=122");
+            }
+            public static void StartXyWikiVersion(string version)
+            {
+                Process.Start("https://xywiki.com/p/XYWE:" + version);
             }
         }
     }

@@ -249,11 +249,13 @@ core/*.dll
 core/*.exe
 core/*.exe.config
 core/editor
+core/data/update
 core/data/data.ini
 core/source/ui/xywe/WorldEditStrings/Tip.txt
 *.exe.manifest
 *.lastcodeanalysissucceeded
 *.CodeAnalysisLog.xml
+*.vshost.exe
 
 # XYWE Project
 ####################

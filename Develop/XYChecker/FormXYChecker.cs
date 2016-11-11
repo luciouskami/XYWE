@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.IO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,51 +14,55 @@ namespace XYChecker
 {
     public partial class FormXYChecker : Form
     {
-        static string serverVersion = "";
+        string serverVersion = "";
 
         public FormXYChecker()
         {
-            InitializeComponent();
-            try
+            if (XYWeb.GetInternetConnection())
             {
-                if (XYWeb.GetInternetConnection())
+                XYWeb.ReadXyweServerTextAsync($"version/ask_update.php?a={XYInfo.Version}", content =>
                 {
-                    XYWeb.ReadXyweServerTextAsync("version/ask_update.php", content =>
+                    if (content.Length == 0
+                        || content == XYInfo.Version) Quit();
+                    else
                     {
-                        if (content.Length == 0) QuitChecker();
-                        else
-                        {
-                            MessageBox.Show("Find new version: " + serverVersion + ", XYWE will update on your next start.");
-                            serverVersion = content;
-                            DownloadResources();
-                            MessageBox.Show("Find new version: " + serverVersion + ", XYWE will update on your next start.");
-                        }
-                    }, Quit, QuitChecker, 0);
-                }
-                else
-                {
-                    QuitChecker();
-                }
+                        if (!Directory.Exists(XYPath.Dir.DataUpdate))
+                            Directory.CreateDirectory(XYPath.Dir.DataUpdate);
+
+                        serverVersion = content;
+                        DownloadResources();
+                    }
+                }, Quit, Quit, 0);
             }
-            catch (Exception e)
+            else Quit();
+        }
+
+        void DownloadResources()
+        {
+            var pathArchive = $"version/cache/{serverVersion}/{XYInfo.Version}.zip";
+            XYWeb.DownloadXyweServerFileAsync(pathArchive, XYPath.File.DataUpdateFiles, () =>
             {
-                throw e;
-            }
+                if (File.ReadAllBytes(XYPath.File.DataUpdateFiles).Length == 0) File.Delete(XYPath.File.DataUpdateFiles);
+
+                var pathRemove = $"version/cache/{serverVersion}/{XYInfo.Version}.txt";
+                XYWeb.DownloadXyweServerFileAsync(pathRemove, XYPath.File.DataUpdateRemove, () =>
+                {
+                    if (File.ReadAllBytes(XYPath.File.DataUpdateRemove).Length == 0) File.Delete(XYPath.File.DataUpdateRemove);
+
+                    XYWeb.DownloadXyweServerFileAsync($"version/repository/{serverVersion}/log.txt", XYPath.File.DataUpdateLog, () =>
+                    {
+                        InitializeComponent();
+                        label2.Text = serverVersion;
+                    }, Quit, Quit, successWhenNotFound: false);
+                }, Quit, Quit, successWhenNotFound: true);
+            }, Quit, Quit, successWhenNotFound: true);
         }
 
-        static void DownloadResources()
-        {
-            XYWeb.DownloadXyweServerFileAsync($"version/cache/{serverVersion}/{XYInfo.Version}.zip", XYPath.File.DataUpdateFiles, null, Quit, QuitChecker);
-            XYWeb.DownloadXyweServerFileAsync($"version/cache/{serverVersion}/{XYInfo.Version}.txt", XYPath.File.DataUpdateRemove, null, Quit, QuitChecker);
-            XYWeb.DownloadXyweServerFileAsync($"version/repository/{serverVersion}/log.txt", XYPath.File.DataUpdateLog, null, Quit, QuitChecker);
-        }
+        void Quit() { Application.Exit(); }
+        void Quit(int _) { Quit(); }
 
-        static void QuitChecker()
+        private void FormXYChecker_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("");
-            XYFile.RemoveDirectory(XYPath.Dir.DataUpdate);
-            Application.Exit();
         }
-        static void Quit(int _) { QuitChecker(); }
     }
 }

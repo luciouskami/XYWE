@@ -5,12 +5,11 @@
     固定性：
         完成编写后永远不更改原有功能，可添加额外功能但必须保证原有功能不变。
     功能：
-	    根据ini备份将要变更的文件（提醒可以在./backup/XXXX下找到）
-	    根据ini从服务端下载差异文件
-	    根据已下载差异文件大小来推进进度条以及下载数量进度
-	    根据当前网速估算剩余时间
+	    Check "./core/data/update" exist
+        Unarchive "files.zip" and patch all files to xywe
+        Remove files in "remove.txt"
+        Leave log.txt, XYWE dispaly it on start.
 */
-
 
 using System;
 using System.Collections.Generic;
@@ -21,6 +20,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.IO.Compression;
+using System.Diagnostics;
 
 namespace XYUpdateExecutor
 {
@@ -28,7 +30,31 @@ namespace XYUpdateExecutor
     {
         public FormXYUpdateExecutor()
         {
-            InitializeComponent();
+            Environment.CurrentDirectory = Path.GetFullPath(Environment.CurrentDirectory + @"\..");
+
+            var pathFile = @"core\data\update\files.zip";
+            if (File.Exists(pathFile))
+            {
+                ZipFile.ExtractToDirectory(pathFile, @"..");
+                File.Delete(pathFile);
+            }
+
+            var pathRemove = @"core\data\update\remove.txt";
+            if (File.Exists(pathRemove))
+            {
+                var lines = File.ReadAllLines(pathRemove).ToList();
+                foreach (var line in lines)
+                {
+                    if (line.Length == 0) continue;
+                    if (File.Exists(line)) File.Delete(line);
+                }
+                File.Delete(pathRemove);
+            }
+
+            Environment.CurrentDirectory = Path.GetFullPath(Environment.CurrentDirectory + @"\core");
+            var proc = Process.Start(@"XYWE.exe");
+
+            Process.GetCurrentProcess().Kill();
         }
     }
 }

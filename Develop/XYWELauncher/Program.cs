@@ -17,7 +17,7 @@ namespace XYWELauncher
 
             if (name == "XYWE.exe" && Directory.Exists(dir + "/data/update"))
             {
-                name = "XYUpdater.exe";
+                name = "XYUpdateExecutor.exe";
             }
 
             if (File.Exists(dir + "/" + name))
