@@ -11,6 +11,32 @@ namespace XYBase
     {
         public static class Application
         {
+            static void KillApplications(string name)
+            {
+                var group = Process.GetProcessesByName(name);
+                foreach (var proc in group) proc.Kill();
+            }
+            static void KillApplications(string[] names)
+            {
+                foreach (var name in names) KillApplications(name);
+            }
+
+            // TODO It doesn't working
+            public static void KillXYWEApplications()
+            {
+                KillApplications(new[]
+                {
+                    "worldeditydwe.exe",
+
+                    "XYCodeLibraryManager.exe",
+                    "XYMpqLibraryManager.exe",
+                    "XYChecker.exe",
+                    "XYTextColorMaker.exe",
+                    "XYTriggerSyntaxHighlighter.exe",
+                    "XYTriggerLibraryManager.exe",
+                });
+            }
+
             public static void StartXYWE()
             {
                 Process.Start(@"editor\YDWE.exe");
