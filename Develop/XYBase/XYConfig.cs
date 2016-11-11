@@ -10,21 +10,17 @@ namespace XYBase
 {
     public static class XYConfig
     {
-        static void SetConfig(string name)
-        {
-            XYIni.Config["UI"] = name;
-        }
         static void WriteConfig(IEnumerable<string> config)
         {
             File.WriteAllLines(XYPath.File.MpqConfig, config);
         }
         public static void TurnYDWE()
         {
-            SetConfig("YDWE");
+            XYIni.Config["StandardUI"] = "YDWE";
         }
         public static void TurnXYWE()
         {
-            SetConfig("XYWE");
+            XYIni.Config["StandardUI"] = "XYWE";
         }
         public static string GetCurrentStandardUI()
         {
