@@ -31,31 +31,31 @@ namespace XYUpdateExecutor
         public FormXYUpdateExecutor()
         {
             Environment.CurrentDirectory = Path.GetFullPath(Environment.CurrentDirectory + @"\..");
-
-            var pathFile = @"core\data\update\files.zip";
-            if (File.Exists(pathFile))
+            if (!File.Exists("disable_update.lock"))
             {
-                ZipFile.ExtractToDirectory(pathFile, @"core\data\update\files");
-                CopyDirectory(@"core\data\update\files", @".", true);
-                File.Delete(pathFile);
-                Directory.Delete(@"core\data\update\files", true);
-            }
-
-            var pathRemove = @"core\data\update\remove.txt";
-            if (File.Exists(pathRemove))
-            {
-                var lines = File.ReadAllLines(pathRemove).ToList();
-                foreach (var line in lines)
+                var pathFile = @"core\data\update\files.zip";
+                if (File.Exists(pathFile))
                 {
-                    if (line.Length == 0) continue;
-                    if (File.Exists(line)) File.Delete(line);
+                    ZipFile.ExtractToDirectory(pathFile, @"core\data\update\files");
+                    CopyDirectory(@"core\data\update\files", @".", true);
+                    File.Delete(pathFile);
+                    Directory.Delete(@"core\data\update\files", true);
                 }
-                File.Delete(pathRemove);
-            }
 
+                var pathRemove = @"core\data\update\remove.txt";
+                if (File.Exists(pathRemove))
+                {
+                    var lines = File.ReadAllLines(pathRemove).ToList();
+                    foreach (var line in lines)
+                    {
+                        if (line.Length == 0) continue;
+                        if (File.Exists(line)) File.Delete(line);
+                    }
+                    File.Delete(pathRemove);
+                }
+            }
             Environment.CurrentDirectory = Path.GetFullPath(Environment.CurrentDirectory + @"\core");
             var proc = Process.Start(@"XYWE.exe");
-
             Process.GetCurrentProcess().Kill();
         }
 

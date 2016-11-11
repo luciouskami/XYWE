@@ -13,14 +13,14 @@ namespace XYWE
     {
         public FormXYWE()
         {
-            if (File.Exists(XYPath.File.DataUpdateLog))
+            if (!File.Exists(XYPath.File.UpdateLock) && File.Exists(XYPath.File.DataUpdateLog))
             {
                 var formLog = new FormUpdateLog();
                 formLog.ShowDialog();
             }
             InitializeComponent();
             XYFile.RemoveDirectory(XYPath.Dir.DataUpdate);
-            XYProcess.Application.StartXYChecker();
+            if (!File.Exists(XYPath.File.UpdateLock)) XYProcess.Application.StartXYChecker();
         }
 
         void FormXYWE_Load(object sender, EventArgs e)

@@ -50,6 +50,8 @@ namespace XYBase
         }
         public static class File
         {
+            public static string UpdateLock = Dir.Root + @"\disable_update.lock";
+
             public static string ProgramWe = Dir.Editor + @"\YDWE.exe";
             public static string MpqConfig = Dir.Mpq + @"\config";
             public static string MpqSort = Dir.Mpq + @"\sort";
