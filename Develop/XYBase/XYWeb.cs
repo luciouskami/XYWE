@@ -163,8 +163,7 @@ namespace XYBase
                 {
                     client.Headers.Add(HttpRequestHeader.UserAgent, "XYWE");
                     client.Headers.Add(HttpRequestHeader.CacheControl, "max-age=0");
-                    //using (var stream = client.OpenRead("http://www.baidu.com"))
-                    using (var stream = client.OpenRead("http://192.168.1.101"))
+                    using (var stream = client.OpenRead("http://www.baidu.com"))
                     {
                         return true;
                     }
