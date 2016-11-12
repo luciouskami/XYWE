@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("XYTriggerSyntaxHighlighter")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("咸鱼语法配色修改器")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Wow9.Org")]
 [assembly: AssemblyProduct("XYTriggerSyntaxHighlighter")]

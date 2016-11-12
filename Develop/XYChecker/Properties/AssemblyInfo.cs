@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("XYChecker")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("咸鱼版本检测器，会自动检测并下载最新版本的资源")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Wow9.Org")]
 [assembly: AssemblyProduct("XYChecker")]

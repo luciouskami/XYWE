@@ -8,7 +8,7 @@ using System.Windows;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("XYTextColorMaker")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("咸鱼文本染色器，集成染色模板、定制等功能")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Wow9.Org")]
 [assembly: AssemblyProduct("XYTextColorMaker")]
