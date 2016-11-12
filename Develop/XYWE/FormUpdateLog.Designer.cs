@@ -70,7 +70,7 @@
             this.btnMore.Name = "btnMore";
             this.btnMore.Size = new System.Drawing.Size(99, 43);
             this.btnMore.TabIndex = 2;
-            this.btnMore.Text = "详细说明";
+            this.btnMore.Text = "更多";
             this.btnMore.UseVisualStyleBackColor = true;
             this.btnMore.Click += new System.EventHandler(this.btnMore_Click);
             // 
