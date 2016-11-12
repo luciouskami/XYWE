@@ -1,4 +1,22 @@
 // TC_UDDS
+	SetHealingThumpAllow=0,boolean
+		_SetHealingThumpAllow_Defaults=true
+		_SetHealingThumpAllow_Category=TC_UDDS
+	SetDisplayHealing=0,boolean
+		_SetDisplayHealing_Defaults=true
+		_SetDisplayHealing_Category=TC_UDDS
+	SetIDHealingData=0,agentTypeID_0,real
+		_SetIDHealingData_Defaults= ReturnUnitID,100
+		_SetIDHealingData_Category=TC_UDDS
+	SetIDHealingPlusData=0,agentTypeID_0,real
+		_SetIDHealingPlusData_Defaults= ReturnUnitID,1
+		_SetIDHealingPlusData_Category=TC_UDDS
+	SetIDHealingReduceData=0,agentTypeID_0,real
+		_SetIDHealingReduceData_Defaults= ReturnUnitID,1
+		_SetIDHealingReduceData_Category=TC_UDDS
+	Healing=0,unit,abilcode,unit
+		_Healing_Defaults=GetTriggerUnit,GetSpellAbilityId,GetSpellTargetUnit
+		_Healing_Category=TC_UDDS
 	TriggerRegisterAnyUnitDamagedEvent=0,trigger,AttackEventType
 		_TriggerRegisterAnyUnitDamagedEvent_Defaults=CreateTrigger,MeleeEventIndex
 		_TriggerRegisterAnyUnitDamagedEvent_Category=TC_UDDS

@@ -382,6 +382,12 @@
 			GetUnitHalfDamageBool=0,0,boolean,unit
 				_GetUnitHalfDamageBool_Defaults=GetTriggerUnit,
 				_GetUnitHalfDamageBool_Category=TC_UDDS
+			GetHealingThumpBoolean=0,0,boolean,unit
+				_GetHealingThumpBoolean_Defaults=GetTriggerUnit,
+				_GetHealingThumpBoolean_Category=TC_UDDS
+			UnitMimeticdSkillDamageBoolean=0,0,boolean,unit
+				_UnitMimeticdSkillDamageBoolean_Defaults=_,
+				_UnitMimeticdSkillDamageBoolean_Category=TC_UDDS
 		// DzAPI
 			DzAPI_Map_IsRPGLobby=0,0,boolean
 				_DzAPI_Map_IsRPGLobby_Defaults=
@@ -1312,6 +1318,24 @@
 			_Rad2Deg_Category=TC_CONVERSION
 	// TODO
 		// SJWE
+			GetEventDamageZJ=0,0,real
+				_GetEventDamageZJ_Defaults=
+				_GetEventDamageZJ_Category=TC_EVENTRESPONSE
+			GetUnitMimeticdDamage=0,0,real,unit
+				_GetUnitMimeticdDamage_Defaults=GetEventDamagedUnitZJ,
+				_GetUnitMimeticdDamage_Category=TC_EVENTRESPONSE
+			GetMimeticdMeleeEventDamage=0,0,real
+				_GetMimeticdMeleeEventDamage_Defaults=
+				_GetMimeticdMeleeEventDamage_Category=TC_EVENTRESPONSE
+			GetMimeticdMagicEventDamage=0,0,real
+				_GetMimeticdMagicEventDamage_Defaults=
+				_GetMimeticdMagicEventDamage_Category=TC_EVENTRESPONSE
+			GetHealingEventHealing=0,0,real
+				_GetHealingEventHealing_Defaults=
+				_GetHealingEventHealing_Category=TC_EVENTRESPONSE
+			GetReboundDamageEventDamage=0,0,real
+				_GetReboundDamageEventDamage_Defaults=
+				_GetReboundDamageEventDamage_Category=TC_EVENTRESPONSE
 			GetHalfDamageFactor=0,0,real,unitcode
 				_GetHalfDamageFactor_Defaults=_,
 				_GetHalfDamageFactor_Category=TC_UDDS
@@ -1786,6 +1810,38 @@
 		GetTriggerUnit=0,1,unit
 			_GetTriggerUnit_Defaults=
 			_GetTriggerUnit_Category=TC_EVENTRESPONSE
+	// TODO
+		// SJWE
+			GetEventDamagedUnitZJ=0,0,unit
+				_GetEventDamagedUnitZJ_Defaults=
+				_GetEventDamagedUnitZJ_Category=TC_EVENTRESPONSE
+			GetEventDamageSourceZJ=0,0,unit
+				_GetEventDamageSourceZJ_Defaults=
+				_GetEventDamageSourceZJ_Category=TC_EVENTRESPONSE
+			GetMimeticdMeleeEventDamageSource=0,0,unit
+				_GetMimeticdMeleeEventDamageSource_Defaults=
+				_GetMimeticdMeleeEventDamageSource_Category=TC_EVENTRESPONSE
+			GetMimeticdMeleeEventDamagedUnit=0,0,unit
+				_GetMimeticdMeleeEventDamagedUnit_Defaults=
+				_GetMimeticdMeleeEventDamagedUnit_Category=TC_EVENTRESPONSE
+			GetMimeticdMagicEventDamageSource=0,0,unit
+				_GetMimeticdMagicEventDamageSource_Defaults=
+				_GetMimeticdMagicEventDamageSource_Category=TC_EVENTRESPONSE
+			GetMimeticdMagicEventDamagedUnit=0,0,unit
+				_GetMimeticdMagicEventDamagedUnit_Defaults=
+				_GetMimeticdMagicEventDamagedUnit_Category=TC_EVENTRESPONSE
+			GetHealingEventHealingSource=0,0,unit
+				_GetHealingEventHealingSource_Defaults=
+				_GetHealingEventHealingSource_Category=TC_EVENTRESPONSE
+			GetHealingEventTreatedUnit=0,0,unit
+				_GetHealingEventTreatedUnit_Defaults=
+				_GetHealingEventTreatedUnit_Category=TC_EVENTRESPONSE
+			GetReboundDamageEventDamageSource=0,0,unit
+				_GetReboundDamageEventDamageSource_Defaults=
+				_GetReboundDamageEventDamageSource_Category=TC_EVENTRESPONSE
+			GetReboundDamageEventDamagedUnit=0,0,unit
+				_GetReboundDamageEventDamagedUnit_Defaults=
+				_GetReboundDamageEventDamagedUnit_Category=TC_EVENTRESPONSE
 // returns unitpool
 	// 普通
 		CreateUnitPool=1,0,unitpool

@@ -80,6 +80,18 @@
 		// This function is handled internally by the editor
 		_AddTriggerEvent_Defaults=GetTriggeringTrigger,_
 		_AddTriggerEvent_Category=TC_TRIGGER
+	TriggerRegisterAnyUnitHealingEvent=0,trigger
+		_TriggerRegisterAnyUnitHealingEvent_Defaults=_
+		_TriggerRegisterAnyUnitHealingEvent_Category=TC_TRIGGER
+	DestroyAnyUnitHealingEvent=0,trigger
+		_DestroyAnyUnitHealingEvent_Defaults=_
+		_DestroyAnyUnitHealingEvent_Category=TC_TRIGGER
+	TriggerRegisterAnyUnitReboundDamageEvent=0,trigger
+		_TriggerRegisterAnyUnitReboundDamageEvent_Defaults=_
+		_TriggerRegisterAnyUnitReboundDamageEvent_Category=TC_TRIGGER
+	DestroyAnyUnitReboundDamageEvent=0,trigger
+		_DestroyAnyUnitReboundDamageEvent_Defaults=_
+		_DestroyAnyUnitReboundDamageEvent_Category=TC_TRIGGER
 	QueuedTriggerAddBJ=0,trigger,checkingignoringoption
 		_QueuedTriggerAddBJ_Defaults=_,CheckingIgnoringChecking
 		_QueuedTriggerAddBJ_Category=TC_TRIGGER

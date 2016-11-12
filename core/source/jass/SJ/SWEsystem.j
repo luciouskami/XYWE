@@ -7,6 +7,8 @@ library_once SWEsystem requires SJWEBase
 globals
     private hashtable         DSHT = InitHashtable()
     private hashtable         DSITHT = InitHashtable()
+    private hashtable         DATA = InitHashtable() 
+       
     private group             DamagedGroup
     private boolean           DisplayDamageBool = false
     private string            str1 = ""
@@ -20,19 +22,38 @@ globals
     private integer           MIMETIC_SKILL_2 = 0    
     private integer           MIMETIC_BUFF_1 = 0   
     private integer           MIMETIC_BUFF_2 = 0    
-    private integer           MagicListEnd = 0
-    private integer           MeleeListEnd = 0
+
     private string array      color_str 
     private real array        rgb_A
     private integer array     rgb_R
     private integer array     rgb_G
     private integer array     rgb_B
+
+    private integer           MagicListEnd = 0
+    private integer           MeleeListEnd = 0
+    private integer           M_MeleeListEnd = 0
+    private integer           M_MagicListEnd = 0           
+    private integer           HealingListEnd = 0
+    private integer           RMDListEnd = 0  
     private integer array     MagicLastIndex
     private integer array     MagicNextIndex
     private integer array     MeleeLastIndex
     private integer array     MeleeNextIndex 
+    private integer array     M_MeleeLastIndex
+    private integer array     M_MeleeNextIndex
+    private integer array     M_MagicLastIndex
+    private integer array     M_MagicNextIndex    
+    private integer array     HealingLastIndex
+    private integer array     HealingNextIndex
+    private integer array     RMDLastIndex
+    private integer array     RMDNextIndex                  
     private trigger array     MagicTriggerList
     private trigger array     MeleeTriggerList
+    private trigger array     M_MeleeTriggerList
+    private trigger array     M_MagicTriggerList    
+    private trigger array     HealingTriggerList
+    private trigger array     RMDTriggerList 
+                       
     private real              EXP_A = 1.0       
     private real              EXP_B = 5.0       
     private real              EXP_C = 5.0      
@@ -45,7 +66,11 @@ globals
     private integer array     EXP_Hero
     private integer           EXP_c = 25
     private integer           EXP_c_Hero = 100
-    private boolean           BUDILINGKILL = false    
+    private boolean           BUDILINGKILL = false 
+    
+    private boolean           HealingThump = true
+    private boolean           DisplayHealingBool = false 
+               
     private trigger array     trA
     private trigger array     trB
     private trigger array     trC   
@@ -347,15 +372,23 @@ function SetType_System takes nothing returns nothing
     call SetTypeName(93,"指定单位反弹伤害率") 
     call SetTypeName(94,"指定单位技能反弹伤害率")   
     call SetTypeName(95,"指定单位吸收伤害率") 
-    call SetTypeName(96,"指定单位技能吸收伤害率")   
+    call SetTypeName(96,"指定单位技能吸收伤害率")  
+    call SetTypeName(1000,"治疗量")  
+    call SetTypeName(1001,"指定单位总治疗量") 
+    call SetTypeName(1002,"指定单位受治疗加成率")       
+    call SetTypeName(1003,"指定单位受治疗衰减率")
+    call SetTypeName(1004,"总物品——单位治疗量加成")
+    call SetTypeName(1005,"总物品——单位受治疗加成率")       
+    call SetTypeName(1006,"总物品——单位受治疗衰减率")     
+    call SetTypeName(1007,"是否暴击治疗")                        
 endfunction
 
 function SetTypeNamePreinstall takes nothing returns nothing
-    call SetTypeName(100,"法术攻击")
+    call SetTypeName(100,"未知攻击")
     call SetTypeName(101,"普通攻击")
     call SetTypeName(102,"穿刺攻击")
     call SetTypeName(103,"攻城攻击")
-    call SetTypeName(104,"魔法攻击")
+    call SetTypeName(104,"强化攻击")
     call SetTypeName(105,"混乱攻击")
     call SetTypeName(106,"英雄攻击")
     call SetTypeName(200,"没有护甲")
@@ -561,6 +594,71 @@ function AttackDefensePreinstallDATA takes nothing returns nothing
         call SaveReal(DSHT, ( 300 + n ), 400, 1.00)
         set n = n + 1
     endloop    
+endfunction
+
+function UnitMimeticdSkillDamageBoolean takes unit whichunit returns boolean
+    return LoadBoolean(DSHT,GetHandleId(whichunit),5) 
+endfunction        
+
+function SetHealingThumpAllow takes boolean b returns nothing
+    set HealingThump = b
+endfunction
+
+function SetDisplayHealing takes boolean b returns nothing
+    set DisplayHealingBool = b
+endfunction
+
+function SetHealingThumpBoolean takes unit whichunit, boolean b returns nothing
+    call SaveBoolean(DSHT,GetHandleId(whichunit), 1007, b)
+endfunction
+function GetHealingThumpBoolean takes unit whichunit returns boolean
+    return LoadBoolean(DSHT, GetHandleId(whichunit), 1007)
+endfunction
+
+function SetIDHealingData takes integer id, real data returns nothing
+    local real i = data
+    if ( i <= 0.0 ) then
+        set i = 0.0
+    endif 
+    call SetTypeData(id,1000,i)
+endfunction
+function GetIDHealingData takes integer id returns real
+    return GetTypeData(id,1000)
+endfunction
+
+function SetIDHealingPlusData takes integer id, real data returns nothing
+    local real i = data / 100.0
+    if ( i <= 1.0 ) then
+        set i = 1.0
+    endif 
+    call SetTypeData(id,1002,i)
+endfunction
+function GetIDHealingPlusData takes integer id returns real
+    return GetTypeData(id,1002)
+endfunction
+
+function SetIDHealingReduceData takes integer id, real data returns nothing
+    local real i = data / 100.0
+    if ( i <= 0.0 ) then
+        set i = 0.0
+    elseif ( i >= 1.0 ) then
+        set i = 1.0
+    endif 
+    call SetTypeData(id,1003,i)
+endfunction
+function GetIDHealingReduceData takes integer id returns real
+    return GetTypeData(id,1003)
+endfunction
+
+function SetTotalHealingData takes unit whichunit, real data returns nothing
+    local real i = data
+    if ( i <= 0.0 ) then
+        set i = 0.0
+    endif 
+    call SetTypeData(GetHandleId(whichunit),1001,i)
+endfunction
+function GetTotalHealingData takes unit whichunit returns real
+    return GetTypeData(GetHandleId(whichunit),1001)
 endfunction
 
 function SetSkillHalfDamageBoolean takes integer unitid, boolean b returns nothing
@@ -828,7 +926,10 @@ function UnitItemPredicable takes unit whichunit returns nothing
     local real r = 0.0  
     local real s = 0.0  
     local real t = 0.0  
-    local real w = 0.0          
+    local real w = 0.0
+    local real z1 = 0.0
+    local real z2 = 0.0
+    local real z3 = 0.0          
     set I = 1
     loop
         exitwhen ( I > GetMaxIndex(UnitHandleId) )
@@ -853,6 +954,9 @@ function UnitItemPredicable takes unit whichunit returns nothing
         set s = s + LoadReal(DSHT, GetItemTypeId(LoadItemHandle(DSITHT, LoadInteger(DSITHT, GetHandleId(whichunit), I),0x100001)), 86)      
         set t = t + LoadReal(DSHT, GetItemTypeId(LoadItemHandle(DSITHT, LoadInteger(DSITHT, GetHandleId(whichunit), I),0x100001)), 87)      
         set w = w + LoadReal(DSHT, GetItemTypeId(LoadItemHandle(DSITHT, LoadInteger(DSITHT, GetHandleId(whichunit), I),0x100001)), 88)
+        set z1 = z1 + LoadReal(DSHT, GetItemTypeId(LoadItemHandle(DSITHT, LoadInteger(DSITHT, GetHandleId(whichunit), I),0x100001)), 1000)
+        set z2 = z2 * LoadReal(DSHT, GetItemTypeId(LoadItemHandle(DSITHT, LoadInteger(DSITHT, GetHandleId(whichunit), I),0x100001)), 1002)
+        set z2 = z2 * LoadReal(DSHT, GetItemTypeId(LoadItemHandle(DSITHT, LoadInteger(DSITHT, GetHandleId(whichunit), I),0x100001)), 1003)
         set I = I + 1
     endloop
     call SaveReal(DSHT, GetHandleId(whichunit), 27, a)     
@@ -876,6 +980,240 @@ function UnitItemPredicable takes unit whichunit returns nothing
     call SaveReal(DSHT, GetHandleId(whichunit), 90, s)
     call SaveReal(DSHT, GetHandleId(whichunit), 91, t)
     call SaveReal(DSHT, GetHandleId(whichunit), 92, w)  
+    call SaveReal(DSHT, GetHandleId(whichunit), 1004, z1)
+    call SaveReal(DSHT, GetHandleId(whichunit), 1005, z2)
+    call SaveReal(DSHT, GetHandleId(whichunit), 1006, z3)  
+endfunction
+
+function TriggerRegisterAnyUnitHealingEvent takes trigger t returns nothing
+        set HealingListEnd = HealingListEnd + 1
+        set HealingNextIndex[HealingListEnd - 1] = HealingListEnd
+        set HealingLastIndex[HealingListEnd] = HealingListEnd - 1
+        set HealingTriggerList[HealingListEnd] = t
+endfunction
+
+function HealingEventTriggerListExecute takes unit HealingSource, unit TreatedUnit, real Treatmentvalue returns nothing
+    local integer index 
+    set index = HealingNextIndex[0]
+    loop
+        exitwhen (index == 0)
+        exitwhen (index > HealingListEnd)
+        if (IsTriggerEnabled(HealingTriggerList[index])) and (TriggerEvaluate(HealingTriggerList[index])) then
+            call SaveUnitHandle(DATA,GetHandleId(HealingTriggerList[index]),S2I("HealingSource"),HealingSource)
+            call SaveUnitHandle(DATA,GetHandleId(HealingTriggerList[index]),S2I("TreatedUnit"),TreatedUnit)
+            call SaveReal(DATA,GetHandleId(HealingTriggerList[index]),S2I("Treatmentvalue"),Treatmentvalue)
+            call TriggerExecute(HealingTriggerList[index])
+        endif
+        set index = HealingNextIndex[index]
+    endloop
+endfunction
+
+function GetHealingEventHealingSource takes nothing returns unit
+    return LoadUnitHandle(DATA,GetHandleId(GetTriggeringTrigger()),S2I("HealingSource"))
+endfunction
+
+function GetHealingEventTreatedUnit takes nothing returns unit
+    return LoadUnitHandle(DATA,GetHandleId(GetTriggeringTrigger()),S2I("TreatedUnit"))
+endfunction
+
+function GetHealingEventHealing takes nothing returns real
+    return LoadReal(DATA,GetHandleId(GetTriggeringTrigger()),S2I("Treatmentvalue"))
+endfunction
+
+function DestroyAnyUnitHealingEvent takes trigger t returns nothing
+    local integer index 
+    set index = HealingNextIndex[0]
+    loop
+        exitwhen (index == 0)
+        exitwhen (HealingTriggerList[index] == t)
+        set index = HealingNextIndex[index]
+    endloop
+    call FlushChildHashtable(DATA,GetHandleId(t))
+    if (index > 0) then
+        set HealingNextIndex[HealingLastIndex[index]] = HealingNextIndex[index]
+        set HealingLastIndex[HealingNextIndex[index]] = HealingLastIndex[index]
+    endif
+endfunction
+
+function Healing takes unit Ua,integer SkillId ,unit Ub returns nothing
+    local real i = 0.0 
+    local real h = 0.0
+    local real n = 0.0
+    local real k = 0.0
+    local real SkillThump = 0.0
+    local real SkillThumpMultiple = 0.0
+    local real temp = 0.0
+    if ( GetIDHealingData(GetHandleId(Ua)) != 0.0 )  then
+        set h = GetIDHealingData(GetHandleId(Ua))
+    else
+        set h = GetIDHealingData(GetUnitTypeId(Ua))
+    endif
+    call SetTotalHealingData(Ua,(h + LoadReal(DSHT, GetHandleId(Ua), 1004) + GetIDHealingData(SkillId)))
+    set i = GetTotalHealingData(Ua)
+    if ( GetIDHealingPlusData(GetHandleId(Ua)) != 0.0 )  then
+        set n = GetIDHealingPlusData(GetHandleId(Ua)) + LoadReal(DSHT, GetHandleId(Ua), 1005)
+    else
+        set n = GetIDHealingPlusData(GetUnitTypeId(Ua)) + LoadReal(DSHT, GetHandleId(Ua), 1005)
+    endif
+    if ( GetIDHealingReduceData(GetHandleId(Ua)) != 0.0 )  then
+        set k = GetIDHealingReduceData(GetHandleId(Ua)) * LoadReal(DSHT, GetHandleId(Ua), 1006)
+    else
+        set k = GetIDHealingReduceData(GetUnitTypeId(Ua)) * LoadReal(DSHT, GetHandleId(Ua), 1006)
+    endif
+    if ( n == 0.0 )  then
+        set n = 1.0
+    endif
+    if ( k == 0.0 )  then
+        set k = 1.0
+    endif
+    set SkillThump = LoadReal(DSHT, GetHandleId(Ua), 20) + LoadReal(DSHT, SkillId, 20) + LoadReal(DSHT, GetHandleId(Ua), 33) + LoadReal(DSHT,GetHandleId(Ua),64)
+    if SkillThump <= 0.0 then
+       set SkillThump = 0.0
+    endif
+    set SkillThumpMultiple = LoadReal(DSHT, GetHandleId(Ua), 21) + LoadReal(DSHT, SkillId, 21) + LoadReal(DSHT, GetHandleId(Ua), 34) + LoadReal(DSHT,GetHandleId(Ua),65)
+    if SkillThumpMultiple <= 1.0 then
+       set SkillThumpMultiple = 1.0
+    endif
+    if ( (Probability(SkillThump) == true) and (HealingThump == true) ) then
+        set temp = i * SkillThumpMultiple * n * k
+        call SetHealingThumpBoolean(Ub,true)
+        if ((GetUnitState(Ub, UNIT_STATE_LIFE) < GetUnitState(Ub, UNIT_STATE_MAX_LIFE))) then
+            call SetUnitState( Ub, UNIT_STATE_LIFE, GetUnitState(Ub, UNIT_STATE_LIFE) + temp )
+            if ( DisplayHealingBool == true ) then
+                call DisplayDamage(Ub,temp,20.0,14.00,114,253,47,0.0)
+            endif
+        else
+            set temp = GetUnitState(Ub, UNIT_STATE_MAX_LIFE) - GetUnitState(Ub, UNIT_STATE_LIFE)
+            call SetUnitState( Ub, UNIT_STATE_LIFE, GetUnitState(Ub, UNIT_STATE_MAX_LIFE) )
+            if ( DisplayHealingBool == true ) then
+                call DisplayDamage(Ub,temp,20.0,14.00,114,253,47,0.0)
+            endif
+        endif
+    else
+        set temp = i * n * k
+        call SetHealingThumpBoolean(Ub,false)
+        if ((GetUnitState(Ub, UNIT_STATE_LIFE) < GetUnitState(Ub, UNIT_STATE_MAX_LIFE))) then
+            call SetUnitState( Ub, UNIT_STATE_LIFE, GetUnitState(Ub, UNIT_STATE_LIFE) + temp )
+            if ( DisplayHealingBool == true ) then
+                call DisplayDamage(Ub,temp,20.0,12.00,114,253,47,0.0)
+            endif
+        else
+            set temp = GetUnitState(Ub, UNIT_STATE_MAX_LIFE) - GetUnitState(Ub, UNIT_STATE_LIFE)
+            call SetUnitState( Ub, UNIT_STATE_LIFE, GetUnitState(Ub, UNIT_STATE_MAX_LIFE) )
+            if ( DisplayHealingBool == true ) then
+                call DisplayDamage(Ub,temp,20.0,12.00,114,253,47,0.0)
+            endif
+        endif
+    endif
+    if ( temp != 0 ) then
+        call HealingEventTriggerListExecute(Ua,Ub,temp)
+    endif
+endfunction
+
+function MimeticdMeleeEventTriggerListExecute takes unit DamageSource, unit DamagedUnit, real Damage returns nothing
+    local integer index 
+    set index = M_MeleeNextIndex[0]
+    loop
+        exitwhen (index == 0)
+        exitwhen (index > M_MeleeListEnd)
+        if (IsTriggerEnabled(M_MeleeTriggerList[index])) and (TriggerEvaluate(M_MeleeTriggerList[index])) then
+            call SaveUnitHandle(DATA,GetHandleId(M_MeleeTriggerList[index]),S2I("MeleeDamageSource"),DamageSource)
+            call SaveUnitHandle(DATA,GetHandleId(M_MeleeTriggerList[index]),S2I("MeleeDamagedUnit"),DamagedUnit)
+            call SaveReal(DATA,GetHandleId(M_MeleeTriggerList[index]),S2I("MeleeDamage"),Damage)
+            call TriggerExecute(M_MeleeTriggerList[index])
+        endif
+        set index = M_MeleeNextIndex[index]
+    endloop
+endfunction
+
+function GetMimeticdMeleeEventDamageSource takes nothing returns unit
+    return LoadUnitHandle(DATA,GetHandleId(GetTriggeringTrigger()),S2I("MeleeDamageSource"))
+endfunction
+
+function GetMimeticdMeleeEventDamagedUnit takes nothing returns unit
+    return LoadUnitHandle(DATA,GetHandleId(GetTriggeringTrigger()),S2I("MeleeDamagedUnit"))
+endfunction
+
+function GetMimeticdMeleeEventDamage takes nothing returns real
+    return LoadReal(DATA,GetHandleId(GetTriggeringTrigger()),S2I("MeleeDamage"))
+endfunction
+
+function MimeticdMagicEventTriggerListExecute takes unit DamageSource, unit DamagedUnit, real Damage returns nothing
+    local integer index 
+    set index = M_MagicNextIndex[0]
+    loop
+        exitwhen (index == 0)
+        exitwhen (index > M_MagicListEnd)
+        if (IsTriggerEnabled(M_MagicTriggerList[index])) and (TriggerEvaluate(M_MagicTriggerList[index])) then
+            call SaveUnitHandle(DATA,GetHandleId(M_MagicTriggerList[index]),S2I("M_MagicDamageSource"),DamageSource)
+            call SaveUnitHandle(DATA,GetHandleId(M_MagicTriggerList[index]),S2I("M_MagicDamagedUnit"),DamagedUnit)
+            call SaveReal(DATA,GetHandleId(M_MagicTriggerList[index]),S2I("M_MagicDamage"),Damage)
+            call TriggerExecute(M_MagicTriggerList[index])
+        endif
+        set index = M_MagicNextIndex[index]
+    endloop
+endfunction
+
+function GetMimeticdMagicEventDamageSource takes nothing returns unit
+    return LoadUnitHandle(DATA,GetHandleId(GetTriggeringTrigger()),S2I("M_MagicDamageSource"))
+endfunction
+
+function GetMimeticdMagicEventDamagedUnit takes nothing returns unit
+    return LoadUnitHandle(DATA,GetHandleId(GetTriggeringTrigger()),S2I("M_MagicDamagedUnit"))
+endfunction
+
+function GetMimeticdMagicEventDamage takes nothing returns real
+    return LoadReal(DATA,GetHandleId(GetTriggeringTrigger()),S2I("M_MagicDamage"))
+endfunction
+
+function TriggerRegisterAnyUnitReboundDamageEvent takes trigger t returns nothing
+    set RMDListEnd = RMDListEnd + 1
+    set RMDNextIndex[RMDListEnd - 1] = RMDListEnd
+    set RMDLastIndex[RMDListEnd] = RMDListEnd - 1
+    set RMDTriggerList[RMDListEnd] = t
+endfunction
+
+function ReboundDamageEventTriggerListExecute takes unit RMDSource, unit RMDUnit, real Damage returns nothing
+    local integer index
+    set index =  RMDNextIndex[0]
+    loop
+        exitwhen (index == 0)
+        exitwhen (index > RMDListEnd)
+        if (IsTriggerEnabled(RMDTriggerList[index])) and (TriggerEvaluate(RMDTriggerList[index])) then
+            call SaveUnitHandle(DATA,GetHandleId(RMDTriggerList[index]),S2I("RMDSource"),RMDSource)
+            call SaveUnitHandle(DATA,GetHandleId(RMDTriggerList[index]),S2I("RMDUnit"),RMDUnit)
+            call SaveReal(DATA,GetHandleId(RMDTriggerList[index]),S2I("RMDamage"),Damage)
+             call TriggerExecute(RMDTriggerList[index])
+        endif
+        set index = RMDNextIndex[index]
+    endloop
+endfunction
+
+function DestroyAnyUnitReboundDamageEvent takes trigger t returns nothing
+    local integer index 
+    set index = RMDNextIndex[0]
+    loop
+        exitwhen (index == 0)
+        exitwhen (RMDTriggerList[index] == t)
+        set index = RMDNextIndex[index]
+    endloop
+    call FlushChildHashtable(DATA,GetHandleId(t))
+    if (index > 0) then
+        set RMDNextIndex[RMDLastIndex[index]] = RMDNextIndex[index]
+        set RMDLastIndex[RMDNextIndex[index]] = RMDLastIndex[index]
+    endif
+endfunction
+
+function GetReboundDamageEventDamageSource takes nothing returns unit
+    return LoadUnitHandle(DATA,GetHandleId(GetTriggeringTrigger()),S2I("RMDSource"))
+endfunction
+
+function GetReboundDamageEventDamagedUnit takes nothing returns unit
+    return LoadUnitHandle(DATA,GetHandleId(GetTriggeringTrigger()),S2I("RMDUnit"))
+endfunction
+
+function GetReboundDamageEventDamage takes nothing returns real
+    return LoadReal(DATA,GetHandleId(GetTriggeringTrigger()),S2I("RMDamage"))
 endfunction
 
 function DamageDispose takes unit whichunit, real damage returns real
@@ -1095,6 +1433,64 @@ function GetUnitMimeticdDamage takes unit DamagedUnit returns real
     return LoadReal(DSHT,GetHandleId(DamagedUnit),6)
 endfunction
 
+function MimeticdMeleeDamageSysten takes unit DamageSource, unit DamagedUnit returns nothing
+    local real a = LoadReal(DSHT, GetHandleId(DamagedUnit), 93)
+    local real b = LoadReal(DSHT, GetHandleId(DamagedUnit), 95)
+    local real c = LoadReal(DSHT, GetHandleId(DamageSource), 83) + LoadReal(DSHT, GetHandleId(DamageSource), 91)
+    local real d = 0.0
+    local boolean b0 = UnitImmuneConditions(DamagedUnit,GetType(GetUnitTypeId(DamageSource),11))
+    local boolean B1 = UnitReboundConditions(DamagedUnit,GetType(GetUnitTypeId(DamageSource),11))
+    local boolean B2 = UnitAbsorptionConditions(DamagedUnit,GetType(GetUnitTypeId(DamageSource),11))
+    if (a >= 1.0) then
+        set a = 1.0
+    elseif (a <= 0.0) then
+        set a = 0.0
+    endif
+    if ( b <= 0.0 ) then
+        set b = 0.0
+    endif    
+    if ( c >= 1.0 ) then 
+        set c = 1.0
+    elseif ( c <= 0.0 ) then 
+        set c = 0.0
+    endif   
+    if (b0 == false) then
+        set d = MeleeOriginalDamageMain(DamageSource,DamagedUnit)
+        call MimeticdDamage(DamageSource,DamagedUnit,d)
+        call SaveReal(DSHT,GetHandleId(DamagedUnit),6,d)    
+    elseif (b0 == true) then
+        set d = 0.0
+        call SaveReal(DSHT,GetHandleId(DamagedUnit),6,d)    
+    endif   
+    if ((IsUnitType(DamagedUnit, UNIT_TYPE_HERO) == true)) then
+        if (DisplayDamageBool == true) then
+            call DisplayDamage(DamagedUnit,d,20.0,11.0,rgb_R[1],rgb_G[1],rgb_B[1],rgb_A[1])
+        endif
+    elseif ((IsUnitType(DamagedUnit, UNIT_TYPE_HERO) == false)) then
+        if (DisplayDamageBool == true) then
+            call DisplayDamage(DamagedUnit,d,20.0,11.0,rgb_R[2],rgb_G[2],rgb_B[2],rgb_A[2])
+        endif
+    endif
+    if (( UnitTypeConditions_A(DamagedUnit) == false )) then
+        call SetUnitState( DamageSource, UNIT_STATE_LIFE, (GetUnitState(DamageSource, UNIT_STATE_LIFE) + d * c) )
+    endif
+    if ((a != 0.0) and (B1 == true)) then
+        call MimeticdDamage(DamagedUnit,DamageSource,a * d)
+        call SaveReal(DSHT,GetHandleId(DamageSource),6,a * d)   
+        if (DisplayDamageBool == true) then
+            call DisplayDamage(DamageSource,GetUnitMimeticdDamage(DamageSource),20.0,11.0,rgb_R[6],rgb_G[6],rgb_B[6],rgb_A[6])
+        endif
+        call ReboundDamageEventTriggerListExecute(DamageSource,DamagedUnit,GetUnitMimeticdDamage(DamageSource))
+    endif
+    if ((b != 0.0) and (B2 == true)) then
+        call SetUnitState( DamagedUnit, UNIT_STATE_LIFE, (GetUnitState(DamagedUnit, UNIT_STATE_LIFE) + b * d) )
+        if (DisplayDamageBool == true) then
+            call DisplayDamage(DamagedUnit,b*d,20.0,11.0,rgb_R[5],rgb_G[5],rgb_B[5],rgb_A[5])
+        endif
+    endif
+    call SaveBoolean(DSHT,GetHandleId(DamagedUnit),5,false)            
+endfunction
+
 function MimeticdMeleeDamage takes unit DamageSource, unit DamagedUnit returns nothing
     local real a = LoadReal(DSHT, GetHandleId(DamagedUnit), 93)
     local real b = LoadReal(DSHT, GetHandleId(DamagedUnit), 95)
@@ -1142,13 +1538,18 @@ function MimeticdMeleeDamage takes unit DamageSource, unit DamagedUnit returns n
         if (DisplayDamageBool == true) then
             call DisplayDamage(DamageSource,GetUnitMimeticdDamage(DamageSource),20.0,11.0,rgb_R[6],rgb_G[6],rgb_B[6],rgb_A[6])
         endif
+        call ReboundDamageEventTriggerListExecute(DamageSource,DamagedUnit,GetUnitMimeticdDamage(DamageSource))
     endif
     if ((b != 0.0) and (B2 == true)) then
         call SetUnitState( DamagedUnit, UNIT_STATE_LIFE, (GetUnitState(DamagedUnit, UNIT_STATE_LIFE) + b * d) )
         if (DisplayDamageBool == true) then
             call DisplayDamage(DamagedUnit,b*d,20.0,11.0,rgb_R[5],rgb_G[5],rgb_B[5],rgb_A[5])
         endif
-    endif   
+    endif
+    if (d != 0) then
+        call MimeticdMeleeEventTriggerListExecute(DamageSource,DamagedUnit,d)
+    endif
+    call SaveBoolean(DSHT,GetHandleId(DamagedUnit),5,false)                
 endfunction
 
 function MimeticdSkillDamage takes integer SkillID, unit DamageSource, unit DamagedUnit returns nothing
@@ -1174,12 +1575,13 @@ function MimeticdSkillDamage takes integer SkillID, unit DamageSource, unit Dama
     endif   
     if (b0 == false) then
         set d = SkillOriginalDamageMain(SkillID,DamageSource,DamagedUnit)
-        call UnitDamageTarget(DamageSource,DamagedUnit,0.01,false,false,ATTACK_TYPE_NORMAL,null,WEAPON_TYPE_WHOKNOWS)
         call MimeticdDamage(DamageSource,DamagedUnit,d)
         call SaveReal(DSHT,GetHandleId(DamagedUnit),6,d)    
     elseif (b0 == true) then
         set d = 0.0 
-    endif   
+    endif
+    call SaveBoolean(DSHT,GetHandleId(DamagedUnit),5,true)
+    call MimeticdMagicEventTriggerListExecute(DamageSource,DamagedUnit,d)   
     if (( UnitTypeConditions_A(DamagedUnit) == false )) then
         call SetUnitState( DamageSource, UNIT_STATE_LIFE, (GetUnitState(DamageSource, UNIT_STATE_LIFE) + d * c) )
     endif
@@ -1189,6 +1591,7 @@ function MimeticdSkillDamage takes integer SkillID, unit DamageSource, unit Dama
         if (DisplayDamageBool == true) then
             call DisplayDamage(DamageSource,GetUnitMimeticdDamage(DamageSource),20.0,11.0,rgb_R[6],rgb_G[6],rgb_B[6],rgb_A[6])
         endif
+        call ReboundDamageEventTriggerListExecute(DamageSource,DamagedUnit,GetUnitMimeticdDamage(DamageSource))
     endif
     if ((b != 0.0) and (B2 == true)) then
         call SetUnitState( DamagedUnit, UNIT_STATE_LIFE, (GetUnitState(DamagedUnit, UNIT_STATE_LIFE) + b * d) )
@@ -1235,6 +1638,7 @@ function MimeticdMeleeDamage_Type takes unit DamageSource, unit DamagedUnit, int
         if (DisplayDamageBool == true) then
             call DisplayDamage(DamageSource,GetUnitMimeticdDamage(DamageSource),20.0,11.0,rgb_R[6],rgb_G[6],rgb_B[6],rgb_A[6])
         endif
+        call ReboundDamageEventTriggerListExecute(DamageSource,DamagedUnit,GetUnitMimeticdDamage(DamageSource))
     endif
     if ((b != 0.0) and (B2 == true)) then
         call SetUnitState( DamagedUnit, UNIT_STATE_LIFE, (GetUnitState(DamagedUnit, UNIT_STATE_LIFE) + b * d) )
@@ -1242,6 +1646,10 @@ function MimeticdMeleeDamage_Type takes unit DamageSource, unit DamagedUnit, int
             call DisplayDamage(DamagedUnit,b*d,20.0,11.0,rgb_R[5],rgb_G[5],rgb_B[5],rgb_A[5])
         endif
     endif
+    if (d != 0) then
+        call MimeticdMeleeEventTriggerListExecute(DamageSource,DamagedUnit,d)
+    endif
+    call SaveBoolean(DSHT,GetHandleId(DamagedUnit),5,false)        
 endfunction
 
 function MimeticdSkillDamage_Type takes integer SkillID, unit DamageSource, unit DamagedUnit, integer DamageTypeID, real damage returns nothing
@@ -1267,12 +1675,13 @@ function MimeticdSkillDamage_Type takes integer SkillID, unit DamageSource, unit
     endif   
     if (b0 == false) then
         set d = CountSkillOriginalDamageMain(SkillID,DamageTypeID,DamageSource,DamagedUnit,damage)
-        call UnitDamageTarget(DamageSource,DamagedUnit,0.01,false,false,ATTACK_TYPE_NORMAL,null,WEAPON_TYPE_WHOKNOWS)
         call MimeticdDamage(DamageSource,DamagedUnit,d)
         call SaveReal(DSHT,GetHandleId(DamagedUnit),6,d)    
     elseif (b0 == true) then
         set d = 0.0
-    endif   
+    endif 
+    call SaveBoolean(DSHT,GetHandleId(DamagedUnit),5,true)
+    call MimeticdMagicEventTriggerListExecute(DamageSource,DamagedUnit,d)         
     if (( UnitTypeConditions_A(DamagedUnit) == false )) then
         call SetUnitState( DamageSource, UNIT_STATE_LIFE, (GetUnitState(DamageSource, UNIT_STATE_LIFE) + d * c) )
     endif
@@ -1282,206 +1691,14 @@ function MimeticdSkillDamage_Type takes integer SkillID, unit DamageSource, unit
         if (DisplayDamageBool == true) then
             call DisplayDamage(DamageSource,GetUnitMimeticdDamage(DamageSource),20.0,11.0,rgb_R[6],rgb_G[6],rgb_B[6],rgb_A[6])
         endif
+        call ReboundDamageEventTriggerListExecute(DamageSource,DamagedUnit,GetUnitMimeticdDamage(DamageSource))
     endif
     if ((b != 0.0) and (B2 == true)) then
         call SetUnitState( DamagedUnit, UNIT_STATE_LIFE, (GetUnitState(DamagedUnit, UNIT_STATE_LIFE) + b * d) )
         if (DisplayDamageBool == true) then
             call DisplayDamage(DamagedUnit,b*d,20.0,11.0,rgb_R[5],rgb_G[5],rgb_B[5],rgb_A[5])
         endif
-    endif
-endfunction
-
-function DisplayPreinstallUnitPredicable takes unit whichunit, real timeout returns nothing
-    local integer whichunitID
-    set whichunitID = GetUnitTypeId(whichunit)
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+"|r")
-    call Print(timeout,color_str[1]+TypeId2S(11)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,11))+"|r")
-    call Print(timeout,color_str[2]+"攻击力:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, GetType(whichunitID,11)))+"|r")
-    call Print(timeout,color_str[3]+TypeId2S(12)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,12))+"|r") 
-    call Print(timeout,color_str[4]+"防御:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, GetType(whichunitID,12)))+"|r")
-    call Print(timeout,color_str[5]+TypeId2S(14)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,14))+"|r")     
-    call Print(timeout,color_str[6]+"技能防御:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, GetType(whichunitID,14)))+"|r")     
-    call Print(timeout,color_str[7]+TypeId2S(16)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 16))+"|r")     
-    call Print(timeout,color_str[8]+TypeId2S(17)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 17))+"|r")     
-    call Print(timeout,color_str[9]+TypeId2S(18)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 18))+"|r")     
-    call Print(timeout,color_str[10]+TypeId2S(19)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 19))+"|r")  
-    call Print(timeout,color_str[11]+TypeId2S(20)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 20))+"|r")     
-    call Print(timeout,color_str[12]+TypeId2S(21)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 21))+"|r") 
-endfunction
-
-function DisplayPreinstallUnitSpecialPredicable takes unit whichunit, real timeout returns nothing
-    local integer whichunitID
-    set whichunitID = GetUnitTypeId(whichunit) 
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+"|r")    
-    call Print(timeout,color_str[13]+TypeId2S(54)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 54))+"|r")     
-    call Print(timeout,color_str[14]+TypeId2S(55)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 55))+"|r")  
-    call Print(timeout,color_str[15]+TypeId2S(56)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 56))+"|r")     
-    call Print(timeout,color_str[16]+TypeId2S(57)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 57))+"|r") 
-    call Print(timeout,color_str[17]+TypeId2S(22)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, GetHandleId(whichunit), 22))+"|r") 
-    call Print(timeout,color_str[18]+TypeId2S(23)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, GetHandleId(whichunit), 23))+"|r") 
-    call Print(timeout,color_str[19]+TypeId2S(24)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, GetHandleId(whichunit), 24))+"|r") 
-endfunction
-
-function DisplayPreinstallItemPredicable takes player whichplayer, integer itemid, real timeout returns nothing
-    call Print(timeout,color_str[20]+GetObjectName(itemid)+"|r")
-    call Print(timeout,color_str[21]+"物品攻击值加成:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 11))+"|r")
-    call Print(timeout,color_str[22]+"物品防御值加成:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 12))+"|r")
-    call Print(timeout,color_str[23]+"物品技能防御值加成:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 14))+"|r")
-    call Print(timeout,color_str[24]+"物品——单位暴击概率(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 17))+"|r")
-    call Print(timeout,color_str[25]+"物品——单位暴击倍数:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 18))+"|r")
-    call Print(timeout,color_str[26]+"物品——单位技能闪避力(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 19))+"|r")
-    call Print(timeout,color_str[27]+"物品——技能暴击概率(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 20))+"|r")
-    call Print(timeout,color_str[28]+"物品——技能暴击倍数:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 21))+"|r")
-    call Print(timeout,color_str[29]+TypeId2S(25)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 25))+"|r")
-    call Print(timeout,color_str[30]+TypeId2S(26)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 26))+"|r")  
-endfunction
-
-function DisplayPreinstallItemSpecialPredicable takes player whichplayer, integer itemid, real timeout returns nothing
-    call Print(timeout,color_str[20]+GetObjectName(itemid)+"|r")
-    call Print(timeout,color_str[31]+TypeId2S(73)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 73))+"|r")
-    call Print(timeout,color_str[32]+TypeId2S(74)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 74))+"|r")
-    call Print(timeout,color_str[33]+TypeId2S(75)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 75))+"|r")
-    call Print(timeout,color_str[34]+TypeId2S(76)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 76))+"|r")
-    call Print(timeout,color_str[35]+TypeId2S(85)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 85))+"|r")
-    call Print(timeout,color_str[36]+TypeId2S(86)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 86))+"|r")
-    call Print(timeout,color_str[37]+TypeId2S(87)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 87))+"|r")
-    call Print(timeout,color_str[38]+TypeId2S(88)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 88))+"|r")     
-    call Print(timeout,color_str[39]+"物品——单位减伤（百分比）:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 22))+"|r")
-    call Print(timeout,color_str[40]+"物品——单位增伤（百分比）:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 23))+"|r")
-    call Print(timeout,color_str[41]+"物品——单位伤害修改（数值）:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 24))+"|r")    
-endfunction
-
-function DisplayPreinstallSkillPredicable takes player whichplayer, integer skillid, real timeout returns nothing
-    call Print(timeout,color_str[42]+GetObjectName(skillid)+"|r")
-    call Print(timeout,color_str[43]+TypeId2S(13)+":"+"|r"+color_str[100]+TypeId2S(GetType(skillid,13))+"|r")
-    call Print(timeout,color_str[44]+TypeId2S(20)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, skillid, 20))+"|r")
-    call Print(timeout,color_str[45]+TypeId2S(21)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, skillid, 21))+"|r")
-    call Print(timeout,color_str[46]+"技能伤害:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, skillid, GetType(skillid,13)))+"|r")
-endfunction
-
-function DisplayUnitPredicable takes unit whichunit, real timeout returns nothing
-    local integer whichunitID
-    local real Thump
-    local real ThumpMultiple
-    local real AttackValue
-    local real DefenseValue
-    local real SkillThump
-    local real SkillThumpMultiple
-    local real SkillDamage
-    local real SkillDefenseValue
-    local real SkillDodge
-    set whichunitID = GetUnitTypeId(whichunit)
-    call UnitItemPredicable(whichunit) 
-    set Thump = LoadReal(DSHT, whichunitID, 17) + LoadReal(DSHT, GetHandleId(whichunit), 30) + LoadReal(DSHT,GetHandleId(whichunit),62)
-    if Thump <= 0.0 then
-       set Thump = 0.0
-    endif
-    set ThumpMultiple = LoadReal(DSHT, whichunitID, 18) + LoadReal(DSHT, GetHandleId(whichunit), 31) + LoadReal(DSHT,GetHandleId(whichunit),63)
-    if ThumpMultiple <= 1.0 then
-       set ThumpMultiple = 1.0
-    endif
-    set AttackValue = LoadReal(DSHT, whichunitID, GetType(whichunitID,11)) + LoadReal(DSHT, GetHandleId(whichunit), 27) + LoadReal(DSHT,GetHandleId(whichunit),42) + LoadReal(DSHT,GetHandleId(whichunit),58)
-    set DefenseValue = LoadReal(DSHT, whichunitID, GetType(whichunitID,12)) + LoadReal(DSHT, GetHandleId(whichunit), 28) + LoadReal(DSHT,GetHandleId(whichunit),43) + LoadReal(DSHT,GetHandleId(whichunit),59)
-    set SkillThump = LoadReal(DSHT, whichunitID, 20) + LoadReal(DSHT, GetHandleId(whichunit), 33) + LoadReal(DSHT,GetHandleId(whichunit),64)
-    if SkillThump <= 0.0 then
-       set SkillThump = 0.0
-    endif   
-    set SkillThumpMultiple = LoadReal(DSHT, whichunitID, 21) + LoadReal(DSHT, GetHandleId(whichunit), 34) + LoadReal(DSHT,GetHandleId(whichunit),65)
-    if SkillThumpMultiple <= 1.0 then
-       set SkillThumpMultiple = 1.0
-    endif   
-    set SkillDamage = LoadReal(DSHT,GetHandleId(whichunit),44) + LoadReal(DSHT,whichunitID,53) + LoadReal(DSHT,GetHandleId(whichunit),60)
-    set SkillDefenseValue = LoadReal(DSHT, whichunitID, GetType(whichunitID,14)) + LoadReal(DSHT, GetHandleId(whichunit), 29) + LoadReal(DSHT,GetHandleId(whichunit),45) + LoadReal(DSHT,GetHandleId(whichunit),61)
-    set SkillDodge = LoadReal(DSHT, whichunitID, 19) + LoadReal(DSHT, GetHandleId(whichunit), 32) + LoadReal(DSHT,GetHandleId(whichunit),66)
-    if ( Thump >= 100.0 ) then
-        set Thump = 100.0
-    endif
-    if ( SkillThump >= 100.0 ) then
-        set SkillThump = 100.0
-    endif
-    if ( SkillDodge >= 100.0 ) then
-        set SkillDodge = 100.0
-    endif
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[1]+TypeId2S(11)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,11))+"|r")
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[2]+"攻击力:"+"|r"+color_str[100]+R2S(AttackValue)+"|r")
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[3]+TypeId2S(12)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,12))+"|r")  
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[4]+"防御:"+"|r"+color_str[100]+R2S(DefenseValue)+"|r")
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[47]+"附加技能伤害:"+"|r"+color_str[100]+R2S(SkillDamage)+"|r")  
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[5]+TypeId2S(14)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,14))+"|r")       
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[6]+"技能防御:"+"|r"+color_str[100]+R2S(SkillDefenseValue)+"|r")     
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[7]+TypeId2S(16)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 16))+"|r")     
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[8]+TypeId2S(17)+"(百分比):"+"|r"+color_str[100]+R2S(Thump)+"|r")     
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[9]+TypeId2S(18)+":"+"|r"+color_str[100]+R2S(ThumpMultiple)+"|r")     
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[10]+TypeId2S(19)+"(百分比):"+"|r"+color_str[100]+R2S(SkillDodge)+"|r")  
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[11]+TypeId2S(20)+"(百分比):"+"|r"+color_str[100]+R2S(SkillThump)+"|r")     
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[12]+TypeId2S(21)+":"+"|r"+color_str[100]+R2S(SkillThumpMultiple)+"|r")    
-endfunction
-
-function DisplayUnitSpecialPredicable takes unit whichunit, real timeout returns nothing
-    local integer whichunitID
-    local real a = 0.0
-    local real b = 0.0
-    local real c = 0.0
-    local real d = 0.0  
-    local real e = 0.0  
-    local real f = 0.0  
-    local real g = 0.0  
-    local real h = 0.0  
-    local real I = 0.0
-    local real R1 = 0.0
-    local real R2 = 0.0
-    set whichunitID = GetUnitTypeId(whichunit)
-    call UnitItemPredicable(whichunit)  
-    set a = LoadReal(DSHT, whichunitID, 54) + LoadReal(DSHT, GetHandleId(whichunit), 69) + LoadReal(DSHT, GetHandleId(whichunit), 77)
-    set b = LoadReal(DSHT, whichunitID, 55) + LoadReal(DSHT, GetHandleId(whichunit), 70) + LoadReal(DSHT, GetHandleId(whichunit), 78)
-    set c = LoadReal(DSHT, whichunitID, 56) + LoadReal(DSHT, GetHandleId(whichunit), 71) + LoadReal(DSHT, GetHandleId(whichunit), 79)
-    set d = LoadReal(DSHT, whichunitID, 57) + LoadReal(DSHT, GetHandleId(whichunit), 72) + LoadReal(DSHT, GetHandleId(whichunit), 80)
-    set e = LoadReal(DSHT, GetHandleId(whichunit), 81) + LoadReal(DSHT, GetHandleId(whichunit), 89)
-    if ( e >= 1.0 ) then 
-        set e = 1.0
-    elseif ( e <= 0.0 ) then 
-        set e = 0.0
-    endif           
-    set f = LoadReal(DSHT, GetHandleId(whichunit), 82) + LoadReal(DSHT, GetHandleId(whichunit), 90)
-    if ( f >= 1.0 ) then 
-        set f = 1.0
-    elseif ( f <= 0.0 ) then 
-        set f = 0.0
-    endif   
-    set g = LoadReal(DSHT, GetHandleId(whichunit), 83) + LoadReal(DSHT, GetHandleId(whichunit), 91)
-    if ( g >= 1.0 ) then 
-        set g = 1.0
-    elseif ( g <= 0.0 ) then 
-        set g = 0.0
-    endif           
-    set h = LoadReal(DSHT, GetHandleId(whichunit), 84) + LoadReal(DSHT, GetHandleId(whichunit), 92)
-    if ( h >= 1.0 ) then 
-        set h = 1.0
-    elseif ( h <= 0.0 ) then 
-        set h = 0.0
-    endif               
-    set I = LoadReal(DSHT, GetHandleId(whichunit), 23) + LoadReal(DSHT, GetHandleId(whichunit), 39) 
-    set R1 = LoadReal(DSHT, GetHandleId(whichunit), 22) + LoadReal(DSHT, GetHandleId(whichunit), 37) 
-    set R2 = LoadReal(DSHT, GetHandleId(whichunit), 24) + LoadReal(DSHT, GetHandleId(whichunit), 38) 
-    if ( I <= 0.0 ) then
-        set I = 1.0
-    endif
-    if ( R1 <= 0.0 ) then
-        set R1 = 0.0
-    elseif ( R1 >= 1.0 ) then
-        set R1 = 1.0
-    endif   
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[13]+TypeId2S(54)+":"+"|r"+color_str[100]+R2S(a)+"|r")     
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[14]+TypeId2S(55)+":"+"|r"+color_str[100]+R2S(b)+"|r")  
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[15]+TypeId2S(56)+"(百分比):"+"|r"+color_str[100]+R2S(c)+"|r")     
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[16]+TypeId2S(57)+"(百分比):"+"|r"+color_str[100]+R2S(d)+"|r")
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[48]+"透甲率:"+"|r"+color_str[100]+R2S(e)+"|r") 
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[49]+"技能透甲率:"+"|r"+color_str[100]+R2S(f)+"|r") 
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[50]+"吸血率:"+"|r"+color_str[100]+R2S(g)+"|r") 
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[51]+"技能吸血率:"+"|r"+color_str[100]+R2S(h)+"|r")     
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[17]+TypeId2S(22)+":"+"|r"+color_str[100]+R2S(R1)+"|r")  
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[18]+TypeId2S(23)+":"+"|r"+color_str[100]+R2S(I)+"|r") 
-    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[19]+TypeId2S(24)+":"+"|r"+color_str[100]+R2S(R2)+"|r")    
+    endif    
 endfunction
 
 function TriggerRegisterAnyUnitDamagedEvent takes trigger t,integer tp returns nothing
@@ -1495,19 +1712,28 @@ function TriggerRegisterAnyUnitDamagedEvent takes trigger t,integer tp returns n
         set MagicNextIndex[MagicListEnd - 1] = MagicListEnd
         set MagicLastIndex[MagicListEnd] = MagicListEnd - 1
         set MagicTriggerList[MagicListEnd] = t
+    elseif (tp == 2) then // Mimeticd Melee Damage
+        set M_MeleeListEnd = M_MeleeListEnd + 1
+        set M_MeleeNextIndex[M_MeleeListEnd - 1] = M_MeleeListEnd
+        set M_MeleeLastIndex[M_MeleeListEnd] = M_MeleeListEnd - 1
+        set M_MeleeTriggerList[M_MeleeListEnd] = t 
+    elseif (tp == 3) then // Mimeticd Magic Damage
+        set M_MagicListEnd = M_MagicListEnd + 1
+        set M_MagicNextIndex[M_MagicListEnd - 1] = M_MagicListEnd
+        set M_MagicLastIndex[M_MagicListEnd] = M_MagicListEnd - 1
+        set M_MagicTriggerList[M_MagicListEnd] = t               
     endif
 endfunction
 
 function DestroyAnyUnitDamagedEvent takes trigger t,integer tp returns nothing
     local integer index 
     if (tp == 0) then
-         set index = MeleeNextIndex[0]
+        set index = MeleeNextIndex[0]
         loop
              exitwhen (index == 0)
              exitwhen (MeleeTriggerList[index] == t)
              set index = MeleeNextIndex[index]
         endloop
-        call DestroyTrigger(t)
         if (index > 0) then
             set MeleeNextIndex[MeleeLastIndex[index]] = MeleeNextIndex[index]
             set MeleeLastIndex[MeleeNextIndex[index]] = MeleeLastIndex[index]
@@ -1519,11 +1745,34 @@ function DestroyAnyUnitDamagedEvent takes trigger t,integer tp returns nothing
              exitwhen (MagicTriggerList[index] == t)
              set index = MagicNextIndex[index]
         endloop
-        call DestroyTrigger(t)
         if (index > 0) then
             set MagicNextIndex[MagicLastIndex[index]] = MagicNextIndex[index]
             set MagicLastIndex[MagicNextIndex[index]] = MagicLastIndex[index]
         endif
+    elseif (tp == 2) then
+        set index = M_MeleeNextIndex[0]
+        loop
+             exitwhen (index == 0)
+             exitwhen (M_MeleeTriggerList[index] == t)
+             set index = M_MeleeNextIndex[index]
+        endloop
+        call FlushChildHashtable(DATA,GetHandleId(t))
+        if (index > 0) then
+            set M_MeleeNextIndex[M_MeleeLastIndex[index]] = M_MeleeNextIndex[index]
+            set M_MeleeLastIndex[M_MeleeNextIndex[index]] = M_MeleeLastIndex[index]
+        endif
+    elseif (tp == 3) then
+        set index = M_MagicNextIndex[0]
+        loop
+             exitwhen (index == 0)
+             exitwhen (M_MagicTriggerList[index] == t)
+             set index = M_MagicNextIndex[index]
+        endloop
+        call FlushChildHashtable(DATA,GetHandleId(t))
+        if (index > 0) then
+            set M_MagicNextIndex[M_MagicLastIndex[index]] = M_MagicNextIndex[index]
+            set M_MagicLastIndex[M_MagicNextIndex[index]] = M_MagicLastIndex[index]
+        endif        
     endif
 endfunction
 
@@ -1727,7 +1976,7 @@ function AnyUnitEnterRegionAddData takes nothing returns nothing
 endfunction
 
 function Melee_Damage_Event_Actions takes nothing returns nothing
-    call MimeticdMeleeDamage(GetEventDamageSourceZJ(),GetEventDamagedUnitZJ())
+    call MimeticdMeleeDamageSysten(GetEventDamageSourceZJ(),GetEventDamagedUnitZJ())
     call SaveReal(DSHT,GetHandleId(GetEventDamagedUnitZJ()),6,0.0)
 endfunction
 
@@ -1745,7 +1994,6 @@ function TimerRun_Func001 takes nothing returns nothing
 endfunction
 
 function Magic_Damage_Event_Actions takes nothing returns nothing
-    local boolean B = LoadBoolean(DSHT,GetHandleId(GetEventDamagedUnitZJ()),5)
     local boolean B0 = UnitImmuneConditions(GetEventDamagedUnitZJ(),46)
     local boolean b1 = UnitReboundConditions(GetEventDamagedUnitZJ(),46)
     local boolean b2 = UnitAbsorptionConditions(GetEventDamagedUnitZJ(),46)        
@@ -1765,35 +2013,35 @@ function Magic_Damage_Event_Actions takes nothing returns nothing
         set c = 1.0
     elseif ( c <= 0.0 ) then 
         set c = 0.0
-    endif       
+    endif 
+    call SaveBoolean(DSHT,GetHandleId(GetEventDamagedUnitZJ()),5,false)                  
     if ((B0 == false) and (GetEventDamageZJ() != 0.01)) then
-        if (B == false) then
-            if (( UnitTypeConditions_A(GetEventDamagedUnitZJ()) == false )) then
-                call SetUnitState( GetEventDamageSourceZJ(), UNIT_STATE_LIFE, (GetUnitState(GetEventDamageSourceZJ(), UNIT_STATE_LIFE) + GetEventDamageZJ() * c) )
+        if (( UnitTypeConditions_A(GetEventDamagedUnitZJ()) == false )) then
+            call SetUnitState( GetEventDamageSourceZJ(), UNIT_STATE_LIFE, (GetUnitState(GetEventDamageSourceZJ(), UNIT_STATE_LIFE) + GetEventDamageZJ() * c) )
+        endif
+        if ((a != 0.0) and (b1 == true))  then
+            call MimeticdDamage(GetEventDamagedUnitZJ(),GetEventDamageSourceZJ(),a * GetEventDamageZJ())
+            if (DisplayDamageBool == true) then
+                call DisplayDamage(GetEventDamageSourceZJ(),GetUnitMimeticdDamage(GetEventDamageSourceZJ()),20.0,11.0,rgb_R[6],rgb_G[6],rgb_B[6],rgb_A[6])
             endif
-            if ((a != 0.0) and (b1 == true))  then
-                call MimeticdDamage(GetEventDamagedUnitZJ(),GetEventDamageSourceZJ(),a * GetEventDamageZJ())
-                if (DisplayDamageBool == true) then
-                    call DisplayDamage(GetEventDamageSourceZJ(),GetUnitMimeticdDamage(GetEventDamageSourceZJ()),20.0,11.0,rgb_R[6],rgb_G[6],rgb_B[6],rgb_A[6])
-                endif
+            call ReboundDamageEventTriggerListExecute(GetEventDamageSourceZJ(),GetEventDamagedUnitZJ(),GetUnitMimeticdDamage(GetEventDamageSourceZJ()))
+        endif
+        if ((b != 0.0) and (b2 == true))  then
+            call SetUnitState( GetEventDamagedUnitZJ(), UNIT_STATE_LIFE, (GetUnitState(GetEventDamagedUnitZJ(), UNIT_STATE_LIFE) + b * GetEventDamageZJ()) )
+            if (DisplayDamageBool == true) then
+                call DisplayDamage(GetEventDamagedUnitZJ(),b*GetEventDamageZJ(),20.0,11.0,rgb_R[5],rgb_G[5],rgb_B[5],rgb_A[5])
             endif
-            if ((b != 0.0) and (b2 == true))  then
-                call SetUnitState( GetEventDamagedUnitZJ(), UNIT_STATE_LIFE, (GetUnitState(GetEventDamagedUnitZJ(), UNIT_STATE_LIFE) + b * GetEventDamageZJ()) )
-                if (DisplayDamageBool == true) then
-                    call DisplayDamage(GetEventDamagedUnitZJ(),b*GetEventDamageZJ(),20.0,11.0,rgb_R[5],rgb_G[5],rgb_B[5],rgb_A[5])
-                endif
+        endif
+        call SaveReal(DSHT,GetHandleId(GetEventDamagedUnitZJ()),6,GetEventDamageZJ())
+        if ((IsUnitType(GetEventDamagedUnitZJ(), UNIT_TYPE_HERO) == true)) then
+            if (DisplayDamageBool == true) then
+                call DisplayDamage(GetEventDamagedUnitZJ(),GetEventDamageZJ(),20.0,11.0,rgb_R[3],rgb_G[3],rgb_B[3],rgb_A[3])
             endif
-            call SaveReal(DSHT,GetHandleId(GetEventDamagedUnitZJ()),6,GetEventDamageZJ())
-            if ((IsUnitType(GetEventDamagedUnitZJ(), UNIT_TYPE_HERO) == true)) then
-                if (DisplayDamageBool == true) then
-                   call DisplayDamage(GetEventDamagedUnitZJ(),GetEventDamageZJ(),20.0,11.0,rgb_R[3],rgb_G[3],rgb_B[3],rgb_A[3])
-                endif
-            elseif ((IsUnitType(GetEventDamagedUnitZJ(), UNIT_TYPE_HERO) == false)) then
-                if (DisplayDamageBool == true) then
-                   call DisplayDamage(GetEventDamagedUnitZJ(),GetEventDamageZJ(),20.0,11.0,rgb_R[4],rgb_G[4],rgb_B[4],rgb_A[4])
-                endif
-            endif  
-        endif   
+        elseif ((IsUnitType(GetEventDamagedUnitZJ(), UNIT_TYPE_HERO) == false)) then
+            if (DisplayDamageBool == true) then
+                call DisplayDamage(GetEventDamagedUnitZJ(),GetEventDamageZJ(),20.0,11.0,rgb_R[4],rgb_G[4],rgb_B[4],rgb_A[4])
+            endif
+        endif    
     elseif (B0 == true) then
         call SaveReal(DSHT,GetHandleId(GetEventDamagedUnitZJ()),50,GetEventDamageZJ())
         set t = CreateTimer()
@@ -1810,7 +2058,7 @@ function Magic_Damage_Event_Actions takes nothing returns nothing
                call DisplayDamage(GetEventDamagedUnitZJ(),0.0,20.0,11.0,163,70,255,0.0)
             endif
         endif  
-    endif       
+    endif             
     call SaveReal(DSHT,GetHandleId(GetEventDamagedUnitZJ()),6,0.0)
 endfunction
 
@@ -2117,24 +2365,6 @@ function OpenSystemPreinstallDATA takes nothing returns nothing
     call SetDisplayPredicableColor(100,255,255,255,255)
 endfunction
 
-function DialogButtonA takes nothing returns nothing
-    local integer PlayerIndex
-    set PlayerIndex = GetPlayerId(GetTriggerPlayer())
-    call EnableTrigger(trA[PlayerIndex])
-endfunction
-
-function DialogButtonB takes nothing returns nothing
-    local integer PlayerIndex
-    set PlayerIndex = GetPlayerId(GetTriggerPlayer())
-    call EnableTrigger(trB[PlayerIndex])
-endfunction
-
-function DialogButtonC takes nothing returns nothing
-    local integer PlayerIndex
-    set PlayerIndex = GetPlayerId(GetTriggerPlayer())
-    call EnableTrigger(trC[PlayerIndex])
-endfunction
-
 function DisplayUnitPredicableBuyButton takes boolean b, player whichplayer, unit whichunit returns nothing
     local integer PlayerIndex
     local integer whichunitID
@@ -2299,6 +2529,198 @@ function DisplayItemPredicable takes nothing returns nothing
     call DisableTrigger(trC[PlayerIndex])
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
+function DisplayPreinstallUnitPredicable takes unit whichunit, real timeout returns nothing
+    local integer whichunitID
+    set whichunitID = GetUnitTypeId(whichunit)
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+"|r")
+    call Print(timeout,color_str[1]+TypeId2S(11)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,11))+"|r")
+    call Print(timeout,color_str[2]+"攻击力:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, GetType(whichunitID,11)))+"|r")
+    call Print(timeout,color_str[3]+TypeId2S(12)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,12))+"|r") 
+    call Print(timeout,color_str[4]+"防御:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, GetType(whichunitID,12)))+"|r")
+    call Print(timeout,color_str[5]+TypeId2S(14)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,14))+"|r")     
+    call Print(timeout,color_str[6]+"技能防御:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, GetType(whichunitID,14)))+"|r")     
+    call Print(timeout,color_str[7]+TypeId2S(16)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 16))+"|r")     
+    call Print(timeout,color_str[8]+TypeId2S(17)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 17))+"|r")     
+    call Print(timeout,color_str[9]+TypeId2S(18)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 18))+"|r")     
+    call Print(timeout,color_str[10]+TypeId2S(19)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 19))+"|r")  
+    call Print(timeout,color_str[11]+TypeId2S(20)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 20))+"|r")     
+    call Print(timeout,color_str[12]+TypeId2S(21)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 21))+"|r") 
+endfunction
+
+function DisplayPreinstallUnitSpecialPredicable takes unit whichunit, real timeout returns nothing
+    local integer whichunitID
+    set whichunitID = GetUnitTypeId(whichunit) 
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+"|r")    
+    call Print(timeout,color_str[13]+TypeId2S(54)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 54))+"|r")     
+    call Print(timeout,color_str[14]+TypeId2S(55)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 55))+"|r")  
+    call Print(timeout,color_str[15]+TypeId2S(56)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 56))+"|r")     
+    call Print(timeout,color_str[16]+TypeId2S(57)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 57))+"|r") 
+    call Print(timeout,color_str[17]+TypeId2S(22)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, GetHandleId(whichunit), 22))+"|r") 
+    call Print(timeout,color_str[18]+TypeId2S(23)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, GetHandleId(whichunit), 23))+"|r") 
+    call Print(timeout,color_str[19]+TypeId2S(24)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, GetHandleId(whichunit), 24))+"|r") 
+endfunction
+
+function DisplayPreinstallItemPredicable takes player whichplayer, integer itemid, real timeout returns nothing
+    call Print(timeout,color_str[20]+GetObjectName(itemid)+"|r")
+    call Print(timeout,color_str[21]+"物品攻击值加成:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 11))+"|r")
+    call Print(timeout,color_str[22]+"物品防御值加成:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 12))+"|r")
+    call Print(timeout,color_str[23]+"物品技能防御值加成:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 14))+"|r")
+    call Print(timeout,color_str[24]+"物品——单位暴击概率(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 17))+"|r")
+    call Print(timeout,color_str[25]+"物品——单位暴击倍数:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 18))+"|r")
+    call Print(timeout,color_str[26]+"物品——单位技能闪避力(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 19))+"|r")
+    call Print(timeout,color_str[27]+"物品——技能暴击概率(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 20))+"|r")
+    call Print(timeout,color_str[28]+"物品——技能暴击倍数:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 21))+"|r")
+    call Print(timeout,color_str[29]+TypeId2S(25)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 25))+"|r")
+    call Print(timeout,color_str[30]+TypeId2S(26)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 26))+"|r")  
+endfunction
+
+function DisplayPreinstallItemSpecialPredicable takes player whichplayer, integer itemid, real timeout returns nothing
+    call Print(timeout,color_str[20]+GetObjectName(itemid)+"|r")
+    call Print(timeout,color_str[31]+TypeId2S(73)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 73))+"|r")
+    call Print(timeout,color_str[32]+TypeId2S(74)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 74))+"|r")
+    call Print(timeout,color_str[33]+TypeId2S(75)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 75))+"|r")
+    call Print(timeout,color_str[34]+TypeId2S(76)+"(百分比):"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 76))+"|r")
+    call Print(timeout,color_str[35]+TypeId2S(85)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 85))+"|r")
+    call Print(timeout,color_str[36]+TypeId2S(86)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 86))+"|r")
+    call Print(timeout,color_str[37]+TypeId2S(87)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 87))+"|r")
+    call Print(timeout,color_str[38]+TypeId2S(88)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 88))+"|r")     
+    call Print(timeout,color_str[39]+"物品——单位减伤（百分比）:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 22))+"|r")
+    call Print(timeout,color_str[40]+"物品——单位增伤（百分比）:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 23))+"|r")
+    call Print(timeout,color_str[41]+"物品——单位伤害修改（数值）:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, itemid, 24))+"|r")    
+endfunction
+
+function DisplayPreinstallSkillPredicable takes player whichplayer, integer skillid, real timeout returns nothing
+    call Print(timeout,color_str[42]+GetObjectName(skillid)+"|r")
+    call Print(timeout,color_str[43]+TypeId2S(13)+":"+"|r"+color_str[100]+TypeId2S(GetType(skillid,13))+"|r")
+    call Print(timeout,color_str[44]+TypeId2S(20)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, skillid, 20))+"|r")
+    call Print(timeout,color_str[45]+TypeId2S(21)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, skillid, 21))+"|r")
+    call Print(timeout,color_str[46]+"技能伤害:"+"|r"+color_str[100]+R2S(LoadReal(DSHT, skillid, GetType(skillid,13)))+"|r")
+endfunction
+
+function DisplayUnitPredicable takes unit whichunit, real timeout returns nothing
+    local integer whichunitID
+    local real Thump
+    local real ThumpMultiple
+    local real AttackValue
+    local real DefenseValue
+    local real SkillThump
+    local real SkillThumpMultiple
+    local real SkillDamage
+    local real SkillDefenseValue
+    local real SkillDodge
+    set whichunitID = GetUnitTypeId(whichunit)
+    call UnitItemPredicable(whichunit) 
+    set Thump = LoadReal(DSHT, whichunitID, 17) + LoadReal(DSHT, GetHandleId(whichunit), 30) + LoadReal(DSHT,GetHandleId(whichunit),62)
+    if Thump <= 0.0 then
+       set Thump = 0.0
+    endif
+    set ThumpMultiple = LoadReal(DSHT, whichunitID, 18) + LoadReal(DSHT, GetHandleId(whichunit), 31) + LoadReal(DSHT,GetHandleId(whichunit),63)
+    if ThumpMultiple <= 1.0 then
+       set ThumpMultiple = 1.0
+    endif
+    set AttackValue = LoadReal(DSHT, whichunitID, GetType(whichunitID,11)) + LoadReal(DSHT, GetHandleId(whichunit), 27) + LoadReal(DSHT,GetHandleId(whichunit),42) + LoadReal(DSHT,GetHandleId(whichunit),58)
+    set DefenseValue = LoadReal(DSHT, whichunitID, GetType(whichunitID,12)) + LoadReal(DSHT, GetHandleId(whichunit), 28) + LoadReal(DSHT,GetHandleId(whichunit),43) + LoadReal(DSHT,GetHandleId(whichunit),59)
+    set SkillThump = LoadReal(DSHT, whichunitID, 20) + LoadReal(DSHT, GetHandleId(whichunit), 33) + LoadReal(DSHT,GetHandleId(whichunit),64)
+    if SkillThump <= 0.0 then
+       set SkillThump = 0.0
+    endif   
+    set SkillThumpMultiple = LoadReal(DSHT, whichunitID, 21) + LoadReal(DSHT, GetHandleId(whichunit), 34) + LoadReal(DSHT,GetHandleId(whichunit),65)
+    if SkillThumpMultiple <= 1.0 then
+       set SkillThumpMultiple = 1.0
+    endif   
+    set SkillDamage = LoadReal(DSHT,GetHandleId(whichunit),44) + LoadReal(DSHT,whichunitID,53) + LoadReal(DSHT,GetHandleId(whichunit),60)
+    set SkillDefenseValue = LoadReal(DSHT, whichunitID, GetType(whichunitID,14)) + LoadReal(DSHT, GetHandleId(whichunit), 29) + LoadReal(DSHT,GetHandleId(whichunit),45) + LoadReal(DSHT,GetHandleId(whichunit),61)
+    set SkillDodge = LoadReal(DSHT, whichunitID, 19) + LoadReal(DSHT, GetHandleId(whichunit), 32) + LoadReal(DSHT,GetHandleId(whichunit),66)
+    if ( Thump >= 100.0 ) then
+        set Thump = 100.0
+    endif
+    if ( SkillThump >= 100.0 ) then
+        set SkillThump = 100.0
+    endif
+    if ( SkillDodge >= 100.0 ) then
+        set SkillDodge = 100.0
+    endif
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[1]+TypeId2S(11)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,11))+"|r")
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[2]+"攻击力:"+"|r"+color_str[100]+R2S(AttackValue)+"|r")
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[3]+TypeId2S(12)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,12))+"|r")  
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[4]+"防御:"+"|r"+color_str[100]+R2S(DefenseValue)+"|r")
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[47]+"附加技能伤害:"+"|r"+color_str[100]+R2S(SkillDamage)+"|r")  
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[5]+TypeId2S(14)+":"+"|r"+color_str[100]+TypeId2S(GetType(whichunitID,14))+"|r")       
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[6]+"技能防御:"+"|r"+color_str[100]+R2S(SkillDefenseValue)+"|r")     
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[7]+TypeId2S(16)+":"+"|r"+color_str[100]+R2S(LoadReal(DSHT, whichunitID, 16))+"|r")     
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[8]+TypeId2S(17)+"(百分比):"+"|r"+color_str[100]+R2S(Thump)+"|r")     
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[9]+TypeId2S(18)+":"+"|r"+color_str[100]+R2S(ThumpMultiple)+"|r")     
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[10]+TypeId2S(19)+"(百分比):"+"|r"+color_str[100]+R2S(SkillDodge)+"|r")  
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[11]+TypeId2S(20)+"(百分比):"+"|r"+color_str[100]+R2S(SkillThump)+"|r")     
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[12]+TypeId2S(21)+":"+"|r"+color_str[100]+R2S(SkillThumpMultiple)+"|r")    
+endfunction
+
+function DisplayUnitSpecialPredicable takes unit whichunit, real timeout returns nothing
+    local integer whichunitID
+    local real a = 0.0
+    local real b = 0.0
+    local real c = 0.0
+    local real d = 0.0  
+    local real e = 0.0  
+    local real f = 0.0  
+    local real g = 0.0  
+    local real h = 0.0  
+    local real I = 0.0
+    local real R1 = 0.0
+    local real R2 = 0.0
+    set whichunitID = GetUnitTypeId(whichunit)
+    call UnitItemPredicable(whichunit)  
+    set a = LoadReal(DSHT, whichunitID, 54) + LoadReal(DSHT, GetHandleId(whichunit), 69) + LoadReal(DSHT, GetHandleId(whichunit), 77)
+    set b = LoadReal(DSHT, whichunitID, 55) + LoadReal(DSHT, GetHandleId(whichunit), 70) + LoadReal(DSHT, GetHandleId(whichunit), 78)
+    set c = LoadReal(DSHT, whichunitID, 56) + LoadReal(DSHT, GetHandleId(whichunit), 71) + LoadReal(DSHT, GetHandleId(whichunit), 79)
+    set d = LoadReal(DSHT, whichunitID, 57) + LoadReal(DSHT, GetHandleId(whichunit), 72) + LoadReal(DSHT, GetHandleId(whichunit), 80)
+    set e = LoadReal(DSHT, GetHandleId(whichunit), 81) + LoadReal(DSHT, GetHandleId(whichunit), 89)
+    if ( e >= 1.0 ) then 
+        set e = 1.0
+    elseif ( e <= 0.0 ) then 
+        set e = 0.0
+    endif           
+    set f = LoadReal(DSHT, GetHandleId(whichunit), 82) + LoadReal(DSHT, GetHandleId(whichunit), 90)
+    if ( f >= 1.0 ) then 
+        set f = 1.0
+    elseif ( f <= 0.0 ) then 
+        set f = 0.0
+    endif   
+    set g = LoadReal(DSHT, GetHandleId(whichunit), 83) + LoadReal(DSHT, GetHandleId(whichunit), 91)
+    if ( g >= 1.0 ) then 
+        set g = 1.0
+    elseif ( g <= 0.0 ) then 
+        set g = 0.0
+    endif           
+    set h = LoadReal(DSHT, GetHandleId(whichunit), 84) + LoadReal(DSHT, GetHandleId(whichunit), 92)
+    if ( h >= 1.0 ) then 
+        set h = 1.0
+    elseif ( h <= 0.0 ) then 
+        set h = 0.0
+    endif               
+    set I = LoadReal(DSHT, GetHandleId(whichunit), 23) + LoadReal(DSHT, GetHandleId(whichunit), 39) 
+    set R1 = LoadReal(DSHT, GetHandleId(whichunit), 22) + LoadReal(DSHT, GetHandleId(whichunit), 37) 
+    set R2 = LoadReal(DSHT, GetHandleId(whichunit), 24) + LoadReal(DSHT, GetHandleId(whichunit), 38) 
+    if ( I <= 0.0 ) then
+        set I = 1.0
+    endif
+    if ( R1 <= 0.0 ) then
+        set R1 = 0.0
+    elseif ( R1 >= 1.0 ) then
+        set R1 = 1.0
+    endif   
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[13]+TypeId2S(54)+":"+"|r"+color_str[100]+R2S(a)+"|r")     
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[14]+TypeId2S(55)+":"+"|r"+color_str[100]+R2S(b)+"|r")  
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[15]+TypeId2S(56)+"(百分比):"+"|r"+color_str[100]+R2S(c)+"|r")     
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[16]+TypeId2S(57)+"(百分比):"+"|r"+color_str[100]+R2S(d)+"|r")
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[48]+"透甲率:"+"|r"+color_str[100]+R2S(e)+"|r") 
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[49]+"技能透甲率:"+"|r"+color_str[100]+R2S(f)+"|r") 
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[50]+"吸血率:"+"|r"+color_str[100]+R2S(g)+"|r") 
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[51]+"技能吸血率:"+"|r"+color_str[100]+R2S(h)+"|r")     
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[17]+TypeId2S(22)+":"+"|r"+color_str[100]+R2S(R1)+"|r")  
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[18]+TypeId2S(23)+":"+"|r"+color_str[100]+R2S(I)+"|r") 
+    call Print(timeout,color_str[0]+GetUnitName(whichunit)+":"+"|r"+color_str[19]+TypeId2S(24)+":"+"|r"+color_str[100]+R2S(R2)+"|r")    
+endfunction
 
 function DisplayItemSpecialPredicable takes nothing returns nothing
     local integer itemid
@@ -2323,6 +2745,24 @@ function DisplayItemSpecialPredicable takes nothing returns nothing
     call DialogDisplay(GetTriggerPlayer(),DialogE[PlayerIndex],true)
     call DisableTrigger(trC[PlayerIndex])
     call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function DialogButtonA takes nothing returns nothing
+    local integer PlayerIndex
+    set PlayerIndex = GetPlayerId(GetTriggerPlayer())
+    call EnableTrigger(trA[PlayerIndex])
+endfunction
+
+function DialogButtonB takes nothing returns nothing
+    local integer PlayerIndex
+    set PlayerIndex = GetPlayerId(GetTriggerPlayer())
+    call EnableTrigger(trB[PlayerIndex])
+endfunction
+
+function DialogButtonC takes nothing returns nothing
+    local integer PlayerIndex
+    set PlayerIndex = GetPlayerId(GetTriggerPlayer())
+    call EnableTrigger(trC[PlayerIndex])
 endfunction
 
 function PlayerUnitSelectedSetButtonA takes nothing returns nothing
