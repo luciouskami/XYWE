@@ -37,45 +37,47 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 9);
+            this.label1.Location = new System.Drawing.Point(11, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "XYChecker Find New Version";
+            this.label1.Text = "更新器发现了新的XYWE版本：";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(12, 31);
+            this.label2.Location = new System.Drawing.Point(178, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 12);
+            this.label2.Size = new System.Drawing.Size(235, 12);
             this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Text = "{serverVersion}";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 52);
+            this.label3.Location = new System.Drawing.Point(11, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 12);
+            this.label3.Size = new System.Drawing.Size(269, 12);
             this.label3.TabIndex = 2;
-            this.label3.Text = "XYWE will auto update in next use";
+            this.label3.Text = "XYWE已准备好升级包，将在下次启动时自动升级。";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(18, 92);
+            this.label4.Location = new System.Drawing.Point(11, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(245, 12);
+            this.label4.Size = new System.Drawing.Size(461, 12);
             this.label4.TabIndex = 3;
-            this.label4.Text = "!!You Must Exit All XY Tool And Editor!!";
+            this.label4.Text = "注意！你必须在下次运行前关闭所有咸鱼工具和编辑器，否则可能在升级时损坏XYWE。";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // FormXYChecker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 133);
+            this.ClientSize = new System.Drawing.Size(487, 98);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -85,7 +87,7 @@
             this.MinimizeBox = false;
             this.Name = "FormXYChecker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "New Version!";
+            this.Text = "已准备好升级！";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FormXYChecker_Load);
             this.ResumeLayout(false);

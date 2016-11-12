@@ -60,7 +60,7 @@
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(138, 43);
             this.btnConfirm.TabIndex = 1;
-            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.Text = "关闭";
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -70,7 +70,7 @@
             this.btnMore.Name = "btnMore";
             this.btnMore.Size = new System.Drawing.Size(99, 43);
             this.btnMore.TabIndex = 2;
-            this.btnMore.Text = "More";
+            this.btnMore.Text = "详细说明";
             this.btnMore.UseVisualStyleBackColor = true;
             this.btnMore.Click += new System.EventHandler(this.btnMore_Click);
             // 
@@ -88,7 +88,7 @@
             this.MinimizeBox = false;
             this.Name = "FormUpdateLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormUpdateLog";
+            this.Text = "更新日志";
             this.ResumeLayout(false);
             this.PerformLayout();
 

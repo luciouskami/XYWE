@@ -47,7 +47,7 @@
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAnnouncement";
-            this.Text = "FormAnnouncement";
+            this.Text = "公告";
             this.ResumeLayout(false);
             this.PerformLayout();
 
