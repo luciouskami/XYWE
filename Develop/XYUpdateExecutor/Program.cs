@@ -1,22 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace XYUpdateExecutor
 {
     static class Program
     {
-        /// <summary>
-        /// 应用程序的主入口点。
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormXYUpdateExecutor());
+            // Keep UNIQUE
+            // http://stackoverflow.com/questions/184084/how-to-force-c-sharp-net-app-to-run-only-one-instance-in-windows
+
+            bool createdNew = true;
+            using (Mutex mutex = new Mutex(true, "XYUpdateExecutor.exe", out createdNew))
+            {
+                if (createdNew)
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new FormXYUpdateExecutor());
+                }
+                else
+                {
+                    Process.GetCurrentProcess().Kill();
+                }
+            }
         }
     }
 }
