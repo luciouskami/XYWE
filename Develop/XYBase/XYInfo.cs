@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace XYBase {
     public static class XYInfo {
-        public const string YDVersion = "1.30.3";
-        public const string Version = "1.1.Alpha.7 Pre.2"; // Used in version verify & launcher's version mark and update check
+        public const string YDVersion = "1.30.4";
+        public const string Version = "1.1.Alpha.7"; // Used in version verify & launcher's version mark and update check
         public const string VersionClass = "内部预览版 & 预发布版";
 
         public const string EditorName = "咸鱼地图编辑器";
