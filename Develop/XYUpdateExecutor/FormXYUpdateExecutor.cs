@@ -28,39 +28,99 @@ namespace XYUpdateExecutor
 {
     public partial class FormXYUpdateExecutor : Form
     {
+        string pathFile = @"core\data\update\files.zip";
+        string pathRemove = @"core\data\update\remove.txt";
+
         public FormXYUpdateExecutor()
         {
-            Environment.CurrentDirectory = Path.GetFullPath(Environment.CurrentDirectory + @"\..");
-            if (!File.Exists("disable_update.lock"))
+            GotoRoot();
+            if (!IsUpdateDisabled())
             {
-                var pathFile = @"core\data\update\files.zip";
-                if (File.Exists(pathFile))
+                try
                 {
-                    ZipFile.ExtractToDirectory(pathFile, @"core\data\update\files");
-                    CopyDirectory(@"core\data\update\files", @".", true);
-                    File.Delete(pathFile);
-                    Directory.Delete(@"core\data\update\files", true);
-                }
+                    ExecuteUpdate_PatchFile();
+                    ExecuteUpdate_Remove();
+                    ClearUpdateResource();
 
-                var pathRemove = @"core\data\update\remove.txt";
-                if (File.Exists(pathRemove))
+                    GotoCore();
+                    StartXYWE();
+                    ExitExecutor();
+                    return;
+                }
+                catch
                 {
-                    var lines = File.ReadAllLines(pathRemove).ToList();
-                    foreach (var line in lines)
-                    {
-                        if (line.Length == 0) continue;
-                        if (File.Exists(line)) File.Delete(line);
-                    }
-                    File.Delete(pathRemove);
+                    ShowError();
+                    ExitExecutor();
+                    return;
                 }
             }
+        }
+
+        bool IsUpdateDisabled()
+        {
+            return File.Exists("disable_update.lock");
+        }
+
+        void ShowError()
+        {
+            MessageBox.Show("在升级XYWE的过程中出现异常，请确保在启动XYWE前已关闭所有咸鱼工具和WE！");
+        }
+
+        void ExecuteUpdate_PatchFile()
+        {
+            if (File.Exists(pathFile))
+            {
+                ClearArchiveCache();
+                ZipFile.ExtractToDirectory(pathFile, @"core\data\update\files");
+                CopyDirectory(@"core\data\update\files", @".", true);
+            }
+        }
+
+        void ExecuteUpdate_Remove()
+        {
+            if (File.Exists(pathRemove))
+            {
+                var lines = File.ReadAllLines(pathRemove).ToList();
+                foreach (var line in lines)
+                {
+                    if (line.Length == 0) continue;
+                    if (File.Exists(line)) File.Delete(line);
+                }
+            }
+        }
+
+        void ClearUpdateResource()
+        {
+            File.Delete(pathFile);
+            File.Delete(pathRemove);
+        }
+
+        void StartXYWE()
+        {
+            Process.Start(@"XYWE.exe");
+        }
+
+        void GotoRoot()
+        {
+            Environment.CurrentDirectory = Path.GetFullPath(Environment.CurrentDirectory + @"\..");
+        }
+        void GotoCore()
+        {
             Environment.CurrentDirectory = Path.GetFullPath(Environment.CurrentDirectory + @"\core");
-            var proc = Process.Start(@"XYWE.exe");
+        }
+
+        void ExitExecutor()
+        {
             Process.GetCurrentProcess().Kill();
         }
 
+        void ClearArchiveCache()
+        {
+            if (Directory.Exists(@"core\data\update\files"))
+                Directory.Delete(@"core\data\update\files", true);
+        }
 
-        public void CopyDirectory(string sourcePath, string destinationPath, bool overwrite = false)
+        void CopyDirectory(string sourcePath, string destinationPath, bool overwrite = false)
         {
             var info = new DirectoryInfo(sourcePath);
             Directory.CreateDirectory(destinationPath);

@@ -32,16 +32,17 @@
             this.tbLog = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnMore = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbVersion
             // 
-            this.lbVersion.Location = new System.Drawing.Point(258, 9);
+            this.lbVersion.Location = new System.Drawing.Point(307, 9);
             this.lbVersion.Name = "lbVersion";
-            this.lbVersion.Size = new System.Drawing.Size(124, 12);
+            this.lbVersion.Size = new System.Drawing.Size(155, 12);
             this.lbVersion.TabIndex = 0;
             this.lbVersion.Text = "lbVersion";
-            this.lbVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tbLog
             // 
@@ -56,7 +57,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(251, 426);
+            this.btnConfirm.Location = new System.Drawing.Point(250, 426);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(138, 43);
             this.btnConfirm.TabIndex = 1;
@@ -74,11 +75,21 @@
             this.btnMore.UseVisualStyleBackColor = true;
             this.btnMore.Click += new System.EventHandler(this.btnMore_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(221, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "XYWE 已升级到";
+            // 
             // FormUpdateLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 478);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMore);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.tbLog);
@@ -88,7 +99,7 @@
             this.MinimizeBox = false;
             this.Name = "FormUpdateLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "更新日志";
+            this.Text = "XYWE 升级完成";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,5 +111,6 @@
         private System.Windows.Forms.TextBox tbLog;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnMore;
+        private System.Windows.Forms.Label label1;
     }
 }
