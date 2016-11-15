@@ -1,4 +1,7 @@
 // TC_UDDS
+	DamageSystemInitialization=0,abilcode,abilcode,abilcode,buffcode,buffcode
+		_DamageSystemInitialization_Defaults=_,_,_,_,_
+		_DamageSystemInitialization_Category=TC_UDDS
 	SetHealingThumpAllow=0,boolean
 		_SetHealingThumpAllow_Defaults=true
 		_SetHealingThumpAllow_Category=TC_UDDS
@@ -23,9 +26,6 @@
 	DestroyAnyUnitDamagedEvent=0,trigger,AttackEventType
 		_DestroyAnyUnitDamagedEvent_Defaults=GetTriggeringTrigger,MeleeEventIndex
 		_DestroyAnyUnitDamagedEvent_Category=TC_UDDS
-	DamageSystemInitialization=0,abilcode,abilcode,abilcode,buffcode,buffcode
-		_DamageSystemInitialization_Defaults=_,_,_,_,_
-		_DamageSystemInitialization_Category=TC_UDDS
 	SetTypeName=0,SJTypeID,string
 		_SetTypeName_Defaults=_,_
 		_SetTypeName_Category=TC_UDDS
