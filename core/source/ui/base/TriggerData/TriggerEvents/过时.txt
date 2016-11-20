@@ -1,5 +1,5 @@
 TriggerRegisterGameEvent=1,gameevent
 	_TriggerRegisterGameEvent_Defaults=GameEventTourneyNow
 	_TriggerRegisterGameEvent_Category=TC_OBSOLETE
-unWETriggerListAddNew=1,string
-	_unWETriggerListAddNew_Category=TC_OBSOLETE
+LuaInEvent=1,string
+	_LuaInEvent_Category=TC_OBSOLETE

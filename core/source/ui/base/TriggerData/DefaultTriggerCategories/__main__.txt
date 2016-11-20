@@ -1,7 +1,7 @@
 [DefaultTriggerCategories]
-NumCategories=5
+NumCategories=1
 Category01="关于"
-Category02="Include"
-Category03="System"
-Category04="Event"
-Category05="MapInit"
+//Category02="Include"
+//Category03="System"
+//Category04="Event"
+//Category05="MapInit"

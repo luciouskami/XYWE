@@ -1,9 +1,9 @@
 unWETriggerListExecute="响应自定义事件 [U]"
 	unWETriggerListExecute="响应自定义事件: ",~自定义事件名字," [U]"
 	unWETriggerListExecuteHint="运行注册了该事件的多个触发器"
-unWESaveTriggerDataUnit="为上次响应的自定义事件传递单位参数 [U]"
+unWESaveTriggerDataUnit="响应自定义事件 - 传递参数 - 单位 [U]"
 	unWESaveTriggerDataUnit="为响应的自定义事件传递参数，名为 ",~参数名字," 值为 ",~单位
-	unWESaveTriggerDataUnitHint="例如：为响应的自定义事件传递参数，名为 杀人凶手 值为 伤害来源"
+	unWESaveTriggerDataUnitHint="必须在响应至少一次自定义事件后才可使用。为上次响应的自定义事件传递单位参数，如：名为 杀人凶手 值为 伤害来源"
 unWECreatDummyCaster="创建施法傀儡 [U]"
 	unWECreatDummyCaster="为 ",~玩家," 创建一个 施法傀儡 在 ",~位置
 	unWECreatDummyCasterHint=创建一个用于触发器动作的不可见单位，通常被用于代替英雄释放技能

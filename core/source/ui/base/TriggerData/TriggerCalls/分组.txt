@@ -1697,6 +1697,8 @@
 			_GetLastAbilityCastingUnit_Category=TC_FUNCTION
 		GetLastAbilityTargetUnit=0,1,unit
 			_GetLastAbilityTargetUnit_Category=TC_FUNCTION
+		unWELoadTriggerDataUnit=0,1,unit,string
+			_unWELoadTriggerDataUnit_Category=TC_FUNCTION
 	// S 事件响应
 		GetDYCChargingUnit=0,1,unit
 			_GetDYCChargingUnit_Defaults=

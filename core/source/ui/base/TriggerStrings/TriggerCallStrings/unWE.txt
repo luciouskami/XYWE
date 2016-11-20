@@ -6,6 +6,6 @@ unWEOperatorRI="算术运算 [U]"
 unWEGetLastCreatedDummy="最后创建的施法傀儡 [U]"
 	unWEGetLastCreatedDummy="施法傀儡"
 	unWEGetLastCreatedDummyHint="最后一个使用'单位 - 创建施法傀儡'动作创建的单位"
-unWELoadTriggerDataUnit="获取自定义事件单位参数 [U]"
+unWELoadTriggerDataUnit="响应自定义事件 - 获取参数 - 单位 [U]"
 	unWELoadTriggerDataUnit=~字符串
 	unWELoadTriggerDataUnitHint=
