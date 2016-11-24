@@ -39,8 +39,8 @@
             // 
             // LlVersion
             // 
-            this.LlVersion.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.LlVersion.Location = new System.Drawing.Point(99, 106);
+            this.LlVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LlVersion.Location = new System.Drawing.Point(165, 168);
             this.LlVersion.Name = "LlVersion";
             this.LlVersion.Size = new System.Drawing.Size(171, 12);
             this.LlVersion.TabIndex = 0;
@@ -52,9 +52,9 @@
             // BtnXYCodeLibraryManager
             // 
             this.BtnXYCodeLibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(62, 66);
+            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(14, 113);
             this.BtnXYCodeLibraryManager.Name = "BtnXYCodeLibraryManager";
-            this.BtnXYCodeLibraryManager.Size = new System.Drawing.Size(121, 38);
+            this.BtnXYCodeLibraryManager.Size = new System.Drawing.Size(10, 10);
             this.BtnXYCodeLibraryManager.TabIndex = 1;
             this.BtnXYCodeLibraryManager.Text = "代码库管理器";
             this.BtnXYCodeLibraryManager.UseVisualStyleBackColor = true;
@@ -64,9 +64,9 @@
             // BtnXYUILibraryManager
             // 
             this.BtnXYUILibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(94, 75);
+            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(14, 97);
             this.BtnXYUILibraryManager.Name = "BtnXYUILibraryManager";
-            this.BtnXYUILibraryManager.Size = new System.Drawing.Size(121, 38);
+            this.BtnXYUILibraryManager.Size = new System.Drawing.Size(10, 10);
             this.BtnXYUILibraryManager.TabIndex = 3;
             this.BtnXYUILibraryManager.Text = "UI库管理器";
             this.BtnXYUILibraryManager.UseVisualStyleBackColor = true;
@@ -86,9 +86,9 @@
             // BtnXYTextColorMaker
             // 
             this.BtnXYTextColorMaker.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYTextColorMaker.Location = new System.Drawing.Point(46, 79);
+            this.BtnXYTextColorMaker.Location = new System.Drawing.Point(30, 113);
             this.BtnXYTextColorMaker.Name = "BtnXYTextColorMaker";
-            this.BtnXYTextColorMaker.Size = new System.Drawing.Size(121, 38);
+            this.BtnXYTextColorMaker.Size = new System.Drawing.Size(10, 10);
             this.BtnXYTextColorMaker.TabIndex = 5;
             this.BtnXYTextColorMaker.Text = "文本染色器";
             this.BtnXYTextColorMaker.UseVisualStyleBackColor = true;
@@ -107,8 +107,8 @@
             // 
             // linkLabel1
             // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 106);
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 168);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(56, 12);
             this.linkLabel1.TabIndex = 7;
@@ -152,9 +152,9 @@
             // btnLibrary
             // 
             this.btnLibrary.Font = new System.Drawing.Font("宋体", 9F);
-            this.btnLibrary.Location = new System.Drawing.Point(62, 75);
+            this.btnLibrary.Location = new System.Drawing.Point(30, 97);
             this.btnLibrary.Name = "btnLibrary";
-            this.btnLibrary.Size = new System.Drawing.Size(121, 38);
+            this.btnLibrary.Size = new System.Drawing.Size(10, 10);
             this.btnLibrary.TabIndex = 11;
             this.btnLibrary.Text = "函数库管理器";
             this.btnLibrary.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 129);
+            this.ClientSize = new System.Drawing.Size(348, 189);
             this.Controls.Add(this.btnLibrary);
             this.Controls.Add(this.btnPatchUI);
             this.Controls.Add(this.label1);

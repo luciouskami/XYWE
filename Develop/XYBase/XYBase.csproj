@@ -53,6 +53,12 @@
     <Compile Include="Class\Command.cs" />
     <Compile Include="Enum\CreateState.cs" />
     <Compile Include="Extend\ExtendSystemChar.cs" />
+    <Compile Include="XYForm\FormXYDialogConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XYForm\FormXYDialogConfirm.Designer.cs">
+      <DependentUpon>FormXYDialogConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Include\Ini.cs" />
     <Compile Include="UIConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +70,7 @@
     <Compile Include="XYConfig.cs" />
     <Compile Include="XYEncoding.cs" />
     <Compile Include="XYFile.cs" />
+    <Compile Include="XYForm\XYEnum.cs" />
     <Compile Include="XYInfo.cs" />
     <Compile Include="XYIni.cs" />
     <Compile Include="XYMpq.cs" />
@@ -77,7 +84,11 @@
     <Compile Include="XYVersion.cs" />
     <Compile Include="XYWeb.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="XYForm\FormXYDialogConfirm.resx">
+      <DependentUpon>FormXYDialogConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

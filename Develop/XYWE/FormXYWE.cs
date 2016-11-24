@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XYBase;
+using XYBase.XYForm;
 
 namespace XYWE
 {
@@ -106,7 +107,11 @@ namespace XYWE
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            XYProcess.Website.StartCommunity();
+            FormXYDialogConfirm dialog = new FormXYDialogConfirm(
+                XYDialogType.ReportBug,
+                "你正在试图反馈BUG！\r\n但这个BUG很可能已经被解决过了。\r\n在你真正决定反馈BUG之前，请先查看根目录下的说用说明和崩溃解决方法，这也许能更快解决你的问题。",
+                XYProcess.Website.StartCommunity);
+            dialog.ShowDialog();
         }
 
         private void btnPatchUI_Click(object sender, EventArgs e)
