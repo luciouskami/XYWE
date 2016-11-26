@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D6C44A05-9C5B-4924-AE41-0DF7724273D5}</ProjectGuid>
+    <ProjectGuid>{BDD29861-1206-40B4-9F79-A5F5B3A19527}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XYTriggerLibraryManager</RootNamespace>
-    <AssemblyName>XYTriggerLibraryManager</AssemblyName>
+    <RootNamespace>XYMapCreator</RootNamespace>
+    <AssemblyName>XYMapCreator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormXYTriggerLibraryManager.cs">
+    <Compile Include="FormXYMapCreator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormXYTriggerLibraryManager.Designer.cs">
-      <DependentUpon>FormXYTriggerLibraryManager.cs</DependentUpon>
+    <Compile Include="FormXYMapCreator.Designer.cs">
+      <DependentUpon>FormXYMapCreator.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormXYTriggerLibraryManager.resx">
-      <DependentUpon>FormXYTriggerLibraryManager.cs</DependentUpon>
+    <EmbeddedResource Include="FormXYMapCreator.resx">
+      <DependentUpon>FormXYMapCreator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,7 +66,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

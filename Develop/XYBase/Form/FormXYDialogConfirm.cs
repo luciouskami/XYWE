@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace XYBase.XYForm
+namespace XYBase
 {
     public partial class FormXYDialogConfirm : Form
     {
@@ -53,7 +53,7 @@ namespace XYBase.XYForm
 
         private void FormXYDialogConfirm_DisposeOnShow(object sender, EventArgs e)
         {
-            ActionOnConfirm();
+            ActionOnConfirm?.Invoke();
             Dispose();
         }
 

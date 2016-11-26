@@ -484,13 +484,13 @@
 			_YDWERPGGameEnd_Category=TC_SAVELOAD
 // D 单位
 	// 创建
-		# CreateUnit=0,player,unitcode,real,real,degree
-			_ CreateUnit_Defaults=_,_,_,_,RealUnitFacing
-			_ CreateUnit_Category=TC_UNIT
 		CreateNUnitsAtLoc=0,integer,unitcode,player,location,degree
 			_CreateNUnitsAtLoc_Defaults=1,hfoo,Player00,_,RealUnitFacing
 			_CreateNUnitsAtLoc_Limits=1,_,_,_,_,_,_,_,0,360
 			_CreateNUnitsAtLoc_Category=TC_UNIT
+		# CreateUnit=0,player,unitcode,real,real,degree
+			_ CreateUnit_Defaults=_,_,_,_,RealUnitFacing
+			_ CreateUnit_Category=TC_UNIT
 		CreateNUnitsAtLocFacingLocBJ=0,integer,unitcode,player,location,location
 			_CreateNUnitsAtLocFacingLocBJ_Defaults=1,hfoo,Player00,_,_
 			_CreateNUnitsAtLocFacingLocBJ_Limits=1,_,_,_,_,_,_,_,_,_

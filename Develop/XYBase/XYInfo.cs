@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XYBase {
-    public static class XYInfo {
-        public const string YDVersion = "1.30.4";
-        public const string Version = "1.1.Alpha.7"; // Used in version verify & launcher's version mark and update check
+namespace XYBase
+{
+    public static class XYInfo
+    {
+        public const string YDVersion = "1.30.5";
+        public const string Version = "1.1.Alpha.8 Pre.2"; // Used in version verify & launcher's version mark and update check
         public const string VersionClass = "内部预览版";
 
         public const string EditorName = "咸鱼地图编辑器";
@@ -18,15 +20,15 @@ namespace XYBase {
 
         public static Dictionary<string, string> CompilerDefaultVariables = new Dictionary<string, string>
         {
-            ["YDVersion"] = YDVersion,
-            ["Version"] = Version,
-            ["VersionClass"] = VersionClass,
+            [nameof(YDVersion)] = YDVersion,
+            [nameof(Version)] = Version,
+            [nameof(VersionClass)] = VersionClass,
 
-            ["EditorName"] = EditorName,
-            ["EditorNameMin"] = EditorNameMin,
+            [nameof(EditorName)] = EditorName,
+            [nameof(EditorNameMin)] = EditorNameMin,
 
-            ["VersionName"] = VersionName,
-            ["VersionNameMin"] = VersionNameMin,
+            [nameof(VersionName)] = VersionName,
+            [nameof(VersionNameMin)] = VersionNameMin,
         };
     }
 }

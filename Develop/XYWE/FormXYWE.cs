@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XYBase;
-using XYBase.XYForm;
 
 namespace XYWE
 {
@@ -38,8 +37,22 @@ namespace XYWE
         void FormXYWE_Load(object sender, EventArgs e)
         {
             LlVersion.Text = XYInfo.Version;
+            cbEnableRSJBWETextEditor15_0.Checked = XYPlugin.RSJB_WE_TextEditor_15_0.GetEnableState();
             XYTip.UpdateTipAsync();
             cbUI.SelectedItem = XYConfig.GetCurrentStandardUI();
+            FormClosing += FormXYWE_FormClosing;
+        }
+
+        private void FormXYWE_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (XYPlugin.RSJB_WE_TextEditor_15_0.IsWorking())
+            {
+                new FormXYDialogConfirm(
+                    XYDialogType.ExitToolBoxWhilePluginWorking,
+                    "检测到当前有插件正在运行，关闭工具窗将会终止所有插件，确定要这么做吗？",
+                    () => XYPlugin.KillAll(),
+                    () => e.Cancel = true).ShowDialog();
+            }
         }
 
         void LlVersion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -71,6 +84,9 @@ namespace XYWE
 
             // Refresh Enabled Package UI Config
             XYConfig.RefreshConfig();
+
+            // Execute Plugin
+            XYPlugin.RSJB_WE_TextEditor_15_0.SafeStart();
 
             // Recover Text
             BtnStartXYWE.Enabled = true;
@@ -124,6 +140,21 @@ namespace XYWE
                 default: throw new KeyNotFoundException("没有找到UI配置：" + ui);
             }
             MessageBox.Show("成功切换UI：" + ui);
+        }
+
+        private void btnCreateMap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbEnableRSJBWETextEditor15_0_CheckedChanged(object sender, EventArgs e)
+        {
+            XYPlugin.RSJB_WE_TextEditor_15_0.SetEnableState(cbEnableRSJBWETextEditor15_0.Checked);
+        }
+
+        private void btnConfigRSJBWETextEditor15_0_Click(object sender, EventArgs e)
+        {
+            XYPlugin.RSJB_WE_TextEditor_15_0.OpenConfigFile();
         }
     }
 }

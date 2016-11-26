@@ -1634,12 +1634,12 @@
 			_RectFromLoc_Category=TC_RECT
 // returns unit
 	// 普通
-		CreateUnit=0,1,unit,player,unitcode,real,real,degree
-			_CreateUnit_Defaults=Player00,hfoo,0,0,0
-			_CreateUnit_Category=TC_NOTHING
 		CreateUnitAtLoc=0,1,unit,player,unitcode,location,degree
 			_CreateUnitAtLoc_Defaults=Player00,hfoo,_,0
 			_CreateUnitAtLoc_Category=TC_NOTHING
+		CreateUnit=0,1,unit,player,unitcode,real,real,degree
+			_CreateUnit_Defaults=Player00,hfoo,0,0,0
+			_CreateUnit_Category=TC_NOTHING
 		CreateCorpse=0,1,unit,player,unitcode,real,real,degree
 			_CreateCorpse_Defaults=Player00,hfoo,0,0,0
 			_CreateCorpse_Category=TC_NOTHING

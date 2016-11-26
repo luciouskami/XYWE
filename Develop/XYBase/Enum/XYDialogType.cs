@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XYBase.XYForm
+namespace XYBase
 {
     public enum XYDialogType
     {
         ReportBug,
+        ExitToolBoxWhilePluginWorking,
     }
 }

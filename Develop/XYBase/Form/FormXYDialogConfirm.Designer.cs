@@ -1,4 +1,4 @@
-﻿namespace XYBase.XYForm
+﻿namespace XYBase
 {
     partial class FormXYDialogConfirm
     {

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace XYBase {
     public static class CodeLibrary {
 #if DEBUG
-        public static string pathRoot = XYPath.Dir.Jass + @"\XYLibrary";
+        public static string pathRoot = XYPath.Dir.EditorJass + @"\XYLibrary";
 #else
         public static string pathRoot = XYPath.Dir.Jass + @"\XYInclude";
 #endif

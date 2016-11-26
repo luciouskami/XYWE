@@ -30,6 +30,17 @@ namespace XYBase
             }
         }
 
+        static IniFile _Plugin;
+        public static IniFile Plugin
+        {
+            get
+            {
+                if (_Plugin == null)
+                    _Plugin = new IniFile(XYPath.File.DataIni, nameof(Plugin));
+                return _Plugin;
+            }
+        }
+
         static IniFile _Package;
         public static IniFile Package
         {

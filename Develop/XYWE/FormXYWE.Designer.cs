@@ -35,6 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPatchUI = new System.Windows.Forms.Button();
             this.btnLibrary = new System.Windows.Forms.Button();
+            this.btnCreateMap = new System.Windows.Forms.Button();
+            this.cbEnableRSJBWETextEditor15_0 = new System.Windows.Forms.CheckBox();
+            this.btnConfigRSJBWETextEditor15_0 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LlVersion
@@ -52,7 +55,7 @@
             // BtnXYCodeLibraryManager
             // 
             this.BtnXYCodeLibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(14, 113);
+            this.BtnXYCodeLibraryManager.Location = new System.Drawing.Point(30, 3);
             this.BtnXYCodeLibraryManager.Name = "BtnXYCodeLibraryManager";
             this.BtnXYCodeLibraryManager.Size = new System.Drawing.Size(10, 10);
             this.BtnXYCodeLibraryManager.TabIndex = 1;
@@ -64,7 +67,7 @@
             // BtnXYUILibraryManager
             // 
             this.BtnXYUILibraryManager.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(14, 97);
+            this.BtnXYUILibraryManager.Location = new System.Drawing.Point(46, 3);
             this.BtnXYUILibraryManager.Name = "BtnXYUILibraryManager";
             this.BtnXYUILibraryManager.Size = new System.Drawing.Size(10, 10);
             this.BtnXYUILibraryManager.TabIndex = 3;
@@ -75,9 +78,9 @@
             // 
             // BtnStartXYWE
             // 
-            this.BtnStartXYWE.Location = new System.Drawing.Point(100, 40);
+            this.BtnStartXYWE.Location = new System.Drawing.Point(193, 114);
             this.BtnStartXYWE.Name = "BtnStartXYWE";
-            this.BtnStartXYWE.Size = new System.Drawing.Size(167, 51);
+            this.BtnStartXYWE.Size = new System.Drawing.Size(143, 51);
             this.BtnStartXYWE.TabIndex = 4;
             this.BtnStartXYWE.Text = "启动咸鱼地图编辑器";
             this.BtnStartXYWE.UseVisualStyleBackColor = true;
@@ -86,7 +89,7 @@
             // BtnXYTextColorMaker
             // 
             this.BtnXYTextColorMaker.Font = new System.Drawing.Font("宋体", 9F);
-            this.BtnXYTextColorMaker.Location = new System.Drawing.Point(30, 113);
+            this.BtnXYTextColorMaker.Location = new System.Drawing.Point(14, 3);
             this.BtnXYTextColorMaker.Name = "BtnXYTextColorMaker";
             this.BtnXYTextColorMaker.Size = new System.Drawing.Size(10, 10);
             this.BtnXYTextColorMaker.TabIndex = 5;
@@ -97,7 +100,7 @@
             // 
             // BtnXYTriggerSyntaxHighlighter
             // 
-            this.BtnXYTriggerSyntaxHighlighter.Location = new System.Drawing.Point(14, 40);
+            this.BtnXYTriggerSyntaxHighlighter.Location = new System.Drawing.Point(14, 114);
             this.BtnXYTriggerSyntaxHighlighter.Name = "BtnXYTriggerSyntaxHighlighter";
             this.BtnXYTriggerSyntaxHighlighter.Size = new System.Drawing.Size(80, 51);
             this.BtnXYTriggerSyntaxHighlighter.TabIndex = 6;
@@ -125,15 +128,15 @@
             this.cbUI.Items.AddRange(new object[] {
             "XYWE",
             "YDWE"});
-            this.cbUI.Location = new System.Drawing.Point(88, 13);
+            this.cbUI.Location = new System.Drawing.Point(83, 13);
             this.cbUI.Name = "cbUI";
-            this.cbUI.Size = new System.Drawing.Size(95, 20);
+            this.cbUI.Size = new System.Drawing.Size(173, 20);
             this.cbUI.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 17);
+            this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 9;
@@ -141,7 +144,7 @@
             // 
             // btnPatchUI
             // 
-            this.btnPatchUI.Location = new System.Drawing.Point(193, 12);
+            this.btnPatchUI.Location = new System.Drawing.Point(262, 12);
             this.btnPatchUI.Name = "btnPatchUI";
             this.btnPatchUI.Size = new System.Drawing.Size(74, 22);
             this.btnPatchUI.TabIndex = 10;
@@ -152,7 +155,7 @@
             // btnLibrary
             // 
             this.btnLibrary.Font = new System.Drawing.Font("宋体", 9F);
-            this.btnLibrary.Location = new System.Drawing.Point(30, 97);
+            this.btnLibrary.Location = new System.Drawing.Point(2, 3);
             this.btnLibrary.Name = "btnLibrary";
             this.btnLibrary.Size = new System.Drawing.Size(10, 10);
             this.btnLibrary.TabIndex = 11;
@@ -161,11 +164,45 @@
             this.btnLibrary.Visible = false;
             this.btnLibrary.Click += new System.EventHandler(this.btnLibrary_Click);
             // 
+            // btnCreateMap
+            // 
+            this.btnCreateMap.Location = new System.Drawing.Point(104, 114);
+            this.btnCreateMap.Name = "btnCreateMap";
+            this.btnCreateMap.Size = new System.Drawing.Size(83, 51);
+            this.btnCreateMap.TabIndex = 12;
+            this.btnCreateMap.Text = "创建新地图";
+            this.btnCreateMap.UseVisualStyleBackColor = true;
+            this.btnCreateMap.Click += new System.EventHandler(this.btnCreateMap_Click);
+            // 
+            // cbEnableRSJBWETextEditor15_0
+            // 
+            this.cbEnableRSJBWETextEditor15_0.AutoSize = true;
+            this.cbEnableRSJBWETextEditor15_0.Location = new System.Drawing.Point(14, 39);
+            this.cbEnableRSJBWETextEditor15_0.Name = "cbEnableRSJBWETextEditor15_0";
+            this.cbEnableRSJBWETextEditor15_0.Size = new System.Drawing.Size(192, 16);
+            this.cbEnableRSJBWETextEditor15_0.TabIndex = 13;
+            this.cbEnableRSJBWETextEditor15_0.Text = "启用人生脚步WE文本修改器15.0";
+            this.cbEnableRSJBWETextEditor15_0.UseVisualStyleBackColor = true;
+            this.cbEnableRSJBWETextEditor15_0.CheckedChanged += new System.EventHandler(this.cbEnableRSJBWETextEditor15_0_CheckedChanged);
+            // 
+            // btnConfigRSJBWETextEditor15_0
+            // 
+            this.btnConfigRSJBWETextEditor15_0.Location = new System.Drawing.Point(204, 36);
+            this.btnConfigRSJBWETextEditor15_0.Name = "btnConfigRSJBWETextEditor15_0";
+            this.btnConfigRSJBWETextEditor15_0.Size = new System.Drawing.Size(44, 20);
+            this.btnConfigRSJBWETextEditor15_0.TabIndex = 14;
+            this.btnConfigRSJBWETextEditor15_0.Text = "配置";
+            this.btnConfigRSJBWETextEditor15_0.UseVisualStyleBackColor = true;
+            this.btnConfigRSJBWETextEditor15_0.Click += new System.EventHandler(this.btnConfigRSJBWETextEditor15_0_Click);
+            // 
             // FormXYWE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 189);
+            this.Controls.Add(this.btnConfigRSJBWETextEditor15_0);
+            this.Controls.Add(this.cbEnableRSJBWETextEditor15_0);
+            this.Controls.Add(this.btnCreateMap);
             this.Controls.Add(this.btnLibrary);
             this.Controls.Add(this.btnPatchUI);
             this.Controls.Add(this.label1);
@@ -202,6 +239,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPatchUI;
         private System.Windows.Forms.Button btnLibrary;
+        private System.Windows.Forms.Button btnCreateMap;
+        private System.Windows.Forms.CheckBox cbEnableRSJBWETextEditor15_0;
+        private System.Windows.Forms.Button btnConfigRSJBWETextEditor15_0;
     }
 }
 
