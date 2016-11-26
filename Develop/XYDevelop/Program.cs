@@ -29,30 +29,24 @@ Select Command:
         }
         void CompileEditor()
         {
-            string pathImport = $@"{XYPath.Dir.Root}\Import";
-            string pathSource = $@"{pathImport}\YDWE-Overwrite";
-            string pathTarget = $@"{pathImport}\YDWE";
-            string pathBuild = $@"{pathTarget}\Build";
-            string pathPublish = $@"{pathBuild}\publish\Release";
-            string pathEditor = $@"{XYPath.Dir.Root}\core\editor";
+            string pathEditorSourceRoot = $@"{XYPath.Dir.Root}\Develop-Editor";
+            string pathEditorSourceBuild = $@"{pathEditorSourceRoot}\Build";
+            string pathEditorSourcePublish = $@"{pathEditorSourceBuild}\publish\Release";
+            string pathEditorOutput = $@"{XYPath.Dir.Root}\core\editor";
 
-            XYFile.SyncDirectory(pathSource, pathTarget, fullName =>
-            {
-                Console.WriteLine("Overwrite File: " + fullName.Replace(pathSource, ""));
-            });
             Console.WriteLine("Start Compile ...");
 
-            var info = new ProcessStartInfo($@"{pathBuild}\Build_Release.bat");
-            info.WorkingDirectory = pathBuild;
+            var info = new ProcessStartInfo($@"{pathEditorSourceBuild}\Build_Release.bat");
+            info.WorkingDirectory = pathEditorSourceBuild;
             Process.Start(info).WaitForExit();
-            if (!Directory.Exists(pathPublish))
+            if (!Directory.Exists(pathEditorSourcePublish))
             {
                 Console.WriteLine("Compile failed, try re-select.");
                 return;
             }
 
             Console.WriteLine("Compile success! Moving file ...");
-            XYFile.CopyDirectory(pathPublish, pathEditor, true);
+            XYFile.CopyDirectory(pathEditorSourcePublish, pathEditorOutput, true);
             Console.WriteLine("File move done!");
         }
 
