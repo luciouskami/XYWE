@@ -1,7 +1,0 @@
-[submodule "Import/YDWE"]
-	path = Import/YDWE
-	url = https://github.com/actboy168/YDWE
-	ignore = dirty
-[submodule "Develop-Editor"]
-	path = Develop-Editor
-	url = https://github.com/XYWE/XYWE-Editor.git
