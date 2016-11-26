@@ -32,6 +32,14 @@ void _fastcall
 	}
 }
 
+void _fastcall 
+	CC_PutActionEx_SetJassLocVar_GetVarName(DWORD This, char* varname)
+{
+	char varname_t[260];
+	BLZSStrPrintf(varname_t, 260, "%s", ((char*)&GetGUIVar_Value(This, 1)));
+	ConvertString(varname_t, varname, 260);
+}
+
 void CC_PutActionEx_ForLoop(DWORD This, DWORD OutClass, char* name, DWORD cc_guiid_type)
 {
 	char buff[260];
@@ -120,6 +128,7 @@ void _fastcall
 	CC_PutActionEx_Hook(DWORD This, DWORD EDX, DWORD OutClass, char* name, DWORD Type, DWORD Endl)
 {
 	char buff[260];
+	char lvarname[260];
 
 	switch (*(DWORD*)(This+0x138))
 	{
@@ -210,7 +219,18 @@ void _fastcall
 	case CC_GUIID_YDWESetAnyTypeLocalVariable:
 		{
 			locvar::set(This, OutClass, name);
-			break;  
+			break;
+		}
+	case CC_GUIID_SetJassLocalVariables:
+		{
+		    CC_PutActionEx_SetJassLocVar_GetVarName(This, lvarname);
+			CC_PutBegin();
+			BLZSStrPrintf(buff, 260, "set %s=",lvarname);
+			PUT_CONST( buff , 0); 
+			PUT_VAR(This, 2);
+			PUT_CONST(" ", 1); 
+			CC_PutEnd();
+			break;
 		}
 	case CC_GUIID_YDWETimerStartMultiple:
 		{   

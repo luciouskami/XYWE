@@ -92,4 +92,5 @@ GUIID_Table_Init()
   GUIID_Table_Put(YDWEGetObjectPropertyInteger);
   GUIID_Table_Put(YDWEGetObjectPropertyReal);
   GUIID_Table_Put(YDWEGetObjectPropertyString);
+  GUIID_Table_Put(SetJassLocalVariables);
 }

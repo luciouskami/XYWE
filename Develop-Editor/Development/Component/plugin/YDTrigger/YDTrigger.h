@@ -8,6 +8,12 @@
 #ifndef INCLUDE_YDTRIGGER_H
 #define INCLUDE_YDTRIGGER_H
 #
+#  if WARCRAFT_VERSION >= 124
+#    include "WM/Base/124define.h"
+#  else
+#    include "WM/Base/120define.h" 
+#  endif
+#
 #  ifndef DISABLE_SAVE_LOAD_SYSTEM
 #      include <YDTrigger/ImportSaveLoadSystem.h>
 #  endif

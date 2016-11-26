@@ -1,6 +1,8 @@
 #include "CC_Include.h"
 #include "locvar.h"
 
+char* pref[0x100];
+
 typedef struct _tag_LocalVarList
 {
 	enum VARTYPE_User_Defined type;
@@ -13,7 +15,7 @@ int  g_local_var_list_top;
 BOOL g_local_in_mainproc;
 
 int _fastcall
-	CC_PutLocal_SaveAndCheck(DWORD OutClass, enum VARTYPE_User_Defined type, char* name)
+	CC_PutLocal_SaveAndCheck(DWORD OutClass, enum VARTYPE_User_Defined type, char* prefix, char* name)
 {
 	int i;
 
@@ -25,6 +27,7 @@ int _fastcall
 
 	if (g_local_var_list_top < 0x100)
 	{
+		pref[g_local_var_list_top] = prefix;
 		g_local_var_list[g_local_var_list_top].name = name;
 		g_local_var_list[g_local_var_list_top].type = type;
 		g_local_var_list_top++;
@@ -41,11 +44,21 @@ void _fastcall
 	char buff[260];
 	char name_covert[260];
 
-	if (CC_PutLocal_SaveAndCheck(OutClass, type, name))
+	if (CC_PutLocal_SaveAndCheck(OutClass, type, prefix, name))
 	{
 		CC_PutBegin();
 		ConvertString(name, name_covert, 260);
-		BLZSStrPrintf(buff, 260, "local %s %s_%s", TypeName[type], prefix, name_covert);
+		if (prefix == "nopref")
+		{
+			if (TypeName[type] == "unitcode" || TypeName[type] == "itemcode" || TypeName[type] == "ablicode")
+				BLZSStrPrintf(buff, 260, "local integer %s", name_covert);
+			else if (TypeName[type] == "radian" || TypeName[type] == "degree")
+				BLZSStrPrintf(buff, 260, "local real %s", name_covert);
+			else
+				BLZSStrPrintf(buff, 260, "local %s %s", TypeName[type], name_covert);
+		}
+		else
+			BLZSStrPrintf(buff, 260, "local %s %s_%s", TypeName[type],prefix,name_covert);
 		PUT_CONST(buff, 1);
 		CC_PutEnd();
 	}
@@ -141,6 +154,10 @@ void _fastcall
 				g_local_in_mainproc = TRUE;
 			}
 			break;
+		case CC_GUIID_SetJassLocalVariables:
+			CC_PutLocal_LocalVar(OutClass, (VARTYPE_User_Defined)GetVarType(nItemClass, 0), "nopref",((char*)&GetGUIVar_Value(nItemClass, 1)));
+			CC_PutLocal_Search(nItemClass, OutClass, isSearchHashLocal, 0);
+			break;
 		default:
 			break;           
 		}
@@ -181,15 +198,38 @@ void _fastcall
 	{
 		switch (g_local_var_list[i].type)
 		{
+		// auto set null list
 		case CC_TYPE_unit:
 		case CC_TYPE_group:
 		case CC_TYPE_timer:
 		case CC_TYPE_trigger:
 		case CC_TYPE_force:
+		case CC_TYPE_item:
+		case CC_TYPE_location:
+		case CC_TYPE_destructable:
+		case CC_TYPE_rect:
+		case CC_TYPE_region:
+		case CC_TYPE_effect:
+		case CC_TYPE_unitpool:
+		case CC_TYPE_itempool:
+		case CC_TYPE_quest:
+		case CC_TYPE_questitem:
+		case CC_TYPE_timerdialog:
+		case CC_TYPE_leaderboard:
+		case CC_TYPE_multiboard:
+		case CC_TYPE_multiboarditem:
+		case CC_TYPE_trackable:
+		case CC_TYPE_dialog:
+		case CC_TYPE_button:
+		case CC_TYPE_fogstate:
+		case CC_TYPE_fogmodifier:
 			CC_PutBegin();
 			ConvertString(g_local_var_list[i].name, name_covert, 260);
-			BLZSStrPrintf(buff, 260, "set ydl_%s = null", name_covert);
-			PUT_CONST(buff, 1);
+			if (pref[i] == "nopref")
+				BLZSStrPrintf(buff, 260, "set %s = null",name_covert);
+			else
+				BLZSStrPrintf(buff, 260, "set %s_%s = null", pref[i], name_covert);
+			PUT_CONST(buff,1);
 			CC_PutEnd();
 			break;
 		}

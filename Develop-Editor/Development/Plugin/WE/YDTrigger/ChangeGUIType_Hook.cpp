@@ -16,6 +16,7 @@ void _fastcall
 	switch (*(DWORD*)(This+0x138))
 	{
 	case CC_GUIID_YDWESetAnyTypeLocalVariable:
+	case CC_GUIID_SetJassLocalVariables:
 		ChangeGUIType_Set(This, EDX, unknow, 0, 2, 11);
 		break;
 	case CC_GUIID_YDWESaveAnyTypeDataByUserData:
