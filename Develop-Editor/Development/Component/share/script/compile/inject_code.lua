@@ -1,4 +1,3 @@
-
 inject_code = {}
 
 -- 注入代码表
@@ -14,11 +13,11 @@ end
 -- op.option - 选项，table类型，支持成员：
 -- 	runtime_version - 表示魔兽版本
 -- 返回：一个table，数组形式，包含所有需要注入的文件名（注意不是fs.path）
-function inject_code:detect(op)	
+function inject_code:detect(op)
 	-- 结果变量
 	local inject_code = nil
 	local inject_slk = false
-	
+
 	-- 读入所有文本
 	local s, e = io.load(op.input)
 	-- 文件存在
@@ -29,9 +28,10 @@ function inject_code:detect(op)
 		-- 检查是否有需要注入的函数
 		local all_table = op.option.runtime_version:is_new() and self.new_table or self.old_table		
 		local GeneralBounsSystemFile = fs.ydwe_path() / "jass" / "YDWEGeneralBounsSystem.j"
+		local SLKAbilitysFile = fs.ydwe_path() / "jass" / "WM" / "WMSLKAbilitys" / "WMSLKAbilitys.j"
 
 		for file, function_table in pairs(all_table) do	
-		    if GeneralBounsSystemFile:string() == file:string() then
+		    if GeneralBounsSystemFile:string() == file:string() or SLKAbilitysFile:string()==file:string() then
 				for _, function_name in ipairs(function_table) do
 					if s:find(function_name) then
 					    inject_slk = true
@@ -58,15 +58,15 @@ function inject_code:detect(op)
 		--会掉线
 		--self:inject_file(op, "units\\abilitymetadata.slk")
 	end
-	
+
 	return inject_code
 end
 
 -- 注入代码到Jass代码文件（最常见的是war3map.j）中
 -- op.output - war3map.j的路径，fs.path对象
 -- inject_code_path_table - 所有需要注入的代码文件路径，table，table中可以是
--- 		string - 此时为YDWE / "jass" 目录下的对应名称的文件
---		fs.path - 此时取其路径
+--     string - 此时为 YDWE / "jass" 目录下的对应名称的文件
+--     fs.path - 此时取其路径
 -- 注：该table必须是数组形式的，哈希表形式的不处理
 -- 返回值：0 - 成功；-1 - 出错失败；1 - 什么都没做
 function inject_code:do_inject(op, inject_code_path_table)
@@ -177,7 +177,6 @@ function inject_code:scan(config_dir)
 				end
 			end
 
-			
 			-- 插入全局表中（替换文件扩展名）
 			local substitution = full_path
 			substitution = substitution:replace_extension(fs.path(".j"))

@@ -1,8 +1,12 @@
+require "compile.ejass"
 
 local select=select
+local setfenv=setfenv
 local load=load
 local string=string
 local table=table
+local stormlib = ar.stormlib
+local ejass=false
 
 local function result(...)
 	return select("#",...), select(1,...)
@@ -14,7 +18,10 @@ local function precompile(code, output_func, lua_codes)
 	end
 	local start_tag = '<?'
 	local end_tag = '?>'
-	
+	if string.find(code,"//! ejass",1,true) then
+		ejass=true
+		string.gsub(code,"//! ejass","")
+	end
 	local start1, end1 = string.find(code, start_tag, 1, true)
 	local start2 = nil
 	local end2 = 0
@@ -39,11 +46,11 @@ local function precompile(code, output_func, lua_codes)
 		end
 	end
 	table.insert(lua_codes, output_func..'('..string.format("%q", string.sub(code, end2 + 1))..')')
-	return 
+	return
 end
 
 local function map_file_import(path_in_archive)
-	return function (buf, is_path)		
+	return function (buf, is_path)
 		if is_path then
 			__map_handle__:import(path_in_archive, __map_path__:parent_path() / buf)
 			return
@@ -65,14 +72,14 @@ local function string_hash(str)
 end
 
 template = {}
-	
+
 function template:do_compile(op)
 	local code, err = io.load(op.input)
 	if not code then
 		log.error("Template read " .. op.input:string() .. ". Error: " .. err)
 		return false, err
 	end
-	
+
 	local lua_codes = {''}
 	table.insert(lua_codes, "local __jass_result__ = {''}")
 	table.insert(lua_codes, "local function __jass_output__(str) table.insert(__jass_result__, str) end")
@@ -80,7 +87,7 @@ function template:do_compile(op)
 	if not r then
 		return r, err
 	end
-	
+
 	package.loaded['slk'] = nil
 	__map_handle__ = op.map_handle
 	__map_path__   = op.map_path
@@ -90,7 +97,7 @@ function template:do_compile(op)
 	if not f then
 		return f, err
 	end
-	
+
 	return pcall(f)
 end
 
@@ -103,17 +110,19 @@ function template:compile(op)
 			gui.error_message(nil, content)
 		else
 			gui.error_message(nil, _("Unknown"))
-		end			
+		end
 		log.error("Template error processing: " .. tostring(content))
 		return false
 	end
-
-	local result, err = io.save(op.output, content)
+	if ejass then
+		content=ejass_compile(content)
+	end
+	local result, err = io.save(op.output,content)
 	if not result then
 		log.error("Template write " .. op.output:string() .. ". Error: " .. err)
 		return false
 	end
-	
+
 	log.debug("Template compilation succeeded.")
 	return true
 end
