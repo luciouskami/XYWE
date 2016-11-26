@@ -1,6 +1,4 @@
-[开发环境说明](Document/Development Environment Introduction/cn.md)
-
-[Development Environment Introduction](Document/Development Environment Introduction/en.md)
+[开发环境说明](Document/Development Environment Introduction/cn.md) | [Development Environment Introduction](Document/Development Environment Introduction/en.md)
 
 # 咸鱼地图编辑器 - Xian Yu World Editor - XYWE
 
