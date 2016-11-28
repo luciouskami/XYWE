@@ -9,9 +9,6 @@ The develop of YDWE is always in promote new features, but there are always some
 XYWE对编辑器内核(YDWE)的主要推进会关注在崩溃修复上，而非推进新功能。  
 XYWE will concentrate on fix Editor(YDWE)'s crash problems, we won't promote new features.
 
-在[项目维基](wiki)中查看项目结构与更多说明：
-See project struct at [project wiki](wiki).
-
 ---
 
 # [YDWE](https://github.com/actboy168/YDWE/tree/release-1.30)
