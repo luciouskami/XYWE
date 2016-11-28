@@ -141,6 +141,7 @@ bool CSplash::SetBitmap(const wchar_t* filename)
 
 bool CSplash::SetText(const wchar_t* text, int x, int y, int w, int h)
 {
+	/* Cancel display text because XYWE do not follow YDWE anymore
 	RECT rect;
 	rect.left = x;
 	rect.top = y;
@@ -163,6 +164,7 @@ bool CSplash::SetText(const wchar_t* text, int x, int y, int w, int h)
 
 	::SelectObject(hDC, hOldBitmap);
 	::DeleteDC(hDC);
+	*/
 
 	return true;
 }
