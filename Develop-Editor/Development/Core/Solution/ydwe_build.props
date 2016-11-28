@@ -3,11 +3,14 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <YDWE>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), build.root))</YDWE>
+    <XYWE>$(YDWE)\..\..\</XYWE>
+    <XYCore>$(XYWE)core\</XYCore>
+    <XYEditor>$(XYCore)editor\</XYEditor>
     <OpenSource>$(YDWE)\..\OpenSource\</OpenSource>
     <ThirdParty>$(YDWE)\..\ThirdParty\</ThirdParty>
     <BuildDir>$(YDWE)\Build\</BuildDir>
+    <BuildBinDir>$(XYEditor)</BuildBinDir>
     <BuildObjDir>$(BuildDir)obj\$(Configuration)\</BuildObjDir>
-    <BuildBinDir>$(BuildDir)bin\$(Configuration)\</BuildBinDir>
     <CoreBin>$(BuildBinDir)bin\</CoreBin>
     <CoreObj>$(BuildObjDir)Core\$(ProjectName)\</CoreObj>
     <LuaPluginBin>$(BuildBinDir)bin\modules\</LuaPluginBin>

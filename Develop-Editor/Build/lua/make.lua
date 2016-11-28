@@ -44,7 +44,7 @@ path.Build = path.Root / 'Build'
 path.ThirdParty = path.Root / 'ThirdParty'
 path.OpenSource = path.Root / 'OpenSource'
 path.Development = path.Root / 'Development'
-path.Result = path.Development / 'Build' / 'bin' / configuration
+path.Result = path.Root / '..' / 'core' / 'editor'
 
 -- Step.2 清理
 if not update then
