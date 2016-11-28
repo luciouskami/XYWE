@@ -257,5 +257,8 @@ core/source/ui/xywe/WorldEditStrings/Tip.txt
 *.vshost.exe
 *.xml
 
+# Unlock Develop-Editor Build Directory
+!Develop-Editor/Build
+
 # XYWE Project
 ####################
