@@ -112,7 +112,7 @@ Untip="|cffc3dbff点击右键以启动自动施放功能。|r"
 Unubertip="|cffc3dbff点击右键以取消自动施放功能。|r"
 Hotkey=C
 Unhotkey=C
-YDWEtip="造成伤害是法术攻击，普通伤害。"
+YDWEtip="造成伤害是法术攻击，普通伤害。实际上不是让单位冲锋，而是创建与单位模型一样的投射物，在命中目标后施法者会进行瞬间移动，然后杀掉自己对敌人造成伤害，投射物飞到一半目标死亡施法者也会瞬移，实际上可以利用这个技能做一些冲锋技能。"
 
 // Healing Wave
 [AOhw]
@@ -134,6 +134,7 @@ Hotkey=X
 Researchtip="学习妖术(|cffffcc00X|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="让目标单位在<AOhx,Dur1>秒内变成一只随机的小动物, 废除其特殊技能的使用。|n|n|cffffcc00等级 1|r - 持续<AOhx,Dur1>秒。|n|cffffcc00等级 2|r - 持续<AOhx,Dur2>秒。|n|cffffcc00等级 3|r - 持续<AOhx,Dur3>秒。"
 Researchhotkey=X
+YDWEtip="对已经被变形的单位释放不能改变被变形的单位类型，只能重新刷新持续时间。"
 
 [BOhx]
 Bufftip=妖术

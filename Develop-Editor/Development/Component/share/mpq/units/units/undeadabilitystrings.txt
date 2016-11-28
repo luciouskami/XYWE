@@ -143,7 +143,7 @@ Hotkey=E
 Researchtip="学习穿刺(|cffffcc00E|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="以地穴领主的巨爪震击地面，射出一道直线形尖刺蔓藤，造成极大伤害并将其轨迹上的敌地面单位抛入空中。|n|n|cffffcc00等级 1|r - <AUim,DataC1>伤害力，<AUim,Dur1>秒晕眩。|n|cffffcc00等级 2|r - <AUim,DataC2> 伤害力，<AUim,Dur2>秒晕眩。|n|cffffcc00等级 3|r - <AUim,DataC3>伤害力，<AUim,Dur3>秒晕眩。"
 Researchhotkey=E
-YDWEtip="造成法术攻击，力量伤害(魔法伤害)。对被缠绕住的单位无效。对飞行单位无效。"
+YDWEtip="造成法术攻击，力量伤害(魔法伤害)。对被缠绕住的单位无效。对飞行单位无效。单位无敌期间实际上不仅仅是无敌，就算改了目标允许也不能被其他任何技能打中，驱散类除外。"
 
 [BUim]
 Bufftip=穿刺
@@ -156,7 +156,7 @@ Ubertip="增加地穴领主<AUts,DataC1>点的护甲并能将敌人<AUts,DataA1,
 Researchtip="学习尖刺外壳(|cffffcc00S|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="在地穴领主的身上形成一层带有尖刺的保护壳，增加其防御能力并能弹射敌人的近战攻击。|n|n|cffffcc00等级 1|r - 弹射<AUts,DataA1,%>%的伤害，增加<AUts,DataC1>点护甲。|n|cffffcc00等级 2|r -  弹射<AUts,DataA2,%>%的伤害，增加<AUts,DataC2>点护甲。|n|cffffcc00等级 3|r -  弹射<AUts,DataA3,%>%点的伤害，增加<AUts,DataC3>点护甲。"
 Researchhotkey=S
-YDWEtip="该技能的科技需求项无效。反射造成法术攻击，防御伤害(魔法伤害)。反射的是原始攻击数值"
+YDWEtip="该技能的科技需求项无效。反射造成法术攻击，防御伤害(魔法伤害)。反射的是原始攻击数值。不能改魔法效果"
 
 
 // Carrion Beetles
@@ -509,7 +509,7 @@ Ubertip="增加周围友军单位<AUau,DataA1,%>%的移动速度和生命恢复�
 Researchtip="学习邪恶光环(|cffffcc00U|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="增加周围友军单位的移动速度和生命恢复速度。|n|n|cffffcc00等级 1|r - 增加<AUau,DataA1,%>%的移动速度和小幅度的生命恢复速度。|n|cffffcc00等级 2|r - 增加<AUau,DataA2,%>%的移动速度和中等幅度的生命恢复速度。|n|cffffcc00等级 3|r - 增加<AUau,DataA3,%>%的移动速度和大幅度的生命恢复速度。"
 Researchhotkey=U
-YDWEtip="魔法效果不同的同种光环可以叠加"
+YDWEtip="魔法效果不同的同种光环可以叠加，百分比恢复时会以获得魔法效果时的生命上限作为标准，即使在这之后最大生命大幅变动也不会改恢复速度。"
 
 [BUau]
 Bufftip=邪恶光环
@@ -552,7 +552,7 @@ Hotkey=C
 Researchtip="学习腐臭蜂群(|cffffcc00C|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="放出一群蝙蝠和昆虫对一线上的敌人造成一定的伤害。|n|n|cffffcc00等级 1|r - 对每个单位造成<AUcs,DataA1>点的伤害。|n|cffffcc00等级 2|r - 对每个单位造成<AUcs,DataA2>点的伤害。|n|cffffcc00等级 3|r - 对每个单位造成<AUcs,DataA3>点的伤害。"
 Researchhotkey=C
-YDWEtip="该技能不会对友军生效，造成法术攻击，音速伤害(魔法伤害)"
+YDWEtip="该技能不会对友军生效，造成法术攻击，音速伤害(魔法伤害)。命中特效只能改原版技能的，自建的修改无效。"
 
 // Sleep
 [AUsl]
@@ -563,6 +563,7 @@ Hotkey=E
 Researchtip="学习睡眠(|cffffcc00E|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="使目标单位处于睡眠状态。该单位被攻击以后会自动醒来。|n|n|cffffcc00等级 1|r -<AUsl,Dur1>秒的睡眠时间，消耗<AUsl,Cost1>点魔法。|n|cffffcc00等级 2|r -<AUsl,Dur2>秒的睡眠时间，消耗<AUsl,Cost2>点魔法。|n|cffffcc00等级 3|r -<AUsl,Dur3>秒的睡眠时间，消耗<AUsl,Cost3>点魔法。"
 Researchhotkey=E
+YDWEtip="单位无敌期间实际上不仅仅是无敌，就算改了目标允许也不能被其他任何技能打中，驱散类除外。"
 
 [BUsl]
 Bufftip=睡眠
@@ -591,7 +592,7 @@ Hotkey=N
 Researchtip="学习霜冻新星(|cffffcc00N|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="能对敌人进行一轮冰冻攻击，对其造成一定伤害并使其减速。|n|n|cffffcc00等级 1|r -<AUfn,DataB1>点常规伤害，<AUfn,DataA1>点新星伤害。|n|cffffcc00等级 2|r -<AUfn,DataB2>点常规伤害，<AUfn,DataA2>点新星伤害。|n|cffffcc00等级 3|r -<AUfn,DataB3>点常规伤害，<AUfn,DataA3>点新星伤害。"
 Researchhotkey=N
-YDWEtip="造成法术攻击，冰冻伤害(魔法伤害)，减速数值可以在游戏平衡性常数中修改"
+YDWEtip="造成法术攻击，冰冻伤害(魔法伤害)，减速数值可以在游戏平衡性常数中修改。不能攻击友方，而且必定会攻击敌人，目标允许只是决定这个技能能点在哪些单位身上。"
 
 // Frost Armor
 [AUfa]

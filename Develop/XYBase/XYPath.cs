@@ -29,8 +29,6 @@ namespace XYBase
 
             public static string Source = Core + @"\source";
             public static string SourceJass = Source + @"\jass";
-            public static string SourceMpq = Source + @"\mpq";
-            public static string SourceMpqUnits = SourceMpq + @"\units";
             public static string SourcePlugin = Source + @"\plugin";
             public static string SourceScript = Source + @"\script";
             public static string SourceUi = Source + @"\ui";

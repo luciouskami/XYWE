@@ -199,6 +199,12 @@ Targetattach=origin
 Effectart=Abilities\Spells\Undead\DeathPact\DeathPactTarget.mdl
 Animnames=spell,channel
 
+[WMRu]
+Art=ReplaceableTextures\CommandButtons\BTNForceOfNature.blp
+ResearchArt=ReplaceableTextures\CommandButtons\BTNForceOfNature.blp
+Buttonpos=2,1
+Order=channel
+Animnames=spell,channel
 //orc campaign hero stuff
 
 // War Stomp (Cairn)

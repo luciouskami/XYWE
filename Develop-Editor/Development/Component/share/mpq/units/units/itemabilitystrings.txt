@@ -193,6 +193,7 @@ YDWEtip="命令ID是852270"
 // continuous Mana regeneration (ring)
 [AIrm]
 Name=能增加魔法恢复速度的物品
+YDWEtip="绑定的模型只有在不满魔的时候才会有效，满状态之后模型播放death动作然后消失。"
 
 [AIfi]
 Name=霹雳闪电物品
@@ -391,6 +392,7 @@ EditorSuffix=(最小的)
 // regen life
 [Arel]
 Name=提高英雄生命值恢复速度的物品
+YDWEtip="绑定的模型只有在不满血的时候才会有效，满状态之后模型播放death动作然后消失。"
 
 // anti-magic shield
 [Aami]
@@ -585,6 +587,7 @@ EditorSuffix=(较大的)
 [Arll]
 Name=提高英雄生命值恢复速度的物品
 EditorSuffix=(较小的)
+YDWEtip="绑定的模型只有在不满血的时候才会有效，满状态之后模型播放death动作然后消失。"
 
 [AIh1]
 Name=具有医疗效果的物品
@@ -629,6 +632,7 @@ YDWEtip="命令ID是852276"
 
 [AIrn]
 EditorSuffix=(较小的)
+YDWEtip="绑定的模型只有在不满魔的时候才会有效，满状态之后模型播放death动作然后消失。"
 
 [AIad]
 EditorSuffix=(物品)

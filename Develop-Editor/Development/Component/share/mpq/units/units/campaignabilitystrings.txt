@@ -200,6 +200,9 @@ Ubertip="通向强大的守卫魔法力量。"
 Hotkey=C
 YDWEtip="可作为大多数主动技能的模板，可以被魔法护盾护身符抵挡"
 
+[WMRu]
+Name=冲锋
+YDWEtip="图标和文本必须自己改一遍，否则无效！"
 //orc campaign abilities
 
 // Summon Quilbeast (Rexxar)
@@ -330,6 +333,7 @@ Researchtip="学习妖术(|cffffcc00X|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="将敌方某个单位变成一种随机的小动物。|n|n|cffffcc00等级 1|r - 消耗<ANhx,Cost1>点魔法，持续<ANhx,Dur1>秒。|n|cffffcc00等级 2|r - 消耗<ANhx,Cost2>点魔法，持续<ANhx,Dur2>秒。|n|cffffcc00等级 3|r - 消耗<ANhx,Cost3>点魔法，持续<ANhx,Dur3>秒。|n|cffffcc00等级 4|r - 消耗<ANhx,Cost4>点魔法，持续<ANhx,Dur4>秒。"
 Researchhotkey=X
 EditorSuffix=(洛克汗)
+YDWEtip="对已经被变形的单位释放不能改变被变形的单位类型，只能重新刷新持续时间。"
 
 // Serpent Ward
 [Arsw]

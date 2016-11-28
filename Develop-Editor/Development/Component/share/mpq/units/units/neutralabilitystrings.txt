@@ -89,6 +89,7 @@ Hotkey=F
 Researchtip="(|cffffcc00F|r)学习口袋工厂 - [|cffffcc00等级 %d|r]"
 Researchubertip="建造一座能自动生成地精的工厂。这些地精都是人工地精。它们是强大的攻击者，在阵亡之后还能发生爆炸从而对周围的造成一定的伤害。|n|n|cffffcc00等级 1|r – 爆炸具有<Asdg,DataB1> 攻击力。|n|cffffcc00等级 2|r – 爆炸具有<Asd2,DataB1> 攻击力。|n|cffffcc00等级 3|r – 爆炸具有<Asd3,DataB1> 攻击力。|n工厂持续<ANsy,Dur3> 秒。"
 Researchhotkey=F
+YDWEtip="单位死亡的时候也有效。"
 
 // Pocket Factory
 [ANs1]
@@ -100,6 +101,7 @@ Researchtip="(|cffffcc00F|r)学习口袋工厂 - [|cffffcc00等级 %d|r]"
 Researchubertip="建造一座能自动生成地精的工厂。这些地精都是人工地精。它们是强大的攻击者，在阵亡之后还能发生爆炸从而对周围的造成一定的伤害。|n|n|cffffcc00等级 1|r – 爆炸具有<Asdg,DataB1> 攻击力。|n|cffffcc00等级 2|r – 爆炸具有<Asd2,DataB1> 攻击力。|n|cffffcc00等级 3|r – 爆炸具有<Asd3,DataB1> 攻击力。|n工厂持续<ANs1,Dur3> 秒。"
 Researchhotkey=F// Pocket Factory
 EditorSuffix= (Upgrade 1)
+YDWEtip="单位死亡的时候也有效。"
 
 [ANs2]
 Name=口袋工厂
@@ -110,6 +112,7 @@ Researchtip=" (|cffffcc00F|r)学习口袋工厂 - [|cffffcc00等级 %d|r]"
 Researchubertip="建造一座能自动生成地精的工厂。这些地精都是人工地精。它们是强大的攻击者，在阵亡之后还能发生爆炸从而对周围的造成一定的伤害。|n|n|cffffcc00等级 1|r – 爆炸具有<Asdg,DataB1> 攻击力。|n|cffffcc00等级 2|r – 爆炸具有<Asd2,DataB1> 攻击力。|n|cffffcc00等级 3|r – 爆炸具有<Asd3,DataB1> 攻击力。|n工厂持续<ANs2,Dur3> 秒。"
 Researchhotkey=F
 EditorSuffix= (Upgrade 2)
+YDWEtip="单位死亡的时候也有效。"
 
 // Pocket Factory
 [ANs3]
@@ -121,6 +124,7 @@ Researchtip=" (|cffffcc00F|r)学习口袋工厂 - [|cffffcc00等级 %d|r]"
 Researchubertip="建造一座能自动生成地精的工厂。这些地精都是人工的地精。它们是强大的攻击者，在阵亡之后还能发生爆炸从而对周围的造成一定的伤害。|n|n|cffffcc00等级 1|r – 爆炸具有<Asdg,DataB1> 攻击力。|n|cffffcc00等级 2|r – 爆炸具有<Asd2,DataB1> 攻击力。|n|cffffcc00等级 3|r – 爆炸具有<Asd3,DataB1> 攻击力。|n工厂持续<ANs3,Dur3> 秒。"
 Researchhotkey=F
 EditorSuffix= (Upgrade 3)
+YDWEtip="单位死亡的时候也有效。"
 
 [BNfy]
 Bufftip=口袋工厂
@@ -290,6 +294,7 @@ Name=工厂
 Tip="工厂"
 Ubertip="工厂."
 Hotkey=
+YDWEtip="单位死亡的时候也有效。"
 
 [ANf1]
 Name=工厂
@@ -441,7 +446,7 @@ YDWEtip="造成法术攻击，力量伤害(魔法伤害)"
 [Atsp]
 Name=龙卷旋风
 EditorSuffix= (龙卷风)
-YDWEtip="该技能能吹起附近的单位"
+YDWEtip="该技能能吹起附近的单位。空中时间是指同一个单位被这个技能2次命中的间隔。"
 
 [Atwa]
 Name=龙卷风漫步者
@@ -503,7 +508,7 @@ EditorSuffix= (中立敌对)
 Tip=魔法吸吮(|cffffcc00N|r) 
 Ubertip="从一个敌人身上吸收魔法能量给血魔法师，每秒吸取<ACsm,DataB1>点魔法值。|n持续<ACsm,Dur1>秒。"
 Hotkey=N
-YDWEtip="吸取生命部分造成法术攻击，魔法伤害。能否向友军转移魔法和生命取决于游戏平衡性常数"
+YDWEtip="吸取生命部分造成法术攻击，魔法伤害。能否向友军转移魔法和生命取决于游戏平衡性常数。汲取超过生命魔法上限后单位的生命魔法恢复效果将全部被取消，不会因为回魔回血改变数字，超过后将应用技能的奖励衰减一项，每秒失去与该项同等数值的生命或魔法，通过汲取额外获得生命和魔法不能超过最大生命×奖励参数。"
 
 // Devour Magic
 [ACde]
@@ -549,7 +554,7 @@ Hotkey=F
 Researchtip=学习火焰雨(|cffffcc00F|r) - [|cffffcc00等级 %d|r]
 Researchhotkey=F
 Researchubertip="召唤来一阵阵的火焰雨从天而降从而对一定范围内的敌人造成伤害，每阵火焰雨在对敌人造成初始伤害之后，在随后的<ANrf,Dur1>秒内还会对其造成持续性的伤害。|n|n|cffffcc00等级 1|r -<ANrf,DataB1>点伤害，<ANrf,DataA1>阵火焰雨，每秒<ANrf,DataE1>点伤害。|n|cffffcc00等级 2|r -<ANrf,DataB2>点伤害，<ANrf,DataA2>阵火焰雨，每秒<ANrf,DataE2>点伤害。|n|cffffcc00等级 3|r -<ANrf,DataB3>点伤害，<ANrf,DataA3>阵火焰雨，每秒<ANrf,DataE1>点伤害。"
-YDWEtip="造成法术攻击，火焰伤害(魔法伤害)"
+YDWEtip="造成法术攻击，火焰伤害(魔法伤害)。这技能第一波伤害有0.9秒延迟，第一波伤害到第二波伤害的间隔为魔法释放时间，技能的魔法效果可以如同光环一样的规则叠加"
 
 [BNrd]
 Bufftip=火焰雨
@@ -562,7 +567,7 @@ EditorSuffix= (中立敌对 1)
 Tip=火焰雨(|cffffcc00F|r)
 Ubertip="召唤出一阵阵的火焰雨来对一定区域内的敌人造成伤害。每阵火焰雨能造成<ACrg,DataB1>点的初始伤害。随后在<ACrg,Dur1>秒内能造成每秒<ACrg,DataE1>点的伤害。|n持续<ACrg,DataA1>阵。"
 Hotkey=F
-YDWEtip="造成法术攻击，火焰伤害(魔法伤害)"
+YDWEtip="造成法术攻击，火焰伤害(魔法伤害)。这个技能第一波伤害有0.9秒延迟，第一波伤害到第二波伤害的间隔为魔法释放时间，技能的魔法效果可以如同光环一样的规则叠加"
 
 // Frost Arrows
 [ANfa]
@@ -717,7 +722,7 @@ Hotkey=D
 Researchtip="学习生命汲取(|cffffcc00D|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="汲取目标单位一定点数的生命值并将其给予黑暗游侠。|n持续<ANdr,Dur1>秒。|n|n|cffffcc00等级 1|r - 每秒汲取<ANdr,DataA1>点。|n|cffffcc00等级 2|r - 每秒汲取<ANdr,DataA2>点。|n|cffffcc00等级 3|r - 每秒汲取<ANdr,DataA3>点。 " 
 Researchhotkey=D
-YDWEtip="吸取生命部分造成法术攻击，魔法伤害。能否向友军转移魔法和生命取决于游戏平衡性常数"
+YDWEtip="吸取生命部分造成法术攻击，魔法伤害。能否向友军转移魔法和生命取决于游戏平衡性常数。汲取超过生命魔法上限后单位的生命魔法恢复效果将全部被取消，不会因为回魔回血改变数字，超过后将应用技能的奖励衰减一项，每秒失去与该项同等数值的生命或魔法，通过汲取额外获得生命和魔法不能超过最大生命×奖励参数。"
 
 // Life Drain (Creep)
 [ACdr]
@@ -726,7 +731,7 @@ EditorSuffix= (中立敌对)
 Tip=生命汲取(|cffffcc00R|r) 
 Ubertip="汲取目标单位一定点数的生命值并将其给予黑暗游侠<ACdr,DataA1>生命值/秒。|n持续<ACdr,Dur1>秒。"
 Hotkey=R
-YDWEtip="吸取生命部分造成法术攻击，魔法伤害。能否向友军转移魔法和生命取决于游戏平衡性常数"
+YDWEtip="吸取生命部分造成法术攻击，魔法伤害。能否向友军转移魔法和生命取决于游戏平衡性常数。汲取超过生命魔法上限后单位的生命魔法恢复效果将全部被取消，不会因为回魔回血改变数字，超过后将应用技能的奖励衰减一项，每秒失去与该项同等数值的生命或魔法，通过汲取额外获得生命和魔法不能超过最大生命×奖励参数。"
 
 // Breath of Fire
 [ANbf]
@@ -824,6 +829,7 @@ EditorSuffix= (中立敌对)
 Tip=妖术(|cffffcc00X|r)
 Ubertip="在<AChx,Dur1>秒内将敌方的某个单位变成某种小动物。"
 Hotkey=X
+YDWEtip="对已经被变形的单位释放不能改变被变形的单位类型，只能重新刷新持续时间。"
 
 // Entangling Roots Seaweed Version (Creep)
 [Aenw]
@@ -850,7 +856,7 @@ EditorSuffix= (中立敌对)
 Tip=沉默魔法(|cffffcc00E|r)
 Ubertip="在<ACsi,Dur1>秒内阻止一定区域内所有敌人施放魔法。"
 Hotkey=E
-YDWEtip="如果单位没有被沉默魔法技能禁止其中的某项能力，也不会受到减速效果的影响。比如禁止魔法的沉默作用于无魔法技能的单位时无效果。"
+YDWEtip="如果单位没有被沉默魔法技能禁止其中的某项能力，也不会受到减速效果的影响。比如禁止魔法的沉默作用于无魔法技能的单位时无效果。降低速度的两项实际上为增加速度"
 
 
 // Mana Shield(Creep)
@@ -927,7 +933,7 @@ EditorSuffix= (中立敌对)
 Tip=穿刺(|cffffcc00E|r)
 Ubertip="震击地面，发出一道直线力量之波，造成<ACmp,DataA1>点伤害力，并将敌地面单位抛入空中，使其晕眩<ACmp,Dur1>秒。"
 Hotkey=E
-YDWEtip="造成法术攻击，力量伤害(魔法伤害)。对被缠绕住的单位无效。对飞行单位无效。"
+YDWEtip="造成法术攻击，力量伤害(魔法伤害)。对被缠绕住的单位无效。对飞行单位无效。单位无敌期间实际上不仅仅是无敌，就算改了目标允许也不能被其他任何技能打中，驱散类除外。"
 
 // Inventory
 [AInv]
@@ -1016,7 +1022,7 @@ Hotkey=E
 Researchtip="学习沉默魔法(|cffffcc00E|r) - [|cffffcc00等级 %d|r]"
 Researchubertip="阻止一定范围内的所有敌人施放魔法。魔法的效果范围和持续时间会随着等级的增加而增加。|n|n|cffffcc00等级 1|r - 小范围，持续<ANsi,Dur1>秒。|n|cffffcc00等级 2|r - 中等范围，持续<ANsi,Dur2>秒。|n|cffffcc00等级 3|r - 大型范围，持续<ANsi,Dur3>秒。"
 Researchhotkey=E
-YDWEtip="如果单位没有被沉默魔法技能禁止其中的某项能力，也不会受到减速效果的影响。比如禁止魔法的沉默作用于无魔法技能的单位时无效果。"
+YDWEtip="如果单位没有被沉默魔法技能禁止其中的某项能力，也不会受到减速效果的影响。比如禁止魔法的沉默作用于无魔法技能的单位时无效果。降低速度的两项实际上为增加速度"
 
 [BNsi]
 Bufftip=沉默魔法
@@ -1405,14 +1411,14 @@ Name=永久的献祭
 EditorSuffix= (中立敌对 1)
 Tip=永久的献祭
 Ubertip="对周围的敌人每秒造成<ANpi,DataA1>点伤害。"
-YDWEtip="造成法术攻击，火焰伤害(魔法伤害)"
+YDWEtip="造成法术攻击，火焰伤害(魔法伤害)。可以通过禁用解禁来让多等级的该技能有效。"
 
 [Apig]
 Name=永久的献祭
 EditorSuffix= (中立敌对 2)
 Tip=永久的献祭
 Ubertip="烧伤附近的敌人，造成每秒<Apig,DataA1>点伤害。
-YDWEtip="造成法术攻击，火焰伤害(魔法伤害)"
+YDWEtip="造成法术攻击，火焰伤害(魔法伤害)。可以通过禁用解禁来让多等级的该技能有效。"
 
 // bunker, orc burrow cargo hold
 [Abun]
@@ -1645,6 +1651,7 @@ YDWEtip="造成伤害是法术攻击，酸性伤害(加强伤害)。事实上伤
 // Creep Sleep
 [ACsp]
 Name=睡眠
+YDWEtip="单位无敌期间实际上不仅仅是无敌，就算改了目标允许也不能被其他任何技能打中，驱散类除外。"
 
 // demon reincarnation
 [ANrn]
@@ -1783,6 +1790,7 @@ YDWEtip="该技能使得单位可以隐身，但是该单位即使是飞行单�
 // permanent invis
 [Apiv]
 Name=永久的隐形
+YDWEtip="获得2个永久隐形时将变得和获得幽灵技能一样。"
 
 // return resources
 [Artn]
@@ -1879,7 +1887,7 @@ Name=辉煌光环
 Tip=辉煌光环
 Ubertip="增加周围单位每秒<ACba,DataA1>点的魔法恢复速度。"
 EditorSuffix=(中立敌对)
-YDWEtip="魔法效果不同的同种光环可以叠加"
+YDWEtip="魔法效果不同的同种光环可以叠加。百分比恢复时会以获得魔法效果时的魔法上限作为标准，即使在这之后最大魔法大幅变动也不会改恢复速度。"
 
 // bash
 [ACbh]
@@ -2035,6 +2043,7 @@ Tip=飓风(|cffffcc00C|r)
 Ubertip="将目标单位投掷到空中，使其不能移动，攻击和施放任何的魔法技能。而且其他单位也不能在这期间攻击它。|n持续<ACcy,Dur1>秒。"
 Hotkey=C
 EditorSuffix=(中立敌对)
+YDWEtip="单位无敌期间实际上不仅仅是无敌，就算改了目标允许也不能被其他任何技能打中，驱散类除外。"
 
 [SCc1]
 Name=飓风
@@ -2042,6 +2051,7 @@ Tip=飓风(|cffffcc00C|r)
 Ubertip="将目标单位投掷到空中，使其不能移动，攻击和施放任何的魔法技能。而且其他单位也不能在这期间攻击它。|n持续<SCc1,Dur1>秒。"
 Hotkey=C
 EditorSuffix=(赛纳留斯)
+YDWEtip="单位无敌期间实际上不仅仅是无敌，就算改了目标允许也不能被其他任何技能打中，驱散类除外。"
 
 // goblin mine damage aoe
 [Amnx]
@@ -2257,7 +2267,7 @@ Tip=霜冻新星(|cffffcc00N|r)
 Ubertip="用一阵霜冻来攻击目标单位，造成<ACfn,DataB1>点的常规伤害和<ACfn,DataA1>点的霜冻新星伤害。并在<ACfn,Dur1>秒内减慢被攻击单位的速度。"
 Hotkey=N
 EditorSuffix=(中立敌对)
-YDWEtip="造成法术攻击，冰冻伤害(魔法伤害)，减速数值可以在游戏平衡性常数中修改"
+YDWEtip="造成法术攻击，冰冻伤害(魔法伤害)，减速数值可以在游戏平衡性常数中修改，不能攻击友方，而且必定会攻击敌人，目标允许只是决定这个技能能点在哪些单位身上。"
 
 // archimonde's ghouls harvest lumber
 [Ahr2]
@@ -2383,6 +2393,7 @@ Tip=变形术(|cffffcc00O|r)
 Ubertip="使得敌人的一个单位变成一头小绵羊，保有原有的生命值和防御，但是会使其丧失攻击力。|n不能被用在英雄身上。|n持续<ACpy,Dur1>秒。"
 Hotkey=O
 EditorSuffix=(中立敌对)
+YDWEtip="对已经被变形的单位释放不能改变被变形的单位类型，只能重新刷新持续时间。"
 
 // possession
 [ACps]
@@ -2416,7 +2427,7 @@ EditorSuffix= (中立敌对 2)
 Tip=火焰雨(|cffffcc00F|r)
 Ubertip="召唤出一阵阵的火焰雨，每阵能造成<ACrf,DataB1>点的伤害。|n持续<ACrf,DataA1>阵。"
 Hotkey=F
-YDWEtip="造成法术攻击，火焰伤害(魔法伤害)"
+YDWEtip="造成法术攻击，火焰伤害(魔法伤害)。这个技能第一波伤害有0.9秒延迟，第一波伤害到第二波伤害的间隔为魔法释放时间，技能的魔法效果可以如同光环一样的规则叠加"
 
 // raise dead
 [ACrd]
@@ -2534,6 +2545,7 @@ Tip=睡眠(|cffffcc00L|r)
 Ubertip="让目标单位在<ACsl,Dur1>秒内处于睡眠状态。如果该单位遭到攻击就会自动醒来。"
 Hotkey=L
 EditorSuffix=(中立敌对)
+YDWEtip="单位无敌期间实际上不仅仅是无敌，就算改了目标允许也不能被其他任何技能打中，驱散类除外。"
 
 // slow
 [ACsw]
@@ -2553,7 +2565,7 @@ Name=邪恶光环
 Tip=邪恶光环
 Ubertip="提高周围单位<ACua,DataA1,%>%的移动速度和<ACua,DataB1,%>%的生命值恢复速度。"
 EditorSuffix=(中立敌对)
-YDWEtip="魔法效果不同的同种光环可以叠加"
+YDWEtip="魔法效果不同的同种光环可以叠加，百分比恢复时会以获得魔法效果时的魔法上限作为标准，即使在这之后最大魔法大幅变动也不会改恢复速度。"
 
 // unholy frenzy
 [ACuf]
