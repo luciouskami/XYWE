@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4835917A-18D1-4014-98A6-900B3999F99D}</ProjectGuid>
+    <ProjectGuid>{2AB650F0-F9BE-11E1-A868-43D82C9D5051}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>YDFont</RootNamespace>
   </PropertyGroup>
