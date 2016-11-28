@@ -14,7 +14,14 @@ namespace lua
 	template <>
 	int convert_to_lua(lua_State* L, const std::string& v)
 	{
-		lua_pushstring(L, v.c_str());
+		lua_pushlstring(L, v.data(), v.size());
+		return 1;
+	}
+
+	template <>
+	int convert_to_lua(lua_State* L, const std::string_view& v)
+	{
+		lua_pushlstring(L, v.data(), v.size());
 		return 1;
 	}
 

@@ -146,7 +146,7 @@ namespace warcraft3 { namespace lua_engine { namespace slk {
 			return 1;
 		}
 
-		return lua::convert_to_lua(L, it->second);
+		return lua::convert_to_lua(L, slk_manager::get(L)->convert_string(it->second.to_string()));
 	}
 
 	static int slk_table_pairs(lua_State* L)
