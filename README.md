@@ -32,8 +32,6 @@ Github: https://github.com/LazyKnightX
 Github Organization: https://github.com/XYWE  
 Website: https://wow9.org/xywe
 
----
-
 # What is "Xian Yu"?
 
 "Xian Yu" is pronunciation of "咸鱼" (Chinese word) which means "Salted Fish" in English.  
