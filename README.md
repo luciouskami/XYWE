@@ -9,13 +9,28 @@ Xian Yu World Editor (XYWE) is a user friendly World Editor mod. We optimize man
 在[项目维基](../../wiki)中查看项目结构与更多说明。  
 See project struct at [project wiki](../../wiki).
 
-# 开发环境介绍 | Introduction of Development Environment
+# LICENSE
 
-在目前XYWE的情况下，你必须保证电脑中同时拥有Visual Studio 2013和Visual Studio 2015来分别对编辑器内核和工具箱进行编译。  
-At current version of XYWE, you'll need both Visual Studio 2013 and Visual Studio 2015 to build Editor and Toolbox.
+Copyright 2016 Lazy Knight & Wow9.Org
 
-* 编辑器内核(Editor): ./Develop-Editor (Visual Studio 2013)
-* 工具箱(Toolbox): ./Develop - (Visual Studio 2015)
+Licensed under the Apache License, Version 2.0 (the "License");  
+you may not use this file except in compliance with the License.  
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software  
+distributed under the License is distributed on an "AS IS" BASIS,  
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+See the License for the specific language governing permissions and  
+limitations under the License.
+
+# Contact
+
+Email: i@lazyknight.com  
+Github: https://github.com/LazyKnightX  
+Github Organization: https://github.com/XYWE  
+Website: https://wow9.org/xywe
 
 ---
 
