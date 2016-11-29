@@ -5,10 +5,10 @@ local configuration = arg[2] or 'Debug'
 local dev = arg[4] ~= nil and arg[4] == 'Dev'
 local update = arg[4] ~= nil and arg[4] == 'Update'
 
+local oldprint = print
 if type(arg[3]) == 'string' then
 	local out = io.open(arg[3], 'w')
 	if out then
-		local oldprint = print
 		function print(...)
 			out:write(table.concat(table.pack(...), '\t') .. '\n')
 			oldprint(...)
@@ -172,17 +172,6 @@ zip(path.Development / 'Core' / 'DuiLib' / 'Resources', path.Result / 'bin' / 's
 		return file:string():lower() ~= 'thumbs.db'
 	end
 )
-
--- Step.7 复制到publish
-if not update then
-	local ignore = { ['.pdb'] = true, ['.exp'] = true, ['.ilk'] = true, ['.aps'] = true, ['.lib'] = true }
-	copy_directory(path.Result, path.Build / 'publish' / configuration, 
-		function(path)
-			local ext = path:extension():string():lower()
-			return not ignore[ext]
-		end
-	)
-end
 
 oklock:lock()
 
