@@ -17,3 +17,7 @@
 Development/Editor/Component/jass/japi/YDWEJapiOther.j
 !Development/Component/bin
 !Build/lua/luabuild/bin
+!OpenSource/jpeg/build
+!OpenSource/png/build
+!OpenSource/zlib/build
+!ThirdParty/RadGameTools/MSS/6.1a/Binaries/x64
