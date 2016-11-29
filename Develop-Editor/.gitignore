@@ -15,3 +15,5 @@
 *.DS_Store
 *.vs/
 Development/Editor/Component/jass/japi/YDWEJapiOther.j
+!Development/Component/bin
+!Build/lua/luabuild/bin
