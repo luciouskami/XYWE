@@ -46,7 +46,7 @@
 			_IsUnitDetected_Defaults=GetTriggerUnit,Player00
 			_IsUnitDetected_Category=TC_UNIT
 		IsUnitType=0,1,boolean,unit,unittype
-			_IsUnitType_Defaults=GetTriggerUnit,UnitTypeStructure
+			_IsUnitType_Defaults=GetTriggerUnit,UnitTypeHero
 			_IsUnitType_Category=TC_UNIT
 		IsUnitRace=0,1,boolean,unit,race
 			_IsUnitRace_Defaults=GetTriggerUnit,RaceHuman
@@ -1986,7 +1986,7 @@
 		GetLastMovedItemInItemSlot=0,1,item
 			_GetLastMovedItemInItemSlot_Category=TC_ITEM
 		GetLastCombinedItem=0,1,item
-			_YDWEGetLastCombinedItem_Category=TC_ITEM
+			_GetLastCombinedItem_Category=TC_ITEM
 		UnitDropItem=0,1,item,unit,itemcode
 			_UnitDropItem_Defaults=GetTriggerUnit,texp
 			_UnitDropItem_Limits=_,_,_,_
