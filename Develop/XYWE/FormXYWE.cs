@@ -37,7 +37,7 @@ namespace XYWE
         void FormXYWE_Load(object sender, EventArgs e)
         {
             LlVersion.Text = XYInfo.Version;
-            cbEnableRSJBWETextEditor15_0.Checked = XYPlugin.RSJB_WE_TextEditor_15_0.GetEnableState();
+            cbEnableRSJBWETextEditor16_0.Checked = XYPlugin.RSJB_WE_TextEditor_16_0.GetEnableState();
             XYTip.UpdateTipAsync();
             cbUI.SelectedItem = XYConfig.GetCurrentStandardUI();
             FormClosing += FormXYWE_FormClosing;
@@ -45,7 +45,7 @@ namespace XYWE
 
         private void FormXYWE_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (XYPlugin.RSJB_WE_TextEditor_15_0.IsWorking())
+            if (XYPlugin.RSJB_WE_TextEditor_16_0.IsWorking())
             {
                 new FormXYDialogConfirm(
                     XYDialogType.ExitToolBoxWhilePluginWorking,
@@ -86,7 +86,7 @@ namespace XYWE
             XYConfig.RefreshConfig();
 
             // Execute Plugin
-            XYPlugin.RSJB_WE_TextEditor_15_0.SafeStart();
+            XYPlugin.RSJB_WE_TextEditor_16_0.SafeStart();
 
             // Recover Text
             BtnStartXYWE.Enabled = true;
@@ -147,14 +147,18 @@ namespace XYWE
 
         }
 
-        private void cbEnableRSJBWETextEditor15_0_CheckedChanged(object sender, EventArgs e)
+        private void cbEnableRSJBWETextEditor16_0_CheckedChanged(object sender, EventArgs e)
         {
-            XYPlugin.RSJB_WE_TextEditor_15_0.SetEnableState(cbEnableRSJBWETextEditor15_0.Checked);
+            XYPlugin.RSJB_WE_TextEditor_16_0.SetEnableState(cbEnableRSJBWETextEditor16_0.Checked);
+            if (!cbEnableRSJBWETextEditor16_0.Checked)
+            {
+                XYPlugin.RSJB_WE_TextEditor_16_0.KillAll();
+            }
         }
 
         private void btnConfigRSJBWETextEditor15_0_Click(object sender, EventArgs e)
         {
-            XYPlugin.RSJB_WE_TextEditor_15_0.OpenConfigFile();
+            XYPlugin.RSJB_WE_TextEditor_16_0.OpenConfigFile();
         }
     }
 }

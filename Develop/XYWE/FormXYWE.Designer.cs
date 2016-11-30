@@ -36,7 +36,7 @@
             this.btnPatchUI = new System.Windows.Forms.Button();
             this.btnLibrary = new System.Windows.Forms.Button();
             this.btnCreateMap = new System.Windows.Forms.Button();
-            this.cbEnableRSJBWETextEditor15_0 = new System.Windows.Forms.CheckBox();
+            this.cbEnableRSJBWETextEditor16_0 = new System.Windows.Forms.CheckBox();
             this.btnConfigRSJBWETextEditor15_0 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -174,16 +174,16 @@
             this.btnCreateMap.UseVisualStyleBackColor = true;
             this.btnCreateMap.Click += new System.EventHandler(this.btnCreateMap_Click);
             // 
-            // cbEnableRSJBWETextEditor15_0
+            // cbEnableRSJBWETextEditor16_0
             // 
-            this.cbEnableRSJBWETextEditor15_0.AutoSize = true;
-            this.cbEnableRSJBWETextEditor15_0.Location = new System.Drawing.Point(14, 39);
-            this.cbEnableRSJBWETextEditor15_0.Name = "cbEnableRSJBWETextEditor15_0";
-            this.cbEnableRSJBWETextEditor15_0.Size = new System.Drawing.Size(192, 16);
-            this.cbEnableRSJBWETextEditor15_0.TabIndex = 13;
-            this.cbEnableRSJBWETextEditor15_0.Text = "启用人生脚步WE文本修改器15.0";
-            this.cbEnableRSJBWETextEditor15_0.UseVisualStyleBackColor = true;
-            this.cbEnableRSJBWETextEditor15_0.CheckedChanged += new System.EventHandler(this.cbEnableRSJBWETextEditor15_0_CheckedChanged);
+            this.cbEnableRSJBWETextEditor16_0.AutoSize = true;
+            this.cbEnableRSJBWETextEditor16_0.Location = new System.Drawing.Point(14, 39);
+            this.cbEnableRSJBWETextEditor16_0.Name = "cbEnableRSJBWETextEditor16_0";
+            this.cbEnableRSJBWETextEditor16_0.Size = new System.Drawing.Size(192, 16);
+            this.cbEnableRSJBWETextEditor16_0.TabIndex = 13;
+            this.cbEnableRSJBWETextEditor16_0.Text = "启用人生脚步WE文本修改器16.0";
+            this.cbEnableRSJBWETextEditor16_0.UseVisualStyleBackColor = true;
+            this.cbEnableRSJBWETextEditor16_0.CheckedChanged += new System.EventHandler(this.cbEnableRSJBWETextEditor16_0_CheckedChanged);
             // 
             // btnConfigRSJBWETextEditor15_0
             // 
@@ -201,7 +201,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 189);
             this.Controls.Add(this.btnConfigRSJBWETextEditor15_0);
-            this.Controls.Add(this.cbEnableRSJBWETextEditor15_0);
+            this.Controls.Add(this.cbEnableRSJBWETextEditor16_0);
             this.Controls.Add(this.btnCreateMap);
             this.Controls.Add(this.btnLibrary);
             this.Controls.Add(this.btnPatchUI);
@@ -240,7 +240,7 @@
         private System.Windows.Forms.Button btnPatchUI;
         private System.Windows.Forms.Button btnLibrary;
         private System.Windows.Forms.Button btnCreateMap;
-        private System.Windows.Forms.CheckBox cbEnableRSJBWETextEditor15_0;
+        private System.Windows.Forms.CheckBox cbEnableRSJBWETextEditor16_0;
         private System.Windows.Forms.Button btnConfigRSJBWETextEditor15_0;
     }
 }

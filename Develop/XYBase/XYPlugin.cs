@@ -13,12 +13,12 @@ namespace XYBase
     {
         public static void KillAll()
         {
-            RSJB_WE_TextEditor_15_0.KillAll();
+            RSJB_WE_TextEditor_16_0.KillAll();
         }
-        public static class RSJB_WE_TextEditor_15_0
+        public static class RSJB_WE_TextEditor_16_0
         {
-            private const string FileNameWithoutExtension = "人生脚步WE文本修改器15.0";
-            private const string PluginId = "RSJB_WE_TriggerEditor_15_0";
+            public const string FileNameWithoutExtension = "人生脚步WE文本修改器16.0";
+            private const string PluginId = "RSJB_WE_TriggerEditor_16_0";
             public static Process[] GetAllProcess()
             {
                 return Process.GetProcessesByName(FileNameWithoutExtension);
@@ -41,7 +41,7 @@ namespace XYBase
             public static void SafeStart()
             {
                 KillAll();
-                Process.Start(XYPath.File.Plugin.RSJB_WE_TextEditor_15_0.Executor);
+                Process.Start(XYPath.File.Plugin.RSJB_WE_TextEditor_16_0.Executor);
             }
             public static void SetEnableState(bool state)
             {
@@ -53,7 +53,7 @@ namespace XYBase
             }
             public static void OpenConfigFile()
             {
-                Process.Start(XYPath.File.Plugin.RSJB_WE_TextEditor_15_0.IniConfig);
+                Process.Start(XYPath.File.Plugin.RSJB_WE_TextEditor_16_0.IniConfig);
             }
         }
     }

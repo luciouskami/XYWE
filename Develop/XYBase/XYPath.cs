@@ -39,7 +39,7 @@ namespace XYBase
             public static string DataUpdate = Data + @"\update";
 
             public static string Plugin = Core + @"\plugin";
-            public static string Plugin_RSJB_WE_TextEditor_15_0 = Plugin + @"\人生脚步WE文本修改器15.0";
+            public static string Plugin_RSJB_WE_TextEditor_16_0 = Plugin + @"\人生脚步WE文本修改器16.0";
         }
         public static class File
         {
@@ -59,10 +59,10 @@ namespace XYBase
 
             public static class Plugin
             {
-                public static class RSJB_WE_TextEditor_15_0
+                public static class RSJB_WE_TextEditor_16_0
                 {
-                    public static string Executor = Dir.Plugin_RSJB_WE_TextEditor_15_0 + @"\人生脚步WE文本修改器15.0.exe";
-                    public static string IniConfig = Dir.Plugin_RSJB_WE_TextEditor_15_0 + @"\功能配置.ini";
+                    public static string Executor = Dir.Plugin_RSJB_WE_TextEditor_16_0 + @"\人生脚步WE文本修改器16.0.exe";
+                    public static string IniConfig = Dir.Plugin_RSJB_WE_TextEditor_16_0 + @"\功能配置.ini";
                 }
             }
 
