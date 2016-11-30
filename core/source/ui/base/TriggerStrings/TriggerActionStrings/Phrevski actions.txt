@@ -27,6 +27,6 @@ AutoRemovePowerupItem="文明 - 开启自动排除书类泄露 [W]"
 WMAroundSystem="文明 - 环绕单位系统 [W]"
 	WMAroundSystem="文明 - 中心单位",~u,"环绕单位类型(马甲)",~m,"长轴",~a,"短轴",~b,"Z轴偏移高度",~z,"长轴与X轴夹角",~d1,"长轴与水平面夹角",~d2,"短轴与水平面夹角",~d3,".环绕周期",~T,"环绕持续时间",~t
 	WMAroundSystemHint="原系统:永恒的灌水帝.若长轴=短轴,即为半径为长轴的圆.Z轴偏移,如此值为200,则环绕中心为中心单位头顶200处.长轴与X轴夹角,若此值填-1，则始终为中心单位面向角度.环绕持续时间0,则永久环绕."
-SetJassLocalVariables="设置真局部变量 [W]"
+SetJassLocalVariables="设置局部变量 [W]"
 	SetJassLocalVariables="设置 {",~类型,"}",~变量名," = ",~值
 	SetJassLocalVariablesHint="(不推荐新手使用)与YD逆天的模拟局部变量不同，这是封装的原版Jass局部变量，因此不与逆天局部变量互通。使用完成后会自动set null，但具体的排泄和传参需要自己完成。用法与JASS中的局部变量完全相同。"

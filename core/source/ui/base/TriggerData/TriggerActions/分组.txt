@@ -485,38 +485,38 @@
 // D 单位
 	// 创建
 		CreateNUnitsAtLoc=0,integer,unitcode,player,location,degree
-			_CreateNUnitsAtLoc_Defaults=1,hfoo,Player00,_,RealUnitFacing
+			_CreateNUnitsAtLoc_Defaults=1,hfoo,GetTriggerPlayer,GetRectCenter,RealUnitFacing
 			_CreateNUnitsAtLoc_Limits=1,_,_,_,_,_,_,_,0,360
 			_CreateNUnitsAtLoc_Category=TC_UNIT
 		# CreateUnit=0,player,unitcode,real,real,degree
-			_ CreateUnit_Defaults=_,_,_,_,RealUnitFacing
+			_ CreateUnit_Defaults=GetTriggerPlayer,hfoo,_,_,RealUnitFacing
 			_ CreateUnit_Category=TC_UNIT
 		CreateNUnitsAtLocFacingLocBJ=0,integer,unitcode,player,location,location
-			_CreateNUnitsAtLocFacingLocBJ_Defaults=1,hfoo,Player00,_,_
+			_CreateNUnitsAtLocFacingLocBJ_Defaults=1,hfoo,GetTriggerPlayer,GetRectCenter,GetRectCenter
 			_CreateNUnitsAtLocFacingLocBJ_Limits=1,_,_,_,_,_,_,_,_,_
 			_CreateNUnitsAtLocFacingLocBJ_Category=TC_UNIT
 		# CreateUnitAtLoc=0,player,unitcode,location,real
-			_ CreateUnitAtLoc_Defaults=Player00,hfoo,_,0
+			_ CreateUnitAtLoc_Defaults=GetTriggerPlayer,hfoo,GetRectCenter,0
 			_ CreateUnitAtLoc_Category=TC_UNIT
 		CreateNUnitsAtLocEx=0,integer,unitcode,player,LocEx,degree
-			_CreateNUnitsAtLocEx_Defaults=1,hfoo,Player00,_,RealUnitFacing
+			_CreateNUnitsAtLocEx_Defaults=1,hfoo,GetTriggerPlayer,GetRectCenterEx,RealUnitFacing
 			_CreateNUnitsAtLocEx_Limits=1,_,_,_,_,_,_,_,0,360
 			_CreateNUnitsAtLocEx_Category=TC_UNIT
 		unWECreateNUnitsAtRect=0,integer,unitcode,player,rect,degree
-			_unWECreateNUnitsAtRect_Defaults=1,hfoo,Player00,_,RealUnitFacing
+			_unWECreateNUnitsAtRect_Defaults=1,hfoo,GetTriggerPlayer,_,RealUnitFacing
 			_unWECreateNUnitsAtRect_Limits=1,_,_,_,_,_,_,_,_,_
 			_unWECreateNUnitsAtRect_Category=TC_UNIT
 		CreateCorpseLocBJ=0,unitcode,player,location
-			_CreateCorpseLocBJ_Defaults=hfoo,Player00,_
+			_CreateCorpseLocBJ_Defaults=hfoo,GetTriggerPlayer,GetRectCenter
 			_CreateCorpseLocBJ_Category=TC_UNIT
 		CreateCorpseLocBJEx=0,unitcode,player,LocEx
-			_CreateCorpseLocBJEx_Defaults=hfoo,Player00,_
+			_CreateCorpseLocBJEx_Defaults=hfoo,GetTriggerPlayer,GetRectCenterEx
 			_CreateCorpseLocBJEx_Category=TC_UNIT
 		CreateAssUnit=0,player,unitcode,real,real,real,abilcode,integer
-			_CreateAssUnit_Defaults=Player00,hfoo,0,0,3,_,1
+			_CreateAssUnit_Defaults=GetTriggerPlayer,hfoo,GetRectCenterX,GetRectCenterY,3,XYParam_AbilCode_Null,1
 			_CreateAssUnit_Category=TC_UNIT
 		CreatePermanentCorpseLocBJ=1,corpsetype,unitcode,player,location,degree
-			_CreatePermanentCorpseLocBJ_Defaults=CorpseTypeBone,hfoo,Player00,_,GetRandomDirectionDeg
+			_CreatePermanentCorpseLocBJ_Defaults=CorpseTypeBone,hfoo,GetTriggerPlayer,GetRectCenter,GetRandomDirectionDeg
 			_CreatePermanentCorpseLocBJ_Limits=_,_,_,_,_,_,_,_,0,360
 			_CreatePermanentCorpseLocBJ_Category=TC_UNIT
 	XYSplitLine_TriggerActions_D_Unit_1=0,nothing
@@ -627,7 +627,7 @@
 			_UnitPauseTimedLife_Defaults=GetTriggerUnit,PauseUnpauseOptionPause
 			_UnitPauseTimedLife_Category=TC_UNIT
 		UnitApplyTimedLife=1,unit,timedlifebuffcode,real
-			_UnitApplyTimedLife_Defaults=GetTriggerUnit,TimedLifeBuffCodeWaterElemental,60
+			_UnitApplyTimedLife_Defaults=GetLastCreatedUnit,TimedLifeBuffCodeWaterElemental,60
 			_UnitApplyTimedLife_Limits=_,_,_,_,0,_
 			_UnitApplyTimedLife_Category=TC_UNIT
 		SetUnitExplodedBJ=0,unit,explodedontoption
@@ -921,7 +921,7 @@
 			_UnitDamageTargetBJ_Defaults=GetTriggerUnit,GetTriggerUnit,500,AttackTypeNormal,DamageTypeNormal
 			_UnitDamageTargetBJ_Category=TC_UNIT
 		WMAOE=0,unit,real,real,real,real,isnotoption,isnotoption,attacktype,damagetype
-			_WMAOE_Defaults=GetTriggerUnit,0,0,300,300,_,_,_,_
+			_WMAOE_Defaults=GetTriggerUnit,0,0,300,300,IsNotIs,IsNotIs,AttackTypeChaos,DamageTypeNormal
 			_WMAOE_Category=TC_UNIT
 	XYSplitLine_TriggerActions_D_Unit_6=0,nothing
 		_XYSplitLine_TriggerActions_D_Unit_6_Category=TC_UNIT
@@ -969,7 +969,7 @@
 			_UnitPauseTimedLifeBJ_Defaults=PauseUnpauseOptionPause,GetTriggerUnit
 			_UnitPauseTimedLifeBJ_Category=TC_UNIT
 		UnitApplyTimedLifeBJ=1,real,timedlifebuffcode,unit
-			_UnitApplyTimedLifeBJ_Defaults=60,TimedLifeBuffCodeGeneric,GetTriggerUnit
+			_UnitApplyTimedLifeBJ_Defaults=60,TimedLifeBuffCodeGeneric,GetLastCreatedUnit
 			_UnitApplyTimedLifeBJ_Limits=0,_,_,_,_,_
 			_UnitApplyTimedLifeBJ_Category=TC_UNIT
 		UnitSuspendDecayBJ=0,suspendresumeoption,unit
@@ -1174,10 +1174,12 @@
 		_ShowUbersplatBJ_Category=TC_UBERSPLAT
 // D 点
 	MoveLocation=0,location,real,real
+		// TODO Make Default to Beyond Fate
 		_MoveLocation=_,0,0
 		_MoveLocation_Category=TC_LOCATION
 	RemoveLocation=0,location
-		_RemoveLocation_Defaults=
+		// TODO Make Default to Beyond Fate
+		_RemoveLocation_Defaults=_
 		_RemoveLocation_Category=TC_LOCATION
 // D 电影
 	ForceCinematicSubtitlesBJ=1,onoffoption
@@ -2282,6 +2284,10 @@
 		_PanCameraToTimed_Defaults=0,0,0
 		_PanCameraToTimed_Limits=_,_,_,_,0,_
 		_PanCameraToTimed_Category=TC_CAMERA
+	XYPanCameraToTimedForPlayer=0,player,real,real,real
+		_XYPanCameraToTimedForPlayer_Defaults=GetOwningPlayer,GetRectCenterX,GetRectCenterY,0
+		_XYPanCameraToTimedForPlayer_Limits=_,_,_,_,_,_,0,_
+		_XYPanCameraToTimedForPlayer_Category=TC_CAMERA
 	PanCameraToTimedLocForPlayer=0,player,location,real
 		_PanCameraToTimedLocForPlayer_Defaults=Player00,_,0
 		_PanCameraToTimedLocForPlayer_Limits=_,_,_,_,0,_
@@ -2593,11 +2599,15 @@
 		_unWECreateTextTagForDamage_Defaults=GetTriggerUnit,0,255,0,0
 		_unWECreateTextTagForDamage_Category=TC_TEXTTAG
 	CreateTextTagForPlayer=0,player,real,real,string,integer,integer,integer,integer,real,real,real,real,real,boolean
-		_CreateTextTagForPlayer_Defaults=Player00,0,0,_,255,255,255,255,10,0,0,0,3,false
+		_CreateTextTagForPlayer_Defaults=Player00,GetRectCenterX,GetRectCenterY,_,255,255,255,255,10,0,0,0,3,false
 		_CreateTextTagForPlayer_Limits=_,_,_,_,_,_,_,_,0,255,0,255,0,255,0,255,0,_,_,_,_,_,_,_,0,_,_,_
 		_CreateTextTagForPlayer_Category=TC_TEXTTAG
+	XYCreateTextTagForAll=0,real,real,string,integer,integer,integer,integer,real,real,real,real,real,boolean
+		_XYCreateTextTagForAll_Defaults=GetRectCenterX,GetRectCenterY,_,255,255,255,255,10,0,0,0,3,false
+		_XYCreateTextTagForAll_Limits=_,_,_,_,_,_,_,_,0,255,0,255,0,255,0,255,0,_,_,_,_,_,_,_,0,_,_,_
+		_XYCreateTextTagForAll_Category=TC_TEXTTAG
 	CreateTextTagLocBJ=1,StringExt,location,real,real,real,real,real,real
-		_CreateTextTagLocBJ_Defaults=_,_,0,10,100,100,100,0
+		_CreateTextTagLocBJ_Defaults=_,GetRectCenter,0,10,100,100,100,0
 		_CreateTextTagLocBJ_Limits=_,_,_,_,_,_,1,_,0,100,0,100,0,100,0,100
 		_CreateTextTagLocBJ_Category=TC_TEXTTAG
 	CreateTextTagUnitBJ=1,StringExt,unit,real,real,real,real,real,real
@@ -3214,13 +3224,13 @@
 		_EnumItemsInRectBJMultiple_Category=TC_ITEM
 		_EnumItemsInRectBJMultiple_ScriptName=EnumItemsInRectBJ
 	CreateItemLocEx=0,itemcode,LocEx
-		_CreateItemLocEx_Defaults=texp,_
+		_CreateItemLocEx_Defaults=texp,GetRectCenterEx
 		_CreateItemLocEx_Category=TC_ITEM
 	CreateItemLoc=0,itemcode,location
-		_CreateItemLoc_Defaults=texp,_
+		_CreateItemLoc_Defaults=texp,GetRectCenter
 		_CreateItemLoc_Category=TC_ITEM
 	CreateItem=0,itemcode,real,real
-		_CreateItem_Defaults=texp,_,_
+		_CreateItem_Defaults=texp,GetRectCenterX,GetRectCenterY
 		_CreateItem_Category=TC_ITEM
 	RemoveItem=0,item
 		_RemoveItem_Defaults=GetLastCreatedItem
@@ -3719,10 +3729,10 @@
 		XYSplitLine_TriggerActions_Y_Game_1=0,nothing
 			_XYSplitLine_TriggerActions_Y_Game_1_Category=TC_GAME
 	DisplayTextToPlayer=0,player,real,real,StringExt
-		_DisplayTextToPlayer_Defaults=Player00,0,0,_
+		_DisplayTextToPlayer_Defaults=GetOwningPlayer,0,0,_
 		_DisplayTextToPlayer_Category=TC_GAME
 	DisplayTimedTextToPlayer=0,player,real,real,real,StringExt
-		_DisplayTimedTextToPlayer_Defaults=Player00,0,0,30,_
+		_DisplayTimedTextToPlayer_Defaults=GetOwningPlayer,0,0,30,_
 		_DisplayTimedTextToPlayer_Category=TC_GAME
 	DisplayTextToForce=0,force,StringExt
 		_DisplayTextToForce_Defaults=GetPlayersAll,_

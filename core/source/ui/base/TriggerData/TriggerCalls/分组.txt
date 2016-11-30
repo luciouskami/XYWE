@@ -1,10 +1,10 @@
 // returns <ANY TYPE>
+	YDWEGetAnyTypeLocalVariable=0,1,AnyReturnType,scriptcode
+		_YDWEGetAnyTypeLocalVariable_Defaults=p
+		_YDWEGetAnyTypeLocalVariable_Category=TC_BEYONDFATE
 	YDWELoadAnyTypeDataByUserData=0,1,AnyReturnType,typename,Null,scriptcode
 		_YDWELoadAnyTypeDataByUserData_Defaults=_,_,_
 		_YDWELoadAnyTypeDataByUserData_Category=TC_BEYONDFATE
-	YDWEGetAnyTypeLocalVariable=0,1,AnyReturnType,scriptcode
-		_YDWEGetAnyTypeLocalVariable_Defaults=_
-		_YDWEGetAnyTypeLocalVariable_Category=TC_BEYONDFATE
 	YDWECustomScriptCode=0,1,AnyReturnType,scriptcode
 		_YDWECustomScriptCode_Defaults=_
 		_YDWECustomScriptCode_Category=TC_BEYONDFATE
@@ -2027,7 +2027,7 @@
 		_CreateItemPool_Category=TC_ITEMPOOL
 // returns itemtype
 	GetItemType=1,1,itemtype,item
-		_GetItemType_Defaults=GetLastCreatedItem
+		_GetItemType_Defaults=GetManipulatedItem
 		_GetItemType_Category=TC_ITEMTYPE
 // returns itemcode
 	YDWEGetItemIDByInteger=0,1,itemcode,integer,integer
@@ -2036,7 +2036,7 @@
 	YDWEGetItemIDByString=0,1,itemcode,string,string
 		_YDWEGetItemIDByString_Category=TC_RESTORE
 	GetItemTypeId=0,1,itemcode,item
-		_GetItemTypeId_Defaults=GetLastCreatedItem
+		_GetItemTypeId_Defaults=GetManipulatedItem
 		_GetItemTypeId_Category=TC_ITEMCODE
 	ChooseRandomItemExBJ=1,1,itemcode,integer,itemtype
 		_ChooseRandomItemExBJ_Defaults=1,ItemTypeAny
