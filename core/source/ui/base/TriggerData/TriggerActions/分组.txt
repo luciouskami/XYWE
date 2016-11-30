@@ -1605,6 +1605,19 @@
 		_MeleeInitVictoryDefeat_Defaults=
 		_MeleeInitVictoryDefeat_Category=TC_MELEE
 // D 多面板
+	DestroyMultiboardForPlayer=0,player,integer
+		// SJWE
+		_DestroyMultiboardForPlayer_Defaults=Player00,0
+		_DestroyMultiboardForPlayer_Limits=_,_,0,680
+		_DestroyMultiboardForPlayer_Category=TC_MULTIBOARD
+	DisplayMultibosrdToPlayer=0,player,multiboard,boolean
+		// SJWE
+		_DisplayMultibosrdToPlayer_Defaults=Player00,bj_lastCreatedMultiboard,true
+		_DisplayMultibosrdToPlayer_Category=TC_MULTIBOARD
+	DisplayMultibosrdFoForce=0,force,multiboard,boolean
+		// SJWE
+		_DisplayMultibosrdFoForce_Defaults=CreateForce,CreateMultiboard,true
+		_DisplayMultibosrdFoForce_Category=TC_MULTIBOARD
 	CreateMultiboardBJ=1,integer,integer,StringExt
 		_CreateMultiboardBJ_Defaults=1,1,_
 		_CreateMultiboardBJ_Limits=1,16,1,32,_,512

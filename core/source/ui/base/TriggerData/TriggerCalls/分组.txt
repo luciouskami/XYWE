@@ -1336,6 +1336,9 @@
 			GetReboundDamageEventDamage=0,0,real
 				_GetReboundDamageEventDamage_Defaults=
 				_GetReboundDamageEventDamage_Category=TC_EVENTRESPONSE
+			GetUnitHatred=0,0,real,unit,unit
+				_GetUnitHatred_Defaults=GetAttackedUnitBJ,GetAttacker,
+				_GetUnitHatred_Category=TC_HTSY
 			GetHalfDamageFactor=0,0,real,unitcode
 				_GetHalfDamageFactor_Defaults=_,
 				_GetHalfDamageFactor_Category=TC_UDDS
@@ -2468,12 +2471,32 @@
 		_PlayerGetLeaderboardBJ_ScriptName=PlayerGetLeaderboard
 		_PlayerGetLeaderboardBJ_Category=TC_PLAYER
 // returns multiboard
+	CreateMultiboardForPlayer=0,0,multiboard,player,integer
+		// SJWE
+		_CreateMultiboardForPlayer_Defaults=Player00,0,
+		_CreateMultiboardForPlayer_Limits=_,_,0,680,
+		_CreateMultiboardForPlayer_Category=TC_NOTHING
+	GetPlayerMultiboard=0,0,multiboard,player,integer
+		// SJWE
+		_GetPlayerMultiboard_Defaults=Player00,0,
+		_GetPlayerMultiboard_Limits=_,_,0,680,
+		_GetPlayerMultiboard_Category=TC_NOTHING
 	CreateMultiboard=1,0,multiboard
 		_CreateMultiboard_Defaults=
 		_CreateMultiboard_Category=TC_NOTHING
 	GetLastCreatedMultiboard=1,0,multiboard
 		_GetLastCreatedMultiboard_Defaults=
 		_GetLastCreatedMultiboard_Category=TC_LAST
+	GetItemPredicableMultiboard=0,0,multiboard,integer
+		// SJWE
+		_GetItemPredicableMultiboard_Defaults=GetPlayerId,
+		_GetItemPredicableMultiboard_Limits=0,12,
+		_GetItemPredicableMultiboard_Category=TC_UDDS
+	GetUnitPredicableMultiboard=0,0,multiboard,integer
+		// SJWE
+		_GetUnitPredicableMultiboard_Defaults=GetPlayerId,
+		_GetUnitPredicableMultiboard_Limits=0,12,
+		_GetUnitPredicableMultiboard_Category=TC_UDDS
 	YDWEGetMultiboardByInteger=0,1,multiboard,integer,integer
 		_YDWEGetMultiboardByInteger_Category=TC_RESTORE
 	YDWEGetMultiboardByString=0,1,multiboard,string,string
