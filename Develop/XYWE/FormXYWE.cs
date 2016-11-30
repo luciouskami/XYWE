@@ -86,7 +86,8 @@ namespace XYWE
             XYConfig.RefreshConfig();
 
             // Execute Plugin
-            XYPlugin.RSJB_WE_TextEditor_16_0.SafeStart();
+            if (XYPlugin.RSJB_WE_TextEditor_16_0.GetEnableState())
+                XYPlugin.RSJB_WE_TextEditor_16_0.SafeStart();
 
             // Recover Text
             BtnStartXYWE.Enabled = true;
