@@ -13,3 +13,4 @@ core/source/ui/xywe/WorldEditStrings/Tip.txt
 *.xml
 Develop/*/obj/
 *.pdb
+*.vs/
