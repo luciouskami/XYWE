@@ -11,3 +11,5 @@ core/source/ui/xywe/WorldEditStrings/Tip.txt
 *.lastcodeanalysissucceeded
 *.vshost.exe
 *.xml
+Develop/*/obj/
+*.pdb
