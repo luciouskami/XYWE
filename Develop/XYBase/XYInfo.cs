@@ -9,7 +9,7 @@ namespace XYBase
     public static class XYInfo
     {
         public const string YDVersion = "1.30.6";
-        public const string Version = "1.1.Alpha.8 Pre.2"; // Used in version verify & launcher's version mark and update check
+        public const string Version = "1.1.Alpha.8 Pre.3"; // Used in version verify & launcher's version mark and update check
         public const string VersionClass = "内部预览版";
 
         public const string EditorName = "咸鱼地图编辑器";
