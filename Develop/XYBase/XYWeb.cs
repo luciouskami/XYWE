@@ -15,7 +15,7 @@ namespace XYBase
     {
         static string xyweServerAddress =
 #if DEBUG
-            "http://localhost:90";
+            "https://wow9.org/xywe_server_debug";
 #else
             "https://wow9.org/xywe_server";
 #endif

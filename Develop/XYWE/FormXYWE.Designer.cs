@@ -46,9 +46,9 @@
             // LlVersion
             // 
             this.LlVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LlVersion.Location = new System.Drawing.Point(165, 135);
+            this.LlVersion.Location = new System.Drawing.Point(95, 135);
             this.LlVersion.Name = "LlVersion";
-            this.LlVersion.Size = new System.Drawing.Size(171, 12);
+            this.LlVersion.Size = new System.Drawing.Size(241, 12);
             this.LlVersion.TabIndex = 0;
             this.LlVersion.TabStop = true;
             this.LlVersion.Text = "LlVersion";
