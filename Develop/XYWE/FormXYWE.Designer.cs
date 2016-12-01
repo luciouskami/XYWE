@@ -38,12 +38,15 @@
             this.btnCreateMap = new System.Windows.Forms.Button();
             this.cbEnableRSJBWETextEditor16_0 = new System.Windows.Forms.CheckBox();
             this.btnConfigRSJBWETextEditor15_0 = new System.Windows.Forms.Button();
+            this.BtnOnlineRoomA = new System.Windows.Forms.Button();
+            this.BtnOnlineRoomB = new System.Windows.Forms.Button();
+            this.LbOnline = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LlVersion
             // 
             this.LlVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LlVersion.Location = new System.Drawing.Point(165, 168);
+            this.LlVersion.Location = new System.Drawing.Point(165, 135);
             this.LlVersion.Name = "LlVersion";
             this.LlVersion.Size = new System.Drawing.Size(171, 12);
             this.LlVersion.TabIndex = 0;
@@ -78,9 +81,9 @@
             // 
             // BtnStartXYWE
             // 
-            this.BtnStartXYWE.Location = new System.Drawing.Point(193, 114);
+            this.BtnStartXYWE.Location = new System.Drawing.Point(95, 60);
             this.BtnStartXYWE.Name = "BtnStartXYWE";
-            this.BtnStartXYWE.Size = new System.Drawing.Size(143, 51);
+            this.BtnStartXYWE.Size = new System.Drawing.Size(161, 51);
             this.BtnStartXYWE.TabIndex = 4;
             this.BtnStartXYWE.Text = "启动咸鱼地图编辑器";
             this.BtnStartXYWE.UseVisualStyleBackColor = true;
@@ -100,9 +103,9 @@
             // 
             // BtnXYTriggerSyntaxHighlighter
             // 
-            this.BtnXYTriggerSyntaxHighlighter.Location = new System.Drawing.Point(14, 114);
+            this.BtnXYTriggerSyntaxHighlighter.Location = new System.Drawing.Point(12, 60);
             this.BtnXYTriggerSyntaxHighlighter.Name = "BtnXYTriggerSyntaxHighlighter";
-            this.BtnXYTriggerSyntaxHighlighter.Size = new System.Drawing.Size(80, 51);
+            this.BtnXYTriggerSyntaxHighlighter.Size = new System.Drawing.Size(77, 51);
             this.BtnXYTriggerSyntaxHighlighter.TabIndex = 6;
             this.BtnXYTriggerSyntaxHighlighter.Text = "触发器脚本\r\n配色修改器";
             this.BtnXYTriggerSyntaxHighlighter.UseVisualStyleBackColor = true;
@@ -111,7 +114,7 @@
             // linkLabel1
             // 
             this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 168);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 135);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(56, 12);
             this.linkLabel1.TabIndex = 7;
@@ -166,12 +169,14 @@
             // 
             // btnCreateMap
             // 
-            this.btnCreateMap.Location = new System.Drawing.Point(104, 114);
+            this.btnCreateMap.Enabled = false;
+            this.btnCreateMap.Location = new System.Drawing.Point(62, 3);
             this.btnCreateMap.Name = "btnCreateMap";
-            this.btnCreateMap.Size = new System.Drawing.Size(83, 51);
+            this.btnCreateMap.Size = new System.Drawing.Size(10, 10);
             this.btnCreateMap.TabIndex = 12;
             this.btnCreateMap.Text = "创建新地图";
             this.btnCreateMap.UseVisualStyleBackColor = true;
+            this.btnCreateMap.Visible = false;
             this.btnCreateMap.Click += new System.EventHandler(this.btnCreateMap_Click);
             // 
             // cbEnableRSJBWETextEditor16_0
@@ -195,11 +200,43 @@
             this.btnConfigRSJBWETextEditor15_0.UseVisualStyleBackColor = true;
             this.btnConfigRSJBWETextEditor15_0.Click += new System.EventHandler(this.btnConfigRSJBWETextEditor15_0_Click);
             // 
+            // BtnOnlineRoomA
+            // 
+            this.BtnOnlineRoomA.Location = new System.Drawing.Point(262, 60);
+            this.BtnOnlineRoomA.Name = "BtnOnlineRoomA";
+            this.BtnOnlineRoomA.Size = new System.Drawing.Size(74, 25);
+            this.BtnOnlineRoomA.TabIndex = 16;
+            this.BtnOnlineRoomA.Text = "在线交流A";
+            this.BtnOnlineRoomA.UseVisualStyleBackColor = true;
+            this.BtnOnlineRoomA.Click += new System.EventHandler(this.BtnOnlineRoomA_Click);
+            // 
+            // BtnOnlineRoomB
+            // 
+            this.BtnOnlineRoomB.Location = new System.Drawing.Point(262, 86);
+            this.BtnOnlineRoomB.Name = "BtnOnlineRoomB";
+            this.BtnOnlineRoomB.Size = new System.Drawing.Size(74, 25);
+            this.BtnOnlineRoomB.TabIndex = 17;
+            this.BtnOnlineRoomB.Text = "在线交流B";
+            this.BtnOnlineRoomB.UseVisualStyleBackColor = true;
+            this.BtnOnlineRoomB.Click += new System.EventHandler(this.BtnOnlineRoomB_Click);
+            // 
+            // LbOnline
+            // 
+            this.LbOnline.Location = new System.Drawing.Point(114, 117);
+            this.LbOnline.Name = "LbOnline";
+            this.LbOnline.Size = new System.Drawing.Size(222, 12);
+            this.LbOnline.TabIndex = 18;
+            this.LbOnline.Text = "当前在线:? / 今日已上线:?";
+            this.LbOnline.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FormXYWE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 189);
+            this.ClientSize = new System.Drawing.Size(348, 154);
+            this.Controls.Add(this.LbOnline);
+            this.Controls.Add(this.BtnOnlineRoomB);
+            this.Controls.Add(this.BtnOnlineRoomA);
             this.Controls.Add(this.btnConfigRSJBWETextEditor15_0);
             this.Controls.Add(this.cbEnableRSJBWETextEditor16_0);
             this.Controls.Add(this.btnCreateMap);
@@ -242,6 +279,9 @@
         private System.Windows.Forms.Button btnCreateMap;
         private System.Windows.Forms.CheckBox cbEnableRSJBWETextEditor16_0;
         private System.Windows.Forms.Button btnConfigRSJBWETextEditor15_0;
+        private System.Windows.Forms.Button BtnOnlineRoomA;
+        private System.Windows.Forms.Button BtnOnlineRoomB;
+        private System.Windows.Forms.Label LbOnline;
     }
 }
 

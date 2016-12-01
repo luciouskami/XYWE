@@ -154,7 +154,7 @@ namespace XYBase
             ReadTextAsync($"{xyweServerAddress}/{path}", successAction, retryAction, failedAction, cacheTime);
         }
         
-        public static bool GetInternetConnection()
+        public static bool GetInternetConnection(string target = "http://www.baidu.com")
         {
             // http://stackoverflow.com/questions/2031824/what-is-the-best-way-to-check-for-internet-connectivity-using-net
 
@@ -164,7 +164,7 @@ namespace XYBase
                 {
                     client.Headers.Add(HttpRequestHeader.UserAgent, "XYWE");
                     client.Headers.Add(HttpRequestHeader.CacheControl, "max-age=0");
-                    using (var stream = client.OpenRead("http://www.baidu.com"))
+                    using (var stream = client.OpenRead(target))
                     {
                         return true;
                     }
