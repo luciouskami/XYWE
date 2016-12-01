@@ -3722,12 +3722,6 @@
 		_UnitAddItemSwapped_Defaults=GetLastCreatedItem,GetTriggerUnit
 		_UnitAddItemSwapped_Category=TC_HERO
 // Y 游戏
-	SetBackGroundMusic=0,StringExt
-		_SetBackGroundMusic_Defaults=_
-		_SetBackGroundMusic_Category=TC_GAME
-	//
-		XYSplitLine_TriggerActions_Y_Game_1=0,nothing
-			_XYSplitLine_TriggerActions_Y_Game_1_Category=TC_GAME
 	DisplayTextToPlayer=0,player,real,real,StringExt
 		_DisplayTextToPlayer_Defaults=GetOwningPlayer,0,0,_
 		_DisplayTextToPlayer_Category=TC_GAME
@@ -3788,6 +3782,12 @@
 	UseTimeOfDayBJ=0,onoffoption
 		_UseTimeOfDayBJ_Defaults=OnOffOff
 		_UseTimeOfDayBJ_Category=TC_GAME
+	//
+		XYSplitLine_TriggerActions_Y_Game_1=0,nothing
+			_XYSplitLine_TriggerActions_Y_Game_1_Category=TC_GAME
+	SetBackGroundMusic=0,StringExt
+		_SetBackGroundMusic_Defaults=_
+		_SetBackGroundMusic_Category=TC_GAME
 	//
 		XYSplitLine_TriggerActions_Y_Game_3=0,nothing
 			_XYSplitLine_TriggerActions_Y_Game_3_Category=TC_GAME
