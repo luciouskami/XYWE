@@ -19,42 +19,35 @@ namespace XYBase
             public static string Editor = Core + @"\editor";
             public static string EditorJass = Editor + @"\jass";
             public static string EditorPlugin = Editor + @"\plugin";
+            public static string EditorPluginTesh = EditorPlugin + @"\tesh";
+            public static string EditorPluginTeshStyle = EditorPluginTesh + @"\styles";
             public static string EditorShare = Editor + @"\share";
             public static string EditorShareMpq = EditorShare + @"\mpq";
+            public static string EditorShareMpqLib(string libName) { return EditorShareMpq + @"\" + libName; }
+            public static string EditorShareMpqUi(string libName) { return EditorShareMpqLib(libName) + @"\ui"; }
             public static string EditorShareScript = EditorShare + @"\script";
 
             public static string Source = Core + @"\source";
             public static string SourceJass = Source + @"\jass";
-            public static string SourceMpq = Source + @"\mpq";
-            public static string SourceMpqUnits = SourceMpq + @"\units";
             public static string SourcePlugin = Source + @"\plugin";
             public static string SourceScript = Source + @"\script";
             public static string SourceUi = Source + @"\ui";
             public static string SourcePackage = Source + @"\package";
+            public static string SourceTemplate = Source + @"\template";
 
             public static string Data = Core + @"\data";
             public static string DataUpdate = Data + @"\update";
 
-            public static string Jass = Editor + @"\jass";
-            public static string Share = Editor + @"\share";
-            public static string Plugin = Editor + @"\plugin";
-
-            public static string JassXYLibrary = Jass + @"\XYLibrary";
-
-            public static string Tesh = Plugin + @"\tesh";
-            public static string TeshStyle = Tesh + @"\styles";
-
-            public static string Mpq = Share + @"\mpq";
-            public static string MpqLib(string libName) { return Mpq + @"\" + libName; }
-            public static string MpqUi(string libName) { return MpqLib(libName) + @"\ui"; }
+            public static string Plugin = Core + @"\plugin";
+            public static string Plugin_RSJB_WE_TextEditor_16_0 = Plugin + @"\人生脚步WE文本修改器16.0";
         }
         public static class File
         {
             public static string UpdateLock = Dir.Root + @"\disable_update.lock";
 
             public static string ProgramWe = Dir.Editor + @"\YDWE.exe";
-            public static string MpqConfig = Dir.Mpq + @"\config";
-            public static string MpqSort = Dir.Mpq + @"\sort";
+            public static string MpqConfig = Dir.EditorShareMpq + @"\config";
+            public static string MpqSort = Dir.EditorShareMpq + @"\sort";
 
             public static string DataIni = Dir.Data + @"\data.ini";
             public static string DataTip = Dir.Data + @"\tips.txt";
@@ -63,6 +56,15 @@ namespace XYBase
             public static string DataUpdateFiles = Dir.DataUpdate + @"\files.zip";
             public static string DataUpdateLog = Dir.DataUpdate + @"\log.txt";
             public static string DataUpdateRemove = Dir.DataUpdate + @"\remove.txt";
+
+            public static class Plugin
+            {
+                public static class RSJB_WE_TextEditor_16_0
+                {
+                    public static string Executor = Dir.Plugin_RSJB_WE_TextEditor_16_0 + @"\人生脚步WE文本修改器16.0.exe";
+                    public static string IniConfig = Dir.Plugin_RSJB_WE_TextEditor_16_0 + @"\功能配置.ini";
+                }
+            }
 
             public static string XyweUiTip = Dir.SourceUi + @"\xywe\WorldEditStrings\Tip.txt";
         }

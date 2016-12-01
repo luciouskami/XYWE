@@ -26,7 +26,7 @@ namespace XYTriggerSyntaxHighlighter
         {
             try
             {
-                dirStyleBase = new DirectoryInfo(XYPath.Dir.TeshStyle);
+                dirStyleBase = new DirectoryInfo(XYPath.Dir.EditorPluginTeshStyle);
                 dirStyle = dirStyleBase.GetDirectories().ToList();
 
                 dirStyle.ForEach(style =>
@@ -51,7 +51,7 @@ namespace XYTriggerSyntaxHighlighter
                 var dir = dirStyle.Where(d => d.Name == style).First();
                 var files = dir.GetFiles("*");
                 files.ToList().ForEach(file => {
-                    file.CopyTo(XYPath.Dir.Tesh + @"\" + file.Name, true);
+                    file.CopyTo(XYPath.Dir.EditorPluginTesh + @"\" + file.Name, true);
                 });
                 MessageBox.Show("应用成功");
             }

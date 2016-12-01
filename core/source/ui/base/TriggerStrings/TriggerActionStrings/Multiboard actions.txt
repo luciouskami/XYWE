@@ -1,3 +1,12 @@
+DestroyMultiboardForPlayer=为玩家删除多面板 [S]
+	DestroyMultiboardForPlayer="为 ",~玩家," 删除标识为 ",~标识," 的多面板"
+	DestroyMultiboardForPlayerHint=
+DisplayMultibosrdToPlayer=为玩家显示/隐藏多面板 [S]
+	DisplayMultibosrdToPlayer="为 ",~玩家," 设置 ",~多面板," 是否显示为 ",~b
+	DisplayMultibosrdToPlayerHint=
+DisplayMultibosrdFoForce=为玩家组显示/隐藏多面板 [S]
+	DisplayMultibosrdFoForce="为 ",~玩家组," 设置 ",~多面板," 是否显示为 ",~b
+	DisplayMultibosrdFoForceHint=
 CreateMultiboardBJ="创建"
 	CreateMultiboardBJ="创建一个 (",~Columns," 列 ",~Rows," 行), 标题为 ",~文字," 的多面板"
 	CreateMultiboardBJHint="不能在'地图初始化'事件中显示多面板"

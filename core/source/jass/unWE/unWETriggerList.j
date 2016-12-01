@@ -2,7 +2,7 @@
 #define unWETriggerListIncluded
 
 //===========================================================================
-//触发器 - 触发器列表 
+//触发器 - 触发器列表
 //===========================================================================
 library unWETriggerList
 globals
@@ -11,7 +11,7 @@ globals
 endglobals
 
 function unWETriggerListAddNew takes trigger trig, string tag returns nothing
-//触发器添加事件(添加标签) 
+//触发器添加事件(添加标签)
     local integer key = StringHash(tag)
     local integer flag = LoadInteger(Data,key,0) + 1
     call SaveInteger(Data,key,0,flag)
@@ -28,11 +28,11 @@ private function CleanupCache takes nothing returns nothing
     loop
         exitwhen index > flag
         set tempKey = LoadInteger(Data,tmId,index)
-        call FlushChildHashtable(Data,tempKey) 
+        call FlushChildHashtable(Data,tempKey)
     endloop
     call FlushChildHashtable(Data,tmId)
     call DestroyTimer(tm)
-    set tm = null     
+    set tm = null
 endfunction
 
 function unWETriggerListExecute takes string tag returns nothing
@@ -40,9 +40,9 @@ function unWETriggerListExecute takes string tag returns nothing
     local integer flag = LoadInteger(Data,key,0)
     local trigger trig
     local timer tm = CreateTimer()
-    local integer tmId = GetHandleId(tm) 
+    local integer tmId = GetHandleId(tm)
     local integer tempKey
-    local integer index = 1  
+    local integer index = 1
     loop
         exitwhen index > flag
         set trig = LoadTriggerHandle(Data,key,index)
@@ -54,9 +54,9 @@ function unWETriggerListExecute takes string tag returns nothing
     endloop
     set unWE_lastCreatedEventDataKey = tmId
     call SaveInteger(Data,tmId,0,flag)
-    call TimerStart(tm,60,false,CleanupCache)
+    call TimerStart(tm,60,false,function CleanupCache)
     set trig = null
-    set tm = null 
+    set tm = null
 endfunction
 
 function unWESaveTriggerDataUnit takes string tag, unit whichUnit returns nothing
@@ -71,7 +71,7 @@ function unWELoadTriggerDataUnit takes string tag returns unit
     local integer key = LoadInteger(Data,tempKey,0)
     local integer val = StringHash(tag)
     return LoadUnitHandle(Data,key,val)
-endfunction 
-endlibrary  
- 
+endfunction
+endlibrary
+
 #endif /// unWETriggerListIncluded

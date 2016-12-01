@@ -20,7 +20,7 @@ namespace XYMpqLibraryManager {
 
         private void BtnEnter_Click(object sender, EventArgs e) {
             uiName = TbUILibraryName.Text;
-            var pahtUI = XYPath.Dir.MpqUi(uiName);
+            var pahtUI = XYPath.Dir.EditorShareMpqUi(uiName);
             if (uiName == "") {
                 // Do Nothing
             }

@@ -86,6 +86,14 @@ namespace XYBase
             {
                 Process.Start("https://xywiki.com/p/XYWE:" + version);
             }
+            public static void StartOnlineRoomWow8()
+            {
+                Process.Start("http://bbs.wow8.org/forum.php?mod=forumdisplay&fid=489");
+            }
+            public static void StartOnlineRoomWow9()
+            {
+                Process.Start("https://wow9.org/forum.php?mod=forumdisplay&fid=123");
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
-LuaInEvent=1,string
-	_LuaInEvent_Category=TC_EVENT
+unWETriggerListAddNew=1,string
+	_unWETriggerListAddNew_Category=TC_EVENT
 //
 	XYSplitLine_TriggerEvents_Event_1=0
 		_XYSplitLine_TriggerEvents_Event_1_Category=TC_EVENT

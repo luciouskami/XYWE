@@ -116,7 +116,7 @@ namespace XYMpqLibraryManager {
                 var result = MessageBox.Show("点击确定将会删除函数库UI：" + selectUI, "确认删除函数库UI", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes) {
                     Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory(
-                        XYPath.Dir.MpqLib(selectUI),
+                        XYPath.Dir.EditorShareMpqLib(selectUI),
                         Microsoft.VisualBasic.FileIO.UIOption.OnlyErrorDialogs,
                         Microsoft.VisualBasic.FileIO.RecycleOption.SendToRecycleBin);
                     LoadUIAndRefreshCheckedListBox();
@@ -157,7 +157,7 @@ namespace XYMpqLibraryManager {
         }
 
         private void TryEditXlsx(string xlsxName) {
-            var path = XYPath.Dir.MpqUi(selectUI) + @"\" + xlsxName + @".xlsx";
+            var path = XYPath.Dir.EditorShareMpqUi(selectUI) + @"\" + xlsxName + @".xlsx";
             if (File.Exists(path)) {
                 Process.Start(path);
             }
@@ -174,7 +174,7 @@ namespace XYMpqLibraryManager {
             XYMpq.SaveEnable();
             XYMpq.SaveExistSort();
 
-            var dirUI = XYPath.Dir.MpqUi(selectUI);
+            var dirUI = XYPath.Dir.EditorShareMpqUi(selectUI);
 
             var fileClass = dirUI + @"\Class.xlsx";
             if (!File.Exists(fileClass)) { ShowNotFindXlsxError(fileClass); return; }
@@ -197,7 +197,7 @@ namespace XYMpqLibraryManager {
                 MessageBox.Show("你必须先选择一个UI");
                 return;
             }
-            Process.Start(XYPath.Dir.MpqUi(selectUI));
+            Process.Start(XYPath.Dir.EditorShareMpqUi(selectUI));
         }
 
         private void BtnHigher_Click(object sender, EventArgs e) {

@@ -1,4 +1,0 @@
-[submodule "Import/YDWE"]
-	path = Import/YDWE
-	url = https://github.com/actboy168/YDWE
-	ignore = dirty

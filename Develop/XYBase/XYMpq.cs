@@ -42,7 +42,7 @@ namespace XYBase {
 
         public static void LoadExist() {
             listExist.Clear();
-            new DirectoryInfo(XYPath.Dir.Mpq).GetDirectories().ToList().ForEach(subDir => {
+            new DirectoryInfo(XYPath.Dir.EditorShareMpq).GetDirectories().ToList().ForEach(subDir => {
                 if (!IsSystemDirectory(subDir.Name)) {
                     listExist.Add(subDir.Name);
                 }
@@ -110,7 +110,7 @@ namespace XYBase {
         }
 
         public static void Create(string name) {
-            var pathMpqUi = XYPath.Dir.MpqUi(name);
+            var pathMpqUi = XYPath.Dir.EditorShareMpqUi(name);
             // TODO Create New UI Example From Template
             // XYFile.CopyDirectory(XYPath.Dir.MpqUiTemplateXywe, pathMpqUi);
             SaveEnable();

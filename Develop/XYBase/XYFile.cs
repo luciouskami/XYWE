@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace XYBase
 {
@@ -16,6 +17,12 @@ namespace XYBase
 
     public static class XYFile
     {
+        public static T LoadJson<T>(string filePath)
+        {
+            var json = File.ReadAllText(filePath);
+            var jsonObj = JsonConvert.DeserializeObject<T>(json);
+            return jsonObj;
+        }
         public static List<List<string>> LoadXlsx(string filePath, string sheetName = "Sheet1")
         {
             // http://blog.163.com/china__xuhua/blog/static/19972316920111028105011136/
@@ -93,6 +100,19 @@ namespace XYBase
                 ForEachDirectory(fullName, forDirectoryAction);
             }
         }
+        public static void ForEachSubDirectory(string directoryPath, ForDirectoryAction forDirectoryAction, bool recursive = true)
+        {
+            var dirInfo = new DirectoryInfo(directoryPath);
+            foreach (var di in dirInfo.GetDirectories())
+            {
+                var fullName = di.FullName;
+
+                var doBreak = forDirectoryAction(fullName);
+                if (doBreak) return;
+
+                if (recursive) ForEachSubDirectory(directoryPath, forDirectoryAction);
+            }
+        }
         /// <summary>
         /// sourcePath: Directory, targetPath: File
         /// </summary>
@@ -140,6 +160,17 @@ namespace XYBase
         {
             if (Directory.Exists(path))
                 Directory.Delete(path, true);
+        }
+        public static List<string> GetSubDirectoriesName(string path)
+        {
+            var info = new DirectoryInfo(path);
+            var subs = info.GetDirectories();
+            List<string> names = new List<string>();
+            foreach (var sub in subs)
+            {
+                names.Add(sub.Name);
+            }
+            return names;
         }
     }
 }

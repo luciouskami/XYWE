@@ -265,5 +265,3 @@
 	GetStoredStringBJ=1,0,string,string,string,gamecache
 		_GetStoredStringBJ_Defaults=_,"Category",GetLastCreatedGameCacheBJ
 		_GetStoredStringBJ_Category=TC_OBSOLETE
-	unWELoadTriggerDataUnit=0,1,unit,string
-		_unWELoadTriggerDataUnit_Category=TC_OBSOLETE

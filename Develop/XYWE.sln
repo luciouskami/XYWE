@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYUpdateExecutor", "XYUpdat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYChecker", "XYChecker\XYChecker.csproj", "{CD11B5C7-D574-483E-A084-21CBA99223B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYMapCreator", "XYMapCreator\XYMapCreator.csproj", "{BDD29861-1206-40B4-9F79-A5F5B3A19527}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{CD11B5C7-D574-483E-A084-21CBA99223B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD11B5C7-D574-483E-A084-21CBA99223B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD11B5C7-D574-483E-A084-21CBA99223B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD29861-1206-40B4-9F79-A5F5B3A19527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD29861-1206-40B4-9F79-A5F5B3A19527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD29861-1206-40B4-9F79-A5F5B3A19527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD29861-1206-40B4-9F79-A5F5B3A19527}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

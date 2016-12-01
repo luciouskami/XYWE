@@ -36,6 +36,10 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -51,9 +55,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Command.cs" />
+    <Compile Include="Enum\XYDialogType.cs" />
     <Compile Include="Enum\CreateState.cs" />
     <Compile Include="Extend\ExtendSystemChar.cs" />
+    <Compile Include="Form\FormXYDialogConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormXYDialogConfirm.Designer.cs">
+      <DependentUpon>FormXYDialogConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Include\Ini.cs" />
+    <Compile Include="Struct\JsonMapTemplate.cs" />
     <Compile Include="UIConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XYAnnouncement.cs" />
@@ -66,18 +78,29 @@
     <Compile Include="XYFile.cs" />
     <Compile Include="XYInfo.cs" />
     <Compile Include="XYIni.cs" />
+    <Compile Include="XYMapTemplate.cs" />
     <Compile Include="XYMpq.cs" />
     <Compile Include="XYPackage.cs" />
+    <Compile Include="XYPlugin.cs" />
     <Compile Include="XYPath.cs" />
     <Compile Include="XYProcess.cs" />
     <Compile Include="XYRandom.cs" />
+    <Compile Include="XYRegEditor.cs" />
     <Compile Include="XYSource.cs" />
     <Compile Include="XYTextFilter.cs" />
     <Compile Include="XYTip.cs" />
+    <Compile Include="XYUtil.cs" />
     <Compile Include="XYVersion.cs" />
     <Compile Include="XYWeb.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Form\FormXYDialogConfirm.resx">
+      <DependentUpon>FormXYDialogConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

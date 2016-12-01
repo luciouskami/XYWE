@@ -1,3 +1,6 @@
+GetUnitHatred=获取被伤害单位对伤害来源的仇恨值 [S]
+	GetUnitHatred="获取 ",~被伤害单位," 对 ",~伤害来源," 的仇恨值。"
+	GetUnitHatredHint=""
 ReturnUnitID=指定单位 [S]
 	ReturnUnitID=~单位
 	ReturnUnitIDHint=""

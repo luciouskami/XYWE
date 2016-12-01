@@ -17,7 +17,6 @@ namespace XYBase
         static void SyncSource()
         {
             XYFile.SyncDirectory(XYPath.Dir.SourceJass, XYPath.Dir.EditorJass);
-            XYFile.SyncDirectory(XYPath.Dir.SourceMpq, XYPath.Dir.EditorShareMpq);
             XYFile.SyncDirectory(XYPath.Dir.SourcePlugin, XYPath.Dir.EditorPlugin);
             XYFile.SyncDirectory(XYPath.Dir.SourceScript, XYPath.Dir.EditorShareScript,
                 ignoreFileName: new[] { "uiloader.lua", "ydwe_on_startup.lua" });

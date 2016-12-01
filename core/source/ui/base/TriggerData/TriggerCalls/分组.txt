@@ -1,10 +1,10 @@
 // returns <ANY TYPE>
+	YDWEGetAnyTypeLocalVariable=0,1,AnyReturnType,scriptcode
+		_YDWEGetAnyTypeLocalVariable_Defaults=p
+		_YDWEGetAnyTypeLocalVariable_Category=TC_BEYONDFATE
 	YDWELoadAnyTypeDataByUserData=0,1,AnyReturnType,typename,Null,scriptcode
 		_YDWELoadAnyTypeDataByUserData_Defaults=_,_,_
 		_YDWELoadAnyTypeDataByUserData_Category=TC_BEYONDFATE
-	YDWEGetAnyTypeLocalVariable=0,1,AnyReturnType,scriptcode
-		_YDWEGetAnyTypeLocalVariable_Defaults=_
-		_YDWEGetAnyTypeLocalVariable_Category=TC_BEYONDFATE
 	YDWECustomScriptCode=0,1,AnyReturnType,scriptcode
 		_YDWECustomScriptCode_Defaults=_
 		_YDWECustomScriptCode_Category=TC_BEYONDFATE
@@ -46,7 +46,7 @@
 			_IsUnitDetected_Defaults=GetTriggerUnit,Player00
 			_IsUnitDetected_Category=TC_UNIT
 		IsUnitType=0,1,boolean,unit,unittype
-			_IsUnitType_Defaults=GetTriggerUnit,UnitTypeStructure
+			_IsUnitType_Defaults=GetTriggerUnit,UnitTypeHero
 			_IsUnitType_Category=TC_UNIT
 		IsUnitRace=0,1,boolean,unit,race
 			_IsUnitRace_Defaults=GetTriggerUnit,RaceHuman
@@ -1336,6 +1336,9 @@
 			GetReboundDamageEventDamage=0,0,real
 				_GetReboundDamageEventDamage_Defaults=
 				_GetReboundDamageEventDamage_Category=TC_EVENTRESPONSE
+			GetUnitHatred=0,0,real,unit,unit
+				_GetUnitHatred_Defaults=GetAttackedUnitBJ,GetAttacker,
+				_GetUnitHatred_Category=TC_HTSY
 			GetHalfDamageFactor=0,0,real,unitcode
 				_GetHalfDamageFactor_Defaults=_,
 				_GetHalfDamageFactor_Category=TC_UDDS
@@ -1635,16 +1638,16 @@
 // returns unit
 	// 普通
 		CreateUnit=0,1,unit,player,unitcode,real,real,degree
-			_CreateUnit_Defaults=Player00,hfoo,0,0,0
+			_CreateUnit_Defaults=Player00,hfoo,GetRectCenterX,GetRectCenterY,0
 			_CreateUnit_Category=TC_NOTHING
 		CreateUnitAtLoc=0,1,unit,player,unitcode,location,degree
-			_CreateUnitAtLoc_Defaults=Player00,hfoo,_,0
+			_CreateUnitAtLoc_Defaults=Player00,hfoo,GetRectCenter,0
 			_CreateUnitAtLoc_Category=TC_NOTHING
 		CreateCorpse=0,1,unit,player,unitcode,real,real,degree
-			_CreateCorpse_Defaults=Player00,hfoo,0,0,0
+			_CreateCorpse_Defaults=Player00,hfoo,GetRectCenterX,GetRectCenterY,0
 			_CreateCorpse_Category=TC_NOTHING
 		CreateBlightedGoldmine=0,1,unit,player,real,real,degree
-			_CreateBlightedGoldmine_Defaults=Player00,0,0,0
+			_CreateBlightedGoldmine_Defaults=Player00,GetRectCenterX,GetRectCenterY,0
 			_CreateBlightedGoldmine_Category=TC_NOTHING
 		GetLastCreatedUnit=0,1,unit
 			_GetLastCreatedUnit_Defaults=
@@ -1697,6 +1700,8 @@
 			_GetLastAbilityCastingUnit_Category=TC_FUNCTION
 		GetLastAbilityTargetUnit=0,1,unit
 			_GetLastAbilityTargetUnit_Category=TC_FUNCTION
+		unWELoadTriggerDataUnit=0,1,unit,string
+			_unWELoadTriggerDataUnit_Category=TC_FUNCTION
 	// S 事件响应
 		GetDYCChargingUnit=0,1,unit
 			_GetDYCChargingUnit_Defaults=
@@ -1970,7 +1975,7 @@
 			_GetSpellTargetItem_Category=TC_EVENTRESPONSE
 	// W 物品
 		CreateItem=0,1,item,itemcode,real,real
-			_CreateItem_Defaults=texp,0,0
+			_CreateItem_Defaults=texp,GetUnitX,GetUnitY
 			_CreateItem_Category=TC_ITEM
 		GetLastCreatedItem=0,1,item
 			_GetLastCreatedItem_Defaults=
@@ -1981,7 +1986,7 @@
 		GetLastMovedItemInItemSlot=0,1,item
 			_GetLastMovedItemInItemSlot_Category=TC_ITEM
 		GetLastCombinedItem=0,1,item
-			_YDWEGetLastCombinedItem_Category=TC_ITEM
+			_GetLastCombinedItem_Category=TC_ITEM
 		UnitDropItem=0,1,item,unit,itemcode
 			_UnitDropItem_Defaults=GetTriggerUnit,texp
 			_UnitDropItem_Limits=_,_,_,_
@@ -2022,7 +2027,7 @@
 		_CreateItemPool_Category=TC_ITEMPOOL
 // returns itemtype
 	GetItemType=1,1,itemtype,item
-		_GetItemType_Defaults=GetLastCreatedItem
+		_GetItemType_Defaults=GetManipulatedItem
 		_GetItemType_Category=TC_ITEMTYPE
 // returns itemcode
 	YDWEGetItemIDByInteger=0,1,itemcode,integer,integer
@@ -2031,7 +2036,7 @@
 	YDWEGetItemIDByString=0,1,itemcode,string,string
 		_YDWEGetItemIDByString_Category=TC_RESTORE
 	GetItemTypeId=0,1,itemcode,item
-		_GetItemTypeId_Defaults=GetLastCreatedItem
+		_GetItemTypeId_Defaults=GetManipulatedItem
 		_GetItemTypeId_Category=TC_ITEMCODE
 	ChooseRandomItemExBJ=1,1,itemcode,integer,itemtype
 		_ChooseRandomItemExBJ_Defaults=1,ItemTypeAny
@@ -2466,12 +2471,32 @@
 		_PlayerGetLeaderboardBJ_ScriptName=PlayerGetLeaderboard
 		_PlayerGetLeaderboardBJ_Category=TC_PLAYER
 // returns multiboard
+	CreateMultiboardForPlayer=0,0,multiboard,player,integer
+		// SJWE
+		_CreateMultiboardForPlayer_Defaults=Player00,0,
+		_CreateMultiboardForPlayer_Limits=_,_,0,680,
+		_CreateMultiboardForPlayer_Category=TC_NOTHING
+	GetPlayerMultiboard=0,0,multiboard,player,integer
+		// SJWE
+		_GetPlayerMultiboard_Defaults=Player00,0,
+		_GetPlayerMultiboard_Limits=_,_,0,680,
+		_GetPlayerMultiboard_Category=TC_NOTHING
 	CreateMultiboard=1,0,multiboard
 		_CreateMultiboard_Defaults=
 		_CreateMultiboard_Category=TC_NOTHING
 	GetLastCreatedMultiboard=1,0,multiboard
 		_GetLastCreatedMultiboard_Defaults=
 		_GetLastCreatedMultiboard_Category=TC_LAST
+	GetItemPredicableMultiboard=0,0,multiboard,integer
+		// SJWE
+		_GetItemPredicableMultiboard_Defaults=GetPlayerId,
+		_GetItemPredicableMultiboard_Limits=0,12,
+		_GetItemPredicableMultiboard_Category=TC_UDDS
+	GetUnitPredicableMultiboard=0,0,multiboard,integer
+		// SJWE
+		_GetUnitPredicableMultiboard_Defaults=GetPlayerId,
+		_GetUnitPredicableMultiboard_Limits=0,12,
+		_GetUnitPredicableMultiboard_Category=TC_UDDS
 	YDWEGetMultiboardByInteger=0,1,multiboard,integer,integer
 		_YDWEGetMultiboardByInteger_Category=TC_RESTORE
 	YDWEGetMultiboardByString=0,1,multiboard,string,string

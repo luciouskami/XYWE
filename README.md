@@ -1,36 +1,40 @@
-# XYWE
+# 咸鱼地图编辑器 | Xian Yu World Editor
 
-咸鱼地图编辑器，重整结构中。
+* 版本(Version): 1.1.Alpha.9
+* 状态(State): 开发中(Develop)
 
-## 常用Git命令
+咸鱼地图编辑器(XYWE)是一个重视用户体验的增强魔兽地图编辑器，对UI信息进行了大量优化，并额外增加了如地图定制、模板化制图、服务端通讯、模块化制图、……等各种增强功能。  
+Xian Yu World Editor (XYWE) is a user friendly World Editor mod. We optimize many UI data and added features such as "Quick Custom Map", "Map Template", "Communicate with Server", "Modular Develop Map", etc...
 
-### 仓库目录外
+在[项目维基](../../wiki)中查看项目结构与更多说明。  
+See project struct at [project wiki](../../wiki).
 
-克隆XYWE到 工作路径/DirName 目录  
-git clone https://github.com/LazyKnightX/XYWE DirName
+# LICENSE
 
-克隆XYWE和非嵌套子模块到 工作路径/DirName 目录  
-git clone --recursive https://github.com/LazyKnightX/XYWE DirName
+Copyright 2016 Lazy Knight & Wow9.Org
 
-### 仓库目录内
+Licensed under the Apache License, Version 2.0 (the "License");  
+you may not use this file except in compliance with the License.  
+You may obtain a copy of the License at
 
-克隆所有子模块  
-git submodule update --init --recursive
+http://www.apache.org/licenses/LICENSE-2.0
 
-更新所有子模块到其Github上的最新版本([#](http://stackoverflow.com/questions/5828324/update-git-submodule-to-latest-commit-on-origin))  
-git submodule foreach --recursive git pull origin master  
-git submodule foreach git pull origin master  
-git submodule foreach git pull
+Unless required by applicable law or agreed to in writing, software  
+distributed under the License is distributed on an "AS IS" BASIS,  
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
+See the License for the specific language governing permissions and  
+limitations under the License.
 
-移除子模块  
-git rm --cached path/to/submodule
+# Contact
 
-## 资源结构
+Email: i@lazyknight.com  
+Github: https://github.com/LazyKnightX  
+Github Organization: https://github.com/XYWE  
+Website: https://wow9.org/xywe
 
-### ./XYWE.exe Develop.lnk
+# What is "Xian Yu"?
 
-以开发模式启动咸鱼工具箱，包含 编译YDWE (XY Edition)，发布XYWE 等操作
-
-### ./core/editor
-
-固定的编辑器目录，编译后的YDWE会被放到这里，咸鱼工具箱会在每次启动WE前根据用户配置来更新editor目录的数据，从而实现动态管理
+"Xian Yu" is pronunciation of "咸鱼" (Chinese word) which means "Salted Fish" in English.  
+It's an interesting and famoues culture in Chinese internet, it begin because Stephen Chow say "If people do not have the goal, then what is the difference with the salted fish (人要是没有了目标, 那跟咸鱼有什么区别)" in his movie.  
+We also love this culture to joking ourself are all "Salted Fish" which means do not have the goal.  
+So we named our World Editor as "Xian Yu World Editor(XYWE)".

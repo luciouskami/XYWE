@@ -1,9 +1,9 @@
-YDWECustomScriptCode="Jass"
-	YDWECustomScriptCode=~Jass代码
-	YDWECustomScriptCodeHint="可以在任何有返回值的地方输入Jass代码"
 YDWEGetAnyTypeLocalVariable="局部变量"
 	YDWEGetAnyTypeLocalVariable="loc_",~局部变量名字
 	YDWEGetAnyTypeLocalVariableHint="可以获取到任意类型的局部变量。"
 YDWELoadAnyTypeDataByUserData="自定义值"
 	YDWELoadAnyTypeDataByUserData="{",~类型,"}",~null,"[",~属性,"]"
 	YDWELoadAnyTypeDataByUserDataHint="从某个数据上获取自定义值。如：{单位}恶魔猎手[命中率]"
+YDWECustomScriptCode="Jass"
+	YDWECustomScriptCode=~Jass代码
+	YDWECustomScriptCodeHint="可以在任何有返回值的地方输入Jass代码"
