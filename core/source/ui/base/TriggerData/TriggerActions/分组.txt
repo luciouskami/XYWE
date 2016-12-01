@@ -1173,14 +1173,14 @@
 		_ShowUbersplatBJ_Defaults=ShowHideShow,GetLastCreatedUbersplat
 		_ShowUbersplatBJ_Category=TC_UBERSPLAT
 // D 点
-	MoveLocation=0,location,real,real
-		// TODO Make Default to Beyond Fate
-		_MoveLocation=_,0,0
-		_MoveLocation_Category=TC_LOCATION
 	RemoveLocation=0,location
-		// TODO Make Default to Beyond Fate
+		// TODO Make Default to Beyond Fate YDWEGetAnyTypeLocalVariable
 		_RemoveLocation_Defaults=_
 		_RemoveLocation_Category=TC_LOCATION
+	MoveLocation=0,location,real,real
+		// TODO Make Default to Beyond Fate YDWEGetAnyTypeLocalVariable
+		_MoveLocation_Defaults=_,GetRectCenterX,GetRectCenterY
+		_MoveLocation_Category=TC_LOCATION
 // D 电影
 	ForceCinematicSubtitlesBJ=1,onoffoption
 		_ForceCinematicSubtitlesBJ_Defaults=OnOffOn
@@ -3223,15 +3223,15 @@
 		_EnumItemsInRectBJMultiple_Defaults=GetPlayableMapRect
 		_EnumItemsInRectBJMultiple_Category=TC_ITEM
 		_EnumItemsInRectBJMultiple_ScriptName=EnumItemsInRectBJ
-	CreateItemLocEx=0,itemcode,LocEx
-		_CreateItemLocEx_Defaults=texp,GetRectCenterEx
-		_CreateItemLocEx_Category=TC_ITEM
+	CreateItem=0,itemcode,real,real
+		_CreateItem_Defaults=texp,GetUnitX,GetUnitY
+		_CreateItem_Category=TC_ITEM
 	CreateItemLoc=0,itemcode,location
 		_CreateItemLoc_Defaults=texp,GetRectCenter
 		_CreateItemLoc_Category=TC_ITEM
-	CreateItem=0,itemcode,real,real
-		_CreateItem_Defaults=texp,GetRectCenterX,GetRectCenterY
-		_CreateItem_Category=TC_ITEM
+	CreateItemLocEx=0,itemcode,LocEx
+		_CreateItemLocEx_Defaults=texp,GetRectCenterEx
+		_CreateItemLocEx_Category=TC_ITEM
 	RemoveItem=0,item
 		_RemoveItem_Defaults=GetLastCreatedItem
 		_RemoveItem_Category=TC_ITEM
@@ -3245,15 +3245,15 @@
 	SetItemVisible=1,item,showhideoption
 		_SetItemVisible_Defaults=bj_lastCreatedItem,ShowHideHide
 		_SetItemVisible_Category=TC_ITEM
-	SetItemPositionLocEx=0,item,LocEx
-		_SetItemPositionLocEx_Category=TC_ITEM
-		_SetItemPositionLocEx_Defaults=GetLastCreatedItem,_
-	SetItemPositionLoc=0,item,location
-		_SetItemPositionLoc_Defaults=GetLastCreatedItem,_
-		_SetItemPositionLoc_Category=TC_ITEM
 	SetItemPosition=0,item,real,real
-		_SetItemPosition_Defaults=bj_lastCreatedItem,0,0
+		_SetItemPosition_Defaults=bj_lastCreatedItem,GetRectCenterX,GetRectCenterY
 		_SetItemPosition_Category=TC_ITEM
+	SetItemPositionLoc=0,item,location
+		_SetItemPositionLoc_Defaults=GetLastCreatedItem,GetRectCenter
+		_SetItemPositionLoc_Category=TC_ITEM
+	SetItemPositionLocEx=0,item,LocEx
+		_SetItemPositionLocEx_Defaults=GetLastCreatedItem,GetRectCenterEx
+		_SetItemPositionLocEx_Category=TC_ITEM
 	SetItemLifeBJ=0,item,real
 		_SetItemLifeBJ_Defaults=GetLastCreatedItem,50
 		_SetItemLifeBJ_Limits=_,_,0,_

@@ -13,7 +13,12 @@ namespace XYBase
 {
     public static class XYWeb
     {
-        static string xyweServerAddress = "https://wow9.org/xywe_server";
+        static string xyweServerAddress =
+#if DEBUG
+            "http://localhost:90/xywe_server_debug";
+#else
+            "https://wow9.org/xywe_server";
+#endif
 
         public static async void DownloadDataAsync(string address, Action<byte[]> successAction)
         {

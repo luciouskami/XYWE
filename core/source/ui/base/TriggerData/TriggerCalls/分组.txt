@@ -1975,7 +1975,7 @@
 			_GetSpellTargetItem_Category=TC_EVENTRESPONSE
 	// W 物品
 		CreateItem=0,1,item,itemcode,real,real
-			_CreateItem_Defaults=texp,0,0
+			_CreateItem_Defaults=texp,GetUnitX,GetUnitY
 			_CreateItem_Category=TC_ITEM
 		GetLastCreatedItem=0,1,item
 			_GetLastCreatedItem_Defaults=

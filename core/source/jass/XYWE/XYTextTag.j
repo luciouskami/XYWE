@@ -1,14 +1,16 @@
 #ifndef XYTextTagIncluded
 #define XYTextTagIncluded
 
+#include "XYWE/XYGlobalVariable.j"
+
 //! zinc
 library XYTextTag requires XYGlobalVariable {
-	public function XYCreateTextTagForAll(real x, real y,string s,integer r,integer g,integer b,integer al,real d,real h,real vx,real vy,real z,boolean l) {
-		tt = CreateTextTag();
+	public function XYCreateTextTagForAll(real x, real y,string s,integer r,integer g,integer b,integer al,real d,real h,real vx,real vy,real z,boolean l) -> texttag {
+		texttag tt = CreateTextTag();
 		SetTextTagPos(tt, x, y, h);
 		SetTextTagPermanent(tt, l);
 		SetTextTagLifespan(tt, z);
-		SetTextTagText(tt, s, d*0.0023);
+		SetTextTagText(tt, s, d * 0.0023);
 		SetTextTagVelocity(tt, vx, vy);
 		SetTextTagColor(tt, r, g, b, al);
 		bj_lastCreatedTextTag = tt;
