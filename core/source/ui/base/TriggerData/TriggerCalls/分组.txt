@@ -1637,17 +1637,17 @@
 			_RectFromLoc_Category=TC_RECT
 // returns unit
 	// 普通
-		CreateUnitAtLoc=0,1,unit,player,unitcode,location,degree
-			_CreateUnitAtLoc_Defaults=Player00,hfoo,_,0
-			_CreateUnitAtLoc_Category=TC_NOTHING
 		CreateUnit=0,1,unit,player,unitcode,real,real,degree
-			_CreateUnit_Defaults=Player00,hfoo,0,0,0
+			_CreateUnit_Defaults=Player00,hfoo,GetRectCenterX,GetRectCenterY,0
 			_CreateUnit_Category=TC_NOTHING
+		CreateUnitAtLoc=0,1,unit,player,unitcode,location,degree
+			_CreateUnitAtLoc_Defaults=Player00,hfoo,GetRectCenter,0
+			_CreateUnitAtLoc_Category=TC_NOTHING
 		CreateCorpse=0,1,unit,player,unitcode,real,real,degree
-			_CreateCorpse_Defaults=Player00,hfoo,0,0,0
+			_CreateCorpse_Defaults=Player00,hfoo,GetRectCenterX,GetRectCenterY,0
 			_CreateCorpse_Category=TC_NOTHING
 		CreateBlightedGoldmine=0,1,unit,player,real,real,degree
-			_CreateBlightedGoldmine_Defaults=Player00,0,0,0
+			_CreateBlightedGoldmine_Defaults=Player00,GetRectCenterX,GetRectCenterY,0
 			_CreateBlightedGoldmine_Category=TC_NOTHING
 		GetLastCreatedUnit=0,1,unit
 			_GetLastCreatedUnit_Defaults=

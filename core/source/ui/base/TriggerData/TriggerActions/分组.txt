@@ -489,7 +489,7 @@
 			_CreateNUnitsAtLoc_Limits=1,_,_,_,_,_,_,_,0,360
 			_CreateNUnitsAtLoc_Category=TC_UNIT
 		# CreateUnit=0,player,unitcode,real,real,degree
-			_ CreateUnit_Defaults=GetTriggerPlayer,hfoo,_,_,RealUnitFacing
+			_ CreateUnit_Defaults=GetTriggerPlayer,hfoo,GetRectCenterX,GetRectCenterY,RealUnitFacing
 			_ CreateUnit_Category=TC_UNIT
 		CreateNUnitsAtLocFacingLocBJ=0,integer,unitcode,player,location,location
 			_CreateNUnitsAtLocFacingLocBJ_Defaults=1,hfoo,GetTriggerPlayer,GetRectCenter,GetRectCenter
